@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "AIツールナビ",
-  url: "https://ai-tools-navi.vercel.app",
+  url: "https://ai-tools-navi-navy.vercel.app",
   description:
     "話題のAIツール・サービスを比較・解説。ChatGPT、Claude、Midjourney等の使い方ガイドも。",
 };
