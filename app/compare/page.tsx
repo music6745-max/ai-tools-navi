@@ -304,29 +304,23 @@ export default function ComparePage() {
           </div>
         </section>
 
-        {/* Other categories CTA */}
+        {/* Other comparisons */}
         <section className="text-center">
           <h2 className="text-xl font-bold mb-4">
-            他のAIツールも比較する
+            他の比較も見る
           </h2>
           <div className="flex flex-wrap justify-center gap-3">
             <Link
-              href="/category/ai-image"
+              href="/compare/ai-image"
               className="px-5 py-2.5 bg-card-bg border border-card-border rounded-full text-sm hover:border-primary transition-colors"
             >
-              🎨 AI画像生成
+              🎨 画像生成AI比較
             </Link>
             <Link
-              href="/category/ai-video"
+              href="/compare/ai-coding"
               className="px-5 py-2.5 bg-card-bg border border-card-border rounded-full text-sm hover:border-primary transition-colors"
             >
-              🎬 AI動画生成
-            </Link>
-            <Link
-              href="/category/ai-coding"
-              className="px-5 py-2.5 bg-card-bg border border-card-border rounded-full text-sm hover:border-primary transition-colors"
-            >
-              💻 AIコーディング
+              💻 AIコーディング比較
             </Link>
           </div>
         </section>
