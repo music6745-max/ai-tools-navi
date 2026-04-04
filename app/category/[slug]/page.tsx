@@ -29,6 +29,9 @@ export async function generateMetadata({
   return {
     title,
     description,
+    alternates: {
+      canonical: `${siteConfig.url}/category/${category.slug}`,
+    },
     openGraph: {
       title: `${title} | ${siteConfig.name}`,
       description,
@@ -48,7 +51,31 @@ export default async function CategoryPage({
 
   const catTools = getToolsByCategory(slug);
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "ホーム",
+        item: siteConfig.url,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: category.name,
+        item: `${siteConfig.url}/category/${category.slug}`,
+      },
+    ],
+  };
+
   return (
+    <>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+    />
     <div className="max-w-6xl mx-auto px-4 py-8">
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm text-muted mb-8">
@@ -134,5 +161,6 @@ export default async function CategoryPage({
         </div>
       </section>
     </div>
+    </>
   );
 }

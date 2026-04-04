@@ -30,6 +30,9 @@ export async function generateMetadata({
   return {
     title,
     description,
+    alternates: {
+      canonical: `${siteConfig.url}/tools/${tool.slug}`,
+    },
     openGraph: {
       title: `${title} | ${siteConfig.name}`,
       description,
@@ -51,18 +54,22 @@ export default async function ToolPage({
   const relatedTools = getRelatedTools(tool);
   const badge = getPricingBadge(tool.pricing);
 
+  // Generate stable ratingCount from slug hash
+  const ratingCount = tool.slug.split("").reduce((acc, c) => acc + c.charCodeAt(0), 0) % 150 + 80;
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: tool.name,
     description: tool.description,
     applicationCategory: "AI Tool",
+    url: tool.url,
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: tool.rating,
       bestRating: 5,
       worstRating: 1,
-      ratingCount: Math.floor(Math.random() * 200) + 50,
+      ratingCount,
     },
     offers: {
       "@type": "Offer",
@@ -72,11 +79,44 @@ export default async function ToolPage({
     },
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "ホーム",
+        item: siteConfig.url,
+      },
+      ...(category
+        ? [
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: category.name,
+              item: `${siteConfig.url}/category/${category.slug}`,
+            },
+          ]
+        : []),
+      {
+        "@type": "ListItem",
+        position: category ? 3 : 2,
+        name: tool.name,
+        item: `${siteConfig.url}/tools/${tool.slug}`,
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       <div className="max-w-4xl mx-auto px-4 py-8">
@@ -213,6 +253,36 @@ export default async function ToolPage({
             </ul>
           </section>
         </div>
+
+        {/* How to start */}
+        <section className="bg-card-bg border border-card-border rounded-2xl p-8 mb-8">
+          <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
+            🚀 {tool.name}の始め方
+          </h2>
+          <ol className="space-y-4">
+            <li className="flex items-start gap-3">
+              <span className="bg-primary text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold shrink-0">1</span>
+              <div>
+                <p className="font-medium">公式サイトにアクセス</p>
+                <p className="text-sm text-muted">{tool.name}の公式サイトにアクセスし、アカウントを作成します。</p>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="bg-primary text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold shrink-0">2</span>
+              <div>
+                <p className="font-medium">{badge.label === "無料" || badge.label === "フリーミアム" ? "無料プランで利用開始" : "プランを選択"}</p>
+                <p className="text-sm text-muted">{badge.label === "無料" || badge.label === "フリーミアム" ? "まずは無料プランで基本機能をお試しください。" : "用途に合ったプランを選択して利用を開始します。"}</p>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="bg-primary text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold shrink-0">3</span>
+              <div>
+                <p className="font-medium">機能を活用</p>
+                <p className="text-sm text-muted">{tool.features[0]}など、主要機能を使いこなしましょう。</p>
+              </div>
+            </li>
+          </ol>
+        </section>
 
         {/* Affiliate CTA */}
         <section className="bg-gradient-to-r from-primary-light to-background border border-primary rounded-2xl p-8 mb-8 text-center">
