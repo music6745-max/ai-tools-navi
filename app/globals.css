@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary: #7c3aed;
+  --primary-hover: #6d28d9;
+  --primary-light: #ede9fe;
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+  --muted: #6b7280;
+  --muted-bg: #f9fafb;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --primary: #a78bfa;
+    --primary-hover: #8b5cf6;
+    --primary-light: #1e1b4b;
+    --card-bg: #18181b;
+    --card-border: #27272a;
+    --muted: #a1a1aa;
+    --muted-bg: #18181b;
+    --success: #34d399;
+    --warning: #fbbf24;
+    --danger: #f87171;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-light: var(--primary-light);
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
+  --color-muted: var(--muted);
+  --color-muted-bg: var(--muted-bg);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Meiryo",
+    sans-serif;
+}
+
+/* Star rating */
+.stars {
+  color: #f59e0b;
+  letter-spacing: 1px;
+}
+
+/* Pricing badges */
+.badge-green {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+.badge-blue {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+.badge-orange {
+  background-color: #ffedd5;
+  color: #9a3412;
+}
+
+@media (prefers-color-scheme: dark) {
+  .badge-green {
+    background-color: #064e3b;
+    color: #6ee7b7;
+  }
+  .badge-blue {
+    background-color: #1e3a5f;
+    color: #93c5fd;
+  }
+  .badge-orange {
+    background-color: #7c2d12;
+    color: #fdba74;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Card hover effect */
+.tool-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.tool-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .tool-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Comparison table */
+.compare-table th,
+.compare-table td {
+  border: 1px solid var(--card-border);
+  padding: 12px 16px;
+}
+.compare-table th {
+  background-color: var(--primary-light);
+  font-weight: 600;
+}
+.compare-table tr:nth-child(even) td {
+  background-color: var(--muted-bg);
+}
