@@ -182,6 +182,19 @@ export default function RootLayout({
                     </Link>
                   </li>
                 </ul>
+                <h4 className="font-bold mb-3 mt-6">姉妹サイト</h4>
+                <ul className="space-y-2">
+                  <li>
+                    <a
+                      href="https://net-toolbox.vercel.app"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-muted hover:text-primary transition-colors"
+                    >
+                      🛠️ ネットツールボックス - 無料Web便利ツール250+
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
             <div className="border-t border-card-border mt-8 pt-8 text-center text-sm text-muted">
