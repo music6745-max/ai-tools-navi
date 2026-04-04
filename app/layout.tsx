@@ -77,6 +77,12 @@ export default function RootLayout({
                 >
                   比較表
                 </Link>
+                <Link
+                  href="/guide"
+                  className="px-3 py-2 text-sm rounded-lg hover:bg-primary-light transition-colors font-medium"
+                >
+                  ガイド
+                </Link>
                 {categories.slice(0, 4).map((cat) => (
                   <Link
                     key={cat.slug}
