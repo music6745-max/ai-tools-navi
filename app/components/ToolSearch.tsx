@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { tools, renderStars, getPricingBadge } from "../lib/data";
 
@@ -25,6 +26,14 @@ type Result = { type: "tool"; data: typeof tools[0] } | { type: "guide"; slug: s
 
 export function ToolSearch() {
   const [query, setQuery] = useState("");
+  const router = useRouter();
+
+  function handleKeyDown(e: React.KeyboardEvent) {
+    if (e.key === "Enter" && query.trim()) {
+      router.push(`/search?q=${encodeURIComponent(query.trim())}`);
+      setQuery("");
+    }
+  }
 
   const results = useMemo((): Result[] => {
     if (!query.trim()) return [];
@@ -61,6 +70,7 @@ export function ToolSearch() {
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
+          onKeyDown={handleKeyDown}
           placeholder="AIツールやガイド記事を検索...（例: ChatGPT、画像生成、副業）"
           className="w-full border border-card-border rounded-xl px-5 py-3.5 pl-12 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary bg-card-bg"
         />
