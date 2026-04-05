@@ -10,6 +10,7 @@ import {
   getPricingBadge,
 } from "./lib/data";
 import { AdSenseUnit } from "./components/AdSenseUnit";
+import { ToolSearch } from "./components/ToolSearch";
 
 export const metadata: Metadata = {
   title: `${siteConfig.name} - AIツール比較・おすすめガイド【2026年最新】`,
@@ -73,6 +74,7 @@ export default function Home() {
           <p className="text-muted text-lg md:text-xl max-w-2xl mx-auto mb-8">
             {siteConfig.description}
           </p>
+          <ToolSearch />
           <div className="flex flex-wrap justify-center gap-3">
             <Link
               href="/compare"
