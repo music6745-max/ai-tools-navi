@@ -124,6 +124,38 @@ const guides = [
     category: "デザイン",
     readTime: "10分",
   },
+  {
+    slug: "ai-programming-school",
+    title: "【2026年最新】AI時代のプログラミングスクール比較5選｜AIスキルが学べるおすすめスクール",
+    description: "AI・機械学習が学べるプログラミングスクール5社を徹底比較。テックアカデミー、DMM WEBCAMP、Aidemy、キカガク、Progateの料金・カリキュラム・転職支援を解説。",
+    icon: "🎓",
+    category: "スクール比較",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-english-tools",
+    title: "【2026年最新】AI英語学習ツール比較5選｜ChatGPTからスピーキング練習まで",
+    description: "AI活用の英語学習ツール・オンライン英会話5選を徹底比較。ChatGPT、Duolingo、DMM英会話、NativeCamp、スピークバディの料金・AI機能・学習効果を解説。",
+    icon: "🇬🇧",
+    category: "英語学習",
+    readTime: "10分",
+  },
+  {
+    slug: "ai-job-change",
+    title: "【2026年最新】AI業界への転職ガイド｜未経験からAIエンジニアになる方法",
+    description: "AI業界への転職方法を徹底解説。doda、リクルートエージェント、Green、レバテックキャリア、ビズリーチの5社を比較。未経験からAIエンジニアになるステップも紹介。",
+    icon: "💼",
+    category: "転職",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-investment",
+    title: "【2026年最新】AI投資・資産運用サービス比較5選｜ロボアドバイザーおすすめ",
+    description: "AIを活用した投資・資産運用サービス5選を徹底比較。WealthNavi、THEO、ROBOPRO、楽ラップ、SBIラップの手数料・最低投資額・運用実績・NISA対応を解説。",
+    icon: "📈",
+    category: "投資・資産運用",
+    readTime: "10分",
+  },
 ];
 
 export default function GuidePage() {
