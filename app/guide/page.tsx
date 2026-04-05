@@ -116,6 +116,14 @@ const guides = [
     category: "リモートワーク",
     readTime: "8分",
   },
+  {
+    slug: "ai-for-designers",
+    title: "デザイナー向けAIツール10選｜イラスト・UI・ロゴ制作を効率化【2026年版】",
+    description: "デザイン業務を効率化するAIツールを厳選紹介。イラスト生成、UI/UXデザイン、ロゴ制作、画像編集まで、おすすめAIツール10選を徹底解説。",
+    icon: "🎨",
+    category: "デザイン",
+    readTime: "10分",
+  },
 ];
 
 export default function GuidePage() {

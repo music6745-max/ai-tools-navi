@@ -5,14 +5,30 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: `${siteConfig.name} - AIツール比較・おすすめガイド`,
+    default: `${siteConfig.name} - AIツール比較・おすすめガイド【2026年最新】`,
     template: `%s | ${siteConfig.name}`,
   },
-  description: siteConfig.description,
+  description:
+    "ChatGPT・Claude・Gemini・Midjourney等100以上のAIツールを徹底比較。料金プラン・機能・使い方を分かりやすく解説。あなたに最適なAIツールが見つかります。",
   metadataBase: new URL(siteConfig.url),
+  keywords: [
+    "AIツール",
+    "AI比較",
+    "ChatGPT",
+    "Claude",
+    "Gemini",
+    "Midjourney",
+    "AI画像生成",
+    "AIチャット",
+    "AI文章作成",
+    "AIコード生成",
+    "AI動画生成",
+    "AIおすすめ",
+  ],
   openGraph: {
-    title: `${siteConfig.name} - AIツール比較・おすすめガイド`,
-    description: siteConfig.description,
+    title: `${siteConfig.name} - AIツール比較・おすすめガイド【2026年最新】`,
+    description:
+      "ChatGPT・Claude・Gemini・Midjourney等100以上のAIツールを徹底比較。料金・機能・使い方を分かりやすく解説。",
     url: siteConfig.url,
     siteName: siteConfig.name,
     locale: "ja_JP",
@@ -20,14 +36,27 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} - AIツール比較・おすすめガイド`,
-    description: siteConfig.description,
+    title: `${siteConfig.name} - AIツール比較・おすすめ【2026年】`,
+    description:
+      "ChatGPT・Claude・Gemini等100以上のAIツールを徹底比較。料金・機能・使い方を解説。",
+    creator: "@net_toolbox_jp",
   },
   alternates: {
     canonical: siteConfig.url,
   },
   verification: {
     google: "-DIu5mdFjxw1ikjtlccXK53hdAfXXT3UzFNb3YU14dc",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
