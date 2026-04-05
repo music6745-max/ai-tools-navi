@@ -9,6 +9,7 @@ import {
   renderStars,
   getPricingBadge,
 } from "./lib/data";
+import { AdSenseUnit } from "./components/AdSenseUnit";
 
 export const metadata: Metadata = {
   title: `${siteConfig.name} - AIツール比較・おすすめガイド【2026年最新】`,
@@ -215,6 +216,11 @@ export default function Home() {
           })}
         </div>
       </section>
+
+      {/* Mid-page ad placement */}
+      <div className="max-w-6xl mx-auto px-4">
+        <AdSenseUnit format="horizontal" className="my-8" />
+      </div>
 
       {/* Popular Guide Articles */}
       <section className="py-16">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig, categories } from "./lib/data";
+import { CrossPromotion } from "./components/CrossPromotion";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -153,6 +154,9 @@ export default function RootLayout({
 
         {/* Main */}
         <main className="flex-1">{children}</main>
+
+        {/* Cross Promotion */}
+        <CrossPromotion />
 
         {/* Footer */}
         <footer className="bg-muted-bg border-t border-card-border mt-16">
