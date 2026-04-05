@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: "ChatGPT vs Claude vs Gemini 徹底比較【2026年最新】",
   description:
     "ChatGPT・Claude・Geminiの3大AIチャットツールを料金・機能・性能で徹底比較。あなたに最適なAIツールが見つかります。",
+  alternates: {
+    canonical: `${siteConfig.url}/compare`,
+  },
   openGraph: {
     title: `ChatGPT vs Claude vs Gemini 徹底比較 | ${siteConfig.name}`,
     description:
