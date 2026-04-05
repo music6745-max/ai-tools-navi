@@ -100,6 +100,22 @@ const guides = [
     category: "英語学習",
     readTime: "10分",
   },
+  {
+    slug: "best-ai-for-marketing",
+    title: "マーケティングに使えるAIツール10選｜SNS運用・広告・分析を効率化",
+    description: "マーケティング業務を効率化するAIツールを厳選紹介。SNS運用、広告クリエイティブ作成、データ分析まで、2026年最新のおすすめAIマーケティングツール10選を徹底解説。",
+    icon: "📣",
+    category: "マーケティング",
+    readTime: "10分",
+  },
+  {
+    slug: "ai-for-remote-work",
+    title: "リモートワークを効率化するAIツール完全ガイド｜2026年版",
+    description: "リモートワーク・テレワークの効率を劇的に上げるAIツールを厳選紹介。会議、文書作成、プロジェクト管理、コミュニケーションをAIで効率化する方法を解説。",
+    icon: "🏠",
+    category: "リモートワーク",
+    readTime: "8分",
+  },
 ];
 
 export default function GuidePage() {

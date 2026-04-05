@@ -137,6 +137,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    {
+      url: `${siteConfig.url}/guide/best-ai-for-marketing`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${siteConfig.url}/guide/ai-for-remote-work`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
     ...categoryPages,
     ...toolPages,
     {
