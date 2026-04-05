@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig, categories } from "./lib/data";
 import { CrossPromotion } from "./components/CrossPromotion";
+import { ThemeToggle } from "./components/ThemeToggle";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -79,6 +80,11 @@ export default function RootLayout({
     <html lang="ja" className="h-full antialiased">
       <head>
         <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)})()`,
+          }}
+        />
+        <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6483317297217533"
           crossOrigin="anonymous"
@@ -122,7 +128,11 @@ export default function RootLayout({
                     {cat.icon} {cat.name}
                   </Link>
                 ))}
+                <ThemeToggle />
               </nav>
+              <div className="md:hidden">
+                <ThemeToggle />
+              </div>
             </div>
           </div>
           {/* Mobile category nav */}
