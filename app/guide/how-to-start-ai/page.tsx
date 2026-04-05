@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { siteConfig, getToolBySlug, renderStars, getPricingBadge } from "../../lib/data";
+import { ShareButtons } from "../../components/ShareButtons";
 
 export const metadata: Metadata = {
   title: "【2026年版】AIツールの始め方ガイド｜初心者向け完全解説",
@@ -196,6 +197,8 @@ export default function HowToStartAIPage() {
             </Link>
           </div>
         </section>
+
+        <ShareButtons />
       </div>
     </>
   );

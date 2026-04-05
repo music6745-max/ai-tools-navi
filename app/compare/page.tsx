@@ -311,6 +311,12 @@ export default function ComparePage() {
           </h2>
           <div className="flex flex-wrap justify-center gap-3">
             <Link
+              href="/compare/ai-chat"
+              className="px-5 py-2.5 bg-card-bg border border-card-border rounded-full text-sm hover:border-primary transition-colors"
+            >
+              💬 AIチャット詳細比較
+            </Link>
+            <Link
               href="/compare/ai-image"
               className="px-5 py-2.5 bg-card-bg border border-card-border rounded-full text-sm hover:border-primary transition-colors"
             >
@@ -321,6 +327,18 @@ export default function ComparePage() {
               className="px-5 py-2.5 bg-card-bg border border-card-border rounded-full text-sm hover:border-primary transition-colors"
             >
               💻 AIコーディング比較
+            </Link>
+            <Link
+              href="/compare/ai-writing"
+              className="px-5 py-2.5 bg-card-bg border border-card-border rounded-full text-sm hover:border-primary transition-colors"
+            >
+              ✍️ AI文章作成比較
+            </Link>
+            <Link
+              href="/compare/ai-music"
+              className="px-5 py-2.5 bg-card-bg border border-card-border rounded-full text-sm hover:border-primary transition-colors"
+            >
+              🎵 AI音楽生成比較
             </Link>
           </div>
         </section>

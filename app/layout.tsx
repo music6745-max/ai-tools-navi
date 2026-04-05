@@ -192,7 +192,7 @@ export default function RootLayout({
                 <ul className="space-y-2">
                   <li>
                     <a
-                      href="https://net-toolbox.vercel.app"
+                      href="https://net-toolbox.jp"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-sm text-muted hover:text-primary transition-colors"

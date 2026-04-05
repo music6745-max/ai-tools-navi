@@ -10,6 +10,7 @@ import {
   renderStars,
   getPricingBadge,
 } from "../../lib/data";
+import { ShareButtons } from "../../components/ShareButtons";
 
 export function generateStaticParams() {
   return tools.map((tool) => ({ slug: tool.slug }));
@@ -343,6 +344,8 @@ export default async function ToolPage({
             </div>
           </section>
         )}
+
+        <ShareButtons />
       </div>
     </>
   );
