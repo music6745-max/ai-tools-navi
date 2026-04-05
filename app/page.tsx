@@ -315,7 +315,7 @@ export default function Home() {
       {/* Sister Site */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-950/30 dark:to-cyan-950/30 border border-blue-200 dark:border-blue-800 rounded-2xl p-8">
+          <div className="border border-card-border rounded-2xl p-8" style={{ background: "linear-gradient(to right, #eff6ff, #ecfeff)" }}>
             <div className="flex items-center gap-4 mb-4">
               <span className="text-4xl">🛠️</span>
               <div>
@@ -324,20 +324,20 @@ export default function Home() {
               </div>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
-              <a href="https://net-toolbox.vercel.app/tools/qr-code" target="_blank" rel="noopener noreferrer" className="bg-white/70 dark:bg-white/5 rounded-lg p-3 text-center hover:shadow-md transition text-sm">
+              <a href="https://net-toolbox.vercel.app/tools/qr-code" target="_blank" rel="noopener noreferrer" className="bg-card-bg border border-card-border rounded-lg p-3 text-center hover:shadow-md transition text-sm">
                 📱 QRコード作成
               </a>
-              <a href="https://net-toolbox.vercel.app/tools/password-generator" target="_blank" rel="noopener noreferrer" className="bg-white/70 dark:bg-white/5 rounded-lg p-3 text-center hover:shadow-md transition text-sm">
+              <a href="https://net-toolbox.vercel.app/tools/password-generator" target="_blank" rel="noopener noreferrer" className="bg-card-bg border border-card-border rounded-lg p-3 text-center hover:shadow-md transition text-sm">
                 🔐 パスワード生成
               </a>
-              <a href="https://net-toolbox.vercel.app/tools/json-formatter" target="_blank" rel="noopener noreferrer" className="bg-white/70 dark:bg-white/5 rounded-lg p-3 text-center hover:shadow-md transition text-sm">
+              <a href="https://net-toolbox.vercel.app/tools/json-formatter" target="_blank" rel="noopener noreferrer" className="bg-card-bg border border-card-border rounded-lg p-3 text-center hover:shadow-md transition text-sm">
                 📋 JSON整形
               </a>
-              <a href="https://net-toolbox.vercel.app/tools/character-count" target="_blank" rel="noopener noreferrer" className="bg-white/70 dark:bg-white/5 rounded-lg p-3 text-center hover:shadow-md transition text-sm">
+              <a href="https://net-toolbox.vercel.app/tools/character-count" target="_blank" rel="noopener noreferrer" className="bg-card-bg border border-card-border rounded-lg p-3 text-center hover:shadow-md transition text-sm">
                 🔢 文字数カウント
               </a>
             </div>
-            <a href="https://net-toolbox.vercel.app" target="_blank" rel="noopener noreferrer" className="inline-block text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium">
+            <a href="https://net-toolbox.vercel.app" target="_blank" rel="noopener noreferrer" className="inline-block text-sm text-primary hover:underline font-medium">
               ネットツールボックスを見る →
             </a>
           </div>
