@@ -315,29 +315,29 @@ export default function Home() {
       {/* Sister Site */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="border border-card-border rounded-2xl p-8" style={{ background: "linear-gradient(to right, #eff6ff, #ecfeff)" }}>
+          <div className="rounded-2xl p-8" style={{ background: "linear-gradient(135deg, #2563eb 0%, #0891b2 100%)", color: "#ffffff" }}>
             <div className="flex items-center gap-4 mb-4">
               <span className="text-4xl">🛠️</span>
               <div>
-                <h2 className="text-xl font-bold">無料Webツールもチェック</h2>
-                <p className="text-sm text-muted">姉妹サイト「ネットツールボックス」で232以上の便利ツールを公開中</p>
+                <h2 className="text-xl font-bold" style={{ color: "#ffffff" }}>無料Webツールもチェック</h2>
+                <p className="text-sm" style={{ color: "rgba(255,255,255,0.8)" }}>姉妹サイト「ネットツールボックス」で252以上の便利ツールを公開中</p>
               </div>
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
-              <a href="https://net-toolbox.vercel.app/tools/qr-code" target="_blank" rel="noopener noreferrer" className="bg-card-bg border border-card-border rounded-lg p-3 text-center hover:shadow-md transition text-sm">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
+              <a href="https://net-toolbox.vercel.app/tools/qr-code" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition text-sm" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
                 📱 QRコード作成
               </a>
-              <a href="https://net-toolbox.vercel.app/tools/password-generator" target="_blank" rel="noopener noreferrer" className="bg-card-bg border border-card-border rounded-lg p-3 text-center hover:shadow-md transition text-sm">
+              <a href="https://net-toolbox.vercel.app/tools/password-generator" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition text-sm" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
                 🔐 パスワード生成
               </a>
-              <a href="https://net-toolbox.vercel.app/tools/json-formatter" target="_blank" rel="noopener noreferrer" className="bg-card-bg border border-card-border rounded-lg p-3 text-center hover:shadow-md transition text-sm">
+              <a href="https://net-toolbox.vercel.app/tools/json-formatter" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition text-sm" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
                 📋 JSON整形
               </a>
-              <a href="https://net-toolbox.vercel.app/tools/character-count" target="_blank" rel="noopener noreferrer" className="bg-card-bg border border-card-border rounded-lg p-3 text-center hover:shadow-md transition text-sm">
+              <a href="https://net-toolbox.vercel.app/tools/character-count" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition text-sm" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
                 🔢 文字数カウント
               </a>
             </div>
-            <a href="https://net-toolbox.vercel.app" target="_blank" rel="noopener noreferrer" className="inline-block text-sm text-primary hover:underline font-medium">
+            <a href="https://net-toolbox.vercel.app" target="_blank" rel="noopener noreferrer" className="inline-block px-5 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition" style={{ background: "#ffffff", color: "#2563eb" }}>
               ネットツールボックスを見る →
             </a>
           </div>
