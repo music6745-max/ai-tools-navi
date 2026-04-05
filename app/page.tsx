@@ -216,6 +216,84 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Popular Guide Articles */}
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-2">
+            人気ガイド記事
+          </h2>
+          <p className="text-muted text-center mb-10">
+            AIツールの活用方法を分かりやすく解説
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {[
+              {
+                slug: "chatgpt-vs-claude",
+                title: "ChatGPT vs Claude 徹底比較【2026年最新】",
+                description: "料金・機能・日本語品質・コーディング力で徹底比較。用途別おすすめを解説。",
+                icon: "🤖",
+                category: "比較",
+                readTime: "8分",
+              },
+              {
+                slug: "ai-side-business",
+                title: "AIツールで副業を始める方法",
+                description: "AIを活用した副業の始め方。月5万円を目指す具体的なロードマップ。",
+                icon: "💰",
+                category: "副業",
+                readTime: "10分",
+              },
+              {
+                slug: "ai-image-generation",
+                title: "AI画像生成ツール徹底比較",
+                description: "Midjourney、DALL-E、Stable Diffusionなど5選を料金・特徴で比較。",
+                icon: "🎨",
+                category: "AI画像",
+                readTime: "10分",
+              },
+              {
+                slug: "ai-tools-pricing",
+                title: "主要AIツール料金比較一覧",
+                description: "主要AIツールの料金プランを一覧比較。無料プランの内容も解説。",
+                icon: "💰",
+                category: "料金比較",
+                readTime: "10分",
+              },
+            ].map((guide) => (
+              <Link
+                key={guide.slug}
+                href={`/guide/${guide.slug}`}
+                className="flex items-start gap-4 bg-card-bg border border-card-border rounded-xl p-5 hover:border-primary hover:shadow-md transition-all group"
+              >
+                <span className="text-3xl flex-shrink-0">{guide.icon}</span>
+                <div className="min-w-0">
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <span className="text-xs px-2.5 py-0.5 bg-primary-light text-primary rounded-full font-medium">
+                      {guide.category}
+                    </span>
+                    <span className="text-xs text-muted">読了 {guide.readTime}</span>
+                  </div>
+                  <h3 className="font-bold mb-1 group-hover:text-primary transition-colors">
+                    {guide.title}
+                  </h3>
+                  <p className="text-sm text-muted leading-relaxed">
+                    {guide.description}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Link
+              href="/guide"
+              className="inline-block px-6 py-3 bg-card-bg border border-card-border rounded-full text-sm font-medium hover:border-primary transition-colors"
+            >
+              ガイド記事をもっと見る →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Comparison CTA */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
@@ -231,6 +309,38 @@ export default function Home() {
           >
             比較表を見る
           </Link>
+        </div>
+      </section>
+
+      {/* Sister Site */}
+      <section className="py-16">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-950/30 dark:to-cyan-950/30 border border-blue-200 dark:border-blue-800 rounded-2xl p-8">
+            <div className="flex items-center gap-4 mb-4">
+              <span className="text-4xl">🛠️</span>
+              <div>
+                <h2 className="text-xl font-bold">無料Webツールもチェック</h2>
+                <p className="text-sm text-muted">姉妹サイト「ネットツールボックス」で232以上の便利ツールを公開中</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
+              <a href="https://net-toolbox.vercel.app/tools/qr-code" target="_blank" rel="noopener noreferrer" className="bg-white/70 dark:bg-white/5 rounded-lg p-3 text-center hover:shadow-md transition text-sm">
+                📱 QRコード作成
+              </a>
+              <a href="https://net-toolbox.vercel.app/tools/password-generator" target="_blank" rel="noopener noreferrer" className="bg-white/70 dark:bg-white/5 rounded-lg p-3 text-center hover:shadow-md transition text-sm">
+                🔐 パスワード生成
+              </a>
+              <a href="https://net-toolbox.vercel.app/tools/json-formatter" target="_blank" rel="noopener noreferrer" className="bg-white/70 dark:bg-white/5 rounded-lg p-3 text-center hover:shadow-md transition text-sm">
+                📋 JSON整形
+              </a>
+              <a href="https://net-toolbox.vercel.app/tools/character-count" target="_blank" rel="noopener noreferrer" className="bg-white/70 dark:bg-white/5 rounded-lg p-3 text-center hover:shadow-md transition text-sm">
+                🔢 文字数カウント
+              </a>
+            </div>
+            <a href="https://net-toolbox.vercel.app" target="_blank" rel="noopener noreferrer" className="inline-block text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium">
+              ネットツールボックスを見る →
+            </a>
+          </div>
         </div>
       </section>
 
