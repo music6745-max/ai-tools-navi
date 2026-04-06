@@ -93,6 +93,13 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <script
+          dangerouslySetInnerHTML={{ __html: 'var vc_pid = "892589513";' }}
+        />
+        <script
+          async
+          src="//aml.valuecommerce.com/vcdal.js"
+        />
       </head>
       <body className="min-h-full flex flex-col">
         {/* Header */}
