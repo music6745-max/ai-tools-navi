@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { siteConfig, getToolBySlug, renderStars, getPricingBadge } from "../../lib/data";
+import { AffiliateCTAMulti } from "../../components/AffiliateCTA";
 
 export const metadata: Metadata = {
   title: "マーケティングに使えるAIツール10選｜SNS運用・広告・分析を効率化",
@@ -294,6 +295,15 @@ export default function BestAIForMarketingPage() {
             ))}
           </div>
         </section>
+
+        <AffiliateCTAMulti
+          title="マーケティングサイトの構築に"
+          description="AIマーケティングツールと合わせて、自社サイトやブログの運営も始めましょう。"
+          links={[
+            { name: "ConoHa WING", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1FSQEQ+50+5SG2LT", badge: "高速", description: "国内最速級・マーケティングサイトに最適" },
+            { name: "エックスサーバー", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1B19KI+CO4+6HES1", badge: "安定", description: "大規模サイトにも対応・高い信頼性" }
+          ]}
+        />
 
         {/* CTA */}
         <section className="bg-gradient-to-r from-primary-light to-background border border-primary rounded-2xl p-8 text-center mb-8">

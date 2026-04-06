@@ -110,3 +110,57 @@ export function AffiliateCTA({
     </div>
   );
 }
+
+interface AffiliateCTALink {
+  name: string;
+  url: string;
+  badge?: string;
+  description?: string;
+}
+
+interface AffiliateCTAMultiProps {
+  title: string;
+  description: string;
+  links: AffiliateCTALink[];
+}
+
+export function AffiliateCTAMulti({ title, description, links }: AffiliateCTAMultiProps) {
+  return (
+    <div className="relative border-2 border-blue-200 dark:border-blue-800 rounded-2xl p-6 bg-card-bg shadow-lg shadow-blue-200/50 dark:shadow-blue-900/30 transition-shadow hover:shadow-xl my-8">
+      <h3 className="text-xl font-bold text-blue-600 dark:text-blue-400 mb-2">{title}</h3>
+      <p className="text-sm text-muted leading-relaxed mb-5">{description}</p>
+
+      <div className="space-y-4">
+        {links.map((link) => (
+          <div key={link.name} className="flex items-center justify-between gap-4 bg-background rounded-xl p-4 border border-card-border">
+            <div className="flex-1">
+              <div className="flex items-center gap-2 mb-1">
+                <span className="font-bold">{link.name}</span>
+                {link.badge && (
+                  <span className="text-xs font-bold px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
+                    {link.badge}
+                  </span>
+                )}
+              </div>
+              {link.description && (
+                <p className="text-xs text-muted">{link.description}</p>
+              )}
+            </div>
+            <a
+              href={link.url}
+              target="_blank"
+              rel="nofollow sponsored noopener noreferrer"
+              className="inline-block bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-400 text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-200 shrink-0"
+            >
+              詳細を見る &rarr;
+            </a>
+          </div>
+        ))}
+      </div>
+
+      <p className="text-center text-xs text-muted mt-4">
+        ※ PR・広告を含みます
+      </p>
+    </div>
+  );
+}

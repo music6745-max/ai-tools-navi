@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { siteConfig } from "../../lib/data";
+import { AffiliateCTAMulti } from "../../components/AffiliateCTA";
 
 export const metadata: Metadata = {
   title: "ビジネスで使えるAIツール活用術【2026年版】業務効率化ガイド",
@@ -158,6 +159,15 @@ export default function AIForBusinessPage() {
             <li className="flex items-start gap-2"><span className="text-primary font-bold">4.</span>チームで<strong>成功事例を共有</strong>して広げる</li>
           </ul>
         </section>
+
+        <AffiliateCTAMulti
+          title="AI×ビジネスに役立つクラウド会計ソフト"
+          description="AIツールと合わせて、経理・会計業務も効率化しましょう。"
+          links={[
+            { name: "弥生シリーズ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", badge: "定番", description: "確定率91%・シェアNo.1" },
+            { name: "freee会計", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", badge: "クラウド", description: "AI自動仕訳・スマホ対応" }
+          ]}
+        />
 
         {/* CTA */}
         <section className="bg-gradient-to-r from-primary-light to-background border border-primary rounded-2xl p-8 text-center">

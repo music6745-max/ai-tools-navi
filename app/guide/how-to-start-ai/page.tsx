@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { siteConfig, getToolBySlug, renderStars, getPricingBadge } from "../../lib/data";
 import { ShareButtons } from "../../components/ShareButtons";
+import { AffiliateCTAMulti } from "../../components/AffiliateCTA";
 
 export const metadata: Metadata = {
   title: "【2026年版】AIツールの始め方ガイド｜初心者向け完全解説",
@@ -183,6 +184,15 @@ export default function HowToStartAIPage() {
             ))}
           </div>
         </section>
+
+        <AffiliateCTAMulti
+          title="AIを本格的に学ぶなら"
+          description="AIの基礎を理解したら、プログラミングスキルも身につけてAI開発にチャレンジしましょう。"
+          links={[
+            { name: "SkillHacks", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4DRW36+4K3S+5YJRM", badge: "初心者向け", description: "買い切り型・質問無制限" },
+            { name: "Winスクール", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4D6GHE+529E+5YJRM", badge: "対面あり", description: "全国展開・AI講座あり" }
+          ]}
+        />
 
         {/* CTA */}
         <section className="bg-gradient-to-r from-primary-light to-background border border-primary rounded-2xl p-8 text-center">
