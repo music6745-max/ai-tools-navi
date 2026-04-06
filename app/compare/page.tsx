@@ -39,7 +39,7 @@ export default function ComparePage() {
     },
     {
       label: "有料プラン",
-      values: ["$20/月（Plus）", "$20/月（Pro）", "¥2,900/月（Advanced）"],
+      values: ["約3,000円/月（Plus）", "約3,000円/月（Pro）", "¥2,900/月（Advanced）"],
     },
     {
       label: "最大コンテキスト",

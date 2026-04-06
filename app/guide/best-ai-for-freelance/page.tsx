@@ -22,7 +22,7 @@ interface FreelanceTool {
 
 const freelanceToolsData: FreelanceTool[] = [
   { slug: "chatgpt", useCase: "提案書・メール作成、企画書のたたき台、リサーチ補助", roi: "作業時間を約50%短縮。月10時間以上の時短効果", freelanceNote: "クライアントへの提案書やメール文面を瞬時に作成。無料プランでも十分実用的。" },
-  { slug: "claude", useCase: "長文レポート作成、契約書の確認補助、データ分析", roi: "長文タスクの処理速度が3倍に。月額$20で元が取れる", freelanceNote: "長文の処理能力に優れ、ドキュメント作業が多いフリーランスに最適。" },
+  { slug: "claude", useCase: "長文レポート作成、契約書の確認補助、データ分析", roi: "長文タスクの処理速度が3倍に。月額約3,000円で元が取れる", freelanceNote: "長文の処理能力に優れ、ドキュメント作業が多いフリーランスに最適。" },
   { slug: "jasper", useCase: "マーケティングコピー、広告文、SNS投稿の作成", roi: "コピーライティング案件の対応速度が2倍に", freelanceNote: "マーケティング特化のAI。広告文やSNS運用を請け負うフリーランスに。" },
   { slug: "midjourney", useCase: "プレゼン用ビジュアル、SNS画像、コンセプトアート", roi: "デザイナーへの外注費を月3〜5万円削減可能", freelanceNote: "高品質な画像生成で、デザイン外注コストを大幅カット。" },
   { slug: "canva-ai", useCase: "プレゼン資料、SNS投稿画像、名刺・ロゴデザイン", roi: "デザインツール費用を一本化。月1,500円で全て対応", freelanceNote: "AI機能搭載でプロ品質のデザインが誰でも作れる。" },

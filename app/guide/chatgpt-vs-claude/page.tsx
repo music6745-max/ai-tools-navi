@@ -110,9 +110,9 @@ export default function ChatGPTvsClaudePage() {
               <tbody>
                 {[
                   { label: "無料プラン", values: ["GPT-4o制限付き", "Claude 3.5制限付き"] },
-                  { label: "個人プラン", values: ["Plus $20/月", "Pro $20/月"] },
-                  { label: "上位プラン", values: ["Pro $200/月", "Max $100/月〜"] },
-                  { label: "チーム", values: ["Team $25/人/月", "Team $30/人/月"] },
+                  { label: "個人プラン", values: ["Plus 約3,000円/月", "Pro 約3,000円/月"] },
+                  { label: "上位プラン", values: ["Pro 約30,000円/月", "Max 約15,000円/月〜"] },
+                  { label: "チーム", values: ["Team 約3,800円/人/月", "Team 約4,500円/人/月"] },
                   { label: "企業", values: ["Enterprise（要問合せ）", "Enterprise（要問合せ）"] },
                 ].map((row, i) => (
                   <tr key={i}>
@@ -127,7 +127,7 @@ export default function ChatGPTvsClaudePage() {
           </div>
           <div className="bg-primary-light rounded-xl p-4 text-sm mt-4">
             <p className="font-bold mb-1">料金はほぼ同等</p>
-            <p className="text-muted">個人利用であれば、どちらも月額$20で利用可能。まずは無料プランで試してから有料に移行するのがおすすめです。</p>
+            <p className="text-muted">個人利用であれば、どちらも月額約3,000円で利用可能。まずは無料プランで試してから有料に移行するのがおすすめです。</p>
           </div>
         </section>
 

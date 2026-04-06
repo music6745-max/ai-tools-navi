@@ -34,7 +34,7 @@ export default function CompareWritingPage() {
   const comparisonData = [
     { label: "開発元", values: ["Jasper AI（米国）", "Copy.ai（米国）", "Writesonic（米国）", "Catchy（日本）", "SAKUBUN（日本）"] },
     { label: "無料プラン", values: ["7日間トライアル", "月2,000文字", "月10,000文字", "月3,000文字", "月5,000文字"] },
-    { label: "有料プラン", values: ["$49/月〜", "$49/月〜", "$20/月〜", "¥3,000/月〜", "¥9,800/月〜"] },
+    { label: "有料プラン", values: ["約7,400円/月〜", "約7,400円/月〜", "約3,000円/月〜", "¥3,000/月〜", "¥9,800/月〜"] },
     { label: "日本語品質", values: ["○ 良好", "○ 良好", "○ 良好", "◎ ネイティブ", "◎ ネイティブ"] },
     { label: "ブログ記事", values: ["◎ 得意", "◎ 得意", "◎ 得意", "◎ 得意", "◎ 得意"] },
     { label: "広告コピー", values: ["◎ 得意", "◎ 得意", "○ 対応", "◎ 得意", "○ 対応"] },
@@ -224,7 +224,7 @@ export default function CompareWritingPage() {
               <p className="text-3xl mb-2">💰</p>
               <h3 className="font-bold mb-2">コスパ重視なら</h3>
               <p className="text-primary font-bold text-lg mb-1">Writesonic</p>
-              <p className="text-sm text-muted">月$20からの低価格帯。SEOツール内蔵で記事量産に向いている。</p>
+              <p className="text-sm text-muted">月約3,000円からの低価格帯。SEOツール内蔵で記事量産に向いている。</p>
             </div>
           </div>
         </section>

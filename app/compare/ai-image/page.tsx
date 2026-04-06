@@ -30,7 +30,7 @@ export default function CompareImagePage() {
 
   const comparisonData = [
     { label: "開発元", values: ["Midjourney Inc.", "OpenAI", "Stability AI"] },
-    { label: "料金", values: ["$10/月〜", "ChatGPT Plus $20/月", "無料（オープンソース）"] },
+    { label: "料金", values: ["約1,500円/月〜", "ChatGPT Plus 約3,000円/月", "無料（オープンソース）"] },
     { label: "画像品質", values: ["◎ 最高品質", "◎ 高品質", "○ カスタマイズ次第"] },
     { label: "テキスト描画", values: ["○ 改善中", "◎ 優秀", "△ 苦手"] },
     { label: "生成速度", values: ["◎ 高速", "○ 標準", "△ GPU依存"] },

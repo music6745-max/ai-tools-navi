@@ -16,7 +16,7 @@ export default function AIEnglishToolsPage() {
   const tools = [
     {
       name: "ChatGPT（英語学習活用）",
-      price: "無料プラン / Plus 月額$20",
+      price: "無料プラン / Plus 月額約3,000円",
       aiFeature: "自然な英会話練習、英作文添削、文法解説、TOEIC対策問題作成",
       features: ["音声会話モードで発音練習", "レベルに合わせた会話相手になる", "英作文の添削・フィードバック", "ビジネス英語のシミュレーション"],
       speakingSupport: "音声モードでリアルタイム会話が可能。発音フィードバックあり。",

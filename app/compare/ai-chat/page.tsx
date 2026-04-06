@@ -32,8 +32,8 @@ export default function CompareChatPage() {
   const comparisonData = [
     { label: "開発元", values: ["OpenAI", "Anthropic", "Google"] },
     { label: "無料プラン", values: ["GPT-4o制限付き", "Claude 3.5制限付き", "Gemini Pro無制限"] },
-    { label: "有料プラン", values: ["Plus $20/月", "Pro $20/月", "Advanced ¥2,900/月"] },
-    { label: "最上位プラン", values: ["Pro $200/月", "Max $100/月〜", "Ultra ¥4,900/月"] },
+    { label: "有料プラン", values: ["Plus 約3,000円/月", "Pro 約3,000円/月", "Advanced ¥2,900/月"] },
+    { label: "最上位プラン", values: ["Pro 約30,000円/月", "Max 約15,000円/月〜", "Ultra ¥4,900/月"] },
     { label: "最大コンテキスト", values: ["128Kトークン", "200Kトークン", "1Mトークン"] },
     { label: "画像認識", values: ["◎", "◎", "◎"] },
     { label: "画像生成", values: ["◎（DALL-E / GPT-4o）", "×", "◎（Imagen 3）"] },
@@ -43,7 +43,7 @@ export default function CompareChatPage() {
     { label: "コード実行", values: ["◎（サンドボックス）", "◎（Artifacts）", "◎"] },
     { label: "プラグイン/拡張", values: ["◎（GPTs Store）", "◎（Projects/MCP）", "◎（Gems）"] },
     { label: "API提供", values: ["◎ 充実", "◎ 充実", "◎ 充実"] },
-    { label: "API料金（入力）", values: ["$2.5/1Mトークン", "$3/1Mトークン", "$1.25/1Mトークン"] },
+    { label: "API料金（入力）", values: ["約375円/1Mトークン", "約450円/1Mトークン", "約188円/1Mトークン"] },
     { label: "日本語品質", values: ["◎ 優秀", "◎ 非常に自然", "○ 良好"] },
     { label: "長文出力", values: ["○ 良い", "◎ 非常に良い", "○ 良い"] },
     { label: "推論・分析力", values: ["◎ o3モデル搭載", "◎ 非常に高い", "◎ 高い"] },
@@ -231,12 +231,12 @@ export default function CompareChatPage() {
               </thead>
               <tbody>
                 {[
-                  { model: "GPT-4o", input: "$2.50", output: "$10.00", note: "バランス型" },
-                  { model: "GPT-4o mini", input: "$0.15", output: "$0.60", note: "低コスト" },
-                  { model: "Claude Sonnet 4", input: "$3.00", output: "$15.00", note: "高性能" },
-                  { model: "Claude Haiku 3.5", input: "$0.80", output: "$4.00", note: "高速・低コスト" },
-                  { model: "Gemini 1.5 Pro", input: "$1.25", output: "$5.00", note: "大容量コンテキスト" },
-                  { model: "Gemini 1.5 Flash", input: "$0.075", output: "$0.30", note: "最安値クラス" },
+                  { model: "GPT-4o", input: "約375円", output: "約1,500円", note: "バランス型" },
+                  { model: "GPT-4o mini", input: "約23円", output: "約90円", note: "低コスト" },
+                  { model: "Claude Sonnet 4", input: "約450円", output: "約2,250円", note: "高性能" },
+                  { model: "Claude Haiku 3.5", input: "約120円", output: "約600円", note: "高速・低コスト" },
+                  { model: "Gemini 1.5 Pro", input: "約188円", output: "約750円", note: "大容量コンテキスト" },
+                  { model: "Gemini 1.5 Flash", input: "約11円", output: "約45円", note: "最安値クラス" },
                 ].map((row, i) => (
                   <tr key={i}>
                     <td className="font-medium">{row.model}</td>

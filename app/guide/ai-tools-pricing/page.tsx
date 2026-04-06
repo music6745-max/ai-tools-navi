@@ -21,39 +21,39 @@ interface PricingEntry {
 
 const pricingData: Record<string, PricingEntry[]> = {
   "チャットAI": [
-    { slug: "chatgpt", freePlan: "GPT-4o制限あり、月間メッセージ上限あり", paidPlan: "Plus $20/月、Pro $200/月", recommended: "Plus（$20/月）が最もコスパ良し" },
-    { slug: "claude", freePlan: "Claude 3.5 Sonnet制限あり", paidPlan: "Pro $20/月、Max $100/月", recommended: "Pro（$20/月）で十分実用的" },
+    { slug: "chatgpt", freePlan: "GPT-4o制限あり、月間メッセージ上限あり", paidPlan: "Plus 約3,000円/月、Pro 約30,000円/月", recommended: "Plus（約3,000円/月）が最もコスパ良し" },
+    { slug: "claude", freePlan: "Claude 3.5 Sonnet制限あり", paidPlan: "Pro 約3,000円/月、Max 約15,000円/月", recommended: "Pro（約3,000円/月）で十分実用的" },
     { slug: "gemini", freePlan: "Gemini 1.5 Flash利用可能", paidPlan: "Advanced ¥2,900/月", recommended: "Google系サービス利用者はAdvanced" },
-    { slug: "perplexity", freePlan: "1日5回のPro検索", paidPlan: "Pro $20/月", recommended: "リサーチ用途ならPro推奨" },
+    { slug: "perplexity", freePlan: "1日5回のPro検索", paidPlan: "Pro 約3,000円/月", recommended: "リサーチ用途ならPro推奨" },
     { slug: "grok", freePlan: "基本機能利用可能", paidPlan: "X Premium+に含まれる", recommended: "X（Twitter）ユーザーに最適" },
   ],
   "画像生成AI": [
-    { slug: "midjourney", freePlan: "なし（有料のみ）", paidPlan: "Basic $10/月、Standard $30/月", recommended: "Standard（$30/月）で商用利用可" },
-    { slug: "dall-e", freePlan: "ChatGPT無料プランで制限付き利用可", paidPlan: "ChatGPT Plus内で利用（$20/月）", recommended: "ChatGPT Plusに含まれるのでお得" },
+    { slug: "midjourney", freePlan: "なし（有料のみ）", paidPlan: "Basic 約1,500円/月、Standard 約4,500円/月", recommended: "Standard（約4,500円/月）で商用利用可" },
+    { slug: "dall-e", freePlan: "ChatGPT無料プランで制限付き利用可", paidPlan: "ChatGPT Plus内で利用（約3,000円/月）", recommended: "ChatGPT Plusに含まれるのでお得" },
     { slug: "stable-diffusion", freePlan: "オープンソース（ローカル実行無料）", paidPlan: "API利用は従量課金", recommended: "PC性能があればローカル実行がコスパ最強" },
     { slug: "adobe-firefly", freePlan: "月25クレジット", paidPlan: "Creative Cloud内 ¥2,728/月〜", recommended: "Adobe製品利用者はCreative Cloud" },
     { slug: "canva-ai", freePlan: "基本的なAI機能利用可能", paidPlan: "Pro ¥1,500/月", recommended: "デザイン全般ならPro一択" },
-    { slug: "ideogram", freePlan: "1日25枚生成可能", paidPlan: "Basic $8/月、Plus $20/月", recommended: "テキスト入り画像ならイチオシ" },
+    { slug: "ideogram", freePlan: "1日25枚生成可能", paidPlan: "Basic 約1,200円/月、Plus 約3,000円/月", recommended: "テキスト入り画像ならイチオシ" },
   ],
   "動画生成AI": [
-    { slug: "sora", freePlan: "ChatGPT Plusに含まれる（制限あり）", paidPlan: "Pro $200/月で無制限", recommended: "Plus（$20/月）で試してからPro検討" },
-    { slug: "runway", freePlan: "125クレジット（登録時）", paidPlan: "Standard $15/月、Pro $35/月", recommended: "本格利用ならPro（$35/月）" },
-    { slug: "pika", freePlan: "月150クレジット", paidPlan: "Standard $10/月、Pro $35/月", recommended: "手軽に始めるならStandard" },
-    { slug: "kling", freePlan: "毎日66クレジット", paidPlan: "Pro $9.9/月", recommended: "コスパ重視ならKling" },
+    { slug: "sora", freePlan: "ChatGPT Plusに含まれる（制限あり）", paidPlan: "Pro 約30,000円/月で無制限", recommended: "Plus（約3,000円/月）で試してからPro検討" },
+    { slug: "runway", freePlan: "125クレジット（登録時）", paidPlan: "Standard 約2,300円/月、Pro 約5,300円/月", recommended: "本格利用ならPro（約5,300円/月）" },
+    { slug: "pika", freePlan: "月150クレジット", paidPlan: "Standard 約1,500円/月、Pro 約5,300円/月", recommended: "手軽に始めるならStandard" },
+    { slug: "kling", freePlan: "毎日66クレジット", paidPlan: "Pro 約1,500円/月", recommended: "コスパ重視ならKling" },
     { slug: "hailuo", freePlan: "基本機能無料", paidPlan: "有料プランあり", recommended: "無料で試してみる価値あり" },
   ],
   "音声・音楽AI": [
-    { slug: "suno", freePlan: "1日10曲生成可能", paidPlan: "Pro $10/月、Premier $30/月", recommended: "音楽制作ならPro（$10/月）" },
-    { slug: "elevenlabs", freePlan: "月10,000文字まで", paidPlan: "Starter $5/月、Creator $22/月", recommended: "ナレーション用途ならCreator" },
-    { slug: "udio", freePlan: "月100曲まで", paidPlan: "Standard $10/月、Pro $30/月", recommended: "Standard（$10/月）で十分" },
-    { slug: "murf", freePlan: "制限付き利用可能", paidPlan: "Creator $29/月", recommended: "ビジネスナレーション用" },
+    { slug: "suno", freePlan: "1日10曲生成可能", paidPlan: "Pro 約1,500円/月、Premier 約4,500円/月", recommended: "音楽制作ならPro（約1,500円/月）" },
+    { slug: "elevenlabs", freePlan: "月10,000文字まで", paidPlan: "Starter 約750円/月、Creator 約3,300円/月", recommended: "ナレーション用途ならCreator" },
+    { slug: "udio", freePlan: "月100曲まで", paidPlan: "Standard 約1,500円/月、Pro 約4,500円/月", recommended: "Standard（約1,500円/月）で十分" },
+    { slug: "murf", freePlan: "制限付き利用可能", paidPlan: "Creator 約4,400円/月", recommended: "ビジネスナレーション用" },
   ],
   "コーディングAI": [
-    { slug: "github-copilot", freePlan: "無料プランあり（月間制限あり）", paidPlan: "Pro $10/月、Business $19/月", recommended: "個人ならPro（$10/月）" },
-    { slug: "cursor", freePlan: "月2000回の補完", paidPlan: "Pro $20/月、Business $40/月", recommended: "メインエディタにするならPro" },
+    { slug: "github-copilot", freePlan: "無料プランあり（月間制限あり）", paidPlan: "Pro 約1,500円/月、Business 約2,900円/月", recommended: "個人ならPro（約1,500円/月）" },
+    { slug: "cursor", freePlan: "月2000回の補完", paidPlan: "Pro 約3,000円/月、Business 約6,000円/月", recommended: "メインエディタにするならPro" },
     { slug: "claude-code", freePlan: "なし（Claude API利用）", paidPlan: "API従量課金", recommended: "開発者はAPI直接利用が効率的" },
-    { slug: "replit", freePlan: "基本機能無料", paidPlan: "Replit Core $25/月", recommended: "学習用途なら無料で十分" },
-    { slug: "v0", freePlan: "月間クレジット制限あり", paidPlan: "Premium $20/月", recommended: "フロントエンド開発にPremium" },
+    { slug: "replit", freePlan: "基本機能無料", paidPlan: "Replit Core 約3,800円/月", recommended: "学習用途なら無料で十分" },
+    { slug: "v0", freePlan: "月間クレジット制限あり", paidPlan: "Premium 約3,000円/月", recommended: "フロントエンド開発にPremium" },
   ],
 };
 
@@ -115,13 +115,13 @@ export default function AIToolsPricingPage() {
             <span className="text-primary">1.</span> AIツール料金の全体感
           </h2>
           <div className="text-sm text-muted leading-relaxed space-y-4 mb-6">
-            <p>2026年現在、多くのAIツールは無料プランを提供しており、お金をかけずにAIを試すことができます。有料プランの相場は月額$10〜$30（約1,500〜4,500円）で、より多くの機能や高い利用制限が解放されます。</p>
+            <p>2026年現在、多くのAIツールは無料プランを提供しており、お金をかけずにAIを試すことができます。有料プランの相場は月額約1,500〜4,500円で、より多くの機能や高い利用制限が解放されます。</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
               { label: "無料で十分", desc: "基本的な質問・文章作成なら無料プランで対応可能", color: "bg-green-100 text-green-700" },
-              { label: "月$10〜20で快適", desc: "仕事で本格的に使うなら月$10〜20の有料プランがおすすめ", color: "bg-blue-100 text-blue-700" },
-              { label: "月$30〜でプロ仕様", desc: "クリエイター・開発者向けのプロプランは月$30以上", color: "bg-purple-100 text-purple-700" },
+              { label: "月約1,500〜3,000円で快適", desc: "仕事で本格的に使うなら月約1,500〜3,000円の有料プランがおすすめ", color: "bg-blue-100 text-blue-700" },
+              { label: "月約4,500円〜でプロ仕様", desc: "クリエイター・開発者向けのプロプランは月約4,500円以上", color: "bg-purple-100 text-purple-700" },
             ].map((item, i) => (
               <div key={i} className="bg-card-bg border border-card-border rounded-xl p-4 text-center">
                 <span className={`inline-block text-xs px-3 py-1 rounded-full font-bold mb-2 ${item.color}`}>{item.label}</span>

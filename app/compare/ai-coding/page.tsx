@@ -30,7 +30,7 @@ export default function CompareCodingPage() {
 
   const comparisonData = [
     { label: "開発元", values: ["GitHub (Microsoft)", "Anysphere", "Anthropic"] },
-    { label: "料金", values: ["$10/月〜", "無料プランあり / $20/月", "Claude Pro $20/月"] },
+    { label: "料金", values: ["約1,500円/月〜", "無料プランあり / 約3,000円/月", "Claude Pro 約3,000円/月"] },
     { label: "ベースエディタ", values: ["VS Code / JetBrains", "VS Code Fork", "ターミナル (CLI)"] },
     { label: "AIモデル", values: ["GPT-4o / Claude", "GPT-4o / Claude", "Claude (Opus/Sonnet)"] },
     { label: "コード補完", values: ["◎ リアルタイム", "◎ リアルタイム", "× チャット型"] },

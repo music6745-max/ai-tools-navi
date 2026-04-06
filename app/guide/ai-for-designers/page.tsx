@@ -141,7 +141,7 @@ export default function AIForDesignersPage() {
                 </tr>
               </thead>
               <tbody className="text-muted">
-                <tr><td className="border border-card-border p-3">Midjourney</td><td className="border border-card-border p-3">アート・イラスト</td><td className="border border-card-border p-3">$10/月〜</td><td className="border border-card-border p-3">有料プランで可</td></tr>
+                <tr><td className="border border-card-border p-3">Midjourney</td><td className="border border-card-border p-3">アート・イラスト</td><td className="border border-card-border p-3">約1,500円/月〜</td><td className="border border-card-border p-3">有料プランで可</td></tr>
                 <tr><td className="border border-card-border p-3">DALL-E</td><td className="border border-card-border p-3">汎用画像生成</td><td className="border border-card-border p-3">従量課金</td><td className="border border-card-border p-3">可</td></tr>
                 <tr><td className="border border-card-border p-3">Adobe Firefly</td><td className="border border-card-border p-3">写真編集・素材</td><td className="border border-card-border p-3">無料枠あり</td><td className="border border-card-border p-3">可（安心）</td></tr>
                 <tr><td className="border border-card-border p-3">Canva AI</td><td className="border border-card-border p-3">SNS・バナー</td><td className="border border-card-border p-3">無料プランあり</td><td className="border border-card-border p-3">可</td></tr>

@@ -29,7 +29,7 @@ export default function CompareVideoPage() {
 
   const comparisonData = [
     { label: "開発元", values: ["OpenAI", "Runway", "Pika Labs"] },
-    { label: "料金", values: ["ChatGPT Plus $20/月〜", "$12/月〜", "無料プランあり / $8/月〜"] },
+    { label: "料金", values: ["ChatGPT Plus 約3,000円/月〜", "約1,800円/月〜", "無料プランあり / 約1,200円/月〜"] },
     { label: "動画品質", values: ["◎ 最高品質", "◎ プロ品質", "○ 良好"] },
     { label: "最大尺", values: ["20秒", "16秒", "3秒（無料）/ 10秒"] },
     { label: "解像度", values: ["1080p", "4K対応", "1080p"] },

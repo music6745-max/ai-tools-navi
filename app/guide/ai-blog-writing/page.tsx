@@ -192,7 +192,7 @@ export default function AIBlogWritingPage() {
                 </tr>
                 <tr>
                   <td className="border border-card-border p-3">AIツール（ChatGPTなど）</td>
-                  <td className="border border-card-border p-3 text-muted">無料〜月$20</td>
+                  <td className="border border-card-border p-3 text-muted">無料〜月額約3,000円</td>
                   <td className="border border-card-border p-3 text-muted">無料プランでも記事作成可能</td>
                 </tr>
               </tbody>

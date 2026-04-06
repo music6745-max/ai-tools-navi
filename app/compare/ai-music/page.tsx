@@ -33,7 +33,7 @@ export default function CompareMusicPage() {
   const comparisonData = [
     { label: "開発元", values: ["Suno Inc.", "Udio (元Google研究者)", "AIVA Technologies", "SOUNDRAW（日本）"] },
     { label: "料金（無料）", values: ["1日5曲まで", "月10曲まで", "月3曲まで", "無料プランなし"] },
-    { label: "有料プラン", values: ["$10/月〜", "$10/月〜", "$15/月〜", "$16.99/月〜"] },
+    { label: "有料プラン", values: ["約1,500円/月〜", "約1,500円/月〜", "約2,300円/月〜", "約2,500円/月〜"] },
     { label: "歌詞付き楽曲", values: ["◎ 得意", "◎ 得意", "× 不可", "× 不可"] },
     { label: "インスト曲", values: ["○", "○", "◎ 得意", "◎ 得意"] },
     { label: "音楽ジャンル", values: ["幅広い", "幅広い", "クラシック中心", "BGM・商用向け"] },
