@@ -91,7 +91,7 @@ export const tools: AITool[] = [
       "OpenAIが開発した世界で最も利用されている対話型AI。GPT-4oモデルにより高精度な回答を提供。",
     category: "ai-chat",
     icon: "🤖",
-    pricing: "無料プランあり / Plus $20/月",
+    pricing: "無料プランあり / Plus 約3,000円/月",
     features: [
       "GPT-4o搭載の高精度な対話",
       "画像認識・生成機能",
@@ -124,7 +124,7 @@ export const tools: AITool[] = [
       "Anthropic開発の高性能AI。長文の理解・生成に優れ、安全性を重視した設計が特徴。",
     category: "ai-chat",
     icon: "🧠",
-    pricing: "無料プランあり / Pro $20/月",
+    pricing: "無料プランあり / Pro 約3,000円/月",
     features: [
       "20万トークンの長大コンテキスト",
       "高度な推論・分析能力",
@@ -190,7 +190,7 @@ export const tools: AITool[] = [
       "AI搭載の次世代検索エンジン。回答にソースを明示し、信頼性の高い情報を提供。",
     category: "ai-chat",
     icon: "🔍",
-    pricing: "無料プランあり / Pro $20/月",
+    pricing: "無料プランあり / Pro 約3,000円/月",
     features: [
       "ソース付きの回答表示",
       "リアルタイムウェブ検索",
@@ -257,7 +257,7 @@ export const tools: AITool[] = [
       "最高品質のAI画像生成ツール。アート性の高い美しい画像を生成可能。",
     category: "ai-image",
     icon: "🖼️",
-    pricing: "Basic $10/月〜",
+    pricing: "Basic 約1,500円/月〜",
     features: [
       "超高品質なアート画像生成",
       "スタイルの細かい指定が可能",
@@ -389,7 +389,7 @@ export const tools: AITool[] = [
       "ゲーム・エンタメ向けの画像生成AI。キャラクターやアセット制作に特化。",
     category: "ai-image",
     icon: "🎮",
-    pricing: "無料プランあり / Artisan $12/月〜",
+    pricing: "無料プランあり / Artisan 約1,800円/月〜",
     features: [
       "ゲームアセット生成に最適化",
       "キャラクター一貫性機能",
@@ -423,7 +423,7 @@ export const tools: AITool[] = [
       "OpenAI開発の高品質AI動画生成。テキストから最大1分のリアルな動画を生成。",
     category: "ai-video",
     icon: "🎥",
-    pricing: "ChatGPT Plus内で利用可 / Pro $200/月",
+    pricing: "ChatGPT Plus内で利用可 / Pro 約30,000円/月",
     features: [
       "テキストから高品質動画生成",
       "最大1080p・1分の動画",
@@ -456,7 +456,7 @@ export const tools: AITool[] = [
       "プロ向けAI動画生成・編集ツール。映像制作のワークフローに統合可能。",
     category: "ai-video",
     icon: "🎬",
-    pricing: "無料トライアルあり / Standard $12/月〜",
+    pricing: "無料トライアルあり / Standard 約1,800円/月〜",
     features: [
       "テキスト・画像から動画生成",
       "Motion Brush機能",
@@ -489,7 +489,7 @@ export const tools: AITool[] = [
       "手軽に使えるAI動画生成ツール。シンプルなUIで初心者にも扱いやすい。",
     category: "ai-video",
     icon: "⚡",
-    pricing: "無料プランあり / Standard $8/月〜",
+    pricing: "無料プランあり / Standard 約1,200円/月〜",
     features: [
       "テキストから動画生成",
       "画像から動画生成",
@@ -522,7 +522,7 @@ export const tools: AITool[] = [
       "中国Kuaishou開発の高品質動画生成AI。リアルな人物動画の生成に強み。",
     category: "ai-video",
     icon: "🌟",
-    pricing: "無料枠あり / Pro $5.99/月〜",
+    pricing: "無料枠あり / Pro 約900円/月〜",
     features: [
       "最大2分の動画生成",
       "高品質な人物動画",
@@ -556,7 +556,7 @@ export const tools: AITool[] = [
       "最高品質のAI音声合成ツール。自然な音声生成とボイスクローニングが可能。",
     category: "ai-audio",
     icon: "🎙️",
-    pricing: "無料プランあり / Starter $5/月〜",
+    pricing: "無料プランあり / Starter 約750円/月〜",
     features: [
       "超自然な音声合成",
       "ボイスクローニング機能",
@@ -589,7 +589,7 @@ export const tools: AITool[] = [
       "テキストから楽曲を自動生成するAI。歌詞付きの完成度の高い音楽を作成。",
     category: "ai-audio",
     icon: "🎶",
-    pricing: "無料プランあり / Pro $10/月〜",
+    pricing: "無料プランあり / Pro 約1,500円/月〜",
     features: [
       "テキストから楽曲生成",
       "歌詞付き楽曲の作成",
@@ -622,7 +622,7 @@ export const tools: AITool[] = [
       "高品質な音楽生成AI。多彩なジャンルと高い音楽性で話題のサービス。",
     category: "ai-audio",
     icon: "🎸",
-    pricing: "無料プランあり / Standard $10/月〜",
+    pricing: "無料プランあり / Standard 約1,500円/月〜",
     features: [
       "高品質な楽曲生成",
       "多彩なジャンル対応",
@@ -689,7 +689,7 @@ export const tools: AITool[] = [
       "マーケティング特化のAIライティングツール。広告コピーやSEO記事の作成に強み。",
     category: "ai-writing",
     icon: "📝",
-    pricing: "Creator $49/月〜",
+    pricing: "Creator 約7,400円/月〜",
     features: [
       "50以上のテンプレート",
       "ブランドボイス設定",
@@ -722,7 +722,7 @@ export const tools: AITool[] = [
       "AIコピーライティングツール。マーケティング文章からメール、SNS投稿まで幅広く対応。",
     category: "ai-writing",
     icon: "✏️",
-    pricing: "無料プランあり / Pro $49/月〜",
+    pricing: "無料プランあり / Pro 約7,400円/月〜",
     features: [
       "90以上のコピーテンプレート",
       "ワークフロー自動化",
@@ -755,7 +755,7 @@ export const tools: AITool[] = [
       "Notionに統合されたAIアシスタント。ドキュメント作成・編集・要約を効率化。",
     category: "ai-writing",
     icon: "📓",
-    pricing: "Notion有料プラン + AI $10/メンバー/月",
+    pricing: "Notion有料プラン + AI 約1,500円/メンバー/月",
     features: [
       "文章の自動生成・編集",
       "要約・翻訳機能",
@@ -822,7 +822,7 @@ export const tools: AITool[] = [
       "GitHub公式のAIコーディングアシスタント。エディタに統合され、リアルタイムでコード補完。",
     category: "ai-coding",
     icon: "🐙",
-    pricing: "Individual $10/月 / Business $19/月",
+    pricing: "Individual 約1,500円/月 / Business 約2,800円/月",
     features: [
       "リアルタイムコード補完",
       "チャットでコード生成",
@@ -855,7 +855,7 @@ export const tools: AITool[] = [
       "AI機能を中心に設計されたコードエディタ。プロジェクト全体を理解したコード生成が可能。",
     category: "ai-coding",
     icon: "🖱️",
-    pricing: "無料プランあり / Pro $20/月",
+    pricing: "無料プランあり / Pro 約3,000円/月",
     features: [
       "プロジェクト全体のコンテキスト理解",
       "AIによるコード生成・編集",
@@ -921,7 +921,7 @@ export const tools: AITool[] = [
       "ブラウザベースのAI開発環境。コード生成からデプロイまでワンストップで完結。",
     category: "ai-coding",
     icon: "🌐",
-    pricing: "無料プランあり / Replit Core $25/月",
+    pricing: "無料プランあり / Replit Core 約3,800円/月",
     features: [
       "ブラウザ上で完結する開発環境",
       "AIによるアプリ自動生成",
@@ -988,7 +988,7 @@ export const tools: AITool[] = [
       "AIでプレゼン・ドキュメントを自動作成。テキストから美しいスライドを瞬時に生成。",
     category: "ai-business",
     icon: "📊",
-    pricing: "無料プランあり / Plus $10/月〜",
+    pricing: "無料プランあり / Plus 約1,500円/月〜",
     features: [
       "テキストからスライド自動生成",
       "美しいテンプレート",
@@ -1021,7 +1021,7 @@ export const tools: AITool[] = [
       "AIがデザインルールを自動適用するプレゼンツール。プロ品質のスライドを簡単作成。",
     category: "ai-business",
     icon: "💎",
-    pricing: "Pro $12/月〜",
+    pricing: "Pro 約1,800円/月〜",
     features: [
       "AIスマートテンプレート",
       "デザインルール自動適用",
@@ -1054,7 +1054,7 @@ export const tools: AITool[] = [
       "ノーコードでAIアプリを構築できるプラットフォーム。チャットボットやワークフローを簡単作成。",
     category: "ai-business",
     icon: "🔨",
-    pricing: "無料プランあり / Pro $59/月〜",
+    pricing: "無料プランあり / Pro 約8,800円/月〜",
     features: [
       "ノーコードAIアプリ構築",
       "RAG機能でナレッジベース構築",
@@ -1088,7 +1088,7 @@ export const tools: AITool[] = [
       "xAI開発のAIチャットボット。X（旧Twitter）のリアルタイムデータにアクセスし、最新の話題にも対応。",
     category: "ai-chat",
     icon: "⚡",
-    pricing: "X Premium+に含まれる / SuperGrok $30/月",
+    pricing: "X Premium+に含まれる / SuperGrok 約4,500円/月",
     features: [
       "Xのリアルタイムデータ参照",
       "画像理解・分析",
@@ -1121,7 +1121,7 @@ export const tools: AITool[] = [
       "Quora開発の複数AIモデル統合プラットフォーム。ChatGPT、Claude、Geminiなどを1つのアプリで利用可能。",
     category: "ai-chat",
     icon: "🌐",
-    pricing: "無料プランあり / 月額$19.99",
+    pricing: "無料プランあり / 月額約3,000円",
     features: [
       "複数AIモデルを一つのアプリで",
       "カスタムボット作成",
@@ -1155,7 +1155,7 @@ export const tools: AITool[] = [
       "テキスト描画に優れたAI画像生成ツール。ロゴやポスターなど文字入り画像の生成が得意。",
     category: "ai-image",
     icon: "🖼️",
-    pricing: "無料プランあり / Pro $7/月〜",
+    pricing: "無料プランあり / Pro 約1,000円/月〜",
     features: [
       "テキスト描画の高精度",
       "ロゴ・ポスター生成",
@@ -1255,7 +1255,7 @@ export const tools: AITool[] = [
       "Luma AI開発の動画生成ツール。テキストや画像から高品質な動画を高速で生成。",
     category: "ai-video",
     icon: "💫",
-    pricing: "無料プランあり / Standard $23.99/月〜",
+    pricing: "無料プランあり / Standard 約3,600円/月〜",
     features: [
       "テキストから動画生成",
       "画像から動画生成",
@@ -1322,7 +1322,7 @@ export const tools: AITool[] = [
       "プロ品質のAI音声合成ツール。120+のリアルな音声でナレーション、動画、プレゼン用の音声を作成。",
     category: "ai-audio",
     icon: "🎙️",
-    pricing: "無料トライアルあり / Creator $26/月〜",
+    pricing: "無料トライアルあり / Creator 約3,900円/月〜",
     features: [
       "120+のリアルなAI音声",
       "20+言語対応",
@@ -1355,7 +1355,7 @@ export const tools: AITool[] = [
       "日本発のAI音楽生成サービス。ジャンル・ムード・楽器を選ぶだけでオリジナル楽曲を自動生成。",
     category: "ai-audio",
     icon: "🎶",
-    pricing: "無料プランあり / $16.99/月〜",
+    pricing: "無料プランあり / 約2,500円/月〜",
     features: [
       "ジャンル・ムード指定で楽曲生成",
       "楽曲の細かいカスタマイズ",
@@ -1389,7 +1389,7 @@ export const tools: AITool[] = [
       "SEO対応のAIコンテンツ作成ツール。ブログ記事、広告コピー、ランディングページを高速で生成。",
     category: "ai-writing",
     icon: "📝",
-    pricing: "無料プランあり / Pro $16/月〜",
+    pricing: "無料プランあり / Pro 約2,400円/月〜",
     features: [
       "SEO最適化記事の自動生成",
       "100+のテンプレート",
@@ -1422,7 +1422,7 @@ export const tools: AITool[] = [
       "世界最大のAI文章校正ツール。文法チェック、スペルミス修正、文章のトーン調整をリアルタイムで実行。",
     category: "ai-writing",
     icon: "✅",
-    pricing: "無料プランあり / Premium $12/月〜",
+    pricing: "無料プランあり / Premium 約1,800円/月〜",
     features: [
       "リアルタイム文法チェック",
       "スペル・句読点の修正",
@@ -1456,7 +1456,7 @@ export const tools: AITool[] = [
       "AIネイティブなコードエディタ。Cascadeフロー機能でコード全体を理解し、マルチファイル編集を自動実行。",
     category: "ai-coding",
     icon: "🏄",
-    pricing: "無料プランあり / Pro $10/月〜",
+    pricing: "無料プランあり / Pro 約1,500円/月〜",
     features: [
       "Cascadeフロー（AI自動コーディング）",
       "コードベース全体の理解",
@@ -1489,7 +1489,7 @@ export const tools: AITool[] = [
       "Vercel開発のAI UIジェネレーター。プロンプトからReact/Next.jsのUIコンポーネントを自動生成。",
     category: "ai-coding",
     icon: "▲",
-    pricing: "無料プランあり / Premium $20/月",
+    pricing: "無料プランあり / Premium 約3,000円/月",
     features: [
       "プロンプトからUI生成",
       "React/Next.jsコンポーネント出力",
@@ -1522,7 +1522,7 @@ export const tools: AITool[] = [
       "StackBlitz開発のAIフルスタック開発ツール。プロンプトからWebアプリ全体をブラウザ上で構築。",
     category: "ai-coding",
     icon: "⚡",
-    pricing: "無料プランあり / Pro $20/月〜",
+    pricing: "無料プランあり / Pro 約3,000円/月〜",
     features: [
       "プロンプトからアプリ全体を生成",
       "ブラウザ上で完結（環境構築不要）",
@@ -1556,7 +1556,7 @@ export const tools: AITool[] = [
       "AIでプレゼン資料を自動生成。テーマを入力するだけで構成・デザイン・コンテンツをまとめて作成。",
     category: "ai-business",
     icon: "📑",
-    pricing: "無料プランあり / Pro $16/月〜",
+    pricing: "無料プランあり / Pro 約2,400円/月〜",
     features: [
       "プロンプトからスライド自動生成",
       "AIによるデザイン・レイアウト",
@@ -1589,7 +1589,7 @@ export const tools: AITool[] = [
       "AIによるリアルタイム議事録・文字起こしツール。会議の録音から自動で要約・アクションアイテムを抽出。",
     category: "ai-business",
     icon: "🦦",
-    pricing: "無料プランあり / Pro $8.33/月〜",
+    pricing: "無料プランあり / Pro 約1,200円/月〜",
     features: [
       "リアルタイム文字起こし",
       "会議の自動要約",
@@ -1622,7 +1622,7 @@ export const tools: AITool[] = [
       "テキストからプロ品質の図解・インフォグラフィックを自動生成。ブログやプレゼン資料の視覚化に最適。",
     category: "ai-business",
     icon: "🗺️",
-    pricing: "無料プランあり / Pro $15/月〜",
+    pricing: "無料プランあり / Pro 約2,200円/月〜",
     features: [
       "テキストから図解自動生成",
       "インフォグラフィック作成",
@@ -1655,7 +1655,7 @@ export const tools: AITool[] = [
       "AI搭載の会議アシスタント。自動で会議を録音・文字起こし・要約し、アクションアイテムを管理。",
     category: "ai-business",
     icon: "🔥",
-    pricing: "無料プランあり / Pro $10/月〜",
+    pricing: "無料プランあり / Pro 約1,500円/月〜",
     features: [
       "会議の自動録音・文字起こし",
       "AI要約・トピック抽出",
@@ -1689,7 +1689,7 @@ export const tools: AITool[] = [
       "Stability AI提供のAI画像編集スイート。背景除去、画像拡大、テキストから画像生成などを統合。",
     category: "ai-image",
     icon: "✂️",
-    pricing: "無料プランあり / Pro $9/月〜",
+    pricing: "無料プランあり / Pro 約1,400円/月〜",
     features: [
       "AI背景除去",
       "画像の高解像度化",
@@ -1757,7 +1757,7 @@ export const tools: AITool[] = [
       "AIキャラクターとの会話を楽しめるプラットフォーム。有名人やアニメキャラなど多彩なAIと対話可能。",
     category: "ai-chat",
     icon: "🎭",
-    pricing: "無料 / c.ai+ $9.99/月",
+    pricing: "無料 / c.ai+ 約1,500円/月",
     features: [
       "多彩なAIキャラクターとの対話",
       "オリジナルキャラクター作成",
@@ -1858,7 +1858,7 @@ export const tools: AITool[] = [
       "AIアバターによる動画作成プラットフォーム。テキストを入力するだけでリアルな人物が話す動画を生成。",
     category: "ai-video",
     icon: "👤",
-    pricing: "Starter $18/月〜",
+    pricing: "Starter 約2,700円/月〜",
     features: [
       "230+のAIアバター",
       "140+言語のナレーション",
@@ -1891,7 +1891,7 @@ export const tools: AITool[] = [
       "AIアバター動画生成プラットフォーム。動画翻訳機能で既存動画を多言語に自動変換も可能。",
     category: "ai-video",
     icon: "🎥",
-    pricing: "無料プランあり / Creator $24/月〜",
+    pricing: "無料プランあり / Creator 約3,600円/月〜",
     features: [
       "100+のAIアバター",
       "動画翻訳・吹き替え",
@@ -1925,7 +1925,7 @@ export const tools: AITool[] = [
       "テキスト編集感覚で動画・ポッドキャストを編集できるAIツール。文字起こし・音声クローン・フィラー除去を搭載。",
     category: "ai-audio",
     icon: "📼",
-    pricing: "無料プランあり / Pro $24/月〜",
+    pricing: "無料プランあり / Pro 約3,600円/月〜",
     features: [
       "テキストベースの動画・音声編集",
       "高精度文字起こし",
@@ -2059,7 +2059,7 @@ export const tools: AITool[] = [
       "プライバシー重視のAIコード補完ツール。コードをクラウドに送信しないオプションでセキュアな開発を実現。",
     category: "ai-coding",
     icon: "🔒",
-    pricing: "無料プランあり / Pro $12/月〜",
+    pricing: "無料プランあり / Pro 約1,800円/月〜",
     features: [
       "AIコード補完",
       "プライベートコード学習不使用",
@@ -2092,7 +2092,7 @@ export const tools: AITool[] = [
       "無料で使えるAIコード補完ツール。70+言語に対応し、個人開発者は無制限に利用可能。",
     category: "ai-coding",
     icon: "🆓",
-    pricing: "個人無料 / Teams $12/月〜",
+    pricing: "個人無料 / Teams 約1,800円/月〜",
     features: [
       "AIコード補完",
       "チャットによるコード説明",
@@ -2126,7 +2126,7 @@ export const tools: AITool[] = [
       "Notionに統合されたAIアシスタント。ワークスペース内の情報を横断検索し、質問に即座に回答。",
     category: "ai-business",
     icon: "📓",
-    pricing: "Notion有料プランに含まれる / AI追加 $10/月",
+    pricing: "Notion有料プランに含まれる / AI追加 約1,500円/月",
     features: [
       "ワークスペース横断検索・回答",
       "議事録の自動要約",
@@ -2159,7 +2159,7 @@ export const tools: AITool[] = [
       "5000+のアプリを自動連携するZapierのAI機能。自然言語でワークフローを作成し、業務を自動化。",
     category: "ai-business",
     icon: "⚡",
-    pricing: "無料プランあり / Starter $19.99/月〜",
+    pricing: "無料プランあり / Starter 約3,000円/月〜",
     features: [
       "自然言語でワークフロー作成",
       "5000+アプリ連携",
@@ -2225,7 +2225,7 @@ export const tools: AITool[] = [
       "AIがカレンダーを最適化するスケジュール管理ツール。会議・タスク・習慣を自動でスケジューリング。",
     category: "ai-business",
     icon: "📅",
-    pricing: "無料プランあり / Starter $8/月〜",
+    pricing: "無料プランあり / Starter 約1,200円/月〜",
     features: [
       "AI自動スケジューリング",
       "タスクの自動時間配分",
@@ -2259,7 +2259,7 @@ export const tools: AITool[] = [
       "AI搭載の検索エンジン。複数のAIモデルを比較しながら使え、検索結果にAI回答を統合。",
     category: "ai-chat",
     icon: "🔎",
-    pricing: "無料プランあり / Pro $15/月",
+    pricing: "無料プランあり / Pro 約2,200円/月",
     features: [
       "AI検索エンジン",
       "複数AIモデルの切り替え",
@@ -2326,7 +2326,7 @@ export const tools: AITool[] = [
       "ブラウザで動くAI搭載画像編集ツール。背景除去、AI画像生成、フィルター適用をオンラインで完結。",
     category: "ai-image",
     icon: "🖌️",
-    pricing: "無料プランあり / Plus $0.99/月〜",
+    pricing: "無料プランあり / Plus 約150円/月〜",
     features: [
       "ブラウザ完結の画像編集",
       "AI背景除去",
@@ -2428,7 +2428,7 @@ export const tools: AITool[] = [
       "40+のユースケースに対応するAIライティングツール。ブログ、メール、広告コピーを30+言語で生成。",
     category: "ai-writing",
     icon: "✍️",
-    pricing: "無料プランあり / Unlimited $9/月",
+    pricing: "無料プランあり / Unlimited 約1,400円/月",
     features: [
       "40+のライティングユースケース",
       "30+言語対応",
@@ -2438,7 +2438,7 @@ export const tools: AITool[] = [
       "ブラウザ拡張機能",
     ],
     pros: [
-      "月額$9で無制限は最安クラス",
+      "月額約1,400円で無制限は最安クラス",
       "ユースケースが豊富で迷わない",
       "多言語対応が充実",
       "無料プランで月10,000文字",
@@ -2462,7 +2462,7 @@ export const tools: AITool[] = [
       "AWS開発向けAIアシスタント。コード生成、デバッグ、AWSサービスの設定・トラブルシューティングを支援。",
     category: "ai-coding",
     icon: "☁️",
-    pricing: "無料枠あり / Pro $19/月",
+    pricing: "無料枠あり / Pro 約2,800円/月",
     features: [
       "AIコード生成・補完",
       "AWSリソースのトラブルシューティング",
@@ -2496,7 +2496,7 @@ export const tools: AITool[] = [
       "AI搭載のスマートノートアプリ。メモを自動整理し、過去のノートから関連情報をAIが提案。",
     category: "ai-business",
     icon: "🧠",
-    pricing: "無料プランあり / Pro $14.99/月",
+    pricing: "無料プランあり / Pro 約2,200円/月",
     features: [
       "AI自動整理・タグ付け",
       "関連ノートの自動リンク",
@@ -2529,7 +2529,7 @@ export const tools: AITool[] = [
       "CRM大手HubSpotのAI機能。メール文面生成、顧客分析、レポート作成、チャットボット構築をAIが支援。",
     category: "ai-business",
     icon: "🟠",
-    pricing: "無料CRMあり / Starter $15/月〜",
+    pricing: "無料CRMあり / Starter 約2,200円/月〜",
     features: [
       "AIメール文面生成",
       "営業メールの最適化",
@@ -2562,7 +2562,7 @@ export const tools: AITool[] = [
       "画面録画ツールLoomのAI機能。録画動画を自動で要約、チャプター生成、タイトル作成。",
     category: "ai-business",
     icon: "🎬",
-    pricing: "無料プランあり / Business $12.50/月〜",
+    pricing: "無料プランあり / Business 約1,900円/月〜",
     features: [
       "動画の自動要約",
       "チャプター自動生成",
@@ -2695,7 +2695,7 @@ export const tools: AITool[] = [
       "AIによる画像の超高解像度化（アップスケール）ツール。低解像度の画像をディテールを保ったまま拡大。",
     category: "ai-image",
     icon: "🔍",
-    pricing: "$39/月〜",
+    pricing: "約5,800円/月〜",
     features: [
       "AI画像アップスケール",
       "最大16倍拡大",
@@ -2728,7 +2728,7 @@ export const tools: AITool[] = [
       "テキストプロンプトからYouTube動画やショート動画を自動生成。スクリプト・映像・ナレーション・BGMをまとめて作成。",
     category: "ai-video",
     icon: "📺",
-    pricing: "無料プランあり / Plus $25/月〜",
+    pricing: "無料プランあり / Plus 約3,800円/月〜",
     features: [
       "テキストから完成動画を自動生成",
       "AI脚本・ナレーション生成",
@@ -2794,7 +2794,7 @@ export const tools: AITool[] = [
       "パフォーマンス予測付きのAIコピーライティングツール。広告コピーやランディングページの効果をAIがスコアリング。",
     category: "ai-writing",
     icon: "📈",
-    pricing: "$39/月〜",
+    pricing: "約5,800円/月〜",
     features: [
       "予測パフォーマンススコア",
       "広告コピー生成",
@@ -2827,7 +2827,7 @@ export const tools: AITool[] = [
       "Cognition AI開発の完全自律型AIソフトウェアエンジニア。タスクを与えるとコーディング・デバッグ・デプロイまで自律的に実行。",
     category: "ai-coding",
     icon: "🤖",
-    pricing: "$500/月〜",
+    pricing: "約75,000円/月〜",
     features: [
       "完全自律型コーディング",
       "ブラウザ・ターミナル・エディタを自律操作",
@@ -2843,7 +2843,7 @@ export const tools: AITool[] = [
       "Slack経由でタスク依頼可能",
     ],
     cons: [
-      "月額$500〜と非常に高価",
+      "月額約75,000円〜と非常に高価",
       "まだ初期段階で精度にばらつき",
       "単純なタスクにはオーバースペック",
     ],
@@ -2860,7 +2860,7 @@ export const tools: AITool[] = [
       "自然言語からフルスタックWebアプリを生成するAIツール。デザインからバックエンドまで一気通貫で構築。",
     category: "ai-coding",
     icon: "💜",
-    pricing: "無料プランあり / Starter $20/月〜",
+    pricing: "無料プランあり / Starter 約3,000円/月〜",
     features: [
       "自然言語からWebアプリ生成",
       "React + Supabase構成",
@@ -2893,7 +2893,7 @@ export const tools: AITool[] = [
       "Slack内蔵のAI機能。チャンネルの要約、スレッドの回答検索、メッセージの下書き作成をAIが支援。",
     category: "ai-business",
     icon: "💬",
-    pricing: "Slack有料プランに追加 $10/月/人〜",
+    pricing: "Slack有料プランに追加 約1,500円/月/人〜",
     features: [
       "チャンネル・スレッドの自動要約",
       "過去メッセージからの回答検索",
@@ -2926,7 +2926,7 @@ export const tools: AITool[] = [
       "Midjourney×Spellbrushによるアニメ・イラスト特化のAI画像生成。日本のアニメ・マンガスタイルの画像生成が得意。",
     category: "ai-image",
     icon: "🌸",
-    pricing: "$10/月〜（Midjourneyサブスクリプション）",
+    pricing: "約1,500円/月〜（Midjourneyサブスクリプション）",
     features: [
       "アニメ・イラスト特化の画像生成",
       "キャラクターデザイン",
@@ -2959,7 +2959,7 @@ export const tools: AITool[] = [
       "学術論文を検索・要約するAIツール。2億本以上の論文から、質問に対するエビデンスベースの回答を提供。",
     category: "ai-chat",
     icon: "📚",
-    pricing: "無料プランあり / Premium $8.99/月",
+    pricing: "無料プランあり / Premium 約1,300円/月",
     features: [
       "2億本以上の学術論文検索",
       "論文のAI要約",
@@ -2992,7 +2992,7 @@ export const tools: AITool[] = [
       "テキストからAIナレーション付き動画を自動生成。ブログ記事やスクリプトを動画コンテンツに変換。",
     category: "ai-video",
     icon: "🎙️",
-    pricing: "無料プランあり / Standard $28/月〜",
+    pricing: "無料プランあり / Standard 約4,200円/月〜",
     features: [
       "テキスト→動画変換",
       "2000+のリアルなAI音声",
@@ -3058,7 +3058,7 @@ export const tools: AITool[] = [
       "PDFをアップロードしてAIと対話できるツール。論文、契約書、マニュアルなどの長文PDFの内容をAIが要約・回答。",
     category: "ai-chat",
     icon: "📄",
-    pricing: "無料プランあり / Plus $5/月",
+    pricing: "無料プランあり / Plus 約750円/月",
     features: [
       "PDFアップロード＆AI対話",
       "文書の要約",
@@ -3070,7 +3070,7 @@ export const tools: AITool[] = [
     pros: [
       "長い文書を一瞬で理解できる",
       "引用元ページを表示してくれる",
-      "月額$5と非常に安い",
+      "月額約750円と非常に安い",
       "論文・契約書・マニュアルに最適",
     ],
     cons: [
@@ -3124,7 +3124,7 @@ export const tools: AITool[] = [
       "Perplexity AIの記事作成機能。AIリサーチ結果を美しい記事形式にまとめて公開・共有できる。",
     category: "ai-writing",
     icon: "📄",
-    pricing: "Perplexity Pro $20/月に含まれる",
+    pricing: "Perplexity Pro 約3,000円/月に含まれる",
     features: [
       "AI調査結果を記事化",
       "ソース付き記事生成",
@@ -3157,7 +3157,7 @@ export const tools: AITool[] = [
       "AI搭載のウェブ検索・リサーチツール。検索結果をAIが要約し、ハイライトやメモ機能で効率的に情報収集。",
     category: "ai-chat",
     icon: "🖍️",
-    pricing: "無料プランあり / Pro $8.99/月",
+    pricing: "無料プランあり / Pro 約1,300円/月",
     features: [
       "AI検索・要約",
       "ウェブページのハイライト",
@@ -3190,7 +3190,7 @@ export const tools: AITool[] = [
       "リアルタイムAI画像生成ツール。描画しながらリアルタイムでAI画像が生成される革新的なUI。",
     category: "ai-image",
     icon: "✏️",
-    pricing: "無料プランあり / Pro $24/月〜",
+    pricing: "無料プランあり / Pro 約3,600円/月〜",
     features: [
       "リアルタイム画像生成",
       "キャンバス上での直接描画",
@@ -3223,7 +3223,7 @@ export const tools: AITool[] = [
       "プロジェクト管理ツールClickUpに統合されたAI機能。タスクの要約、ドキュメント作成、進捗レポートを自動生成。",
     category: "ai-business",
     icon: "✅",
-    pricing: "無料プランあり / AI追加 $5/月/人",
+    pricing: "無料プランあり / AI追加 約750円/月/人",
     features: [
       "タスクの自動要約",
       "ドキュメント自動生成",
@@ -3234,7 +3234,7 @@ export const tools: AITool[] = [
     ],
     pros: [
       "プロジェクト管理とAIが完全統合",
-      "AI追加料金が$5/月と安い",
+      "AI追加料金が約750円/月と安い",
       "タスクのコンテキストを理解した提案",
       "チーム全体の生産性向上",
     ],
@@ -3256,7 +3256,7 @@ export const tools: AITool[] = [
     description: "AI検索エンジン。質問に対して出典付きの回答を生成。リサーチや調査に最適。",
     category: "ai-chat",
     icon: "🔍",
-    pricing: "無料プランあり / Pro $20/月",
+    pricing: "無料プランあり / Pro 約3,000円/月",
     features: ["出典付きAI回答", "リアルタイムWeb検索", "学術論文検索", "ファイルアップロード", "複数AIモデル選択", "Copilot機能"],
     pros: ["回答に出典が付くので信頼性が高い", "最新情報に強い", "学術調査に便利", "無料でも十分使える"],
     cons: ["クリエイティブな文章生成は苦手", "日本語の精度がやや劣る場合がある", "Pro版でないと一部機能制限"],
@@ -3288,7 +3288,7 @@ export const tools: AITool[] = [
     description: "AI搭載の動画・音声編集ツール。テキスト編集のように動画を編集できる革新的なエディタ。",
     category: "ai-video",
     icon: "🎬",
-    pricing: "無料プランあり / Pro $24/月",
+    pricing: "無料プランあり / Pro 約3,600円/月",
     features: ["テキストベースの動画編集", "AI音声クローン", "自動文字起こし", "フィラーワード自動除去", "スクリーン録画", "AIアイコンタクト修正"],
     pros: ["動画編集の学習コストが低い", "文字起こし精度が高い", "ポッドキャスト制作に最適", "チーム共同編集対応"],
     cons: ["高度な映像編集はPremiere等に劣る", "無料版は機能制限が大きい", "日本語文字起こし精度は英語に劣る"],
@@ -3304,7 +3304,7 @@ export const tools: AITool[] = [
     description: "SEO最適化されたブログ記事やマーケティングコピーをAIで自動生成。コンテンツマーケティングに特化。",
     category: "ai-writing",
     icon: "✏️",
-    pricing: "無料プランあり / Pro $19/月",
+    pricing: "無料プランあり / Pro 約2,800円/月",
     features: ["SEO最適化ブログ記事生成", "広告コピー作成", "ランディングページ生成", "AI画像生成", "ブランドボイス設定", "ファクトチェック機能"],
     pros: ["SEO記事の生成品質が高い", "マーケティング特化のテンプレート豊富", "日本語対応", "コスパが良い"],
     cons: ["長文はやや品質が落ちる場合がある", "テンプレート依存になりがち", "独自性のある文章には手直しが必要"],
@@ -3320,7 +3320,7 @@ export const tools: AITool[] = [
     description: "テキストや画像から高品質な動画を生成するAI。Dream Machineエンジンによるリアルな映像生成。",
     category: "ai-video",
     icon: "🎥",
-    pricing: "無料プランあり / Pro $23.99/月",
+    pricing: "無料プランあり / Pro 約3,600円/月",
     features: ["テキストから動画生成", "画像から動画生成", "高解像度出力", "カメラワーク指定", "ループ動画", "複数スタイル対応"],
     pros: ["生成品質が非常に高い", "無料でも試せる", "直感的なUI", "高速な生成速度"],
     cons: ["無料版は月30回まで", "長尺動画は非対応", "日本語プロンプトの精度はやや劣る"],
@@ -3336,7 +3336,7 @@ export const tools: AITool[] = [
     description: "テキストプロンプトから高品質な楽曲を生成するAI音楽サービス。多様なジャンルに対応。",
     category: "ai-audio",
     icon: "🎶",
-    pricing: "無料プランあり / Standard $10/月",
+    pricing: "無料プランあり / Standard 約1,500円/月",
     features: ["テキストから作曲", "歌詞付き楽曲生成", "多ジャンル対応", "音声クローン", "楽曲の延長・リミックス", "商用利用可能"],
     pros: ["楽曲の品質が非常に高い", "ボーカル付き楽曲が生成可能", "無料枠が充実", "商用利用OK"],
     cons: ["生成に時間がかかる場合がある", "著作権の取り扱いに注意が必要", "日本語歌詞の品質にムラ"],
@@ -3352,7 +3352,7 @@ export const tools: AITool[] = [
     description: "AIでプレゼンテーション・ドキュメント・Webページを自動作成。テキスト入力だけでプロ品質の資料を生成。",
     category: "ai-business",
     icon: "📊",
-    pricing: "無料プランあり / Plus $10/月",
+    pricing: "無料プランあり / Plus 約1,500円/月",
     features: ["AIプレゼン自動生成", "ドキュメント作成", "Webページ作成", "テンプレート豊富", "共同編集", "分析ダッシュボード"],
     pros: ["プレゼン作成が劇的に早い", "デザインが洗練されている", "無料プランでも十分使える", "チーム共有が簡単"],
     cons: ["カスタマイズ性はPowerPointに劣る", "オフライン利用不可", "日本語テンプレートが少ない"],
@@ -3368,7 +3368,7 @@ export const tools: AITool[] = [
     description: "AIでUI/Webコンポーネントを自動生成。プロンプトからReact・Next.jsコードを即座に作成。",
     category: "ai-coding",
     icon: "🖥️",
-    pricing: "無料プランあり / Premium $20/月",
+    pricing: "無料プランあり / Premium 約3,000円/月",
     features: ["プロンプトからUI生成", "React/Next.jsコード出力", "shadcn/ui対応", "リアルタイムプレビュー", "コード編集可能", "デプロイ連携"],
     pros: ["UI開発速度が劇的に向上", "生成コードの品質が高い", "Vercelとのシームレス連携", "無料でも十分試せる"],
     cons: ["React/Next.js以外は非対応", "複雑なロジックには不向き", "デザインの微調整は手動が必要"],
@@ -3384,7 +3384,7 @@ export const tools: AITool[] = [
     description: "AIアバター動画を簡単作成。テキストを入力するだけでリアルな人物が話す動画を生成。",
     category: "ai-video",
     icon: "👤",
-    pricing: "無料プランあり / Creator $29/月",
+    pricing: "無料プランあり / Creator 約4,400円/月",
     features: ["AIアバター動画生成", "多言語音声対応", "テンプレート豊富", "動画翻訳機能", "カスタムアバター", "API連携"],
     pros: ["リアルなアバター動画が簡単に作れる", "多言語対応で海外展開に便利", "マーケティング動画に最適", "顔出し不要で動画制作可能"],
     cons: ["無料版は機能制限が大きい", "Pro以上は月額が高め", "長尺動画には不向き"],
@@ -3400,7 +3400,7 @@ export const tools: AITool[] = [
     description: "ブラウザ上でAIがフルスタックWebアプリを自動生成。プロンプトからデプロイまでワンストップ。",
     category: "ai-coding",
     icon: "⚡",
-    pricing: "無料プランあり / Pro $20/月",
+    pricing: "無料プランあり / Pro 約3,000円/月",
     features: ["フルスタックアプリ生成", "ブラウザ内開発環境", "ワンクリックデプロイ", "複数フレームワーク対応", "データベース連携", "リアルタイムプレビュー"],
     pros: ["環境構築なしで即開発開始", "非エンジニアでもアプリが作れる", "デプロイまで一気通貫", "学習コストが低い"],
     cons: ["複雑なアプリには限界がある", "生成コードの品質にムラ", "無料枠の制限が厳しい"],
@@ -3506,7 +3506,7 @@ export const tools: AITool[] = [
     description: "開発者特化のAI検索エンジン。技術的な質問に対してコード付きの詳細な回答を生成。",
     category: "ai-chat",
     icon: "🔎",
-    pricing: "無料プランあり / Pro $20/月",
+    pricing: "無料プランあり / Pro 約3,000円/月",
     features: [
       "技術質問に特化した回答",
       "コード生成・解説",
@@ -3529,7 +3529,7 @@ export const tools: AITool[] = [
     description: "直感的なUIで高品質な画像を生成するAIプラットフォーム。スタイルの混合やリアルタイム編集が可能。",
     category: "ai-image",
     icon: "🎮",
-    pricing: "無料プランあり / Pro $15/月",
+    pricing: "無料プランあり / Pro 約2,200円/月",
     features: [
       "テキストから画像生成",
       "リアルタイム画像編集",
@@ -3595,7 +3595,7 @@ export const tools: AITool[] = [
     description: "デザイナー向けのAI画像生成ツール。ベクター画像やアイコン生成に強く、ブランドデザインに最適。",
     category: "ai-image",
     icon: "🎯",
-    pricing: "無料プランあり / Pro $25/月",
+    pricing: "無料プランあり / Pro 約3,800円/月",
     features: [
       "ベクター画像生成",
       "アイコン・ロゴ生成",
@@ -3617,7 +3617,7 @@ export const tools: AITool[] = [
     description: "Stable Diffusionベースの無料AI画像生成プラットフォーム。豊富なモデルとLoRAでアニメ・リアル系画像を生成。",
     category: "ai-image",
     icon: "🖌️",
-    pricing: "無料プランあり / Pro $9.99/月",
+    pricing: "無料プランあり / Pro 約1,500円/月",
     features: [
       "多数のStable Diffusionモデル",
       "LoRA対応",
@@ -3639,7 +3639,7 @@ export const tools: AITool[] = [
     description: "複数のAIモデルを使い分けて画像を生成。テキストからの生成、画像編集、背景除去など統合ツール。",
     category: "ai-image",
     icon: "🎪",
-    pricing: "無料プランあり / Basic $12/月",
+    pricing: "無料プランあり / Basic 約1,800円/月",
     features: [
       "20以上のAIモデル搭載",
       "テキストから画像生成",
@@ -3661,7 +3661,7 @@ export const tools: AITool[] = [
     description: "複数のAIアートモデルを使ったアート作品生成プラットフォーム。コミュニティでの共有・コンテストも楽しめる。",
     category: "ai-image",
     icon: "🌙",
-    pricing: "無料プランあり / Pro $9.99/月",
+    pricing: "無料プランあり / Pro 約1,500円/月",
     features: [
       "複数AIモデル対応",
       "アートスタイル変換",
@@ -3684,7 +3684,7 @@ export const tools: AITool[] = [
     description: "写真からリアルなトーキングアバター動画を生成。1枚の静止画から表情豊かに話す動画を自動作成。",
     category: "ai-video",
     icon: "🎭",
-    pricing: "無料トライアルあり / Lite $5.9/月",
+    pricing: "無料トライアルあり / Lite 約880円/月",
     features: [
       "写真からアバター動画生成",
       "多言語テキスト読み上げ",
@@ -3706,7 +3706,7 @@ export const tools: AITool[] = [
     description: "テキストから動画を自動作成するAIツール。ブログ記事やスクリプトを高品質な動画コンテンツに変換。",
     category: "ai-video",
     icon: "🎞️",
-    pricing: "無料プランあり / Standard $28/月",
+    pricing: "無料プランあり / Standard 約4,200円/月",
     features: [
       "テキストから動画自動生成",
       "2000以上のAI音声",
@@ -3728,7 +3728,7 @@ export const tools: AITool[] = [
     description: "長尺動画からバイラルなショート動画をAIが自動生成。YouTube動画をTikTok・Reels向けに最適化。",
     category: "ai-video",
     icon: "✂️",
-    pricing: "無料プランあり / Starter $15/月",
+    pricing: "無料プランあり / Starter 約2,200円/月",
     features: [
       "長尺動画からショート動画自動生成",
       "バイラルスコア予測",
@@ -3750,7 +3750,7 @@ export const tools: AITool[] = [
     description: "中国Shengshu Technology開発の高品質AI動画生成。テキストや画像からリアルな4K動画を高速生成。",
     category: "ai-video",
     icon: "🎬",
-    pricing: "無料プランあり / Pro $29.99/月",
+    pricing: "無料プランあり / Pro 約4,500円/月",
     features: [
       "テキストから4K動画生成",
       "画像から動画変換",
@@ -3772,7 +3772,7 @@ export const tools: AITool[] = [
     description: "Hailuoの進化版。MiniMaxが提供する高品質AI動画生成。自然な動きと高解像度が特徴。",
     category: "ai-video",
     icon: "📹",
-    pricing: "無料プランあり / Pro $19.99/月",
+    pricing: "無料プランあり / Pro 約3,000円/月",
     features: [
       "テキストから動画生成",
       "自然な人物の動き",
@@ -3795,7 +3795,7 @@ export const tools: AITool[] = [
     description: "テキストを自然な音声に変換するTTSツール。PDFやWebページの読み上げ、学習支援に最適。",
     category: "ai-audio",
     icon: "🔊",
-    pricing: "無料プランあり / Premium $139/年",
+    pricing: "無料プランあり / Premium 約20,800円/年",
     features: [
       "テキスト読み上げ（TTS）",
       "200以上のAI音声",
@@ -3817,7 +3817,7 @@ export const tools: AITool[] = [
     description: "超リアルなAI音声合成プラットフォーム。ポッドキャスト、動画ナレーション、音声コンテンツ制作に最適。",
     category: "ai-audio",
     icon: "🎙️",
-    pricing: "無料プランあり / Creator $31.2/月",
+    pricing: "無料プランあり / Creator 約4,700円/月",
     features: [
       "900以上のAI音声",
       "音声クローニング",
@@ -3839,7 +3839,7 @@ export const tools: AITool[] = [
     description: "数クリックでオリジナル楽曲を作成できるAI音楽ジェネレーター。作った曲をストリーミング配信して収益化も可能。",
     category: "ai-audio",
     icon: "🎸",
-    pricing: "無料プランあり / Creator $2.99/月",
+    pricing: "無料プランあり / Creator 約450円/月",
     features: [
       "数クリックで楽曲生成",
       "ジャンル選択で簡単作曲",
@@ -3883,7 +3883,7 @@ export const tools: AITool[] = [
     description: "Stability AI提供のAI音楽生成。テキストプロンプトから高品質なBGMや効果音を生成。商用利用も可能。",
     category: "ai-audio",
     icon: "🎹",
-    pricing: "無料プランあり / Pro $11.99/月",
+    pricing: "無料プランあり / Pro 約1,800円/月",
     features: [
       "テキストから音楽生成",
       "効果音生成",
@@ -3906,7 +3906,7 @@ export const tools: AITool[] = [
     description: "AI駆動の文章リライトツール。既存の文章をより明確、簡潔、魅力的に書き換え。ライティング品質向上に最適。",
     category: "ai-writing",
     icon: "🔄",
-    pricing: "無料プランあり / Plus $13.99/月",
+    pricing: "無料プランあり / Plus 約2,100円/月",
     features: [
       "文章のリライト・改善",
       "トーン調整（カジュアル/フォーマル）",
@@ -3928,7 +3928,7 @@ export const tools: AITool[] = [
     description: "ECサイト向けのAI文章生成ツール。商品説明、ブログ記事、広告コピーをブランドトーンに合わせて自動生成。",
     category: "ai-writing",
     icon: "🛒",
-    pricing: "無料トライアルあり / Starter $29/月",
+    pricing: "無料トライアルあり / Starter 約4,400円/月",
     features: [
       "商品説明文の自動生成",
       "SEO最適化コンテンツ",
@@ -3950,7 +3950,7 @@ export const tools: AITool[] = [
     description: "SEOリサーチとコンテンツ作成を一体化したAIツール。検索上位ページの分析からSEO記事の作成まで完結。",
     category: "ai-writing",
     icon: "📈",
-    pricing: "$15/月〜（14日間返金保証）",
+    pricing: "約2,200円/月〜（14日間返金保証）",
     features: [
       "SERP分析・競合調査",
       "AIコンテンツ生成",
@@ -3972,7 +3972,7 @@ export const tools: AITool[] = [
     description: "AIによるコンテンツ戦略プランニングツール。トピックのカバレッジ分析でSEOコンテンツの品質を最大化。",
     category: "ai-writing",
     icon: "🧠",
-    pricing: "無料プランあり / Standard $149/月",
+    pricing: "無料プランあり / Standard 約22,400円/月",
     features: [
       "トピックモデリング",
       "コンテンツギャップ分析",
@@ -3994,7 +3994,7 @@ export const tools: AITool[] = [
     description: "データドリブンなSEO記事作成支援ツール。検索上位ページを分析し、最適なコンテンツ構成を提案。",
     category: "ai-writing",
     icon: "🏄",
-    pricing: "Essential $89/月〜（7日間返金保証）",
+    pricing: "Essential 約13,400円/月〜（7日間返金保証）",
     features: [
       "コンテンツエディター",
       "SERP分析",
@@ -4016,7 +4016,7 @@ export const tools: AITool[] = [
     description: "200以上のテンプレートでSNS投稿、ブログ、メール等を瞬時に生成。AIエディタで編集も自在。",
     category: "ai-writing",
     icon: "💎",
-    pricing: "無料プランあり / Creator $25/月",
+    pricing: "無料プランあり / Creator 約3,800円/月",
     features: [
       "200以上のコンテンツテンプレート",
       "リアルタイムAI編集",
@@ -4039,7 +4039,7 @@ export const tools: AITool[] = [
     description: "コードベース全体を理解するAIコーディングアシスタント。リポジトリのコンテキストを把握した正確なコード支援。",
     category: "ai-coding",
     icon: "🔍",
-    pricing: "無料プランあり / Pro $9/月",
+    pricing: "無料プランあり / Pro 約1,400円/月",
     features: [
       "コードベース全体の理解",
       "コンテキスト対応のコード生成",
@@ -4127,7 +4127,7 @@ export const tools: AITool[] = [
     description: "超高速AIコード補完ツール。300,000トークンのコンテキスト窓で大規模ファイルも理解し、的確なコード提案。",
     category: "ai-coding",
     icon: "⚡",
-    pricing: "無料プランあり / Pro $10/月",
+    pricing: "無料プランあり / Pro 約1,500円/月",
     features: [
       "超高速コード補完",
       "300,000トークンコンテキスト",
@@ -4171,7 +4171,7 @@ export const tools: AITool[] = [
     description: "GitHubのAI開発環境。Issueから自動でコード変更を提案し、プランニングから実装まで一気通貫。",
     category: "ai-coding",
     icon: "🏢",
-    pricing: "Copilot Individual $10/月に含む",
+    pricing: "Copilot Individual 約1,500円/月に含む",
     features: [
       "Issueからの自動コード提案",
       "プランニング機能",
@@ -4194,7 +4194,7 @@ export const tools: AITool[] = [
     description: "ノーコード自動化プラットフォーム。1500以上のアプリを連携し、複雑なワークフローをビジュアルで構築。",
     category: "ai-business",
     icon: "🔧",
-    pricing: "無料プランあり / Core $10.59/月",
+    pricing: "無料プランあり / Core 約1,600円/月",
     features: [
       "ビジュアルワークフロービルダー",
       "1500以上のアプリ連携",
@@ -4216,7 +4216,7 @@ export const tools: AITool[] = [
     description: "オンラインホワイトボードにAI機能を統合。ブレインストーミング、マインドマップ、図表の自動生成を支援。",
     category: "ai-business",
     icon: "📋",
-    pricing: "無料プランあり / Business $16/月",
+    pricing: "無料プランあり / Business 約2,400円/月",
     features: [
       "AIマインドマップ自動生成",
       "付箋の自動グルーピング",
@@ -4238,7 +4238,7 @@ export const tools: AITool[] = [
     description: "デザインツールFigmaにAI機能を統合。レイアウト提案、テキスト生成、画像置換など、デザインワークフローを加速。",
     category: "ai-business",
     icon: "🎨",
-    pricing: "Figma Professional $15/月に含む",
+    pricing: "Figma Professional 約2,200円/月に含む",
     features: [
       "AIレイアウト自動提案",
       "テキストコンテンツ生成",
@@ -4282,7 +4282,7 @@ export const tools: AITool[] = [
     description: "AIワークフロー自動化でGTM（Go-to-Market）業務を効率化。リード発掘からコンテンツ作成まで一気通貫。",
     category: "ai-business",
     icon: "🚀",
-    pricing: "無料プランあり / Starter $49/月",
+    pricing: "無料プランあり / Starter 約7,400円/月",
     features: [
       "AIワークフロー自動化",
       "リード情報の自動収集",
@@ -4304,7 +4304,7 @@ export const tools: AITool[] = [
     description: "AIが自動でスケジュール最適化。タスク、会議、プロジェクトをAIが優先度判断し、最適な時間配分を提案。",
     category: "ai-business",
     icon: "📅",
-    pricing: "Individual $34/月",
+    pricing: "Individual 約5,100円/月",
     features: [
       "AI自動スケジュール最適化",
       "タスク優先度の自動判断",
@@ -4326,7 +4326,7 @@ export const tools: AITool[] = [
     description: "企業向けAIコンテンツプラットフォーム。ブランドボイスを学習し、マーケティングチーム全体のコンテンツ品質を統一。",
     category: "ai-business",
     icon: "💼",
-    pricing: "Creator $49/月〜 / Business要相談",
+    pricing: "Creator 約7,400円/月〜 / Business要相談",
     features: [
       "ブランドボイス学習",
       "マーケティングコンテンツ生成",
@@ -4348,7 +4348,7 @@ export const tools: AITool[] = [
     description: "AI文章チェック＆ライティング支援のビジネスプラン。チーム全体の英文品質を統一し、ブランドトーンを維持。",
     category: "ai-business",
     icon: "✅",
-    pricing: "Business $25/月/ユーザー",
+    pricing: "Business 約3,800円/月/ユーザー",
     features: [
       "AI文法・スペルチェック",
       "トーン検出・調整",
@@ -4370,7 +4370,7 @@ export const tools: AITool[] = [
     description: "AIプレゼン自動デザインのチーム向けプラン。スライドの内容を入力するだけで美しいデザインを自動適用。",
     category: "ai-business",
     icon: "🖥️",
-    pricing: "Pro $12/月〜 / Team $40/月",
+    pricing: "Pro 約1,800円/月〜 / Team 約6,000円/月",
     features: [
       "AIスライドデザイン自動化",
       "チームテンプレート共有",
@@ -4392,7 +4392,7 @@ export const tools: AITool[] = [
     description: "AIノイズキャンセリング＆会議アシスタント。通話中の雑音除去、文字起こし、要約を自動で実行。",
     category: "ai-business",
     icon: "🔇",
-    pricing: "無料プランあり / Pro $12/月",
+    pricing: "無料プランあり / Pro 約1,800円/月",
     features: [
       "AIノイズキャンセリング",
       "会議の自動文字起こし",
