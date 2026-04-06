@@ -122,8 +122,8 @@ body {
   color: #fdba74;
 }
 
-/* Smooth scrolling */
-html {
+/* Smooth scrolling only for in-page anchor links, not page transitions */
+html:has(:target) {
   scroll-behavior: smooth;
 }
 
