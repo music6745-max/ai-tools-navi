@@ -156,6 +156,46 @@ const guides = [
     category: "投資・資産運用",
     readTime: "10分",
   },
+  {
+    slug: "ai-for-healthcare",
+    title: "AI医療・健康管理ガイド【2026年版】ヘルスケアAI活用術",
+    description: "症状チェック、メンタルヘルス、健康データ分析、栄養管理など、医療・健康管理分野でのAIツール活用法を紹介。",
+    icon: "🏥",
+    category: "ヘルスケア",
+    readTime: "10分",
+  },
+  {
+    slug: "ai-music-creation",
+    title: "AI音楽制作ガイド【2026年版】初心者でもAIで作曲・編曲",
+    description: "Suno、Udio、Soundraw、ElevenLabsなど、おすすめAI音楽ツールの比較と具体的な活用法。BGM制作からボーカル生成まで。",
+    icon: "🎵",
+    category: "音楽制作",
+    readTime: "10分",
+  },
+  {
+    slug: "ai-for-education",
+    title: "AI教育活用ガイド【2026年版】教師・学校向けAIツール活用術",
+    description: "授業準備、教材作成、成績管理、個別指導、保護者対応など、教育現場でのAIツール活用法を教師・学校関係者向けに解説。",
+    icon: "🏫",
+    category: "教育",
+    readTime: "10分",
+  },
+  {
+    slug: "ai-customer-service",
+    title: "AIカスタマーサービス活用ガイド【2026年版】顧客対応を効率化",
+    description: "問い合わせ対応、FAQ作成、顧客分析、多言語サポートなど、カスタマーサービス業務でのAI活用法を解説。",
+    icon: "🎧",
+    category: "カスタマーサービス",
+    readTime: "10分",
+  },
+  {
+    slug: "ai-data-analysis",
+    title: "AIデータ分析ガイド【2026年版】ノーコードでデータ分析を効率化",
+    description: "Excel分析、可視化、レポート作成、予測分析まで、プログラミング不要で使えるAIデータ分析ツールと活用法を紹介。",
+    icon: "📊",
+    category: "データ分析",
+    readTime: "10分",
+  },
 ];
 
 export default function GuidePage() {

@@ -148,7 +148,7 @@ export default function AIInvestmentPage() {
           投資の知識がなくても、AIが自動で資産運用してくれるロボアドバイザー。この記事では、主要5サービスの手数料・最低投資額・AI機能・NISA対応を徹底比較し、あなたに合ったサービスの選び方を解説します。
         </p>
 
-        <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-xl p-4 text-sm mb-10">
+        <div className="bg-yellow-50 dark:bg-yellow-900/40 border border-yellow-200 dark:border-yellow-800 rounded-xl p-4 text-sm mb-10">
           <p className="font-bold mb-1">投資に関する注意事項</p>
           <p className="text-muted">本記事は情報提供を目的としたものであり、特定の金融商品の購入を推奨するものではありません。投資にはリスクが伴い、元本割れの可能性があります。投資判断はご自身の責任で行ってください。</p>
         </div>
