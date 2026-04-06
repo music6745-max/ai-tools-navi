@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { siteConfig, getToolBySlug, renderStars, getPricingBadge } from "../../lib/data";
+import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "AIでブログ記事を書く方法｜月5万円稼ぐブログ運営術",
@@ -378,6 +379,30 @@ export default function AIBlogWritingPage() {
               </div>
             ))}
           </div>
+        </section>
+
+        {/* Server Comparison Table CTA */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-4">レンタルサーバー比較</h2>
+          <p className="text-sm text-muted mb-6">ブログを始めるならまずサーバーを選びましょう。どちらも高性能で初心者に優しいサービスです。</p>
+          <ComparisonTableCTA
+            services={[
+              {
+                name: "ConoHa WING",
+                url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1FSQEQ+50+5SG2LT",
+                highlight: "国内最速・高確定率",
+                price: "月687円〜",
+                badge: "おすすめ",
+              },
+              {
+                name: "エックスサーバー",
+                url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1B19KI+CO4+6HES1",
+                highlight: "20年以上の安定実績",
+                price: "月990円〜",
+                badge: "定番",
+              },
+            ]}
+          />
         </section>
 
         {/* CTA - Server */}

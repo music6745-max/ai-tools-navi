@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { siteConfig } from "../../lib/data";
+import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "AIツールで副業を始める方法｜月5万円を目指すロードマップ【2026年版】",
@@ -275,6 +276,52 @@ export default function AISideBusinessPage() {
               </div>
             ))}
           </div>
+        </section>
+
+        {/* Server Comparison Table CTA */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-4">副業におすすめのレンタルサーバー</h2>
+          <p className="text-sm text-muted mb-6">ブログ副業を始めるなら、まずはサーバーの契約から。どちらもWordPressの簡単セットアップに対応しています。</p>
+          <ComparisonTableCTA
+            services={[
+              {
+                name: "ConoHa WING",
+                url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1FSQEQ+50+5SG2LT",
+                highlight: "ブログ開設に最適",
+                price: "月687円〜",
+                badge: "おすすめ",
+              },
+              {
+                name: "エックスサーバー",
+                url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1B19KI+CO4+6HES1",
+                highlight: "安定実績20年",
+                price: "月990円〜",
+              },
+            ]}
+          />
+        </section>
+
+        {/* Accounting Comparison Table CTA */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-4">副業の確定申告におすすめの会計ソフト</h2>
+          <p className="text-sm text-muted mb-6">副業収入が年間20万円を超えたら確定申告が必要です。早めに会計ソフトを導入しておくと安心です。</p>
+          <ComparisonTableCTA
+            services={[
+              {
+                name: "弥生シリーズ",
+                url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU",
+                highlight: "確定率91.74%の安心実績",
+                price: "無料〜",
+                badge: "定番",
+              },
+              {
+                name: "freee会計",
+                url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y",
+                highlight: "スマホで確定申告",
+                price: "月1,180円〜",
+              },
+            ]}
+          />
         </section>
 
         {/* CTA */}

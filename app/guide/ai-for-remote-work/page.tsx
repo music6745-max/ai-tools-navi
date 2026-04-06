@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { siteConfig, getToolBySlug, renderStars, getPricingBadge } from "../../lib/data";
+import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "リモートワークを効率化するAIツール完全ガイド｜2026年版",
@@ -205,6 +206,34 @@ export default function AIForRemoteWorkPage() {
               <p className="text-sm text-muted">Slackやメールの長いスレッドをAIで要約すれば、途中参加のメンバーも素早くキャッチアップ可能。重要な決定事項だけを抽出することもできます。</p>
             </div>
           </div>
+        </section>
+
+        {/* VPN Security for Remote Work */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span className="text-primary">&#128274;</span> リモートワークのセキュリティ対策
+          </h2>
+          <div className="text-sm text-muted leading-relaxed space-y-4 mb-6">
+            <p>カフェやコワーキングスペースなど、公共Wi-Fiを利用する機会が多いリモートワーカーにとって、VPN（仮想プライベートネットワーク）は必須のセキュリティ対策です。通信を暗号化することで、情報漏洩やハッキングのリスクを大幅に低減できます。</p>
+          </div>
+          <ComparisonTableCTA
+            services={[
+              {
+                name: "MillenVPN",
+                url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+41V7ZM+3JTE+HV7V6",
+                highlight: "確定率99%・国産VPN",
+                price: "月396円〜",
+                badge: "高確定率",
+              },
+              {
+                name: "NordVPN",
+                url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+674EQ",
+                highlight: "世界シェアNo.1",
+                price: "月560円〜",
+                badge: "人気No.1",
+              },
+            ]}
+          />
         </section>
 
         {/* Section 6 - Recommended Tools */}
