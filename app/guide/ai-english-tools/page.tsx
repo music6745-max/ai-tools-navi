@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { siteConfig } from "../../lib/data";
+import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】AI英語学習ツール比較5選｜ChatGPTからスピーキング練習まで",
@@ -303,6 +304,28 @@ export default function AIEnglishToolsPage() {
               </div>
             ))}
           </div>
+        </section>
+
+        {/* Affiliate Comparison Table CTA */}
+        <section className="mb-8">
+          <h2 className="text-xl font-bold mb-4">おすすめオンライン英会話に申し込む</h2>
+          <ComparisonTableCTA
+            services={[
+              {
+                name: "ネイティブキャンプ",
+                url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+APTO2+35VG+5YJRM",
+                highlight: "レッスン受け放題・確定率84%",
+                price: "月6,480円",
+                badge: "おすすめ",
+              },
+              {
+                name: "NOVA ライブステーション",
+                url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+EAFAQ+320A+BWVTE",
+                highlight: "LIVE配信で学ぶオンライン英会話",
+                price: "月額980円〜",
+              },
+            ]}
+          />
         </section>
 
         {/* CTA */}
