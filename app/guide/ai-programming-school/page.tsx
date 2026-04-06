@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { siteConfig } from "../../lib/data";
+import { AffiliateCTA } from "../../components/AffiliateCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】AI時代のプログラミングスクール比較5選｜AIスキルが学べるおすすめスクール",
@@ -305,6 +306,24 @@ export default function AIProgrammingSchoolPage() {
             ))}
           </div>
         </section>
+
+        {/* SkillHacks Affiliate CTA */}
+        <AffiliateCTA
+          serviceName="SkillHacks（スキルハックス）"
+          url="https://px.a8.net/svt/ejp?a8mat=4B1DXI+4DRW36+4K3S+5YJRM"
+          description="業界最安値のオンラインプログラミングスクール。動画で学べて質問し放題。初心者でも安心のサポート体制。"
+          badge="業界最安値"
+          color="purple"
+        />
+
+        {/* Winスクール Affiliate CTA */}
+        <AffiliateCTA
+          serviceName="Winスクール"
+          url="https://px.a8.net/svt/ejp?a8mat=4B1DXI+4D6GHE+529E+5YJRM"
+          description="全国各地に教室を展開する個人レッスンのプログラミングスクール。資格取得に強く、就転職サポートも充実。"
+          badge="全国展開"
+          color="blue"
+        />
 
         {/* CTA */}
         <section className="bg-gradient-to-r from-primary-light to-background border border-primary rounded-2xl p-8 text-center">
