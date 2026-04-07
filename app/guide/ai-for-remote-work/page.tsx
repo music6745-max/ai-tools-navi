@@ -79,17 +79,17 @@ export default function AIForRemoteWorkPage() {
             <p>AIツールを導入することで、これらの課題を解決し、チームの生産性を向上させることが可能です。特に議事録の自動作成や文書の自動生成は、すぐに効果を実感できるAI活用の代表例です。</p>
           </div>
           <div className="bg-primary-light rounded-xl p-5 mt-6">
-            <h3 className="font-bold text-sm mb-3">リモートワークの主な課題</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-muted">
+            <h3 className="font-bold text-sm mb-3 text-slate-900 dark:text-white">リモートワークの主な課題</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
               {[
                 { problem: "会議が多すぎる", solution: "AIで議事録自動作成 → 不要な会議を削減" },
                 { problem: "情報が散在する", solution: "AI搭載ナレッジツールで一元管理" },
                 { problem: "文書作成に時間がかかる", solution: "AIで下書き自動生成 → 編集のみ" },
                 { problem: "チーム間の認識のズレ", solution: "AIで要約・翻訳してスムーズに共有" },
               ].map((item, i) => (
-                <div key={i} className="bg-white/50 rounded-lg p-3">
-                  <div className="font-medium text-foreground mb-1">{item.problem}</div>
-                  <div className="text-primary">{item.solution}</div>
+                <div key={i} className="bg-white dark:bg-slate-800 rounded-lg p-3">
+                  <div className="font-medium text-slate-900 dark:text-white mb-1">{item.problem}</div>
+                  <div className="text-primary dark:text-indigo-300">{item.solution}</div>
                 </div>
               ))}
             </div>
