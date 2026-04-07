@@ -1,0 +1,197 @@
+import Link from "next/link";
+import type { Metadata } from "next";
+import { siteConfig } from "../../lib/data";
+
+export const metadata: Metadata = {
+  title: "AIコーディングアシスタント比較ガイド【2026年版】開発を高速化",
+  description:
+    "AIコーディングアシスタントを徹底比較。コード生成、レビュー、デバッグ、リファクタリング、テスト作成など、開発効率を劇的に上げるAIツールと活用法を紹介。",
+  alternates: {
+    canonical: `${siteConfig.url}/guide/ai-coding-assistant`,
+  },
+};
+
+export default function AICodingAssistantPage() {
+  const useCases = [
+    {
+      title: "コード生成・補完",
+      icon: "⌨️",
+      description: "自然言語やコメントから関数・クラスを自動生成。既存コードの文脈を理解した賢い補完でタイピング量を削減。",
+      tools: [
+        { name: "ChatGPT", slug: "chatgpt", tip: "要件を伝えるだけで複数言語のコードをまとめて生成" },
+        { name: "Claude", slug: "claude", tip: "長いコンテキストを読み込み、既存構造に沿ったコード生成が得意" },
+        { name: "Gemini", slug: "gemini", tip: "Google検索と連携して最新APIに沿ったコード例を提示" },
+      ],
+    },
+    {
+      title: "コードレビュー",
+      icon: "🔍",
+      description: "プルリクエストのコードをAIがレビュー。潜在バグ、命名、設計上の問題を指摘。",
+      tools: [
+        { name: "Claude", slug: "claude", tip: "差分をまとめて読み込み、設計観点での指摘に強い" },
+        { name: "ChatGPT", slug: "chatgpt", tip: "言語別のベストプラクティスに沿ったレビューを提示" },
+        { name: "Gemini", slug: "gemini", tip: "大規模リポジトリの全体構造を踏まえたレビューが可能" },
+      ],
+    },
+    {
+      title: "デバッグ・エラー解析",
+      icon: "🐛",
+      description: "スタックトレースやエラーメッセージを貼るだけで原因と修正案を提示。",
+      tools: [
+        { name: "ChatGPT", slug: "chatgpt", tip: "エラーメッセージから原因を推論し、修正パッチを提案" },
+        { name: "Claude", slug: "claude", tip: "複数ファイルにまたがる問題の切り分けが得意" },
+        { name: "Perplexity", slug: "perplexity", tip: "類似エラーの事例やStackOverflow情報を横断検索" },
+      ],
+    },
+    {
+      title: "リファクタリング",
+      icon: "♻️",
+      description: "可読性・保守性を高めるリファクタリング提案。レガシーコードのモダン化にも活躍。",
+      tools: [
+        { name: "Claude", slug: "claude", tip: "大規模な既存コードを理解した段階的リファクタに強い" },
+        { name: "ChatGPT", slug: "chatgpt", tip: "デザインパターンへの置き換え提案が豊富" },
+        { name: "Gemini", slug: "gemini", tip: "言語仕様の最新機能を活用した書き換え提案" },
+      ],
+    },
+    {
+      title: "テストコード生成",
+      icon: "🧪",
+      description: "ユニットテスト・統合テストをAIが自動生成。カバレッジを効率良く上げられる。",
+      tools: [
+        { name: "ChatGPT", slug: "chatgpt", tip: "Jest・Pytest等の主要フレームワークに対応したテストを生成" },
+        { name: "Claude", slug: "claude", tip: "エッジケースまで網羅したテストケースを提案" },
+        { name: "Gemini", slug: "gemini", tip: "モック・スタブまで含めた実用的なテストを出力" },
+      ],
+    },
+    {
+      title: "ドキュメント生成",
+      icon: "📚",
+      description: "関数コメント、READMEやAPIドキュメントをAIが自動生成。",
+      tools: [
+        { name: "ChatGPT", slug: "chatgpt", tip: "JSDoc/Docstring形式のコメントを一括生成" },
+        { name: "Claude", slug: "claude", tip: "コードから利用例付きREADMEをまとめて作成" },
+        { name: "Notion AI", slug: "notion-ai", tip: "生成ドキュメントをNotionに保存してチーム共有" },
+      ],
+    },
+  ];
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "AIコーディングアシスタント比較ガイド【2026年版】",
+    description: "AIコーディングアシスタントの比較と活用法を解説",
+    author: { "@type": "Organization", name: siteConfig.name },
+    publisher: { "@type": "Organization", name: siteConfig.name },
+  };
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <div className="max-w-3xl mx-auto px-4 py-8">
+        <nav className="flex items-center gap-2 text-sm text-muted mb-8">
+          <Link href="/" className="hover:text-primary transition-colors">ホーム</Link>
+          <span>/</span>
+          <Link href="/guide" className="hover:text-primary transition-colors">ガイド</Link>
+          <span>/</span>
+          <span className="text-foreground">AIコーディングアシスタント</span>
+        </nav>
+
+        <div className="mb-8">
+          <span className="text-xs px-2.5 py-1 bg-primary-light text-primary rounded-full font-medium">コーディング</span>
+          <span className="text-xs text-muted ml-3">読了 10分 ・ 更新 2026年4月</span>
+        </div>
+
+        <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+          AIコーディングアシスタント比較ガイド
+        </h1>
+        <p className="text-muted text-lg mb-10 leading-relaxed">
+          AIコーディングアシスタントを使えば、コード生成・レビュー・デバッグ・テスト作成までを自動化でき、開発速度を大きく引き上げられます。本ガイドでは、現場ですぐ使えるAIツールと活用テクニックを目的別に紹介します。
+        </p>
+
+        {/* TOC */}
+        <div className="bg-card-bg dark:bg-blue-900/40 border border-card-border rounded-xl p-6 mb-10">
+          <h2 className="font-bold mb-3">活用シーン</h2>
+          <ol className="space-y-2 text-sm">
+            {useCases.map((uc, i) => (
+              <li key={i}>
+                <a href={`#scene-${i}`} className="text-primary hover:underline">
+                  {uc.icon} {uc.title}
+                </a>
+              </li>
+            ))}
+          </ol>
+        </div>
+
+        {/* Use cases */}
+        {useCases.map((uc, i) => (
+          <section key={i} id={`scene-${i}`} className="mb-12">
+            <h2 className="text-2xl font-bold mb-3 flex items-center gap-2">
+              <span>{uc.icon}</span> {uc.title}
+            </h2>
+            <p className="text-sm text-muted mb-6">{uc.description}</p>
+
+            <div className="space-y-3">
+              {uc.tools.map((tool) => (
+                <div key={tool.slug} className="bg-card-bg dark:bg-blue-900/40 border border-card-border rounded-xl p-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <Link href={`/tools/${tool.slug}`} className="font-bold text-primary hover:underline">
+                      {tool.name}
+                    </Link>
+                    <Link href={`/tools/${tool.slug}`} className="text-xs text-primary hover:underline">
+                      詳細 →
+                    </Link>
+                  </div>
+                  <p className="text-sm text-muted">💡 {tool.tip}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        ))}
+
+        {/* FAQ */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-6">よくある質問（FAQ）</h2>
+          <div className="space-y-4">
+            <div className="bg-card-bg dark:bg-blue-900/40 border border-card-border rounded-xl p-5">
+              <h3 className="font-bold mb-2">Q. 初心者でもAIコーディングアシスタントは使える？</h3>
+              <p className="text-sm text-muted">A. はい。自然言語で要件を伝えれば動くコードを生成してくれるため、学習中の方にも有効です。ただし内容理解は欠かせません。</p>
+            </div>
+            <div className="bg-card-bg dark:bg-blue-900/40 border border-card-border rounded-xl p-5">
+              <h3 className="font-bold mb-2">Q. 業務コードをAIに貼っても大丈夫？</h3>
+              <p className="text-sm text-muted">A. 会社のセキュリティポリシーを必ず確認してください。法人プランやAPI利用では学習に使わない設定が可能です。</p>
+            </div>
+            <div className="bg-card-bg dark:bg-blue-900/40 border border-card-border rounded-xl p-5">
+              <h3 className="font-bold mb-2">Q. 生成されたコードの品質は信頼できる？</h3>
+              <p className="text-sm text-muted">A. 軽微な誤りや古い情報が混ざることがあります。必ず人間によるレビューとテストを実施してください。</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Summary */}
+        <section className="bg-card-bg dark:bg-blue-900/40 border border-card-border rounded-2xl p-8 mb-8">
+          <h2 className="text-xl font-bold mb-4">まとめ：AIコーディング活用のポイント</h2>
+          <ul className="space-y-3 text-sm">
+            <li className="flex items-start gap-2"><span className="text-primary font-bold">1.</span>まずは<strong>定型コード生成</strong>から導入する</li>
+            <li className="flex items-start gap-2"><span className="text-primary font-bold">2.</span>AI生成コードも<strong>必ずレビュー</strong>する</li>
+            <li className="flex items-start gap-2"><span className="text-primary font-bold">3.</span>業務コードは<strong>セキュリティポリシー</strong>を確認</li>
+            <li className="flex items-start gap-2"><span className="text-primary font-bold">4.</span><strong>テストとドキュメント</strong>もAIで自動化する</li>
+          </ul>
+        </section>
+
+        {/* CTA */}
+        <section className="bg-gradient-to-r from-primary-light to-background border border-primary rounded-2xl p-8 text-center">
+          <h2 className="text-xl font-bold mb-3">AIツールを比較して選ぶ</h2>
+          <p className="text-sm text-muted mb-6">開発業務に合ったAIツールを見つけましょう</p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link href="/compare" className="px-6 py-3 bg-primary text-white rounded-full font-medium hover:bg-primary-hover transition-colors">
+              AIチャット比較表
+            </Link>
+            <Link href="/category/ai-business" className="px-6 py-3 bg-card-bg border border-card-border rounded-full font-medium hover:bg-primary-light transition-colors">
+              AIビジネスツール一覧
+            </Link>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+}
