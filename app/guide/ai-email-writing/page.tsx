@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { siteConfig } from "../../lib/data";
+import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "AIメール作成ツール比較ガイド【2026年版】ビジネスメールを自動化",
@@ -147,6 +148,19 @@ export default function AIEmailWritingPage() {
             </div>
           </section>
         ))}
+
+        {/* Affiliate Comparison Table CTA */}
+        <section className="mb-8">
+          <h2 className="text-xl font-bold mb-4">ビジネス英語メール力を磨くサービス</h2>
+          <p className="text-sm text-muted mb-4">海外取引や英語メール対応が必要な方は、ビジネス英語に強いオンライン英会話で実践力を鍛えましょう。</p>
+          <ComparisonTableCTA
+            services={[
+              { name: "ベストティーチャー", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+7QNN6+2ZIK+69HA9", highlight: "Writing×Speaking・ビジネスメール添削に強い", price: "月12,000円〜", badge: "Writing特化" },
+              { name: "ネイティブキャンプ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+APTO2+35VG+64JTE", highlight: "ビジネス教材も豊富・受け放題", price: "月6,480円", badge: "受け放題" },
+              { name: "QQ English", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+A4E2A+4HHM+639IP", highlight: "ビジネスコース・正社員講師", price: "月2,980円〜" },
+            ]}
+          />
+        </section>
 
         {/* FAQ */}
         <section className="mb-12">

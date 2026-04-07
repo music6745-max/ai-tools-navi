@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { siteConfig } from "../../lib/data";
+import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "AI履歴書・職務経歴書作成ガイド【2026年版】転職で差がつく書類作成",
@@ -147,6 +148,19 @@ export default function AIResumePage() {
             </div>
           </section>
         ))}
+
+        {/* Affiliate Comparison Table CTA */}
+        <section className="mb-8">
+          <h2 className="text-xl font-bold mb-4">履歴書作成と並行して活用したいサービス</h2>
+          <p className="text-sm text-muted mb-4">AIで履歴書を整えたら、スキルアップと転職エージェントの活用で書類選考の通過率を高めましょう。</p>
+          <ComparisonTableCTA
+            services={[
+              { name: "SkillHacks（スキルハックス）", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4DRW36+4K3S+5YJRM", highlight: "未経験からプログラミング・スキル証明に最適", price: "買い切り69,800円", badge: "業界最安値" },
+              { name: "Winスクール", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4D6GHE+529E+5ZMCH", highlight: "資格取得・就転職サポート充実", price: "コース別", badge: "全国展開" },
+              { name: "ファルマスタッフ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXL+95U5WY+276A+63OYA", highlight: "薬剤師の履歴書添削・面談サポートあり", price: "登録無料" },
+            ]}
+          />
+        </section>
 
         {/* FAQ */}
         <section className="mb-12">

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { siteConfig } from "../../lib/data";
+import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "AI議事録ツール比較ガイド【2026年版】会議の文字起こしを自動化",
@@ -147,6 +148,19 @@ export default function AIMeetingNotesPage() {
             </div>
           </section>
         ))}
+
+        {/* Affiliate Comparison Table CTA */}
+        <section className="mb-8">
+          <h2 className="text-xl font-bold mb-4">議事録運用と相性の良い業務インフラ</h2>
+          <p className="text-sm text-muted mb-4">議事録の保存・共有にはセキュアな環境が欠かせません。会計・サーバー・VPNで業務基盤を整えましょう。</p>
+          <ComparisonTableCTA
+            services={[
+              { name: "freee会計", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "スマホで完結する会計ソフト", price: "月1,180円〜", badge: "業務効率化" },
+              { name: "ConoHa WING", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1FSQEQ+50+5SG2LT", highlight: "国内最速級のレンタルサーバー", price: "月687円〜", badge: "高速" },
+              { name: "MillenVPN", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+41V7ZM+3JTE+HV7V6", highlight: "国産VPNでセキュアな会議環境", price: "月396円〜" },
+            ]}
+          />
+        </section>
 
         {/* FAQ */}
         <section className="mb-12">

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { siteConfig } from "../../lib/data";
+import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "AI英文校正ツール比較ガイド【2026年版】ビジネス英語を自然に添削",
@@ -147,6 +148,20 @@ export default function AIEnglishProofreadingPage() {
             </div>
           </section>
         ))}
+
+        {/* Affiliate Comparison Table CTA */}
+        <section className="mb-8">
+          <h2 className="text-xl font-bold mb-4">英文ライティング力を伸ばす英会話サービス</h2>
+          <p className="text-sm text-muted mb-4">AIで添削した後は、実際にネイティブ講師と英文を確認することで定着します。Writingに強いオンライン英会話を活用しましょう。</p>
+          <ComparisonTableCTA
+            services={[
+              { name: "ベストティーチャー", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+7QNN6+2ZIK+69HA9", highlight: "Writing×Speakingの独自メソッド・添削特化", price: "月12,000円〜", badge: "Writing特化" },
+              { name: "ネイティブキャンプ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+APTO2+35VG+64JTE", highlight: "レッスン受け放題・添削も依頼可能", price: "月6,480円", badge: "おすすめ" },
+              { name: "QQ English", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+A4E2A+4HHM+639IP", highlight: "プロ教師によるカランメソッド", price: "月2,980円〜" },
+              { name: "エイゴックス", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+EVUWI+2TKO+5ZU2A", highlight: "ネイティブ講師から学べる", price: "月2,000円〜" },
+            ]}
+          />
+        </section>
 
         {/* FAQ */}
         <section className="mb-12">

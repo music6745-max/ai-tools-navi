@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { siteConfig } from "../../lib/data";
+import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "AI医療・健康管理ガイド【2026年版】ヘルスケアAI活用術",
@@ -156,6 +157,17 @@ export default function AIForHealthcarePage() {
             </div>
           </section>
         ))}
+
+        {/* Affiliate Comparison Table CTA */}
+        <section className="mb-8">
+          <h2 className="text-xl font-bold mb-4">医療・薬剤師の転職に強いサービス</h2>
+          <p className="text-sm text-muted mb-4">ヘルスケア業界でキャリアアップを目指す方向けの、業界特化型エージェントです。</p>
+          <ComparisonTableCTA
+            services={[
+              { name: "ファルマスタッフ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXL+95U5WY+276A+63OYA", highlight: "薬剤師転職専門・業界トップクラスの求人数", price: "登録無料", badge: "薬剤師特化" },
+            ]}
+          />
+        </section>
 
         {/* Summary */}
         <section className="bg-card-bg border border-card-border rounded-2xl p-8 mb-8">

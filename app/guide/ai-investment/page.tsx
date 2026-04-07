@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { siteConfig } from "../../lib/data";
+import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】AI投資・資産運用サービス比較5選｜ロボアドバイザーおすすめ",
@@ -304,6 +305,19 @@ export default function AIInvestmentPage() {
               </div>
             ))}
           </div>
+        </section>
+
+        {/* Affiliate Comparison Table CTA */}
+        <section className="mb-8">
+          <h2 className="text-xl font-bold mb-4">投資・資産管理に役立つ会計ツール</h2>
+          <p className="text-sm text-muted mb-4">投資の利益が出たら確定申告が必要です。会計ソフトで日々の取引をしっかり管理しましょう。</p>
+          <ComparisonTableCTA
+            services={[
+              { name: "freee会計", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "スマホで確定申告・暗号資産にも対応", price: "月1,180円〜", badge: "初心者向け" },
+              { name: "やよいの青色申告", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "売上実績No.1・初年度無料プランあり", price: "初年度無料〜", badge: "コスパ重視" },
+              { name: "マネーフォワード クラウド確定申告", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "口座連携で自動仕訳・投資管理に強い", price: "月800円〜" },
+            ]}
+          />
         </section>
 
         {/* FAQ */}

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { siteConfig } from "../../lib/data";
+import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "AI音声文字起こしツール比較ガイド【2026年版】会議・インタビューを自動化",
@@ -147,6 +148,19 @@ export default function AITranscriptionPage() {
             </div>
           </section>
         ))}
+
+        {/* Affiliate Comparison Table CTA */}
+        <section className="mb-8">
+          <h2 className="text-xl font-bold mb-4">文字起こしデータの活用に役立つ業務ツール</h2>
+          <p className="text-sm text-muted mb-4">文字起こししたデータの保存・共有・活用には、高速サーバーや会計ソフトとの連携が便利です。</p>
+          <ComparisonTableCTA
+            services={[
+              { name: "ConoHa WING", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1FSQEQ+50+5SG2LT", highlight: "国内最速級・データ保管に最適", price: "月687円〜", badge: "高速" },
+              { name: "エックスサーバー", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1B19KI+CO4+6HES1", highlight: "安定実績20年・大容量対応", price: "月990円〜", badge: "定番" },
+              { name: "freee会計", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "議事録から請求書発行まで一気通貫", price: "月1,180円〜" },
+            ]}
+          />
+        </section>
 
         {/* FAQ */}
         <section className="mb-12">

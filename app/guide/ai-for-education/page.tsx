@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { siteConfig } from "../../lib/data";
+import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "AI教育活用ガイド【2026年版】教師・学校向けAIツール活用術",
@@ -147,6 +148,20 @@ export default function AIForEducationPage() {
             </div>
           </section>
         ))}
+
+        {/* Affiliate Comparison Table CTA */}
+        <section className="mb-8">
+          <h2 className="text-xl font-bold mb-4">子ども・学生向けの英語学習サービス</h2>
+          <p className="text-sm text-muted mb-4">AIと併用したい、子ども向け・初学者向けに最適化されたオンライン英会話サービスです。</p>
+          <ComparisonTableCTA
+            services={[
+              { name: "NovaKid", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+D3K36+4KYW+63OY9", highlight: "4〜12歳向け・ゲーム感覚で学べる子供英会話", price: "月3,760円〜", badge: "子ども向け" },
+              { name: "ワールドアイキッズ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+7581E+4MZ4+5YZ77", highlight: "幼児・小学生向けオンライン英会話", price: "月2,450円〜", badge: "幼児OK" },
+              { name: "クラウティ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+5CX82+46SW+5YJRM", highlight: "家族でシェアできる・1日2レッスン", price: "月4,950円〜", badge: "家族共有" },
+              { name: "QQ English", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+A4E2A+4HHM+639IP", highlight: "正社員講師・カランメソッドで学ぶ", price: "月2,980円〜" },
+            ]}
+          />
+        </section>
 
         {/* Summary */}
         <section className="bg-card-bg border border-card-border rounded-2xl p-8 mb-8">
