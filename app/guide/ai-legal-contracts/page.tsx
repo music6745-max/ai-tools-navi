@@ -1,0 +1,192 @@
+import Link from "next/link";
+import type { Metadata } from "next";
+import { siteConfig } from "../../lib/data";
+
+export const metadata: Metadata = {
+  title: "AI法務・契約書ツールガイド【2026年版】契約レビューを効率化",
+  description:
+    "AIを活用した法務・契約書業務の効率化を解説。契約書レビュー、リスク検出、ドラフト作成、リーガルチェックに役立つAIツールと活用法を紹介。",
+  alternates: {
+    canonical: `${siteConfig.url}/guide/ai-legal-contracts`,
+  },
+};
+
+export default function AILegalContractsPage() {
+  const useCases = [
+    {
+      title: "契約書のレビュー・要約",
+      icon: "📑",
+      description: "長大な契約書をAIが要約し、重要条項やリスク項目をピックアップ。",
+      tools: [
+        { name: "Claude", slug: "claude", tip: "10万文字超の契約書も一度に読み込み、条項ごとに要約可能" },
+        { name: "ChatGPT", slug: "chatgpt", tip: "リスク条項・免責・損害賠償条項を自動抽出" },
+        { name: "Gemini", slug: "gemini", tip: "Google Drive上の契約書ドラフトを直接レビュー可能" },
+      ],
+    },
+    {
+      title: "契約書ドラフトの作成",
+      icon: "✍️",
+      description: "業務委託契約・NDA・利用規約など、定型契約のたたき台をAIが作成。",
+      tools: [
+        { name: "ChatGPT", slug: "chatgpt", tip: "種類・当事者・条件を伝えるだけで一般的なドラフトを生成" },
+        { name: "Claude", slug: "claude", tip: "条文の論理整合性を保ったまま長文ドラフトを作成" },
+        { name: "Jasper", slug: "jasper", tip: "ブランドトーンに合わせた利用規約・プライバシーポリシーを生成" },
+      ],
+    },
+    {
+      title: "リスク・抜け漏れの検出",
+      icon: "⚠️",
+      description: "標準テンプレートとの差分や、欠落条項をAIが自動検出。",
+      tools: [
+        { name: "Claude", slug: "claude", tip: "条項単位で「あるべき内容」との差分を指摘" },
+        { name: "ChatGPT", slug: "chatgpt", tip: "チェックリスト形式で抜け漏れを一覧化" },
+        { name: "Perplexity", slug: "perplexity", tip: "最新の法改正や判例を踏まえたチェック観点を提供" },
+      ],
+    },
+    {
+      title: "社内規程・ポリシーの作成",
+      icon: "📘",
+      description: "就業規則・情報セキュリティポリシー等の社内文書をAIが作成・更新。",
+      tools: [
+        { name: "ChatGPT", slug: "chatgpt", tip: "業種・規模に合わせた社内規程のひな形を生成" },
+        { name: "Claude", slug: "claude", tip: "既存規程を踏まえた改定案・差分の作成が得意" },
+        { name: "Notion AI", slug: "notion-ai", tip: "社内ナレッジとして規程を蓄積・横断検索" },
+      ],
+    },
+    {
+      title: "英文契約書の翻訳・チェック",
+      icon: "🌐",
+      description: "海外取引先とのやり取りに必須の英文契約をAIが翻訳・チェック。",
+      tools: [
+        { name: "DeepL Write", slug: "deepl-write", tip: "法務文書のニュアンスを保った高精度な翻訳" },
+        { name: "Claude", slug: "claude", tip: "日英対訳での条文比較やリスク評価まで対応" },
+        { name: "ChatGPT", slug: "chatgpt", tip: "英文契約特有の表現（hereto, herein等）も適切に解釈" },
+      ],
+    },
+    {
+      title: "契約管理・期限アラート",
+      icon: "📆",
+      description: "契約一覧を整理し、更新期限や違約条項をAIが見える化。",
+      tools: [
+        { name: "Notion AI", slug: "notion-ai", tip: "契約データベースの自動タグ付け・期限管理" },
+        { name: "ChatGPT", slug: "chatgpt", tip: "契約一覧から重要日付を自動抽出してリスト化" },
+        { name: "Claude", slug: "claude", tip: "複数契約を横断的に比較・要約" },
+      ],
+    },
+  ];
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "AI法務・契約書ツールガイド【2026年版】",
+    description: "AIを活用した法務・契約業務の効率化",
+    author: { "@type": "Organization", name: siteConfig.name },
+    publisher: { "@type": "Organization", name: siteConfig.name },
+  };
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <div className="max-w-3xl mx-auto px-4 py-8">
+        <nav className="flex items-center gap-2 text-sm text-muted mb-8">
+          <Link href="/" className="hover:text-primary transition-colors">ホーム</Link>
+          <span>/</span>
+          <Link href="/guide" className="hover:text-primary transition-colors">ガイド</Link>
+          <span>/</span>
+          <span className="text-foreground">AI法務・契約書</span>
+        </nav>
+
+        <div className="mb-8">
+          <span className="text-xs px-2.5 py-1 bg-primary-light text-primary rounded-full font-medium">法務</span>
+          <span className="text-xs text-muted ml-3">読了 10分 ・ 更新 2026年4月</span>
+        </div>
+
+        <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+          AI法務・契約書ツールガイド
+        </h1>
+        <p className="text-muted text-lg mb-10 leading-relaxed">
+          契約書のレビュー・ドラフト作成・リスク検出までAIで効率化することで、法務業務の負担を大幅に軽減できます。本ガイドでは、目的別おすすめAIツールと実務での使い方を紹介します。
+        </p>
+
+        <div className="bg-card-bg dark:bg-amber-900/40 border border-card-border rounded-xl p-6 mb-10">
+          <h2 className="font-bold mb-3">活用シーン</h2>
+          <ol className="space-y-2 text-sm">
+            {useCases.map((uc, i) => (
+              <li key={i}>
+                <a href={`#scene-${i}`} className="text-primary hover:underline">
+                  {uc.icon} {uc.title}
+                </a>
+              </li>
+            ))}
+          </ol>
+        </div>
+
+        {useCases.map((uc, i) => (
+          <section key={i} id={`scene-${i}`} className="mb-12">
+            <h2 className="text-2xl font-bold mb-3 flex items-center gap-2">
+              <span>{uc.icon}</span> {uc.title}
+            </h2>
+            <p className="text-sm text-muted mb-6">{uc.description}</p>
+
+            <div className="space-y-3">
+              {uc.tools.map((tool) => (
+                <div key={tool.slug} className="bg-card-bg dark:bg-amber-900/40 border border-card-border rounded-xl p-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <Link href={`/tools/${tool.slug}`} className="font-bold text-primary hover:underline">
+                      {tool.name}
+                    </Link>
+                    <Link href={`/tools/${tool.slug}`} className="text-xs text-primary hover:underline">
+                      詳細 →
+                    </Link>
+                  </div>
+                  <p className="text-sm text-muted">💡 {tool.tip}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        ))}
+
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-6">よくある質問（FAQ）</h2>
+          <div className="space-y-4">
+            <div className="bg-card-bg dark:bg-amber-900/40 border border-card-border rounded-xl p-5">
+              <h3 className="font-bold mb-2">Q. AIが作った契約書をそのまま使える？</h3>
+              <p className="text-sm text-muted">A. たたき台としては有用ですが、必ず弁護士・法務担当者のレビューを受けてから使用してください。</p>
+            </div>
+            <div className="bg-card-bg dark:bg-amber-900/40 border border-card-border rounded-xl p-5">
+              <h3 className="font-bold mb-2">Q. 契約書をAIに入力してもいい？</h3>
+              <p className="text-sm text-muted">A. 機密情報を含むため、法人プランやAPI経由で「学習に使わない」設定で運用しましょう。</p>
+            </div>
+            <div className="bg-card-bg dark:bg-amber-900/40 border border-card-border rounded-xl p-5">
+              <h3 className="font-bold mb-2">Q. AIは法的助言を提供できる？</h3>
+              <p className="text-sm text-muted">A. AIは情報提供の補助ツールであり、最終的な法的判断は必ず資格を持つ専門家に相談してください。</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-card-bg dark:bg-amber-900/40 border border-card-border rounded-2xl p-8 mb-8">
+          <h2 className="text-xl font-bold mb-4">まとめ：AI法務活用のポイント</h2>
+          <ul className="space-y-3 text-sm">
+            <li className="flex items-start gap-2"><span className="text-primary font-bold">1.</span>まず<strong>レビュー業務</strong>から導入する</li>
+            <li className="flex items-start gap-2"><span className="text-primary font-bold">2.</span>長文契約は<strong>Claude</strong>が便利</li>
+            <li className="flex items-start gap-2"><span className="text-primary font-bold">3.</span>機密情報は<strong>法人プラン</strong>で運用</li>
+            <li className="flex items-start gap-2"><span className="text-primary font-bold">4.</span>最終判断は<strong>専門家に相談</strong></li>
+          </ul>
+        </section>
+
+        <section className="bg-gradient-to-r from-primary-light to-background border border-primary rounded-2xl p-8 text-center">
+          <h2 className="text-xl font-bold mb-3">AIツールを比較して選ぶ</h2>
+          <p className="text-sm text-muted mb-6">法務業務に合ったAIツールを見つけましょう</p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link href="/compare" className="px-6 py-3 bg-primary text-white rounded-full font-medium hover:bg-primary-hover transition-colors">
+              AIチャット比較表
+            </Link>
+            <Link href="/category/ai-business" className="px-6 py-3 bg-card-bg border border-card-border rounded-full font-medium hover:bg-primary-light transition-colors">
+              AIビジネスツール一覧
+            </Link>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+}

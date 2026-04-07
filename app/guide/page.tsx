@@ -196,6 +196,46 @@ const guides = [
     category: "データ分析",
     readTime: "10分",
   },
+  {
+    slug: "ai-meeting-notes",
+    title: "AI議事録ツール比較ガイド【2026年版】会議の文字起こしを自動化",
+    description: "会議の文字起こし、要約、タスク抽出、多言語対応など、議事録作成を自動化するおすすめAI議事録ツールと活用法を紹介。",
+    icon: "🎙️",
+    category: "議事録",
+    readTime: "10分",
+  },
+  {
+    slug: "ai-presentation",
+    title: "AIプレゼン資料作成ガイド【2026年版】スライド作成を自動化",
+    description: "構成案、スライド生成、図解、原稿作成まで、プレゼン資料作成を効率化するおすすめAIツールと活用術を紹介。",
+    icon: "📽️",
+    category: "プレゼン",
+    readTime: "10分",
+  },
+  {
+    slug: "ai-translation",
+    title: "AI翻訳ツール比較ガイド【2026年版】高精度な多言語翻訳",
+    description: "ビジネス文書、メール、Webサイト、論文翻訳まで、用途別おすすめAI翻訳ツールと高精度に翻訳するコツを紹介。",
+    icon: "🌐",
+    category: "翻訳",
+    readTime: "10分",
+  },
+  {
+    slug: "ai-photo-editing",
+    title: "AI画像編集ツール比較ガイド【2026年版】写真加工を自動化",
+    description: "背景削除、画質向上、不要物消去、自動補正など、写真加工を効率化するおすすめAI画像編集ツールと活用法を紹介。",
+    icon: "🖼️",
+    category: "画像編集",
+    readTime: "10分",
+  },
+  {
+    slug: "ai-legal-contracts",
+    title: "AI法務・契約書ツールガイド【2026年版】契約レビューを効率化",
+    description: "契約書レビュー、リスク検出、ドラフト作成、英文契約チェックなど、法務業務を効率化するAIツールと活用法を紹介。",
+    icon: "⚖️",
+    category: "法務",
+    readTime: "10分",
+  },
 ];
 
 export default function GuidePage() {
