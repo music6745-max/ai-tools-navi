@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { siteConfig } from "../../lib/data";
+import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "AI法務・契約書ツールガイド【2026年版】契約レビューを効率化",
@@ -145,6 +146,19 @@ export default function AILegalContractsPage() {
             </div>
           </section>
         ))}
+
+        {/* Affiliate Comparison Table CTA */}
+        <section className="mb-8">
+          <h2 className="text-xl font-bold mb-4">法務・士業・転職を考えている方へ</h2>
+          <p className="text-sm text-muted mb-4">法務スキルやキャリアアップを支える、転職・専門サービスの選択肢をまとめました。</p>
+          <ComparisonTableCTA
+            services={[
+              { name: "ファルマスタッフ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXL+95U5WY+276A+63OYA", highlight: "薬剤師転職専門・業界トップクラスの求人数", price: "登録無料", badge: "士業特化" },
+              { name: "SkillHacks（スキルハックス）", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4DRW36+4K3S+5YJRM", highlight: "未経験から学べる買い切り型プログラミング講座", price: "買い切り69,800円", badge: "業界最安値" },
+              { name: "Winスクール", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4D6GHE+529E+5ZMCH", highlight: "全国展開・資格取得や転職サポートも充実", price: "コース別", badge: "全国展開" },
+            ]}
+          />
+        </section>
 
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-6">よくある質問（FAQ）</h2>

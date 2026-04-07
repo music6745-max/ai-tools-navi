@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { siteConfig } from "../../lib/data";
+import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "AIロゴ作成ツール比較ガイド【2026年版】無料で高品質ロゴをAI生成",
@@ -147,6 +148,19 @@ export default function AILogoCreationPage() {
             </div>
           </section>
         ))}
+
+        {/* Affiliate Comparison Table CTA */}
+        <section className="mb-8">
+          <h2 className="text-xl font-bold mb-4">ロゴ制作を副業として伸ばしたい方へ</h2>
+          <p className="text-sm text-muted mb-4">AI生成と組み合わせるデザイン・Web制作スキルがあれば、ロゴ単体ではなくブランディング案件も狙えます。</p>
+          <ComparisonTableCTA
+            services={[
+              { name: "SkillHacks（スキルハックス）", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4DRW36+4K3S+5YJRM", highlight: "業界最安値・動画＋質問し放題", price: "買い切り69,800円", badge: "業界最安値" },
+              { name: "Winスクール", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4D6GHE+529E+5ZMCH", highlight: "全国展開・個人レッスンで挫折しない", price: "コース別", badge: "全国展開" },
+              { name: "Python Winner（Winスクール）", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4EDBOY+529E+HW2Q9", highlight: "AI・データ分析特化のPython個人レッスン", price: "コース別", badge: "AI特化" },
+            ]}
+          />
+        </section>
 
         {/* FAQ */}
         <section className="mb-12">

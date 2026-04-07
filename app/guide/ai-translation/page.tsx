@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { siteConfig } from "../../lib/data";
+import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "AI翻訳ツール比較ガイド【2026年版】高精度な多言語翻訳",
@@ -145,6 +146,19 @@ export default function AITranslationPage() {
             </div>
           </section>
         ))}
+
+        {/* Affiliate Comparison Table CTA */}
+        <section className="mb-8">
+          <h2 className="text-xl font-bold mb-4">英語力も一緒に底上げしたい方へ</h2>
+          <p className="text-sm text-muted mb-4">AI翻訳に頼り切らず、自分の英語力も鍛えると、最終チェックや交渉場面で大きな差が出ます。</p>
+          <ComparisonTableCTA
+            services={[
+              { name: "ネイティブキャンプ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+APTO2+35VG+64JTE", highlight: "レッスン受け放題・スキマ時間に話せる", price: "月6,480円", badge: "受け放題" },
+              { name: "ベストティーチャー", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+7QNN6+2ZIK+69HA9", highlight: "Writing×Speakingの独自メソッド・添削特化", price: "月12,000円〜", badge: "Writing特化" },
+              { name: "QQ English", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+A4E2A+4HHM+639IP", highlight: "正社員講師・カランメソッドで学ぶ", price: "月2,980円〜" },
+            ]}
+          />
+        </section>
 
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-6">よくある質問（FAQ）</h2>
