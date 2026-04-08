@@ -889,6 +889,46 @@ export const guides: Guide[] =
     category: "エンジニア",
     readTime: "12分",
   },
+  {
+    slug: "ai-for-elderly-care",
+    title: "介護・高齢者ケアAIおすすめ5選【2026年最新】",
+    description: "介護現場と家庭の高齢者ケアで活躍するAIツールを徹底比較。見守りカメラ・記録自動化・会話ロボット・服薬管理・音声アシスタントまで、在宅介護から施設運営まで役立つ最新AIを解説します。",
+    icon: "🧓",
+    category: "業種別",
+    readTime: "10分",
+  },
+  {
+    slug: "ai-for-pets",
+    title: "ペット向けAIサービスおすすめ5選【2026年最新】",
+    description: "犬・猫などペットのためのAIサービスを徹底解説。AIカメラ見守り、健康モニタリング、鳴き声翻訳、しつけAIチャット、給餌自動化まで、2026年最新のペットテックAIを紹介します。",
+    icon: "🐶",
+    category: "ライフスタイル",
+    readTime: "10分",
+  },
+  {
+    slug: "ai-for-childcare",
+    title: "育児・子育てAIアプリおすすめ5選【2026年最新】",
+    description: "離乳食・睡眠・学習・絵本読み聞かせ・育児相談まで、パパママの味方となる2026年最新AIアプリを分野別に紹介します。",
+    icon: "👶",
+    category: "ライフスタイル",
+    readTime: "10分",
+  },
+  {
+    slug: "ai-for-language-learning",
+    title: "言語学習AI比較おすすめ5選【2026年最新】",
+    description: "中国語・韓国語・フランス語・スペイン語・ドイツ語など英語以外の多言語学習にも対応するAIツールを徹底比較。会話・文法・発音練習の活用法を解説。",
+    icon: "🌏",
+    category: "学習",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-personality-test",
+    title: "AI性格診断・心理テストツールおすすめ5選【2026年最新】",
+    description: "MBTI・ビッグファイブ・ストレングスファインダー型のAI診断から、ChatGPTで自作する診断プロンプトまで。自己理解とキャリア選択に役立つ性格診断AIを解説。",
+    icon: "🧠",
+    category: "その他",
+    readTime: "10分",
+  },
 ];
 
 export const GENRES = [
@@ -1023,6 +1063,13 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "ai-prompt-templates": "チャット・文章",
   "ai-for-product-managers": "ビジネス",
   "ai-for-qa-testers": "業種別",
+
+  // ライフスタイルAI
+  "ai-for-elderly-care": "業種別",
+  "ai-for-pets": "その他",
+  "ai-for-childcare": "業種別",
+  "ai-for-language-learning": "学習・研究",
+  "ai-personality-test": "その他",
 };
 
 export function genreOf(slug: string): Genre {
