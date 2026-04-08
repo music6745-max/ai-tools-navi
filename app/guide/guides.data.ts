@@ -665,6 +665,46 @@ export const guides: Guide[] =
     category: "無料",
     readTime: "8分",
   },
+  {
+    slug: "ai-for-game-developers",
+    title: "ゲーム開発者向けAIツール完全ガイド｜2026年おすすめ5選",
+    description: "ChatGPT・Claude・Midjourney・Suno・Scenarioなど、ゲーム開発に役立つAIツール5選を徹底比較。プログラミング・グラフィック・サウンド・シナリオ制作まで活用法を解説。",
+    icon: "🎮",
+    category: "業種別",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-3d-printing",
+    title: "3DプリントAI活用完全ガイド｜2026年おすすめツール5選",
+    description: "3Dプリント向けにモデル生成・スライス最適化・トラブルシュートが可能なAIツール5選を解説。Luma AI・Meshy・3DFY・ChatGPT・Spline AIの活用法を紹介。",
+    icon: "🖨️",
+    category: "業種別",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-fashion-design",
+    title: "ファッションデザインAI完全ガイド｜2026年おすすめツール5選",
+    description: "ファッションデザイナー・アパレルブランド向けに最適なAIツール5選を徹底解説。Midjourney・Stable Diffusion・CALA・Vue.aiなどでデザイン制作を効率化。",
+    icon: "👗",
+    category: "業種別",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-news-generation",
+    title: "AIニュース生成・要約完全ガイド｜2026年おすすめツール5選",
+    description: "ChatGPT・Claude・Perplexity・Feedly AI・NotebookLMでニュース要約・記事生成を効率化する方法を解説。情報収集の時間を10分の1にする活用法を紹介。",
+    icon: "📰",
+    category: "情報収集",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-fact-checking",
+    title: "AIファクトチェック・情報検証完全ガイド｜2026年おすすめツール5選",
+    description: "Perplexity・GPTZero・Originality.AI・ChatGPT・Google Fact Check Toolsなど、フェイクニュース対策と情報検証に役立つAIツール5選を徹底解説。",
+    icon: "✅",
+    category: "情報検証",
+    readTime: "12分",
+  },
 ];
 
 export const GENRES = [
@@ -768,6 +808,11 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "ai-pricing-comparison": "その他",
   "ai-japanese-tools": "チャット・文章",
   "ai-free-tools": "その他",
+  "ai-for-game-developers": "業種別",
+  "ai-3d-printing": "業種別",
+  "ai-fashion-design": "業種別",
+  "ai-news-generation": "その他",
+  "ai-fact-checking": "その他",
 };
 
 export function genreOf(slug: string): Genre {
