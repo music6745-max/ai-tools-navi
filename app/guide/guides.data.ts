@@ -769,6 +769,46 @@ export const guides: Guide[] =
     category: "画像生成",
     readTime: "11分",
   },
+  {
+    slug: "ai-text-to-speech",
+    title: "AIテキスト読み上げツール比較【2026年最新】ElevenLabs・Azure・Google徹底解説",
+    description: "AIテキスト読み上げ（TTS）を音声品質・日本語対応・商用ライセンス・料金で徹底比較。YouTubeナレーション・audiobook制作に最適な1つが見つかります。",
+    icon: "🗣️",
+    category: "音声AI",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-speech-to-text",
+    title: "AI音声文字起こしツール比較【2026年最新】Whisper・Otter・Notta徹底解説",
+    description: "AI音声文字起こしを精度・日本語対応・価格・話者分離で徹底比較。議事録作成・インタビュー・YouTube字幕生成に最適なサービスを解説します。",
+    icon: "🎙️",
+    category: "音声AI",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-search-engines",
+    title: "AI検索エンジン比較【2026年最新】Perplexity・You.com・Phind徹底解説",
+    description: "AI検索エンジンをPerplexity・You.com・Phind・Arc Search・Braveで徹底比較。従来のGoogle検索との違い、リサーチ・開発者向けの使い分けを解説。",
+    icon: "🔍",
+    category: "検索AI",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-rag-tools",
+    title: "RAG構築ツール比較【2026年最新】LangChain・LlamaIndex・Dify徹底解説",
+    description: "RAG構築ツールを徹底比較。LangChain・LlamaIndex・Dify・Haystack・Vectaraの特徴、社内ナレッジAI・カスタマーサポートAIの実装方法を解説。",
+    icon: "🦜",
+    category: "開発・インフラ",
+    readTime: "13分",
+  },
+  {
+    slug: "ai-vector-database",
+    title: "ベクターデータベース比較【2026年最新】Pinecone・Weaviate・Qdrant徹底解説",
+    description: "AI・RAG構築に必須のベクターDBを徹底比較。Pinecone・Weaviate・Qdrant・Milvus・Chromaの特徴・料金・使い分けを解説。",
+    icon: "🗄️",
+    category: "インフラ",
+    readTime: "13分",
+  },
 ];
 
 export const GENRES = [
@@ -885,6 +925,11 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "chatgpt-claude-gemini-comparison": "チャット・文章",
   "ai-pricing-detailed": "その他",
   "chatgpt-image-generation-guide": "画像・動画",
+  "ai-text-to-speech": "音声・音楽",
+  "ai-speech-to-text": "音声・音楽",
+  "ai-search-engines": "その他",
+  "ai-rag-tools": "その他",
+  "ai-vector-database": "その他",
 };
 
 export function genreOf(slug: string): Genre {
