@@ -1,9 +1,25 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
 import Link from "next/link";
 import { siteConfig, categories } from "./lib/data";
 import { CrossPromotion } from "./components/CrossPromotion";
 import { ThemeToggle } from "./components/ThemeToggle";
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+  ],
+};
 
 export const metadata: Metadata = {
   title: {
@@ -69,16 +85,37 @@ export default function RootLayout({
 }>) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: siteConfig.name,
-    url: siteConfig.url,
-    description: siteConfig.description,
-    inLanguage: "ja",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": `${siteConfig.url}/#website`,
+        name: siteConfig.name,
+        url: siteConfig.url,
+        description: siteConfig.description,
+        inLanguage: "ja",
+        potentialAction: {
+          "@type": "SearchAction",
+          target: `${siteConfig.url}/search?q={search_term_string}`,
+          "query-input": "required name=search_term_string",
+        },
+      },
+      {
+        "@type": "Organization",
+        "@id": `${siteConfig.url}/#organization`,
+        name: siteConfig.name,
+        url: siteConfig.url,
+        logo: `${siteConfig.url}/favicon.ico`,
+      },
+    ],
   };
 
   return (
-    <html lang="ja" className="h-full antialiased">
+    <html lang="ja" className={`h-full antialiased ${inter.variable}`}>
       <head>
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
+        <link rel="preconnect" href="https://aml.valuecommerce.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         {/* Google Analytics */}
         <script
           async
