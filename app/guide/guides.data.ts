@@ -625,6 +625,46 @@ export const guides: Guide[] =
     category: "ビジネス",
     readTime: "12分",
   },
+  {
+    slug: "ai-vs-human",
+    title: "AIと人間の比較・使い分け完全ガイド【2026年版】",
+    description: "AIと人間それぞれの得意・不得意を整理し、ビジネスや日常の場面でどう使い分けるべきかを解説。AIに任せる仕事・人にしかできない仕事の境界線を明確にします。",
+    icon: "🤝",
+    category: "基礎",
+    readTime: "8分",
+  },
+  {
+    slug: "ai-image-vs-photo",
+    title: "AI画像 vs 実写【2026年最新】ビジネス活用比較",
+    description: "AI生成画像と実写写真をビジネスシーンでどう使い分けるべきか。コスト・スピード・著作権・ブランド信頼性・SEOまで徹底比較し、最適な選択肢を解説します。",
+    icon: "🖼️",
+    category: "画像・動画",
+    readTime: "9分",
+  },
+  {
+    slug: "ai-pricing-comparison",
+    title: "主要AIサービス料金徹底比較【2026年版】",
+    description: "ChatGPT・Claude・Gemini・Perplexity・Copilot・Midjourneyなど主要AIサービスの料金プランを2026年最新版で徹底比較。コスパ最強はどれかを解説します。",
+    icon: "💰",
+    category: "料金",
+    readTime: "10分",
+  },
+  {
+    slug: "ai-japanese-tools",
+    title: "日本語特化AIツール比較【2026年最新】",
+    description: "ELYZA・Sarashina・rinna・PLaMoなど日本語特化AIツール、そしてClaudeやGPT-4oの日本語性能を徹底比較。日本語業務に最適なAIを選ぶための実用ガイド。",
+    icon: "🇯🇵",
+    category: "日本語",
+    readTime: "9分",
+  },
+  {
+    slug: "ai-free-tools",
+    title: "完全無料で使えるAIツール厳選【2026年版】10選",
+    description: "ChatGPT・Claude・Gemini・Microsoft Copilot・Bingなど、完全無料で使える本格AIツールを厳選。コストをかけずにAIを始めたい人必見です。",
+    icon: "🆓",
+    category: "無料",
+    readTime: "8分",
+  },
 ];
 
 export const GENRES = [
@@ -723,6 +763,11 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "ai-for-startups": "業種別",
   "ai-data-visualization": "ビジネス",
   "ai-customer-support": "ビジネス",
+  "ai-vs-human": "その他",
+  "ai-image-vs-photo": "画像・動画",
+  "ai-pricing-comparison": "その他",
+  "ai-japanese-tools": "チャット・文章",
+  "ai-free-tools": "その他",
 };
 
 export function genreOf(slug: string): Genre {
