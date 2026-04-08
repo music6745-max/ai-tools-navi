@@ -809,6 +809,46 @@ export const guides: Guide[] =
     category: "インフラ",
     readTime: "13分",
   },
+  {
+    slug: "ai-for-graphic-designers",
+    title: "グラフィックデザイナー向けAIツール2026｜業務効率化おすすめ5選",
+    description: "ロゴ・バナー・名刺・ポスター制作を効率化するAIツールを徹底比較。Midjourney・Adobe Firefly・Canva AI・Figma AI・ChatGPTを目的別に解説。",
+    icon: "🎨",
+    category: "デザイン",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-for-web-developers",
+    title: "Web開発者向けAIツール2026｜コーディング支援おすすめ5選",
+    description: "Web開発者がコーディング・デバッグ・ドキュメント作成を効率化できるAIツールを徹底比較。GitHub Copilot・Cursor・Claude Codeの使い分けを解説。",
+    icon: "💻",
+    category: "コーディング",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-for-translators",
+    title: "翻訳家・通訳者向けAIツール2026｜業務効率化おすすめ5選",
+    description: "プロの翻訳家・通訳者が作業効率を上げるAIツールを徹底解説。DeepL・ChatGPT・Claude・Geminiの併用でスピードと品質を両立。",
+    icon: "🌐",
+    category: "翻訳",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-for-illustrators",
+    title: "イラストレーター向けAIツール2026｜制作支援おすすめ5選",
+    description: "イラストレーターの制作を支援するAIツール。Midjourney・NovelAI・Stable Diffusion・Clip Studio・Adobe Fireflyを工程別に解説。",
+    icon: "🖌️",
+    category: "画像生成",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-character-design",
+    title: "キャラクターデザイン特化AI2026｜おすすめ5選＆活用術",
+    description: "オリジナルキャラ制作に特化したAIツールを徹底比較。NovelAI・Midjourney・Stable Diffusion・Leonardoをキャラ設定から三面図まで解説。",
+    icon: "👤",
+    category: "キャラ生成",
+    readTime: "12分",
+  },
 ];
 
 export const GENRES = [
@@ -930,6 +970,12 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "ai-search-engines": "その他",
   "ai-rag-tools": "その他",
   "ai-vector-database": "その他",
+
+  "ai-for-graphic-designers": "クリエイティブ",
+  "ai-for-web-developers": "クリエイティブ",
+  "ai-for-translators": "チャット・文章",
+  "ai-for-illustrators": "画像・動画",
+  "ai-character-design": "画像・動画",
 };
 
 export function genreOf(slug: string): Genre {
