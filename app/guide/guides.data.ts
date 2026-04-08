@@ -585,6 +585,46 @@ export const guides: Guide[] =
     category: "ノーコード",
     readTime: "13分",
   },
+  {
+    slug: "ai-for-marketers",
+    title: "マーケター向けAI活用ガイド【2026年最新】業務効率化おすすめ5選",
+    description: "広告運用・SEO・SNS・コンテンツ制作・データ分析まで、マーケター業務をAIで効率化する方法を徹底解説。",
+    icon: "📣",
+    category: "業種別",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-for-content-creators",
+    title: "コンテンツクリエイター向けAI活用ガイド【2026年最新】おすすめ5選",
+    description: "YouTube・ブログ・Podcast・SNS・動画編集まで、コンテンツクリエイターの制作プロセスをAIで効率化する方法を徹底解説。",
+    icon: "🎥",
+    category: "クリエイティブ",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-for-startups",
+    title: "スタートアップ向けAI活用ガイド【2026年最新】事業立ち上げ効率化おすすめ5選",
+    description: "MVP開発・営業・採用・顧客対応・経理まで、スタートアップの事業立ち上げに役立つAIツール5選を徹底解説。",
+    icon: "🚀",
+    category: "業種別",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-data-visualization",
+    title: "AIデータ可視化ツールおすすめ5選【2026年最新】グラフ・ダッシュボードを自動生成",
+    description: "ChatGPT・Claude・Tableau AI・Power BI Copilotを使ってデータからグラフ・ダッシュボードを自動生成する方法を徹底解説。",
+    icon: "📊",
+    category: "ビジネス",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-customer-support",
+    title: "AIカスタマーサポート構築ガイド【2026年最新】チャットボット・自動応答おすすめ5選",
+    description: "AIチャットボット・自動メール返信・ナレッジ検索でカスタマーサポートを効率化する方法を徹底解説。",
+    icon: "💬",
+    category: "ビジネス",
+    readTime: "12分",
+  },
 ];
 
 export const GENRES = [
@@ -678,6 +718,11 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "ai-legal-contracts": "業種別",
   "ai-for-ecommerce": "業種別",
   "ai-content-moderation": "業種別",
+  "ai-for-marketers": "業種別",
+  "ai-for-content-creators": "クリエイティブ",
+  "ai-for-startups": "業種別",
+  "ai-data-visualization": "ビジネス",
+  "ai-customer-support": "ビジネス",
 };
 
 export function genreOf(slug: string): Genre {
