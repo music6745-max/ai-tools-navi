@@ -969,6 +969,46 @@ export const guides: Guide[] =
     category: "ビジネス",
     readTime: "13分",
   },
+  {
+    slug: "ai-text-summarizer",
+    title: "AIテキスト要約ツール比較5選【2026年最新】｜長文を瞬時に要約",
+    description: "ChatGPT・Claude・Gemini・Notion AI・Perplexityのテキスト要約機能を徹底比較。長文記事・論文・議事録の要約に最適なAIツールを解説。",
+    icon: "📰",
+    category: "チャット・文章",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-pdf-tools",
+    title: "AI PDF処理ツール比較5選【2026年最新】｜要約・翻訳・質問応答",
+    description: "ChatPDF・Claude・ChatGPT・Adobe Acrobat AI Assistant・Humata AIのPDF処理機能を徹底比較。PDFの要約・翻訳・質問応答・データ抽出に最適なツール。",
+    icon: "📄",
+    category: "ビジネス",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-spreadsheet-tools",
+    title: "AIスプレッドシート/Excel拡張ツール比較5選【2026年最新】",
+    description: "Microsoft Copilot・Google Workspace Gemini・GPTExcel・SheetAI・Rows AIを徹底比較。Excel/スプレッドシートの数式生成・データ分析・可視化を自動化。",
+    icon: "📊",
+    category: "ビジネス",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-document-generation",
+    title: "AIドキュメント生成ツール比較5選【2026年最新】",
+    description: "ChatGPT・Claude・Gemini・Notion AI・Microsoft Copilotの文書生成機能を徹底比較。提案書・報告書・マニュアル・議事録を秒で作る方法を解説。",
+    icon: "📝",
+    category: "ビジネス",
+    readTime: "13分",
+  },
+  {
+    slug: "ai-knowledge-base",
+    title: "AIナレッジベース構築ツール比較5選【2026年最新】",
+    description: "Notion AI・Guru・Glean・NotebookLM・Claude Projectsを徹底比較。社内ドキュメント・マニュアル・FAQを賢く検索できるAIナレッジベースの選び方を解説。",
+    icon: "🗄️",
+    category: "ビジネス",
+    readTime: "13分",
+  },
 ];
 
 export const GENRES = [
@@ -1116,6 +1156,11 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "ai-llm-self-hosted": "ビジネス",
   "ai-for-non-engineers": "ビジネス",
   "ai-for-managers": "ビジネス",
+  "ai-text-summarizer": "チャット・文章",
+  "ai-pdf-tools": "ビジネス",
+  "ai-spreadsheet-tools": "ビジネス",
+  "ai-document-generation": "ビジネス",
+  "ai-knowledge-base": "ビジネス",
 };
 
 export function genreOf(slug: string): Genre {
