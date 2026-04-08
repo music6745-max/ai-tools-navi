@@ -4,9 +4,9 @@ import { siteConfig } from "../../lib/data";
 import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
-  title: "AI 3Dモデル生成ツール比較ガイド【2026年版】テキストから3Dを自動生成",
+  title: "3DモデルAIおすすめ6選【2026年最新】徹底比較｜選び方も解説",
   description:
-    "AI 3Dモデル生成ツールを徹底比較。テキスト・画像から3Dモデル生成、ゲーム素材、プロダクトデザイン、メタバース活用まで、おすすめAIツールと活用法を紹介。",
+    "テキストや画像から3Dモデルを自動生成できるAI6選を徹底比較。Meshy・Tripoなど主要ツールの料金と選び方を解説します。",
   alternates: {
     canonical: `${siteConfig.url}/guide/ai-3d-modeling`,
   },
@@ -84,10 +84,44 @@ export default function AI3DModelingPage() {
     author: { "@type": "Organization", name: siteConfig.name },
     publisher: { "@type": "Organization", name: siteConfig.name },
   };
+  const breadcrumbLd_seo = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "ホーム", item: siteConfig.url },
+      { "@type": "ListItem", position: 2, name: "ガイド", item: `${siteConfig.url}/guide` },
+      { "@type": "ListItem", position: 3, name: "AI 3Dモデル生成", item: `${siteConfig.url}/guide/ai-3d-modeling` },
+    ],
+  };
+
+  const faqLd_seo = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "AI 3Dモデル生成は無料で使えますか？",
+        acceptedAnswer: { "@type": "Answer", text: "多くのAIツールは無料プランから始められます。本記事では無料で使える範囲と有料プランの違いを比較しています。" },
+      },
+      {
+        "@type": "Question",
+        name: "AI 3Dモデル生成の選び方は？",
+        acceptedAnswer: { "@type": "Answer", text: "用途・予算・日本語対応・サポート体制を基準に選ぶのがおすすめです。本記事内で各ツールを比較しています。" },
+      },
+      {
+        "@type": "Question",
+        name: "初心者でも使えますか？",
+        acceptedAnswer: { "@type": "Answer", text: "はい。多くのツールは登録してすぐに日本語で使えます。専門知識は不要です。" },
+      },
+    ],
+  };
+
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd_seo) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd_seo) }} />
       <div className="max-w-3xl mx-auto px-4 py-8">
         <nav className="flex items-center gap-2 text-sm text-muted mb-8">
           <Link href="/" className="hover:text-primary transition-colors">ホーム</Link>
@@ -205,6 +239,33 @@ export default function AI3DModelingPage() {
             </Link>
           </div>
         </section>
+        {/* 関連ガイド */}
+        <section className="mt-12 mb-8">
+          <h2 className="text-xl font-bold mb-4">関連ガイド</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <Link href="/guide/ai-image-generation" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">クリエイティブ</div>
+                <div className="font-bold text-sm">画像生成AI</div>
+              </Link>
+              <Link href="/guide/ai-video-creation" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">クリエイティブ</div>
+                <div className="font-bold text-sm">動画生成AI</div>
+              </Link>
+              <Link href="/guide/ai-music-creation" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">クリエイティブ</div>
+                <div className="font-bold text-sm">AI音楽制作</div>
+              </Link>
+              <Link href="/guide/ai-voice-cloning" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">クリエイティブ</div>
+                <div className="font-bold text-sm">AI音声クローン</div>
+              </Link>
+              <Link href="/guide/ai-podcast-creation" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">クリエイティブ</div>
+                <div className="font-bold text-sm">AIポッドキャスト制作</div>
+              </Link>
+          </div>
+        </section>
+
       </div>
     </>
   );

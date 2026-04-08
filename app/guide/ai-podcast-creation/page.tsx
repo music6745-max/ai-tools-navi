@@ -4,9 +4,9 @@ import { siteConfig } from "../../lib/data";
 import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
-  title: "AIポッドキャスト制作ガイド【2026年版】台本から配信まで全自動化",
+  title: "ポッドキャスト制作AIおすすめ6選【2026年最新】徹底比較｜選び方も解説",
   description:
-    "AIツールを使ったポッドキャスト制作の完全ガイド。台本作成、音声収録、編集、書き起こし、SNS拡散まで、AIで効率化する手順とおすすめツールを解説。",
+    "台本作成から音声編集・配信まで自動化できるポッドキャスト制作AI6選を徹底比較。初心者向けの選び方と活用術を解説します。",
   keywords: ["AI ポッドキャスト", "ポッドキャスト 制作 AI", "AI 音声 編集", "Podcast 自動化"],
   alternates: {
     canonical: `${siteConfig.url}/guide/ai-podcast-creation`,
@@ -24,10 +24,44 @@ export default function AIPodcastCreationPage() {
     datePublished: "2026-04-07",
     dateModified: "2026-04-07",
   };
+  const breadcrumbLd_seo = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "ホーム", item: siteConfig.url },
+      { "@type": "ListItem", position: 2, name: "ガイド", item: `${siteConfig.url}/guide` },
+      { "@type": "ListItem", position: 3, name: "AIポッドキャスト制作", item: `${siteConfig.url}/guide/ai-podcast-creation` },
+    ],
+  };
+
+  const faqLd_seo = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "AIポッドキャスト制作は無料で使えますか？",
+        acceptedAnswer: { "@type": "Answer", text: "多くのAIツールは無料プランから始められます。本記事では無料で使える範囲と有料プランの違いを比較しています。" },
+      },
+      {
+        "@type": "Question",
+        name: "AIポッドキャスト制作の選び方は？",
+        acceptedAnswer: { "@type": "Answer", text: "用途・予算・日本語対応・サポート体制を基準に選ぶのがおすすめです。本記事内で各ツールを比較しています。" },
+      },
+      {
+        "@type": "Question",
+        name: "初心者でも使えますか？",
+        acceptedAnswer: { "@type": "Answer", text: "はい。多くのツールは登録してすぐに日本語で使えます。専門知識は不要です。" },
+      },
+    ],
+  };
+
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd_seo) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd_seo) }} />
       <div className="max-w-3xl mx-auto px-4 py-8">
         <nav className="flex items-center gap-2 text-sm text-muted mb-8">
           <Link href="/" className="hover:text-primary transition-colors">ホーム</Link>
@@ -259,6 +293,33 @@ export default function AIPodcastCreationPage() {
             </Link>
           </div>
         </section>
+        {/* 関連ガイド */}
+        <section className="mt-12 mb-8">
+          <h2 className="text-xl font-bold mb-4">関連ガイド</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <Link href="/guide/ai-image-generation" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">クリエイティブ</div>
+                <div className="font-bold text-sm">画像生成AI</div>
+              </Link>
+              <Link href="/guide/ai-video-creation" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">クリエイティブ</div>
+                <div className="font-bold text-sm">動画生成AI</div>
+              </Link>
+              <Link href="/guide/ai-music-creation" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">クリエイティブ</div>
+                <div className="font-bold text-sm">AI音楽制作</div>
+              </Link>
+              <Link href="/guide/ai-voice-cloning" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">クリエイティブ</div>
+                <div className="font-bold text-sm">AI音声クローン</div>
+              </Link>
+              <Link href="/guide/ai-avatar-creation" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">クリエイティブ</div>
+                <div className="font-bold text-sm">AIアバター作成</div>
+              </Link>
+          </div>
+        </section>
+
       </div>
     </>
   );

@@ -84,10 +84,44 @@ export default function AICodingAssistantPage() {
     author: { "@type": "Organization", name: siteConfig.name },
     publisher: { "@type": "Organization", name: siteConfig.name },
   };
+  const breadcrumbLd_seo = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "ホーム", item: siteConfig.url },
+      { "@type": "ListItem", position: 2, name: "ガイド", item: `${siteConfig.url}/guide` },
+      { "@type": "ListItem", position: 3, name: "AIコーディング支援", item: `${siteConfig.url}/guide/ai-coding-assistant` },
+    ],
+  };
+
+  const faqLd_seo = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "AIコーディング支援は無料で使えますか？",
+        acceptedAnswer: { "@type": "Answer", text: "多くのAIツールは無料プランから始められます。本記事では無料で使える範囲と有料プランの違いを比較しています。" },
+      },
+      {
+        "@type": "Question",
+        name: "AIコーディング支援の選び方は？",
+        acceptedAnswer: { "@type": "Answer", text: "用途・予算・日本語対応・サポート体制を基準に選ぶのがおすすめです。本記事内で各ツールを比較しています。" },
+      },
+      {
+        "@type": "Question",
+        name: "初心者でも使えますか？",
+        acceptedAnswer: { "@type": "Answer", text: "はい。多くのツールは登録してすぐに日本語で使えます。専門知識は不要です。" },
+      },
+    ],
+  };
+
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd_seo) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd_seo) }} />
       <div className="max-w-3xl mx-auto px-4 py-8">
         <nav className="flex items-center gap-2 text-sm text-muted mb-8">
           <Link href="/" className="hover:text-primary transition-colors">ホーム</Link>
@@ -205,6 +239,33 @@ export default function AICodingAssistantPage() {
             </Link>
           </div>
         </section>
+        {/* 関連ガイド */}
+        <section className="mt-12 mb-8">
+          <h2 className="text-xl font-bold mb-4">関連ガイド</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <Link href="/guide/ai-english-learning" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">スキル・学習</div>
+                <div className="font-bold text-sm">AI英語学習</div>
+              </Link>
+              <Link href="/guide/ai-english-tools" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">スキル・学習</div>
+                <div className="font-bold text-sm">AI英語ツール</div>
+              </Link>
+              <Link href="/guide/ai-english-proofreading" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">スキル・学習</div>
+                <div className="font-bold text-sm">AI英文校正</div>
+              </Link>
+              <Link href="/guide/ai-programming-school" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">スキル・学習</div>
+                <div className="font-bold text-sm">プログラミングスクール×AI</div>
+              </Link>
+              <Link href="/guide/ai-tools-for-students" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">スキル・学習</div>
+                <div className="font-bold text-sm">学生向けAI</div>
+              </Link>
+          </div>
+        </section>
+
       </div>
     </>
   );

@@ -4,9 +4,9 @@ import { siteConfig, getToolBySlug, renderStars, getPricingBadge } from "../../l
 import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
-  title: "【2026年最新】主要AIツール料金比較一覧｜無料プランまとめ",
+  title: "料金比較AIおすすめ7選【2026年最新】徹底比較｜選び方も解説",
   description:
-    "2026年最新のAIツール料金を一覧で比較。ChatGPT、Claude、Midjourney、GitHub Copilotなど主要ツールの無料プラン・有料プラン・おすすめプランを徹底解説。",
+    "主要AIツールの料金プランを7つ厳選して徹底比較。無料で使える範囲・有料プランの違い・コスパ最強の選び方まで一覧で解説します。",
   keywords: ["AIツール 料金", "AIツール 比較", "ChatGPT 料金", "Claude 料金", "Midjourney 料金", "無料AIツール", "2026年"],
   alternates: {
     canonical: `${siteConfig.url}/guide/ai-tools-pricing`,
@@ -69,10 +69,44 @@ export default function AIToolsPricingPage() {
     datePublished: "2026-04-05",
     dateModified: "2026-04-05",
   };
+  const breadcrumbLd_seo = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "ホーム", item: siteConfig.url },
+      { "@type": "ListItem", position: 2, name: "ガイド", item: `${siteConfig.url}/guide` },
+      { "@type": "ListItem", position: 3, name: "AIツール料金比較", item: `${siteConfig.url}/guide/ai-tools-pricing` },
+    ],
+  };
+
+  const faqLd_seo = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "AIツール料金比較は無料で使えますか？",
+        acceptedAnswer: { "@type": "Answer", text: "多くのAIツールは無料プランから始められます。本記事では無料で使える範囲と有料プランの違いを比較しています。" },
+      },
+      {
+        "@type": "Question",
+        name: "AIツール料金比較の選び方は？",
+        acceptedAnswer: { "@type": "Answer", text: "用途・予算・日本語対応・サポート体制を基準に選ぶのがおすすめです。本記事内で各ツールを比較しています。" },
+      },
+      {
+        "@type": "Question",
+        name: "初心者でも使えますか？",
+        acceptedAnswer: { "@type": "Answer", text: "はい。多くのツールは登録してすぐに日本語で使えます。専門知識は不要です。" },
+      },
+    ],
+  };
+
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd_seo) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd_seo) }} />
       <div className="max-w-4xl mx-auto px-4 py-8">
         <nav className="flex items-center gap-2 text-sm text-muted mb-8">
           <Link href="/" className="hover:text-primary transition-colors">ホーム</Link>
@@ -289,6 +323,29 @@ export default function AIToolsPricingPage() {
             </Link>
           </div>
         </section>
+        {/* 関連ガイド */}
+        <section className="mt-12 mb-8">
+          <h2 className="text-xl font-bold mb-4">関連ガイド</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <Link href="/guide/how-to-start-ai" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">AIチャット・基礎</div>
+                <div className="font-bold text-sm">AIツールの始め方</div>
+              </Link>
+              <Link href="/guide/chatgpt-vs-claude" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">AIチャット・基礎</div>
+                <div className="font-bold text-sm">ChatGPT vs Claude</div>
+              </Link>
+              <Link href="/guide/best-ai-for-marketing" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">AIチャット・基礎</div>
+                <div className="font-bold text-sm">マーケティング向けAI</div>
+              </Link>
+              <Link href="/guide/ai-summary" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">AIチャット・基礎</div>
+                <div className="font-bold text-sm">AI要約ツール</div>
+              </Link>
+          </div>
+        </section>
+
       </div>
     </>
   );

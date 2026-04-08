@@ -4,9 +4,9 @@ import { siteConfig } from "../../lib/data";
 import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
-  title: "【2026年最新】AI英語学習ツール比較5選｜ChatGPTからスピーキング練習まで",
+  title: "英語学習AIおすすめ5選【2026年最新】徹底比較｜選び方も解説",
   description:
-    "AI活用の英語学習ツール・オンライン英会話5選を徹底比較。ChatGPT、Duolingo、DMM英会話、NativeCamp、スピークバディの料金・AI機能・学習効果を解説。",
+    "ChatGPTからスピーキング練習まで使える英語学習AI5選を徹底比較。料金・機能・選び方を分かりやすく解説します。",
   alternates: {
     canonical: `${siteConfig.url}/guide/ai-english-tools`,
   },
@@ -366,6 +366,33 @@ export default function AIEnglishToolsPage() {
             </Link>
           </div>
         </section>
+        {/* 関連ガイド */}
+        <section className="mt-12 mb-8">
+          <h2 className="text-xl font-bold mb-4">関連ガイド</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <Link href="/guide/ai-english-learning" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">スキル・学習</div>
+                <div className="font-bold text-sm">AI英語学習</div>
+              </Link>
+              <Link href="/guide/ai-english-proofreading" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">スキル・学習</div>
+                <div className="font-bold text-sm">AI英文校正</div>
+              </Link>
+              <Link href="/guide/ai-programming-school" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">スキル・学習</div>
+                <div className="font-bold text-sm">プログラミングスクール×AI</div>
+              </Link>
+              <Link href="/guide/ai-tools-for-students" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">スキル・学習</div>
+                <div className="font-bold text-sm">学生向けAI</div>
+              </Link>
+              <Link href="/guide/ai-coding-assistant" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">スキル・学習</div>
+                <div className="font-bold text-sm">AIコーディング支援</div>
+              </Link>
+          </div>
+        </section>
+
       </div>
     </>
   );

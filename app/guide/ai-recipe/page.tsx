@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import { siteConfig } from "../../lib/data";
 
 export const metadata: Metadata = {
-  title: "AI料理レシピツール比較ガイド【2026年版】冷蔵庫の食材から献立提案",
+  title: "レシピ提案AIおすすめ6選【2026年最新】徹底比較｜選び方も解説",
   description:
-    "AI料理レシピツールを徹底比較。冷蔵庫の食材からの献立提案、栄養バランス、時短レシピ、英語レシピまで、料理を効率化するおすすめAIツールと活用法を紹介。",
+    "冷蔵庫の食材から献立を提案するレシピAI6選を徹底比較。栄養管理や時短調理に役立つ選び方を解説します。",
   alternates: {
     canonical: `${siteConfig.url}/guide/ai-recipe`,
   },
@@ -83,10 +83,44 @@ export default function AIRecipePage() {
     author: { "@type": "Organization", name: siteConfig.name },
     publisher: { "@type": "Organization", name: siteConfig.name },
   };
+  const breadcrumbLd_seo = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "ホーム", item: siteConfig.url },
+      { "@type": "ListItem", position: 2, name: "ガイド", item: `${siteConfig.url}/guide` },
+      { "@type": "ListItem", position: 3, name: "AIレシピ提案", item: `${siteConfig.url}/guide/ai-recipe` },
+    ],
+  };
+
+  const faqLd_seo = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "AIレシピ提案は無料で使えますか？",
+        acceptedAnswer: { "@type": "Answer", text: "多くのAIツールは無料プランから始められます。本記事では無料で使える範囲と有料プランの違いを比較しています。" },
+      },
+      {
+        "@type": "Question",
+        name: "AIレシピ提案の選び方は？",
+        acceptedAnswer: { "@type": "Answer", text: "用途・予算・日本語対応・サポート体制を基準に選ぶのがおすすめです。本記事内で各ツールを比較しています。" },
+      },
+      {
+        "@type": "Question",
+        name: "初心者でも使えますか？",
+        acceptedAnswer: { "@type": "Answer", text: "はい。多くのツールは登録してすぐに日本語で使えます。専門知識は不要です。" },
+      },
+    ],
+  };
+
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd_seo) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd_seo) }} />
       <div className="max-w-3xl mx-auto px-4 py-8">
         <nav className="flex items-center gap-2 text-sm text-muted mb-8">
           <Link href="/" className="hover:text-primary transition-colors">ホーム</Link>
@@ -186,6 +220,33 @@ export default function AIRecipePage() {
             </Link>
           </div>
         </section>
+        {/* 関連ガイド */}
+        <section className="mt-12 mb-8">
+          <h2 className="text-xl font-bold mb-4">関連ガイド</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <Link href="/guide/ai-for-healthcare" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">特定業界</div>
+                <div className="font-bold text-sm">医療・健康AI</div>
+              </Link>
+              <Link href="/guide/ai-for-education" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">特定業界</div>
+                <div className="font-bold text-sm">AI教育活用</div>
+              </Link>
+              <Link href="/guide/ai-travel-planning" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">特定業界</div>
+                <div className="font-bold text-sm">AI旅行計画</div>
+              </Link>
+              <Link href="/guide/ai-legal-contracts" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">特定業界</div>
+                <div className="font-bold text-sm">AI法務・契約書</div>
+              </Link>
+              <Link href="/guide/ai-for-ecommerce" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">特定業界</div>
+                <div className="font-bold text-sm">ECサイト向けAI</div>
+              </Link>
+          </div>
+        </section>
+
       </div>
     </>
   );

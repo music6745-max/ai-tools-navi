@@ -348,6 +348,25 @@ export default function AIInvestmentPage() {
             </Link>
           </div>
         </section>
+        {/* 関連ガイド */}
+        <section className="mt-12 mb-8">
+          <h2 className="text-xl font-bold mb-4">関連ガイド</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <Link href="/guide/ai-side-business" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">キャリア・副業</div>
+                <div className="font-bold text-sm">副業向けAI</div>
+              </Link>
+              <Link href="/guide/ai-job-change" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">キャリア・副業</div>
+                <div className="font-bold text-sm">AI転職エージェント</div>
+              </Link>
+              <Link href="/guide/best-ai-for-freelance" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">キャリア・副業</div>
+                <div className="font-bold text-sm">フリーランス向けAI</div>
+              </Link>
+          </div>
+        </section>
+
       </div>
     </>
   );

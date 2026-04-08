@@ -5,9 +5,9 @@ import { AffiliateCTAMulti } from "../../components/AffiliateCTA";
 
 export const metadata: Metadata = {
   title:
-    "【2026年最新】AIを活用した旅行計画の立て方｜おすすめツールと予約サイト",
+    "旅行計画AIおすすめ6選【2026年最新】徹底比較｜選び方も解説",
   description:
-    "ChatGPTやClaudeなどのAIツールを使った旅行計画の立て方を徹底解説。旅程作成、予算計算、現地リサーチ、翻訳まで。じゃらん・JTB・一休など予約サイトとの組み合わせ術も紹介。",
+    "旅程作成・予算計算・現地リサーチに使える旅行計画AI6選を徹底比較。予約サイト連携と選び方を解説します。",
   alternates: {
     canonical: `${siteConfig.url}/guide/ai-travel-planning`,
   },
@@ -164,6 +164,38 @@ export default function AITravelPlanningPage() {
     author: { "@type": "Organization", name: siteConfig.name },
     publisher: { "@type": "Organization", name: siteConfig.name },
   };
+  const breadcrumbLd_seo = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "ホーム", item: siteConfig.url },
+      { "@type": "ListItem", position: 2, name: "ガイド", item: `${siteConfig.url}/guide` },
+      { "@type": "ListItem", position: 3, name: "AI旅行計画", item: `${siteConfig.url}/guide/ai-travel-planning` },
+    ],
+  };
+
+  const faqLd_seo = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "AI旅行計画は無料で使えますか？",
+        acceptedAnswer: { "@type": "Answer", text: "多くのAIツールは無料プランから始められます。本記事では無料で使える範囲と有料プランの違いを比較しています。" },
+      },
+      {
+        "@type": "Question",
+        name: "AI旅行計画の選び方は？",
+        acceptedAnswer: { "@type": "Answer", text: "用途・予算・日本語対応・サポート体制を基準に選ぶのがおすすめです。本記事内で各ツールを比較しています。" },
+      },
+      {
+        "@type": "Question",
+        name: "初心者でも使えますか？",
+        acceptedAnswer: { "@type": "Answer", text: "はい。多くのツールは登録してすぐに日本語で使えます。専門知識は不要です。" },
+      },
+    ],
+  };
+
 
   return (
     <>
@@ -547,6 +579,33 @@ export default function AITravelPlanningPage() {
             </Link>
           </div>
         </section>
+        {/* 関連ガイド */}
+        <section className="mt-12 mb-8">
+          <h2 className="text-xl font-bold mb-4">関連ガイド</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <Link href="/guide/ai-for-healthcare" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">特定業界</div>
+                <div className="font-bold text-sm">医療・健康AI</div>
+              </Link>
+              <Link href="/guide/ai-for-education" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">特定業界</div>
+                <div className="font-bold text-sm">AI教育活用</div>
+              </Link>
+              <Link href="/guide/ai-recipe" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">特定業界</div>
+                <div className="font-bold text-sm">AIレシピ提案</div>
+              </Link>
+              <Link href="/guide/ai-legal-contracts" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">特定業界</div>
+                <div className="font-bold text-sm">AI法務・契約書</div>
+              </Link>
+              <Link href="/guide/ai-for-ecommerce" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">特定業界</div>
+                <div className="font-bold text-sm">ECサイト向けAI</div>
+              </Link>
+          </div>
+        </section>
+
       </div>
     </>
   );

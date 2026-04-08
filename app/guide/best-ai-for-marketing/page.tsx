@@ -4,9 +4,9 @@ import { siteConfig, getToolBySlug, renderStars, getPricingBadge } from "../../l
 import { AffiliateCTAMulti } from "../../components/AffiliateCTA";
 
 export const metadata: Metadata = {
-  title: "マーケティングに使えるAIツール10選｜SNS運用・広告・分析を効率化",
+  title: "マーケティングAIおすすめ10選【2026年最新】徹底比較｜選び方も解説",
   description:
-    "マーケティング業務を効率化するAIツールを厳選紹介。SNS運用、広告クリエイティブ作成、データ分析まで、2026年最新のおすすめAIマーケティングツール10選を徹底解説。",
+    "SNS運用・広告作成・分析に使えるマーケティングAI10選を徹底比較。集客や売上向上に役立つツールの選び方と活用術をわかりやすく解説します。",
   keywords: ["AIマーケティング", "AI SNS運用", "AI広告", "マーケティングツール", "SNS自動化", "AI分析"],
   alternates: {
     canonical: `${siteConfig.url}/guide/best-ai-for-marketing`,
@@ -29,10 +29,44 @@ export default function BestAIForMarketingPage() {
     datePublished: "2026-04-05",
     dateModified: "2026-04-05",
   };
+  const breadcrumbLd_seo = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "ホーム", item: siteConfig.url },
+      { "@type": "ListItem", position: 2, name: "ガイド", item: `${siteConfig.url}/guide` },
+      { "@type": "ListItem", position: 3, name: "マーケティング向けAI", item: `${siteConfig.url}/guide/best-ai-for-marketing` },
+    ],
+  };
+
+  const faqLd_seo = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "マーケティング向けAIは無料で使えますか？",
+        acceptedAnswer: { "@type": "Answer", text: "多くのAIツールは無料プランから始められます。本記事では無料で使える範囲と有料プランの違いを比較しています。" },
+      },
+      {
+        "@type": "Question",
+        name: "マーケティング向けAIの選び方は？",
+        acceptedAnswer: { "@type": "Answer", text: "用途・予算・日本語対応・サポート体制を基準に選ぶのがおすすめです。本記事内で各ツールを比較しています。" },
+      },
+      {
+        "@type": "Question",
+        name: "初心者でも使えますか？",
+        acceptedAnswer: { "@type": "Answer", text: "はい。多くのツールは登録してすぐに日本語で使えます。専門知識は不要です。" },
+      },
+    ],
+  };
+
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd_seo) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd_seo) }} />
       <div className="max-w-3xl mx-auto px-4 py-8">
         <nav className="flex items-center gap-2 text-sm text-muted mb-8">
           <Link href="/" className="hover:text-primary transition-colors">ホーム</Link>
@@ -331,6 +365,29 @@ export default function BestAIForMarketingPage() {
             </Link>
           </div>
         </section>
+        {/* 関連ガイド */}
+        <section className="mt-12 mb-8">
+          <h2 className="text-xl font-bold mb-4">関連ガイド</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <Link href="/guide/how-to-start-ai" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">AIチャット・基礎</div>
+                <div className="font-bold text-sm">AIツールの始め方</div>
+              </Link>
+              <Link href="/guide/chatgpt-vs-claude" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">AIチャット・基礎</div>
+                <div className="font-bold text-sm">ChatGPT vs Claude</div>
+              </Link>
+              <Link href="/guide/ai-tools-pricing" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">AIチャット・基礎</div>
+                <div className="font-bold text-sm">AIツール料金比較</div>
+              </Link>
+              <Link href="/guide/ai-summary" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">AIチャット・基礎</div>
+                <div className="font-bold text-sm">AI要約ツール</div>
+              </Link>
+          </div>
+        </section>
+
       </div>
     </>
   );

@@ -4,9 +4,9 @@ import { siteConfig } from "../../lib/data";
 import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
-  title: "AI医療・健康管理ガイド【2026年版】ヘルスケアAI活用術",
+  title: "医療・健康AIおすすめ6選【2026年最新】徹底比較｜選び方も解説",
   description:
-    "医療現場・健康管理で活用できるAIツールを厳選紹介。症状チェック、メンタルヘルス、健康データ分析、医療文書作成など、ヘルスケア分野のAI活用法を解説。",
+    "ヘルスケア分野で使える医療・健康AI6選を徹底比較。症状チェック・記録管理など選び方のポイントを解説します。",
   alternates: {
     canonical: `${siteConfig.url}/guide/ai-for-healthcare`,
   },
@@ -84,10 +84,44 @@ export default function AIForHealthcarePage() {
     author: { "@type": "Organization", name: siteConfig.name },
     publisher: { "@type": "Organization", name: siteConfig.name },
   };
+  const breadcrumbLd_seo = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "ホーム", item: siteConfig.url },
+      { "@type": "ListItem", position: 2, name: "ガイド", item: `${siteConfig.url}/guide` },
+      { "@type": "ListItem", position: 3, name: "医療・健康AI", item: `${siteConfig.url}/guide/ai-for-healthcare` },
+    ],
+  };
+
+  const faqLd_seo = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "医療・健康AIは無料で使えますか？",
+        acceptedAnswer: { "@type": "Answer", text: "多くのAIツールは無料プランから始められます。本記事では無料で使える範囲と有料プランの違いを比較しています。" },
+      },
+      {
+        "@type": "Question",
+        name: "医療・健康AIの選び方は？",
+        acceptedAnswer: { "@type": "Answer", text: "用途・予算・日本語対応・サポート体制を基準に選ぶのがおすすめです。本記事内で各ツールを比較しています。" },
+      },
+      {
+        "@type": "Question",
+        name: "初心者でも使えますか？",
+        acceptedAnswer: { "@type": "Answer", text: "はい。多くのツールは登録してすぐに日本語で使えます。専門知識は不要です。" },
+      },
+    ],
+  };
+
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd_seo) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd_seo) }} />
       <div className="max-w-3xl mx-auto px-4 py-8">
         <nav className="flex items-center gap-2 text-sm text-muted mb-8">
           <Link href="/" className="hover:text-primary transition-colors">ホーム</Link>
@@ -193,6 +227,33 @@ export default function AIForHealthcarePage() {
             </Link>
           </div>
         </section>
+        {/* 関連ガイド */}
+        <section className="mt-12 mb-8">
+          <h2 className="text-xl font-bold mb-4">関連ガイド</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <Link href="/guide/ai-for-education" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">特定業界</div>
+                <div className="font-bold text-sm">AI教育活用</div>
+              </Link>
+              <Link href="/guide/ai-recipe" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">特定業界</div>
+                <div className="font-bold text-sm">AIレシピ提案</div>
+              </Link>
+              <Link href="/guide/ai-travel-planning" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">特定業界</div>
+                <div className="font-bold text-sm">AI旅行計画</div>
+              </Link>
+              <Link href="/guide/ai-legal-contracts" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">特定業界</div>
+                <div className="font-bold text-sm">AI法務・契約書</div>
+              </Link>
+              <Link href="/guide/ai-for-ecommerce" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">特定業界</div>
+                <div className="font-bold text-sm">ECサイト向けAI</div>
+              </Link>
+          </div>
+        </section>
+
       </div>
     </>
   );

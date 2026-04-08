@@ -338,6 +338,33 @@ export default function AIProgrammingSchoolPage() {
             </Link>
           </div>
         </section>
+        {/* 関連ガイド */}
+        <section className="mt-12 mb-8">
+          <h2 className="text-xl font-bold mb-4">関連ガイド</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <Link href="/guide/ai-english-learning" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">スキル・学習</div>
+                <div className="font-bold text-sm">AI英語学習</div>
+              </Link>
+              <Link href="/guide/ai-english-tools" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">スキル・学習</div>
+                <div className="font-bold text-sm">AI英語ツール</div>
+              </Link>
+              <Link href="/guide/ai-english-proofreading" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">スキル・学習</div>
+                <div className="font-bold text-sm">AI英文校正</div>
+              </Link>
+              <Link href="/guide/ai-tools-for-students" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">スキル・学習</div>
+                <div className="font-bold text-sm">学生向けAI</div>
+              </Link>
+              <Link href="/guide/ai-coding-assistant" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">スキル・学習</div>
+                <div className="font-bold text-sm">AIコーディング支援</div>
+              </Link>
+          </div>
+        </section>
+
       </div>
     </>
   );

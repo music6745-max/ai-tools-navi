@@ -4,9 +4,9 @@ import { siteConfig } from "../../lib/data";
 import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
-  title: "AI記事リライトツール比較ガイド【2026年版】既存記事を高品質に書き直し",
+  title: "記事リライトAIおすすめ6選【2026年最新】徹底比較｜選び方も解説",
   description:
-    "AI記事リライトツールを徹底比較。SEOリライト、口調変更、要約リライト、翻訳リライトなど、用途別おすすめAIリライトツールと活用法を紹介。",
+    "既存記事を高品質にリライトできるAI6選を徹底比較。SEO効果を高めるリライト術と選び方のポイントを解説します。",
   alternates: {
     canonical: `${siteConfig.url}/guide/ai-article-rewriting`,
   },
@@ -84,10 +84,44 @@ export default function AIArticleRewritingPage() {
     author: { "@type": "Organization", name: siteConfig.name },
     publisher: { "@type": "Organization", name: siteConfig.name },
   };
+  const breadcrumbLd_seo = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "ホーム", item: siteConfig.url },
+      { "@type": "ListItem", position: 2, name: "ガイド", item: `${siteConfig.url}/guide` },
+      { "@type": "ListItem", position: 3, name: "AI記事リライト", item: `${siteConfig.url}/guide/ai-article-rewriting` },
+    ],
+  };
+
+  const faqLd_seo = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "AI記事リライトは無料で使えますか？",
+        acceptedAnswer: { "@type": "Answer", text: "多くのAIツールは無料プランから始められます。本記事では無料で使える範囲と有料プランの違いを比較しています。" },
+      },
+      {
+        "@type": "Question",
+        name: "AI記事リライトの選び方は？",
+        acceptedAnswer: { "@type": "Answer", text: "用途・予算・日本語対応・サポート体制を基準に選ぶのがおすすめです。本記事内で各ツールを比較しています。" },
+      },
+      {
+        "@type": "Question",
+        name: "初心者でも使えますか？",
+        acceptedAnswer: { "@type": "Answer", text: "はい。多くのツールは登録してすぐに日本語で使えます。専門知識は不要です。" },
+      },
+    ],
+  };
+
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd_seo) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd_seo) }} />
       <div className="max-w-3xl mx-auto px-4 py-8">
         <nav className="flex items-center gap-2 text-sm text-muted mb-8">
           <Link href="/" className="hover:text-primary transition-colors">ホーム</Link>
@@ -205,6 +239,33 @@ export default function AIArticleRewritingPage() {
             </Link>
           </div>
         </section>
+        {/* 関連ガイド */}
+        <section className="mt-12 mb-8">
+          <h2 className="text-xl font-bold mb-4">関連ガイド</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <Link href="/guide/ai-blog-writing" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">ライティング</div>
+                <div className="font-bold text-sm">AIブログ執筆</div>
+              </Link>
+              <Link href="/guide/ai-email-writing" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">ライティング</div>
+                <div className="font-bold text-sm">AIメール作成</div>
+              </Link>
+              <Link href="/guide/ai-resume" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">ライティング</div>
+                <div className="font-bold text-sm">AI履歴書作成</div>
+              </Link>
+              <Link href="/guide/ai-seo" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">ライティング</div>
+                <div className="font-bold text-sm">AI SEO対策</div>
+              </Link>
+              <Link href="/guide/ai-subtitle-creation" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+                <div className="text-xs text-muted mb-1">ライティング</div>
+                <div className="font-bold text-sm">AI字幕作成</div>
+              </Link>
+          </div>
+        </section>
+
       </div>
     </>
   );
