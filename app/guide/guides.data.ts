@@ -1009,6 +1009,46 @@ export const guides: Guide[] =
     category: "ビジネス",
     readTime: "13分",
   },
+  {
+    slug: "ai-for-podcasting",
+    title: "ポッドキャスト制作AIおすすめ5選【2026年最新】台本から編集まで自動化",
+    description: "台本作成・音声生成・ノイズ除去・書き起こし・配信までポッドキャスト制作を効率化するAIツールを徹底比較。初心者でも番組が作れる手順を解説します。",
+    icon: "🎙️",
+    category: "音声・音楽",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-for-twitch-streamers",
+    title: "配信者向けAIおすすめ5選【2026年最新】Twitch・YouTube Liveを盛り上げる",
+    description: "モデレーション・翻訳・クリップ生成・視聴者エンゲージメントを高めるAIツールを徹底解説。Twitch・YouTube Liveで活躍する5ツールを紹介。",
+    icon: "🎮",
+    category: "クリエイティブ",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-for-instagram",
+    title: "Instagram運用AIおすすめ5選【2026年最新】フォロワー獲得とエンゲージ改善",
+    description: "Instagramの投稿・キャプション・ハッシュタグ・リール編集・分析をAIで効率化する方法を解説。フォロワー獲得とエンゲージメント改善に直結する5ツールを紹介。",
+    icon: "📸",
+    category: "クリエイティブ",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-for-tiktok",
+    title: "TikTok運用AIおすすめ5選【2026年最新】バズるショート動画を量産",
+    description: "TikTokでバズる動画を量産するためのAIツールを厳選。台本・編集・字幕・サムネ・分析まで、AIを使った運用の時短テクを解説します。",
+    icon: "🎵",
+    category: "クリエイティブ",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-content-strategy",
+    title: "AIコンテンツ戦略立案ガイド【2026年最新】SEO×SNSで勝つ設計術",
+    description: "AIを活用してSEOとSNSの両輪でコンテンツ戦略を設計する方法を徹底解説。キーワード選定・競合分析・カレンダー設計・KPI運用までAI活用の実践ガイド。",
+    icon: "🧭",
+    category: "ビジネス",
+    readTime: "13分",
+  },
 ];
 
 export const GENRES = [
@@ -1161,6 +1201,13 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "ai-spreadsheet-tools": "ビジネス",
   "ai-document-generation": "ビジネス",
   "ai-knowledge-base": "ビジネス",
+
+  // 配信・SNS系新規ガイド
+  "ai-for-podcasting": "音声・音楽",
+  "ai-for-twitch-streamers": "クリエイティブ",
+  "ai-for-instagram": "クリエイティブ",
+  "ai-for-tiktok": "クリエイティブ",
+  "ai-content-strategy": "ビジネス",
 };
 
 export function genreOf(slug: string): Genre {
