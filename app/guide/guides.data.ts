@@ -1177,6 +1177,46 @@ export const guides: Guide[] =
     category: "画像",
     readTime: "12分",
   },
+  {
+    slug: "ai-voice-cloning-comparison",
+    title: "AI音声合成・ボイスクローン比較5選【2026年最新】ElevenLabs/CoeFont/にじボイス",
+    description: "ElevenLabs・CoeFont・にじボイス・Murf.ai・Resemble AIの音声合成・ボイスクローンAI5選を徹底比較。商用利用条件と日本語対応を解説。",
+    icon: "🎙️",
+    category: "音声",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-presentation-comparison",
+    title: "AIプレゼン作成ツール比較5選【2026年最新】Gamma/Beautiful.ai/Tome/Decktopus/SlidesAI",
+    description: "数分でスライドを生成するAIプレゼンツール5選を徹底比較。Gamma・Beautiful.ai・Tome・Decktopus・SlidesAIの料金・テンプレ・連携を解説。",
+    icon: "📊",
+    category: "業務",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-music-creation-comparison",
+    title: "AI音楽生成ツール比較5選【2026年最新】Suno/Udio/Stable Audio/Soundraw/AIVA",
+    description: "Suno AI・Udio・Stable Audio・Soundraw・AIVAの音楽生成AI5選を徹底比較。歌詞付き楽曲生成から商用BGMまで網羅。",
+    icon: "🎵",
+    category: "音楽",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-no-code-comparison",
+    title: "AI×ノーコード開発ツール比較5選【2026年最新】Bolt/v0/Cursor/Replit/Windsurf",
+    description: "Bolt.new・v0.dev・Cursor・Replit・Windsurfの最新AIノーコードツール5選を徹底比較。プロンプトで本格Webアプリを構築する方法を解説。",
+    icon: "⚡",
+    category: "開発",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-data-analysis-comparison",
+    title: "AIデータ分析ツール比較5選【2026年最新】Julius/Akkio/Tableau/PowerBI/ChatGPT",
+    description: "Julius AI・Akkio・Tableau Pulse・Power BI Copilot・ChatGPT Advanced Data Analysisを徹底比較。ノーコードで高度なデータ分析を実現。",
+    icon: "📈",
+    category: "業務",
+    readTime: "12分",
+  },
 ];
 
 export const GENRES = [
