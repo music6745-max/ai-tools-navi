@@ -705,6 +705,46 @@ export const guides: Guide[] =
     category: "情報検証",
     readTime: "12分",
   },
+  {
+    slug: "ai-for-investors",
+    title: "投資家向けAIおすすめ7選【2026年最新】活用ガイド",
+    description: "ChatGPT・Claude・Gemini・Perplexityで決算分析・銘柄スクリーニング・市況リサーチを効率化する方法を解説。",
+    icon: "📈",
+    category: "投資・金融",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-for-cooks",
+    title: "料理・レシピAIおすすめ7選【2026年最新】徹底比較",
+    description: "ChatGPT・Claude・Geminiを使った献立作成、レシピ生成、栄養管理、冷蔵庫の余り食材活用法を解説。",
+    icon: "🍳",
+    category: "料理・レシピ",
+    readTime: "11分",
+  },
+  {
+    slug: "ai-for-fitness",
+    title: "フィットネス・トレーニングAIおすすめ7選【2026年最新】",
+    description: "AIをパーソナルトレーナー代わりに活用してメニュー作成・進捗管理・栄養相談を行う方法を解説。",
+    icon: "💪",
+    category: "健康・トレーニング",
+    readTime: "11分",
+  },
+  {
+    slug: "ai-for-mental-health",
+    title: "メンタルヘルスAIアプリおすすめ7選【2026年最新】",
+    description: "Woebot・Wysa・ChatGPT・ClaudeなどメンタルケアにAIを活用する方法と注意点を解説。",
+    icon: "🧘",
+    category: "健康・メンタル",
+    readTime: "11分",
+  },
+  {
+    slug: "ai-for-japanese-business",
+    title: "日本企業のAI導入事例まとめ【2026年最新】",
+    description: "製造・金融・小売・人事など業界別の日本企業AI活用パターンと、おすすめツール7選を解説。",
+    icon: "🇯🇵",
+    category: "業種別",
+    readTime: "12分",
+  },
 ];
 
 export const GENRES = [
@@ -813,6 +853,11 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "ai-fashion-design": "業種別",
   "ai-news-generation": "その他",
   "ai-fact-checking": "その他",
+  "ai-for-investors": "業種別",
+  "ai-for-cooks": "その他",
+  "ai-for-fitness": "その他",
+  "ai-for-mental-health": "その他",
+  "ai-for-japanese-business": "業種別",
 };
 
 export function genreOf(slug: string): Genre {
