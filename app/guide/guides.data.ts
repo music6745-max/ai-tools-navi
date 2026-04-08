@@ -1137,6 +1137,46 @@ export const guides: Guide[] =
     category: "業種別",
     readTime: "12分",
   },
+  {
+    slug: "ai-customer-support-comparison",
+    title: "AIカスタマーサポートツール比較5選【2026年最新】Intercom/Zendesk/Drift/Ada/Tidio",
+    description: "AIで顧客対応を自動化するチャットボット・サポートツール5選を徹底比較。Intercom Fin・Zendesk AI・Drift・Ada・Tidioの料金・機能を解説。",
+    icon: "💬",
+    category: "業務",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-sales-tools-comparison",
+    title: "AI営業支援ツール比較5選【2026年最新】Gong/Salesloft/Apollo/Outreach/Clari",
+    description: "営業生産性を上げるAIツール5選を徹底比較。Gong・Salesloft・Apollo.io・Outreach・Clariの料金・機能・連携先を解説。",
+    icon: "📊",
+    category: "業務",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-seo-tools-comparison",
+    title: "AI SEOツール比較5選【2026年最新】Surfer/Frase/Clearscope/MarketMuse/SE Ranking",
+    description: "コンテンツSEOを加速するAIツール5選を徹底比較。Surfer SEO・Frase・Clearscope・MarketMuse・SE Rankingの料金・機能を詳しく解説。",
+    icon: "🔍",
+    category: "マーケティング",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-translation-comparison",
+    title: "AI翻訳ツール比較5選【2026年最新】DeepL/Google/ChatGPT/Microsoft/T-3MT",
+    description: "ビジネス利用に耐えるAI翻訳ツール5選を徹底比較。DeepL Pro・Google Translate・ChatGPT・Microsoft Translator・T-3MTを精度・料金で解説。",
+    icon: "🌐",
+    category: "言語・翻訳",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-image-generator-comparison-detail",
+    title: "AI画像生成ツール詳細比較5選【2026年最新】Midjourney/DALL-E/SD/Imagen/Firefly",
+    description: "Midjourney・DALL-E 3・Stable Diffusion・Google Imagen 3・Adobe Fireflyの5大画像生成AIを品質・料金・商用利用で徹底比較。",
+    icon: "🎨",
+    category: "画像",
+    readTime: "12分",
+  },
 ];
 
 export const GENRES = [
