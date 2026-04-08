@@ -745,6 +745,30 @@ export const guides: Guide[] =
     category: "業種別",
     readTime: "12分",
   },
+  {
+    slug: "chatgpt-claude-gemini-comparison",
+    title: "ChatGPT vs Claude vs Gemini 3社徹底比較【2026年最新】どれを選ぶべき？",
+    description: "主要AIチャット3社を料金・日本語品質・コーディング力・文脈長・マルチモーダルで徹底比較し、用途別のおすすめを解説。",
+    icon: "⚖️",
+    category: "比較",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-pricing-detailed",
+    title: "主要AIツール料金完全比較【2026年最新】ChatGPT・Claude・Codeium・Notion AI他",
+    description: "ChatGPT・Claude・Gemini・Codeium・Notion AI・Perplexity など主要AIサービスの料金を完全比較。無料枠、年払い、API料金まで詳しく解説。",
+    icon: "💰",
+    category: "料金",
+    readTime: "13分",
+  },
+  {
+    slug: "chatgpt-image-generation-guide",
+    title: "ChatGPTで画像生成する完全ガイド【2026年最新】DALL-E活用術",
+    description: "ChatGPTで画像生成する方法・プロンプトのコツ・商用利用・他の画像AIとの比較まで解説。DALL-E統合機能を最大活用。",
+    icon: "🎨",
+    category: "画像生成",
+    readTime: "11分",
+  },
 ];
 
 export const GENRES = [
@@ -858,6 +882,9 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "ai-for-fitness": "その他",
   "ai-for-mental-health": "その他",
   "ai-for-japanese-business": "業種別",
+  "chatgpt-claude-gemini-comparison": "チャット・文章",
+  "ai-pricing-detailed": "その他",
+  "chatgpt-image-generation-guide": "画像・動画",
 };
 
 export function genreOf(slug: string): Genre {
