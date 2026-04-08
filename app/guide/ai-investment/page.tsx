@@ -125,6 +125,17 @@ export default function AIInvestmentPage() {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: "AI投資ツールおすすめ比較",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, item: { "@type": "Product", name: "ChatGPT", url: "https://chat.openai.com/" } },
+          { "@type": "ListItem", position: 2, item: { "@type": "Product", name: "Claude", url: "https://claude.ai/" } },
+          { "@type": "ListItem", position: 3, item: { "@type": "Product", name: "WealthNavi", url: "https://www.wealthnavi.com/" } },
+          { "@type": "ListItem", position: 4, item: { "@type": "Product", name: "THEO", url: "https://theo.blue/" } },
+        ],
+      }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />

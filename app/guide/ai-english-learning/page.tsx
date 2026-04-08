@@ -63,6 +63,17 @@ export default function AIEnglishLearningPage() {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: "AI英語学習ツールおすすめ比較",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, item: { "@type": "Product", name: "ChatGPT", url: "https://chat.openai.com/" } },
+          { "@type": "ListItem", position: 2, item: { "@type": "Product", name: "Claude", url: "https://claude.ai/" } },
+          { "@type": "ListItem", position: 3, item: { "@type": "Product", name: "Gemini", url: "https://gemini.google.com/" } },
+          { "@type": "ListItem", position: 4, item: { "@type": "Product", name: "DeepL", url: "https://www.deepl.com/" } },
+        ],
+      }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd_seo) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd_seo) }} />

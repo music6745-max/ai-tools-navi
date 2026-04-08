@@ -119,6 +119,18 @@ export default function AICodingAssistantPage() {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: "AIコーディング支援ツールおすすめ比較",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, item: { "@type": "Product", name: "GitHub Copilot", url: "https://github.com/features/copilot" } },
+          { "@type": "ListItem", position: 2, item: { "@type": "Product", name: "Cursor", url: "https://cursor.sh/" } },
+          { "@type": "ListItem", position: 3, item: { "@type": "Product", name: "Claude Code", url: "https://claude.ai/code" } },
+          { "@type": "ListItem", position: 4, item: { "@type": "Product", name: "Codeium", url: "https://codeium.com/" } },
+          { "@type": "ListItem", position: 5, item: { "@type": "Product", name: "Tabnine", url: "https://www.tabnine.com/" } },
+        ],
+      }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd_seo) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd_seo) }} />

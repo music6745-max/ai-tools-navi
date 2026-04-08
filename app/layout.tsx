@@ -95,7 +95,10 @@ export default function RootLayout({
         inLanguage: "ja",
         potentialAction: {
           "@type": "SearchAction",
-          target: `${siteConfig.url}/search?q={search_term_string}`,
+          target: {
+            "@type": "EntryPoint",
+            urlTemplate: `${siteConfig.url}/search?q={search_term_string}`,
+          },
           "query-input": "required name=search_term_string",
         },
       },
@@ -104,7 +107,11 @@ export default function RootLayout({
         "@id": `${siteConfig.url}/#organization`,
         name: siteConfig.name,
         url: siteConfig.url,
-        logo: `${siteConfig.url}/favicon.ico`,
+        logo: {
+          "@type": "ImageObject",
+          url: `${siteConfig.url}/favicon.ico`,
+        },
+        sameAs: ["https://x.com/net_toolbox_jp"],
       },
     ],
   };
