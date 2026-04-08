@@ -4,9 +4,9 @@ import { siteConfig } from "../../lib/data";
 import { AffiliateCTA } from "../../components/AffiliateCTA";
 
 export const metadata: Metadata = {
-  title: "【2026年最新】AI時代のプログラミングスクール比較5選｜AIスキルが学べるおすすめスクール",
+  title: "プログラミングスクールAIおすすめ5選【2026年最新】徹底比較｜選び方も解説",
   description:
-    "AI・機械学習が学べるプログラミングスクール5社を徹底比較。テックアカデミー、DMM WEBCAMP、Aidemy、キカガク、Progateの料金・カリキュラム・転職支援を解説。",
+    "AI・機械学習を本気で学びたい人必見。テックアカデミー、DMM WEBCAMP、Aidemy、キカガク、Progateを料金・カリキュラム・転職支援で徹底比較し、選び方を解説します。",
   alternates: {
     canonical: `${siteConfig.url}/guide/ai-programming-school`,
   },

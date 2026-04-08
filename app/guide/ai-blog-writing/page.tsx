@@ -4,9 +4,9 @@ import { siteConfig, getToolBySlug, renderStars, getPricingBadge } from "../../l
 import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
-  title: "AIでブログ記事を書く方法｜月5万円稼ぐブログ運営術",
+  title: "ブログ執筆AIおすすめ6選【2026年最新】徹底比較｜選び方も解説",
   description:
-    "ChatGPTやClaudeを使ったブログ記事の書き方を徹底解説。ブログ開設から記事執筆、収益化まで月5万円を目指すロードマップ。サーバー選びからAI活用テクニックまで。",
+    "ブログを始めたいが文章を書く時間がない方へ。ChatGPT・Claude・Gemini・Notion AI等の執筆AI6選を比較し、月5万円を目指す記事作成・収益化のコツを解説します。",
   keywords: ["AIブログ", "ブログ運営", "ChatGPT ブログ", "ブログ 始め方", "副業 ブログ", "月5万円", "ConoHa WING", "エックスサーバー"],
   alternates: {
     canonical: `${siteConfig.url}/guide/ai-blog-writing`,

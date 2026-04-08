@@ -4,9 +4,9 @@ import { siteConfig } from "../../lib/data";
 import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
-  title: "AIコーディングアシスタント比較ガイド【2026年版】開発を高速化",
+  title: "コーディングAIおすすめ6選【2026年最新】徹底比較｜選び方も解説",
   description:
-    "AIコーディングアシスタントを徹底比較。コード生成、レビュー、デバッグ、リファクタリング、テスト作成など、開発効率を劇的に上げるAIツールと活用法を紹介。",
+    "コードを書く時間を半分にしたいエンジニア必見。GitHub Copilot・Cursor・Claude Code等のAIコーディングアシスタント6選を比較し、開発効率を上げる選び方を解説。",
   alternates: {
     canonical: `${siteConfig.url}/guide/ai-coding-assistant`,
   },

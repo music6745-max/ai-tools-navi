@@ -4,9 +4,9 @@ import { siteConfig, getToolBySlug, renderStars, getPricingBadge } from "../../l
 import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
-  title: "AIで英語学習を効率化する方法｜2026年おすすめツール5選",
+  title: "AI英語学習おすすめ5選【2026年最新】徹底比較｜選び方も解説",
   description:
-    "ChatGPTやClaude等のAIツールを使った英語学習法を徹底解説。英会話練習、英作文添削、TOEIC対策まで、AIを活用した効率的な学習方法とおすすめツールを紹介。",
+    "英会話・添削・TOEIC対策に時間が取れない人必見。ChatGPT・Claude・Gemini・ElevenLabs・GrammarlyのAIツール5選を徹底比較し、目的別の選び方と活用法を解説します。",
   keywords: ["AI英語学習", "ChatGPT 英語", "AI英会話", "英語 勉強 AI", "TOEIC AI", "英作文 添削 AI"],
   alternates: {
     canonical: `${siteConfig.url}/guide/ai-english-learning`,

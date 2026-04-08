@@ -4,9 +4,9 @@ import { siteConfig } from "../../lib/data";
 import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
-  title: "AIツールで副業を始める方法｜月5万円を目指すロードマップ【2026年版】",
+  title: "副業AIおすすめ7選【2026年最新】徹底比較｜選び方も解説",
   description:
-    "AIツールを活用した副業の始め方を解説。ブログ運営、コンテンツ作成、デザイン、動画編集など、具体的なロードマップで月5万円の副収入を目指す。",
+    "本業で時間がない会社員必見。ブログ・デザイン・動画編集で月5万円を目指せるChatGPT・Claude・Canva・Midjourney等のAIツール7選を比較し、最短ロードマップを解説。",
   alternates: {
     canonical: `${siteConfig.url}/guide/ai-side-business`,
   },

@@ -4,9 +4,9 @@ import { siteConfig } from "../../lib/data";
 import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
-  title: "【2026年最新】AI投資・資産運用サービス比較5選｜ロボアドバイザーおすすめ",
+  title: "AIロボアドバイザーおすすめ5選【2026年最新】徹底比較｜選び方も解説",
   description:
-    "AIを活用した投資・資産運用サービス5選を徹底比較。WealthNavi、THEO、ROBOPRO、楽ラップ、SBIラップの手数料・最低投資額・運用実績・NISA対応を解説。",
+    "投資初心者でも安心して資産運用したい方向け。WealthNavi・THEO・ROBOPRO・楽ラップ・SBIラップを手数料・最低投資額・実績・NISA対応で比較し、選び方を解説します。",
   alternates: {
     canonical: `${siteConfig.url}/guide/ai-investment`,
   },

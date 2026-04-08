@@ -4,9 +4,9 @@ import { siteConfig } from "../../lib/data";
 import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
-  title: "AI履歴書・職務経歴書作成ガイド【2026年版】転職で差がつく書類作成",
+  title: "履歴書作成AIおすすめ5選【2026年最新】徹底比較｜選び方も解説",
   description:
-    "AIを使った履歴書・職務経歴書の作成法を徹底解説。自己PR、志望動機、職務要約までAIで効率化するおすすめツールと活用テクニックを紹介。",
+    "自己PRや志望動機が書けず転職活動が止まっている方へ。ChatGPT・Claude・Gemini等のAIツール5選を比較し、職務経歴書を魅力的に仕上げる活用法を解説します。",
   alternates: {
     canonical: `${siteConfig.url}/guide/ai-resume`,
   },

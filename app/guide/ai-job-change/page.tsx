@@ -4,9 +4,9 @@ import { siteConfig } from "../../lib/data";
 import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
-  title: "【2026年最新】AI業界への転職ガイド｜未経験からAIエンジニアになる方法",
+  title: "AI転職エージェントおすすめ5選【2026年最新】徹底比較｜選び方も解説",
   description:
-    "AI業界への転職方法を徹底解説。doda、リクルートエージェント、Green、レバテックキャリア、ビズリーチの5社を比較。未経験からAIエンジニアになるステップも紹介。",
+    "未経験からAIエンジニアを目指す方向け。doda、リクルートエージェント、Green、レバテックキャリア、ビズリーチを求人数・サポート・年収交渉力で比較し選び方を解説。",
   alternates: {
     canonical: `${siteConfig.url}/guide/ai-job-change`,
   },

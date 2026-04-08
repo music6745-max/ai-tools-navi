@@ -4,9 +4,9 @@ import { siteConfig, getToolBySlug, renderStars, getPricingBadge } from "../../l
 import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
-  title: "【2026年最新】AI画像生成ツール徹底比較｜無料で使えるおすすめ5選",
+  title: "画像生成AIおすすめ5選【2026年最新】徹底比較｜選び方も解説",
   description:
-    "Midjourney、DALL-E、Stable Diffusion、Adobe Firefly、Canva AIを徹底比較。料金・特徴・メリット・デメリットを解説し、用途別のおすすめを紹介。",
+    "デザイナー不要で高品質な画像が欲しい方へ。Midjourney・DALL-E・Stable Diffusion・Adobe Firefly・Canva AIを料金・画質・商用利用で比較し、用途別の選び方を解説。",
   alternates: {
     canonical: `${siteConfig.url}/guide/ai-image-generation`,
   },

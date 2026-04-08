@@ -4,9 +4,9 @@ import { siteConfig, getToolBySlug, renderStars, getPricingBadge } from "../../l
 import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
-  title: "ChatGPT vs Claude 徹底比較【2026年最新】どっちを使うべき？",
+  title: "AIチャットおすすめ2選【2026年最新】ChatGPT vs Claude徹底比較｜選び方も解説",
   description:
-    "ChatGPTとClaudeを料金・機能・日本語品質・コーディング力・安全性で徹底比較。それぞれの得意分野と選び方を詳しく解説。",
+    "ChatGPTとClaudeどちらを契約すべきか迷う方へ。料金・日本語品質・コーディング・長文処理・安全性で徹底比較し、用途別にどちらが最適かを解説します。",
   alternates: {
     canonical: `${siteConfig.url}/guide/chatgpt-vs-claude`,
   },
