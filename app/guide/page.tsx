@@ -508,6 +508,46 @@ const guides = [
     category: "法務",
     readTime: "10分",
   },
+  {
+    slug: "ai-for-bloggers",
+    title: "ブロガー向けAI活用ガイド【2026年最新】記事作成・SEO・収益化を加速",
+    description: "ブログ運営を効率化するAIツール活用法を徹底解説。記事構成作成・執筆・リライト・SEO対策・画像生成まで実践ノウハウを紹介します。",
+    icon: "✍️",
+    category: "ブログ運営",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-for-small-business",
+    title: "中小企業経営者向けAI活用ガイド【2026年最新】業務効率化とDX推進",
+    description: "中小企業経営者のためのAI活用ガイド。総務・経理・営業・マーケまで限られたリソースで最大の成果を出す導入ステップを解説。",
+    icon: "🏢",
+    category: "経営・DX",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-for-researchers",
+    title: "研究者・大学院生向けAI活用ガイド【2026年最新】論文執筆・文献調査を効率化",
+    description: "研究者・大学院生のための実践AI活用ガイド。論文執筆・文献調査・データ分析・英文校正まで研究業務を加速する方法を解説。",
+    icon: "🔬",
+    category: "研究・学術",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-for-students",
+    title: "学生の論文・レポート向けAI活用ガイド【2026年最新】評価を下げない正しい使い方",
+    description: "大学生・高校生のための論文・レポートAI活用ガイド。構成作り・文献収集・引用・英文校正まで評価を上げる賢い使い方を解説。",
+    icon: "🎓",
+    category: "学生・教育",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-workflow-automation",
+    title: "AIワークフロー自動化入門【2026年最新】Zapier・Make・n8n徹底活用",
+    description: "AI×ワークフロー自動化の実践入門ガイド。ChatGPT APIとZapier・Make・n8nを連携し繰り返しタスクをゼロから自動化する方法を解説。",
+    icon: "⚙️",
+    category: "自動化",
+    readTime: "13分",
+  },
 ];
 
 export default function GuidePage() {
