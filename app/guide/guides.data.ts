@@ -929,6 +929,46 @@ export const guides: Guide[] =
     category: "その他",
     readTime: "10分",
   },
+  {
+    slug: "ai-for-saas-builders",
+    title: "SaaS開発者のためのAIツール活用ガイド｜2026年おすすめ5選",
+    description: "個人開発者・スタートアップのSaaS開発に役立つAIツールを徹底比較。コーディング支援・ドキュメント生成・カスタマーサポート自動化まで、立ち上げを加速する実践ガイド。",
+    icon: "🛠️",
+    category: "開発者",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-api-comparison",
+    title: "OpenAI API vs Claude API vs Gemini API 徹底比較【2026年最新】",
+    description: "OpenAI・Anthropic・Googleの主要LLM APIを料金・速度・コンテキスト長・機能で徹底比較。アプリ組み込みに最適なAPIの選び方を開発者向けに解説します。",
+    icon: "🔌",
+    category: "開発者",
+    readTime: "13分",
+  },
+  {
+    slug: "ai-llm-self-hosted",
+    title: "セルフホスティング可能なオープンソースLLM比較【2026年最新】",
+    description: "Llama 3・Mistral・Gemma・Qwen・DeepSeekなどセルフホスト可能なオープンソースLLMをライセンス・性能・GPU要件で徹底比較します。",
+    icon: "🦙",
+    category: "開発者",
+    readTime: "14分",
+  },
+  {
+    slug: "ai-for-non-engineers",
+    title: "非エンジニア向けAI活用ガイド｜2026年版",
+    description: "プログラミング不要で使えるAIツールと活用法を非エンジニア向けに徹底解説。資料作成・データ集計・メール作成・議事録まで業務効率を一気に高めます。",
+    icon: "🧑‍💼",
+    category: "ビジネス",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-for-managers",
+    title: "マネージャー向けAI活用ガイド｜意思決定とチーム運営を加速",
+    description: "管理職・マネージャー向けにAIツールの活用法を徹底解説。意思決定支援・1on1準備・評価面談・KPI分析・部下育成までマネジメント業務を効率化します。",
+    icon: "👔",
+    category: "ビジネス",
+    readTime: "13分",
+  },
 ];
 
 export const GENRES = [
@@ -1070,6 +1110,12 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "ai-for-childcare": "業種別",
   "ai-for-language-learning": "学習・研究",
   "ai-personality-test": "その他",
+
+  "ai-for-saas-builders": "ビジネス",
+  "ai-api-comparison": "ビジネス",
+  "ai-llm-self-hosted": "ビジネス",
+  "ai-for-non-engineers": "ビジネス",
+  "ai-for-managers": "ビジネス",
 };
 
 export function genreOf(slug: string): Genre {
