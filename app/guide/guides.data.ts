@@ -1217,6 +1217,46 @@ export const guides: Guide[] =
     category: "業務",
     readTime: "12分",
   },
+  {
+    slug: "ai-search-engines-comparison",
+    title: "AI検索エンジン比較5選【2026年最新】Perplexity/Phind/You.com/Bing/Google SGE",
+    description: "回答型AI検索エンジン5選を徹底比較。Perplexity・Phind・You.com・Bing Chat・Google SGEの精度・引用・料金を解説。",
+    icon: "🔎",
+    category: "検索",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-rag-platform-comparison",
+    title: "AI RAGプラットフォーム比較5選【2026年最新】LangChain/LlamaIndex/Vectara/Pinecone/Weaviate",
+    description: "RAG(検索拡張生成)を構築するプラットフォーム5選を徹底比較。LangChain・LlamaIndex・Vectara・Pinecone・Weaviateの特徴を解説。",
+    icon: "🧠",
+    category: "開発",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-llm-api-comparison",
+    title: "LLM API比較5選【2026年最新】OpenAI/Anthropic/Google/Mistral/Meta",
+    description: "OpenAI GPT・Anthropic Claude・Google Gemini・Mistral・Meta LlamaのLLM APIを料金・性能・コンテキスト長で徹底比較。",
+    icon: "🤖",
+    category: "開発",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-design-tools-comparison",
+    title: "AIデザインツール比較5選【2026年最新】Figma AI/Canva Magic/Galileo/Uizard/Visily",
+    description: "デザイン作業をAIで加速する5ツールを徹底比較。Figma AI・Canva Magic Studio・Galileo AI・Uizard・Visilyの料金・特徴・連携を解説。",
+    icon: "🖌️",
+    category: "デザイン",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-automation-comparison",
+    title: "AIワークフロー自動化ツール比較5選【2026年最新】Zapier/Make/n8n/Pipedream/Workato",
+    description: "業務自動化を実現するAIワークフローツール5選を徹底比較。Zapier・Make・n8n・Pipedream・Workatoの料金・連携先・特徴を解説。",
+    icon: "⚙️",
+    category: "業務",
+    readTime: "12分",
+  },
 ];
 
 export const GENRES = [
