@@ -849,6 +849,46 @@ export const guides: Guide[] =
     category: "キャラ生成",
     readTime: "12分",
   },
+  {
+    slug: "ai-for-data-scientists",
+    title: "データサイエンティスト向けAIおすすめ5選【2026年最新】",
+    description: "データサイエンティストのためのAIツールを徹底比較。ChatGPT・Claude・Gemini・GitHub Copilot・Hugging Faceを使った分析・特徴量エンジニアリング・モデル評価の実務活用法を解説。",
+    icon: "📊",
+    category: "エンジニア",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-for-engineers",
+    title: "エンジニア向けAI開発支援おすすめ5選【2026年最新】",
+    description: "ソフトウェアエンジニア向けAI開発支援ツールを徹底比較。GitHub Copilot・Cursor・Claude Code・ChatGPT・Tabnineのコード補完・レビュー・テスト自動化を解説。",
+    icon: "🧑‍💻",
+    category: "エンジニア",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-prompt-templates",
+    title: "プロンプトテンプレート集2026｜実用プロンプト30選",
+    description: "仕事・学習・クリエイティブで使えるプロンプトテンプレートを用途別に30個紹介。ChatGPT・Claude・Geminiで即使える実践例と、自作テンプレートの作り方を解説。",
+    icon: "📋",
+    category: "スキル",
+    readTime: "15分",
+  },
+  {
+    slug: "ai-for-product-managers",
+    title: "プロダクトマネージャー向けAIおすすめ5選【2026年最新】",
+    description: "PMのためのAIツールを徹底比較。ChatGPT・Claude・Notion AI・Gemini・Perplexityを使った要件定義・ユーザーリサーチ・PRD作成・競合分析の実務活用法を解説。",
+    icon: "📈",
+    category: "ビジネス",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-for-qa-testers",
+    title: "QA・テスト向けAIおすすめ5選【2026年最新】",
+    description: "QAエンジニア・テスターのためのAIツールを徹底比較。ChatGPT・Claude・Testim・Mabl・AutifyでテストケースAI自動生成、E2E自動化、バグ検出を効率化。",
+    icon: "🧪",
+    category: "エンジニア",
+    readTime: "12分",
+  },
 ];
 
 export const GENRES = [
@@ -976,6 +1016,13 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "ai-for-translators": "チャット・文章",
   "ai-for-illustrators": "画像・動画",
   "ai-character-design": "画像・動画",
+
+  // 新着: エンジニア・PM向け
+  "ai-for-data-scientists": "業種別",
+  "ai-for-engineers": "業種別",
+  "ai-prompt-templates": "チャット・文章",
+  "ai-for-product-managers": "ビジネス",
+  "ai-for-qa-testers": "業種別",
 };
 
 export function genreOf(slug: string): Genre {
