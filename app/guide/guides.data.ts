@@ -1049,6 +1049,46 @@ export const guides: Guide[] =
     category: "ビジネス",
     readTime: "13分",
   },
+  {
+    slug: "ai-for-japanese-language",
+    title: "日本語特化AIツールおすすめ5選【2026年最新】徹底比較｜選び方も解説",
+    description: "日本語の敬語・ビジネス文書・翻訳精度に優れた日本語特化AIツールを徹底比較。ChatGPT・Claude・Gemini・ELYZA・Sakana AIの5ツールを用途別に解説します。",
+    icon: "🗾",
+    category: "言語・翻訳",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-multilingual-tools",
+    title: "多言語対応AIツールおすすめ5選【2026年最新】徹底比較",
+    description: "100言語以上対応のAIツールを徹底比較。ChatGPT・Claude・Gemini・DeepL・Google翻訳の多言語性能・料金・用途別選び方を解説します。",
+    icon: "🌐",
+    category: "言語・翻訳",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-for-translation-business",
+    title: "翻訳業界向けAIツールおすすめ5選【2026年最新】プロ翻訳者が使うべきAI",
+    description: "翻訳者・翻訳会社向けのAIツールを徹底比較。CAT連携・機械翻訳+ポストエディット・用語管理など、プロの現場で役立つAI活用法を解説します。",
+    icon: "🔤",
+    category: "業種別",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-for-localization",
+    title: "ローカライゼーション向けAIツール5選【2026年最新】L10n業務を効率化",
+    description: "アプリ・ゲーム・ソフトウェアのローカライゼーションに使えるAIツールを徹底比較。継続ローカリゼーション・文脈理解・プレースホルダー対応を解説します。",
+    icon: "🗺️",
+    category: "業種別",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-grammar-check",
+    title: "AI文法チェッカー比較おすすめ5選【2026年最新】英文校正ツール徹底解説",
+    description: "Grammarly・ProWritingAid・LanguageTool・QuillBot・ChatGPTなどAI文法チェッカーを徹底比較。無料・有料プランの違いと用途別おすすめを解説します。",
+    icon: "✍️",
+    category: "言語・翻訳",
+    readTime: "12分",
+  },
 ];
 
 export const GENRES = [
@@ -1208,6 +1248,13 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "ai-for-instagram": "クリエイティブ",
   "ai-for-tiktok": "クリエイティブ",
   "ai-content-strategy": "ビジネス",
+
+  // 言語・翻訳系新規ガイド
+  "ai-for-japanese-language": "学習・研究",
+  "ai-multilingual-tools": "学習・研究",
+  "ai-for-translation-business": "業種別",
+  "ai-for-localization": "業種別",
+  "ai-grammar-check": "学習・研究",
 };
 
 export function genreOf(slug: string): Genre {
