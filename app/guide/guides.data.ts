@@ -1377,6 +1377,22 @@ export const guides: Guide[] =
     category: "業種別",
     readTime: "12分",
   },
+  {
+    slug: "codeium-pricing",
+    title: "Codeium 料金プラン徹底解説【2026年最新】無料版とPro版の違い",
+    description: "AIコード補完Codeiumの料金プランを徹底解説。無料Individual・Pro・Teams・Enterpriseの違い、GitHub Copilotとの料金比較を網羅。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "8分",
+  },
+  {
+    slug: "notion-ai-qa-pricing",
+    title: "Notion AI Q&A 料金プラン徹底解説【2026年最新】個人・チーム別の費用",
+    description: "Notion AIとNotion Q&Aの料金プランを徹底解説。月額・年額・チームプランの違い、追加コストの計算方法を解説します。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "8分",
+  },
 ];
 
 export const GENRES = [
