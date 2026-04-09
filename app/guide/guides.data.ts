@@ -1505,6 +1505,30 @@ export const guides: Guide[] =
     category: "料金解説",
     readTime: "10分",
   },
+  {
+    slug: "reclaim-ai-review",
+    title: "Reclaim AI 使い方・料金徹底解説【2026年最新】カレンダーAIで時間管理を自動化",
+    description: "Reclaim AIの使い方・料金プランを徹底解説。Googleカレンダーと連携し、会議・タスク・習慣を自動スケジュール。",
+    icon: "📅",
+    category: "ツール解説",
+    readTime: "10分",
+  },
+  {
+    slug: "make-integromat-pricing",
+    title: "Make(旧Integromat) 料金プラン徹底解説【2026年最新】",
+    description: "Make(旧Integromat)の料金プランを徹底解説。無料プランからEnterprise、Zapierとの料金比較も網羅。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "10分",
+  },
+  {
+    slug: "character-ai-review",
+    title: "Character AI 使い方・料金徹底解説【2026年最新】AIキャラクターと会話",
+    description: "Character AIの使い方・料金プラン(Free/Plus)を徹底解説。AIキャラクターとの会話・自作キャラ作成方法を網羅。",
+    icon: "🤖",
+    category: "ツール解説",
+    readTime: "10分",
+  },
 ];
 
 export const GENRES = [
