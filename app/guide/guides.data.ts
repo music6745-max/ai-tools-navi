@@ -1561,6 +1561,22 @@ export const guides: Guide[] =
     category: "料金解説",
     readTime: "10分",
   },
+  {
+    slug: "midjourney-pricing",
+    title: "Midjourney 料金プラン徹底解説【2026年最新】Basic/Standard/Pro/Mega",
+    description: "Midjourneyの料金プラン全4種を徹底解説。商用利用条件も網羅。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "10分",
+  },
+  {
+    slug: "perplexity-pricing",
+    title: "Perplexity 料金プラン徹底解説【2026年最新】Free/Pro/Enterprise",
+    description: "Perplexity AIのFree・Pro・Enterpriseの料金プランを徹底解説。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "8分",
+  },
 ];
 
 export const GENRES = [
