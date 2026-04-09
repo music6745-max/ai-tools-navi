@@ -1473,6 +1473,22 @@ export const guides: Guide[] =
     category: "ランキング",
     readTime: "12分",
   },
+  {
+    slug: "ai-voice-ranking-2026",
+    title: "【2026年最新】AI音声合成・音楽生成ツールおすすめランキングTOP10",
+    description: "ElevenLabs・Suno・Udio・CoeFont等、AI音声・音楽系ツールを徹底比較。",
+    icon: "🎙️",
+    category: "ランキング",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-business-ranking-2026",
+    title: "【2026年最新】AIビジネスツールおすすめランキングTOP10",
+    description: "営業・CS・データ分析・会議録・プレゼンに使えるAIビジネスツールを徹底比較。",
+    icon: "💼",
+    category: "ランキング",
+    readTime: "12分",
+  },
 ];
 
 export const GENRES = [
