@@ -1577,6 +1577,30 @@ export const guides: Guide[] =
     category: "料金解説",
     readTime: "8分",
   },
+  {
+    slug: "deepl-pricing",
+    title: "DeepL 料金プラン徹底解説【2026年最新】Free/Pro/API/Businessの違い",
+    description: "DeepL翻訳の全プランを徹底解説。Google翻訳との精度比較も網羅。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "8分",
+  },
+  {
+    slug: "cursor-pricing",
+    title: "Cursor 料金プラン徹底解説【2026年最新】Hobby/Pro/Businessの違い",
+    description: "AIコードエディタCursorの全プランを徹底解説。Copilotとの比較も。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "8分",
+  },
+  {
+    slug: "github-copilot-pricing",
+    title: "GitHub Copilot 料金プラン徹底解説【2026年最新】Free/Individual/Business/Enterprise",
+    description: "GitHub Copilotの全プランを徹底解説。CursorやCodeiumとの比較も。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "8分",
+  },
 ];
 
 export const GENRES = [
