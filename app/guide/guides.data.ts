@@ -1297,6 +1297,46 @@ export const guides: Guide[] =
     category: "開発",
     readTime: "12分",
   },
+  {
+    slug: "ai-virtual-tryon-comparison",
+    title: "AIバーチャル試着・ファッションツール比較5選【2026年最新】",
+    description: "AIで服を試着できる5サービスを徹底比較。Vue.ai・FitTech・Style3D・YourMirror・WANNA AIを解説。",
+    icon: "👗",
+    category: "業種別",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-fitness-coach-comparison",
+    title: "AIフィットネスコーチ比較5選【2026年最新】Freeletics/Fitbod/JEFIT/Aaptiv/Future",
+    description: "AIで自分専用のトレーニングプランを作成する5サービスを徹底比較。Freeletics・Fitbod・JEFIT・Aaptiv・Futureを解説。",
+    icon: "🏋️",
+    category: "ライフスタイル",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-recipe-comparison",
+    title: "AI料理レシピアプリ比較5選【2026年最新】DishGen/SuperCook/Mealime/Whisk/Plant Jammer",
+    description: "冷蔵庫の食材から献立を提案するAIレシピアプリ5選を徹底比較。DishGen・SuperCook・Mealime・Whisk・Plant Jammerを解説。",
+    icon: "🍳",
+    category: "ライフスタイル",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-kids-learning-comparison",
+    title: "AI子ども向け学習アプリ比較5選【2026年最新】",
+    description: "子どもの個別最適学習を実現するAI学習アプリ5選を徹底比較。Khan Academy Kids・Synthesis・MagicSchool・SchoolAI・atama+を解説。",
+    icon: "👶",
+    category: "学習",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-medical-diagnosis-comparison",
+    title: "AI医療診断支援ツール比較5選【2026年最新】Aidoc/PathAI/Tempus/Ubie/エルピクセル",
+    description: "医療現場で使われるAI診断支援ツール5選を徹底比較。Aidoc・PathAI・Tempus・Ubie・エルピクセルの特徴を解説。",
+    icon: "🏥",
+    category: "業種別",
+    readTime: "12分",
+  },
 ];
 
 export const GENRES = [
