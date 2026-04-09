@@ -1529,6 +1529,14 @@ export const guides: Guide[] =
     category: "ツール解説",
     readTime: "10分",
   },
+  {
+    slug: "canva-ai-image-guide",
+    title: "Canva AI 画像生成の使い方・料金【2026年最新】Magic Studioで何ができる？",
+    description: "Canva AIの画像生成機能(Magic Studio)の使い方を徹底解説。無料プランとProの違いも網羅。",
+    icon: "🎨",
+    category: "ツール解説",
+    readTime: "10分",
+  },
 ];
 
 export const GENRES = [
