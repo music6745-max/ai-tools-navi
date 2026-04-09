@@ -1337,6 +1337,46 @@ export const guides: Guide[] =
     category: "業種別",
     readTime: "12分",
   },
+  {
+    slug: "ai-travel-planner-comparison",
+    title: "AI旅行プランナー比較5選【2026年最新】Layla/Wonderplan/Trip.com AI/Roam Around/Vacay",
+    description: "希望条件を伝えるだけで旅程を作ってくれるAI旅行プランナー5選を徹底比較。",
+    icon: "✈️",
+    category: "ライフスタイル",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-fortune-comparison",
+    title: "AI占い・スピリチュアルツール比較5選【2026年最新】",
+    description: "AIで占いを楽しめる5サービスを徹底比較。占いMy・ココナラAI占い・FortuneAI・StarAI・TarotGPTを解説。",
+    icon: "🔮",
+    category: "エンタメ",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-real-estate-comparison",
+    title: "AI不動産業務支援ツール比較5選【2026年最新】",
+    description: "不動産業務をAIで効率化する5サービスを徹底比較。HouseCanary・Tokyo Lease Capital・SUGAR・Chiseki AI・Reonomy。",
+    icon: "🏘️",
+    category: "業種別",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-agriculture-comparison",
+    title: "AI農業・スマート農業ツール比較5選【2026年最新】",
+    description: "農業のDXを支えるAIツール5選を徹底比較。Plantix・xarvio・Farmonaut・Climate FieldView・Agrist。",
+    icon: "🌾",
+    category: "業種別",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-logistics-comparison",
+    title: "AI物流・サプライチェーン管理ツール比較5選【2026年最新】",
+    description: "物流業界のAI活用ツール5選を徹底比較。Project44・FourKites・Symbotic・Locus Robotics・Hacobu MOVOを解説。",
+    icon: "🚚",
+    category: "業種別",
+    readTime: "12分",
+  },
 ];
 
 export const GENRES = [
