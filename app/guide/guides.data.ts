@@ -1457,6 +1457,22 @@ export const guides: Guide[] =
     category: "ランキング",
     readTime: "12分",
   },
+  {
+    slug: "ai-coding-ranking-2026",
+    title: "【2026年最新】AIコーディング支援ツールおすすめランキングTOP10",
+    description: "GitHub Copilot・Cursor・Claude Code・Codeium等のAIコーディングツールを徹底比較。",
+    icon: "💻",
+    category: "ランキング",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-video-ranking-2026",
+    title: "【2026年最新】AI動画生成ツールおすすめランキングTOP10｜Sora/Runway/Pika",
+    description: "Sora・Runway Gen-3・Pika・Luma・Kling等のAI動画生成ツールを徹底比較。",
+    icon: "🎬",
+    category: "ランキング",
+    readTime: "12分",
+  },
 ];
 
 export const GENRES = [
