@@ -1489,6 +1489,22 @@ export const guides: Guide[] =
     category: "ランキング",
     readTime: "12分",
   },
+  {
+    slug: "chatgpt-pricing",
+    title: "ChatGPT 料金プラン徹底解説【2026年最新】Free/Plus/Pro/Team/Enterprise",
+    description: "ChatGPTの料金プランを徹底解説。Free・Plus・Pro・Team・Enterpriseの違いを日本語で詳しく解説。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "10分",
+  },
+  {
+    slug: "claude-pricing",
+    title: "Claude 料金プラン徹底解説【2026年最新】Free/Pro/Max/Team/Enterprise",
+    description: "AnthropicのClaude料金プランを徹底解説。Free・Pro・Max・Team・Enterpriseの違いを解説。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "10分",
+  },
 ];
 
 export const GENRES = [
