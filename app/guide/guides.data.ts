@@ -1393,6 +1393,22 @@ export const guides: Guide[] =
     category: "料金解説",
     readTime: "8分",
   },
+  {
+    slug: "vercel-pricing",
+    title: "Vercel 料金プラン徹底解説【2026年最新】Hobby/Pro/Enterpriseの違い",
+    description: "Vercelの料金プランHobby・Pro・Enterpriseを徹底解説。日本語で分かりやすく料金体系・帯域・ビルド時間の違いを網羅。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "8分",
+  },
+  {
+    slug: "you-com-pricing",
+    title: "You.com 料金プラン徹底解説【2026年最新】無料版とPro版の違い",
+    description: "AI検索エンジンYou.comの料金プランを徹底解説。無料・Pro・Maxの違い、Perplexityとの料金比較を日本語で詳しく解説。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "8分",
+  },
 ];
 
 export const GENRES = [
