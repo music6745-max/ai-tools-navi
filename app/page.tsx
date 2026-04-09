@@ -224,6 +224,39 @@ export default function Home() {
         <AdSenseUnit format="horizontal" className="my-8" />
       </div>
 
+      {/* 2026年ランキングハブ */}
+      <section className="py-16 bg-gradient-to-b from-primary-light/20 to-transparent">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-2">
+            🏆 2026年おすすめランキング
+          </h2>
+          <p className="text-muted text-center mb-10">
+            用途別に厳選したAIツールTOP10
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {[
+              { slug: "ai-tools-ranking-2026", title: "AIツール総合TOP10", icon: "🏆", desc: "ChatGPT/Claude/Geminiから厳選" },
+              { slug: "ai-image-ranking-2026", title: "画像生成AI TOP10", icon: "🎨", desc: "Midjourney/SD/DALL-E等" },
+              { slug: "ai-writing-ranking-2026", title: "AIライティングTOP10", icon: "✍️", desc: "ブログ・記事執筆に最適" },
+            ].map((r) => (
+              <Link
+                key={r.slug}
+                href={`/guide/${r.slug}`}
+                className="block bg-card-bg border border-primary/30 rounded-xl p-5 hover:border-primary hover:shadow-md transition-all"
+              >
+                <div className="flex items-start gap-3">
+                  <span className="text-3xl">{r.icon}</span>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">{r.title}</h3>
+                    <p className="text-sm text-muted">{r.desc}</p>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Popular Guide Articles */}
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-4">
