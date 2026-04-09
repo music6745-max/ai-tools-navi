@@ -1537,6 +1537,22 @@ export const guides: Guide[] =
     category: "ツール解説",
     readTime: "10分",
   },
+  {
+    slug: "suno-ai-review",
+    title: "Suno AI 使い方・料金徹底解説【2026年最新】歌詞付き楽曲をAIで生成",
+    description: "Suno AIの使い方・料金プランを徹底解説。歌詞付きフル楽曲を数十秒で生成する方法を網羅。",
+    icon: "🎵",
+    category: "ツール解説",
+    readTime: "10分",
+  },
+  {
+    slug: "v0-dev-review",
+    title: "v0.dev 使い方・料金徹底解説【2026年最新】VercelのAI UI生成ツール",
+    description: "v0.devの使い方・料金プランを徹底解説。プロンプトからReact/Next.jsコンポーネントを自動生成。",
+    icon: "⚡",
+    category: "ツール解説",
+    readTime: "10分",
+  },
 ];
 
 export const GENRES = [
