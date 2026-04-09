@@ -1433,6 +1433,30 @@ export const guides: Guide[] =
     category: "ライフスタイル",
     readTime: "10分",
   },
+  {
+    slug: "ai-tools-ranking-2026",
+    title: "【2026年最新】AIツールおすすめランキングTOP10｜ChatGPT/Claude/Geminiから厳選",
+    description: "2026年最新のAIツールおすすめランキングTOP10。ChatGPT・Claude・Geminiから画像生成・動画生成・コーディングAIまで厳選。",
+    icon: "🏆",
+    category: "ランキング",
+    readTime: "15分",
+  },
+  {
+    slug: "ai-image-ranking-2026",
+    title: "【2026年最新】画像生成AIおすすめランキングTOP10",
+    description: "2026年最新の画像生成AIおすすめランキングTOP10。Midjourney・Stable Diffusion・DALL-E・Fireflyを徹底比較。",
+    icon: "🎨",
+    category: "ランキング",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-writing-ranking-2026",
+    title: "【2026年最新】AIライティングツールおすすめランキングTOP10",
+    description: "2026年最新のAIライティングツールおすすめランキングTOP10。ChatGPT・Claude・Jasper・Catchyなどを徹底比較。",
+    icon: "✍️",
+    category: "ランキング",
+    readTime: "12分",
+  },
 ];
 
 export const GENRES = [
