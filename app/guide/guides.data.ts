@@ -1641,6 +1641,46 @@ export const guides: Guide[] =
     category: "料金解説",
     readTime: "8分",
   },
+  {
+    slug: "canva-pricing",
+    title: "Canva 料金プラン徹底解説【2026年最新】",
+    description: "CanvaのFree/Pro/Teamsを解説。AI機能の無料枠も。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "8分",
+  },
+  {
+    slug: "zapier-pricing",
+    title: "Zapier 料金プラン徹底解説【2026年最新】",
+    description: "Zapierの全プランとMakeとの比較を解説。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "8分",
+  },
+  {
+    slug: "otter-pricing",
+    title: "Otter.ai 料金プラン徹底解説【2026年最新】",
+    description: "AI文字起こしOtter.aiの全プランを解説。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "8分",
+  },
+  {
+    slug: "notion-pricing",
+    title: "Notion 料金プラン徹底解説【2026年最新】",
+    description: "NotionのFree/Plus/Business/Enterprise+AI料金を解説。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "8分",
+  },
+  {
+    slug: "figma-pricing",
+    title: "Figma 料金プラン徹底解説【2026年最新】",
+    description: "FigmaのFree/Professional/Organization/Enterpriseを解説。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "8分",
+  },
 ];
 
 export const GENRES = [
