@@ -1617,6 +1617,30 @@ export const guides: Guide[] =
     category: "料金解説",
     readTime: "8分",
   },
+  {
+    slug: "runway-pricing",
+    title: "Runway 料金プラン徹底解説【2026年最新】",
+    description: "AI動画生成Runwayの料金プランを徹底解説。Gen-3の使い方も。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "8分",
+  },
+  {
+    slug: "jasper-pricing",
+    title: "Jasper AI 料金プラン徹底解説【2026年最新】",
+    description: "AIライティングJasperのCreator/Pro/Businessを解説。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "8分",
+  },
+  {
+    slug: "grammarly-pricing",
+    title: "Grammarly 料金プラン徹底解説【2026年最新】",
+    description: "英文校正AIGrammarlyのFree/Premium/Businessを解説。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "8分",
+  },
 ];
 
 export const GENRES = [
