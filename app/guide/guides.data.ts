@@ -1409,6 +1409,30 @@ export const guides: Guide[] =
     category: "料金解説",
     readTime: "8分",
   },
+  {
+    slug: "ai-mental-care-comparison",
+    title: "AIメンタルケア・カウンセリングアプリ比較5選【2026年最新】",
+    description: "AIで気軽にメンタルケアできる5アプリを徹底比較。Woebot・Wysa・Replika・Awarefy・emolを解説。",
+    icon: "💭",
+    category: "ライフスタイル",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-shopping-assistant-comparison",
+    title: "AIショッピングアシスタント比較5選【2026年最新】",
+    description: "AIで買い物を効率化する5サービスを徹底比較。Klarna AI・Rufus・Honey AI・Shop AI・PriceSpy AI。",
+    icon: "🛒",
+    category: "ライフスタイル",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-meditation-comparison",
+    title: "AI瞑想・マインドフルネスアプリ比較5選【2026年最新】",
+    description: "AIでパーソナライズされた瞑想を提供するアプリ5選を徹底比較。Calm・Headspace・Insight Timer・Balance・Smiling Mindを解説。",
+    icon: "🧘",
+    category: "ライフスタイル",
+    readTime: "10分",
+  },
 ];
 
 export const GENRES = [
