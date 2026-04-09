@@ -1257,6 +1257,46 @@ export const guides: Guide[] =
     category: "業務",
     readTime: "12分",
   },
+  {
+    slug: "ai-photo-restoration-comparison",
+    title: "AI写真高画質化・復元ツール比較5選【2026年最新】",
+    description: "Topaz Photo AI・Remini・Let's Enhance・PicWish・Bigjpgの写真高画質化・古写真復元AI5選を徹底比較。",
+    icon: "🖼️",
+    category: "画像",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-resume-tools-comparison",
+    title: "AI履歴書・職務経歴書ツール比較5選【2026年最新】Resume Worded/Teal/Kickresume/Rezi/Enhancv",
+    description: "AIで履歴書を最適化する5ツールを徹底比較。Resume Worded・Teal・Kickresume・Rezi・Enhancvの料金・機能・ATS対応を解説。",
+    icon: "📝",
+    category: "キャリア",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-mind-map-comparison",
+    title: "AIマインドマップ・図表生成ツール比較5選【2026年最新】",
+    description: "Whimsical・Miro AI・Mindshow・Taskade・MapifyのAIマインドマップ・図表生成ツール5選を徹底比較。",
+    icon: "🧭",
+    category: "業務",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-language-learning-comparison",
+    title: "AI語学学習アプリ比較5選【2026年最新】Speak/ELSA/Duolingo Max/Lingvist/Memrise",
+    description: "AI技術を活用した語学学習アプリ5選を徹底比較。Speak・ELSA Speak・Duolingo Max・Lingvist・Memriseの料金・特徴を解説。",
+    icon: "🌍",
+    category: "学習",
+    readTime: "12分",
+  },
+  {
+    slug: "ai-game-development-comparison",
+    title: "AIゲーム開発支援ツール比較5選【2026年最新】Inworld/Scenario/Ludo/Rosebud/Charisma",
+    description: "AIでゲーム開発を加速する5ツールを徹底比較。Inworld AI・Scenario・Ludo・Rosebud・Charismaの料金・特徴を解説。",
+    icon: "🎮",
+    category: "開発",
+    readTime: "12分",
+  },
 ];
 
 export const GENRES = [
