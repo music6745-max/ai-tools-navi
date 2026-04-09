@@ -1553,6 +1553,14 @@ export const guides: Guide[] =
     category: "ツール解説",
     readTime: "10分",
   },
+  {
+    slug: "gemini-pricing",
+    title: "Gemini 料金プラン徹底解説【2026年最新】Free/Advanced/Businessの違い",
+    description: "Google GeminiのFree・Advanced・Businessの料金プランを徹底解説。ChatGPT/Claudeとの料金比較も網羅。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "10分",
+  },
 ];
 
 export const GENRES = [
