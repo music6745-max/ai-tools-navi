@@ -1705,6 +1705,30 @@ export const guides: Guide[] =
     category: "料金解説",
     readTime: "8分",
   },
+  {
+    slug: "synthesia-pricing",
+    title: "Synthesia 料金プラン徹底解説【2026年最新】",
+    description: "AIアバター動画SynthesiaのStarter/Creator/Enterpriseを解説。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "8分",
+  },
+  {
+    slug: "adobe-firefly-pricing",
+    title: "Adobe Firefly 料金・使い方徹底解説【2026年最新】",
+    description: "商用安全なAI画像生成Fireflyの料金と使い方を解説。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "8分",
+  },
+  {
+    slug: "copilot-microsoft-pricing",
+    title: "Microsoft Copilot 料金プラン徹底解説【2026年最新】",
+    description: "Copilot Free/Pro/Microsoft 365 Copilotの違いを解説。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "10分",
+  },
 ];
 
 export const GENRES = [
