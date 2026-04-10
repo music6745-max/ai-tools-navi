@@ -1729,6 +1729,14 @@ export const guides: Guide[] =
     category: "料金解説",
     readTime: "10分",
   },
+  {
+    slug: "sora-pricing",
+    title: "Sora 料金・使い方徹底解説【2026年最新】OpenAIのAI動画生成",
+    description: "OpenAIのAI動画生成Soraの使い方と料金を解説。ChatGPT Plus/Proで利用可能。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "10分",
+  },
 ];
 
 export const GENRES = [
