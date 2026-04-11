@@ -1793,6 +1793,14 @@ export const guides: Guide[] =
     category: "料金解説",
     readTime: "8分",
   },
+  {
+    slug: "copy-ai-pricing",
+    title: "Copy.ai 料金プラン徹底解説【2026年最新】",
+    description: "AIコピーライティングCopy.aiの全プランを解説。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "8分",
+  },
 ];
 
 export const GENRES = [
