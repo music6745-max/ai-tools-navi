@@ -1737,6 +1737,22 @@ export const guides: Guide[] =
     category: "料金解説",
     readTime: "10分",
   },
+  {
+    slug: "notta-pricing",
+    title: "Notta 料金プラン徹底解説【2026年最新】",
+    description: "日本語AI文字起こしNottaのFree/Pro/Business/Enterpriseを解説。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "8分",
+  },
+  {
+    slug: "pika-pricing",
+    title: "Pika 料金プラン徹底解説【2026年最新】",
+    description: "AI動画生成PikaのFree/Standard/Pro/Unlimitedを解説。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "8分",
+  },
 ];
 
 export const GENRES = [
