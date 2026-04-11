@@ -1769,6 +1769,14 @@ export const guides: Guide[] =
     category: "料金解説",
     readTime: "8分",
   },
+  {
+    slug: "whisper-pricing",
+    title: "Whisper(OpenAI) 料金・使い方徹底解説【2026年最新】無料の音声認識AI",
+    description: "OpenAI Whisperの料金(無料〜API)と使い方を徹底解説。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "10分",
+  },
 ];
 
 export const GENRES = [
