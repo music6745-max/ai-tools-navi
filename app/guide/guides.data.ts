@@ -1777,6 +1777,22 @@ export const guides: Guide[] =
     category: "料金解説",
     readTime: "10分",
   },
+  {
+    slug: "writesonic-pricing",
+    title: "Writesonic 料金プラン徹底解説【2026年最新】",
+    description: "SEO記事生成に強いWritesonicの料金プランを解説。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "8分",
+  },
+  {
+    slug: "heygen-pricing",
+    title: "HeyGen 料金プラン徹底解説【2026年最新】",
+    description: "AIアバター動画HeyGenのFree/Creator/Business/Enterpriseを解説。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "8分",
+  },
 ];
 
 export const GENRES = [
