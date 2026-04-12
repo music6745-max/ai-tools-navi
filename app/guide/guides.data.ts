@@ -1849,6 +1849,14 @@ export const guides: Guide[] =
     category: "ツール解説",
     readTime: "10分",
   },
+  {
+    slug: "ideogram-pricing",
+    title: "Ideogram 料金プラン徹底解説【2026年最新】",
+    description: "テキスト描画が得意なIdeogramのFree/Basic/Plus/Proを解説。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "8分",
+  },
 ];
 
 export const GENRES = [
