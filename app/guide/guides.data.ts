@@ -1833,6 +1833,22 @@ export const guides: Guide[] =
     category: "料金解説",
     readTime: "8分",
   },
+  {
+    slug: "tensor-art-review",
+    title: "Tensor Art 使い方・料金徹底解説【2026年最新】無料AI画像生成",
+    description: "SD系モデルをブラウザで無料使えるTensor Artの使い方・料金を解説。",
+    icon: "🎨",
+    category: "ツール解説",
+    readTime: "12分",
+  },
+  {
+    slug: "kling-ai-review",
+    title: "Kling AI 使い方・料金徹底解説【2026年最新】中国発AI動画生成",
+    description: "中国Kuaishou社のAI動画生成Kling AIの使い方・料金を解説。",
+    icon: "🎬",
+    category: "ツール解説",
+    readTime: "10分",
+  },
 ];
 
 export const GENRES = [
