@@ -1894,7 +1894,11 @@ export const GENRES = [
   "その他",
 ] as const;
 
-export type Genre = (typeof GENRES)[number];
+export type Genre = (typeof GENRES)[number
+  { slug: "tensor-art-pricing", title: "Tensor.Art 料金プラン解説【2026年最新】", description: "AI画像生成Tensor.Artの無料プラン・Proプラン・クレジットシステムを解説", category: "画像生成AI", readTime: "7分", icon: "🎨" },
+  { slug: "kling-ai-pricing", title: "Kling AI 料金プラン解説【2026年最新】", description: "動画生成AI Kling AIのFree/Standard/Proプランの料金と機能", category: "動画生成AI", readTime: "7分", icon: "🎬" },
+  { slug: "perplexity-review", title: "Perplexity AI 完全レビュー【2026年最新】", description: "AI検索エンジンPerplexity AIの機能・使い方・ChatGPTとの違い", category: "検索AI", readTime: "10分", icon: "🔍" },
+];
 
 const GENRE_BY_SLUG: Record<string, Genre> = {
   "how-to-start-ai": "その他",
