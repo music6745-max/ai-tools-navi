@@ -1857,6 +1857,30 @@ export const guides: Guide[] =
     category: "料金解説",
     readTime: "8分",
   },
+  {
+    slug: "windsurf-pricing",
+    title: "Windsurf (Codeium) 料金プラン徹底解説【2026年最新】",
+    description: "AIコードエディタWindsurf(旧Codeium)のFree/Pro/Enterpriseプランを解説。Cascade AI機能も。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "8分",
+  },
+  {
+    slug: "napkin-ai-pricing",
+    title: "Napkin AI 料金プラン解説【2026年最新】テキストから図解を自動生成",
+    description: "テキストから美しい図解を自動生成するNapkin AIのFree/Pro/Enterpriseプランを解説。",
+    icon: "💰",
+    category: "料金解説",
+    readTime: "8分",
+  },
+  {
+    slug: "ai-code-editor-comparison",
+    title: "AIコードエディタ徹底比較【2026年最新】Cursor vs Windsurf vs GitHub Copilot",
+    description: "3大AIコードエディタを料金・機能・使いやすさで比較。あなたに最適なツールが分かる。",
+    icon: "💻",
+    category: "比較",
+    readTime: "10分",
+  },
 ];
 
 export const GENRES = [
@@ -1870,11 +1894,7 @@ export const GENRES = [
   "その他",
 ] as const;
 
-export type Genre = (typeof GENRES)[number
-  { slug: "suno-ai-pricing", title: "Suno AI 料金プラン徹底解説【2026年最新】", description: "AI作曲Suno AIのFree/Pro/Premierプランと商用利用条件を解説", category: "音楽AI", readTime: "8分", icon: "🎵" },
-  { slug: "replit-pricing", title: "Replit 料金プラン徹底解説【2026年最新】", description: "クラウドIDE ReplitのFree/Core/Teamsプランを解説。Replit Agent情報も", category: "開発AI", readTime: "8分", icon: "💻" },
-  { slug: "lovable-pricing", title: "Lovable 料金プラン徹底解説【2026年最新】", description: "AIアプリビルダーLovableのFree/Starter/Launch/Scaleプランを解説", category: "開発AI", readTime: "8分", icon: "💗" },
-];
+export type Genre = (typeof GENRES)[number];
 
 const GENRE_BY_SLUG: Record<string, Genre> = {
   "how-to-start-ai": "その他",
@@ -2027,6 +2047,11 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "ai-for-translation-business": "業種別",
   "ai-for-localization": "業種別",
   "ai-grammar-check": "学習・研究",
+
+  // Windsurf / Napkin AI / AIコードエディタ比較
+  "windsurf-pricing": "その他",
+  "napkin-ai-pricing": "その他",
+  "ai-code-editor-comparison": "その他",
 };
 
 export function genreOf(slug: string): Genre {
