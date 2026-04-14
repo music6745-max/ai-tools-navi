@@ -1870,7 +1870,11 @@ export const GENRES = [
   "その他",
 ] as const;
 
-export type Genre = (typeof GENRES)[number];
+export type Genre = (typeof GENRES)[number
+  { slug: "suno-ai-pricing", title: "Suno AI 料金プラン徹底解説【2026年最新】", description: "AI作曲Suno AIのFree/Pro/Premierプランと商用利用条件を解説", category: "音楽AI", readTime: "8分", icon: "🎵" },
+  { slug: "replit-pricing", title: "Replit 料金プラン徹底解説【2026年最新】", description: "クラウドIDE ReplitのFree/Core/Teamsプランを解説。Replit Agent情報も", category: "開発AI", readTime: "8分", icon: "💻" },
+  { slug: "lovable-pricing", title: "Lovable 料金プラン徹底解説【2026年最新】", description: "AIアプリビルダーLovableのFree/Starter/Launch/Scaleプランを解説", category: "開発AI", readTime: "8分", icon: "💗" },
+];
 
 const GENRE_BY_SLUG: Record<string, Genre> = {
   "how-to-start-ai": "その他",
