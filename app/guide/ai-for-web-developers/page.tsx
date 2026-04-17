@@ -26,7 +26,7 @@ export default function Page() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "ItemList", name: "Web開発者向けAIツール", itemListElement: [{ "@type": "ListItem", position: 1, item: { "@type": "Product", name: "GitHub Copilot", url: "https://github.com/features/copilot" } }, { "@type": "ListItem", position: 2, item: { "@type": "Product", name: "Cursor", url: "https://cursor.com/" } }, { "@type": "ListItem", position: 3, item: { "@type": "Product", name: "Claude Code", url: "https://claude.com/claude-code" } }] }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "ItemList", name: "Web開発者向けAIツール", itemListElement: [{ "@type": "ListItem", position: 1, item: { "@type": "Thing", name: "GitHub Copilot", url: "https://github.com/features/copilot" } }, { "@type": "ListItem", position: 2, item: { "@type": "Thing", name: "Cursor", url: "https://cursor.com/" } }, { "@type": "ListItem", position: 3, item: { "@type": "Thing", name: "Claude Code", url: "https://claude.com/claude-code" } }] }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />

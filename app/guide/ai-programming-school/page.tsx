@@ -130,10 +130,10 @@ export default function AIProgrammingSchoolPage() {
         "@type": "ItemList",
         name: "AIプログラミングスクールおすすめ比較",
         itemListElement: [
-          { "@type": "ListItem", position: 1, item: { "@type": "Product", name: "テックアカデミー", url: "https://techacademy.jp/" } },
-          { "@type": "ListItem", position: 2, item: { "@type": "Product", name: "DMM WEBCAMP", url: "https://web-camp.io/" } },
-          { "@type": "ListItem", position: 3, item: { "@type": "Product", name: "Aidemy", url: "https://aidemy.net/" } },
-          { "@type": "ListItem", position: 4, item: { "@type": "Product", name: "キカガク", url: "https://www.kikagaku.ai/" } },
+          { "@type": "ListItem", position: 1, item: { "@type": "Thing", name: "テックアカデミー", url: "https://techacademy.jp/" } },
+          { "@type": "ListItem", position: 2, item: { "@type": "Thing", name: "DMM WEBCAMP", url: "https://web-camp.io/" } },
+          { "@type": "ListItem", position: 3, item: { "@type": "Thing", name: "Aidemy", url: "https://aidemy.net/" } },
+          { "@type": "ListItem", position: 4, item: { "@type": "Thing", name: "キカガク", url: "https://www.kikagaku.ai/" } },
         ],
       }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />

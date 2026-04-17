@@ -66,8 +66,8 @@ export default function ChatGPTvsClaudePage() {
         "@type": "ItemList",
         name: "ChatGPT vs Claude 比較",
         itemListElement: [
-          { "@type": "ListItem", position: 1, item: { "@type": "Product", name: "ChatGPT", url: "https://chat.openai.com/" } },
-          { "@type": "ListItem", position: 2, item: { "@type": "Product", name: "Claude", url: "https://claude.ai/" } },
+          { "@type": "ListItem", position: 1, item: { "@type": "Thing", name: "ChatGPT", url: "https://chat.openai.com/" } },
+          { "@type": "ListItem", position: 2, item: { "@type": "Thing", name: "Claude", url: "https://claude.ai/" } },
         ],
       }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd_seo) }} />

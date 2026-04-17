@@ -53,9 +53,9 @@ export default function Page() {
         "@type": "ItemList",
         name: "グラフィックデザイナー向けAIツール比較",
         itemListElement: [
-          { "@type": "ListItem", position: 1, item: { "@type": "Product", name: "Midjourney", url: "https://www.midjourney.com/" } },
-          { "@type": "ListItem", position: 2, item: { "@type": "Product", name: "Adobe Firefly", url: "https://www.adobe.com/products/firefly.html" } },
-          { "@type": "ListItem", position: 3, item: { "@type": "Product", name: "Canva AI", url: "https://www.canva.com/" } },
+          { "@type": "ListItem", position: 1, item: { "@type": "Thing", name: "Midjourney", url: "https://www.midjourney.com/" } },
+          { "@type": "ListItem", position: 2, item: { "@type": "Thing", name: "Adobe Firefly", url: "https://www.adobe.com/products/firefly.html" } },
+          { "@type": "ListItem", position: 3, item: { "@type": "Thing", name: "Canva AI", url: "https://www.canva.com/" } },
         ],
       }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />

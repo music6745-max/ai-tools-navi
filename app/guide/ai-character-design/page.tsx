@@ -25,7 +25,7 @@ export default function Page() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "ItemList", name: "キャラデザ特化AIツール", itemListElement: [{ "@type": "ListItem", position: 1, item: { "@type": "Product", name: "NovelAI", url: "https://novelai.net/" } }, { "@type": "ListItem", position: 2, item: { "@type": "Product", name: "Midjourney", url: "https://www.midjourney.com/" } }, { "@type": "ListItem", position: 3, item: { "@type": "Product", name: "Leonardo AI", url: "https://leonardo.ai/" } }] }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "ItemList", name: "キャラデザ特化AIツール", itemListElement: [{ "@type": "ListItem", position: 1, item: { "@type": "Thing", name: "NovelAI", url: "https://novelai.net/" } }, { "@type": "ListItem", position: 2, item: { "@type": "Thing", name: "Midjourney", url: "https://www.midjourney.com/" } }, { "@type": "ListItem", position: 3, item: { "@type": "Thing", name: "Leonardo AI", url: "https://leonardo.ai/" } }] }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />

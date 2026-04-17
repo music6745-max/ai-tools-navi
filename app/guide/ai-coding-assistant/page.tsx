@@ -124,11 +124,11 @@ export default function AICodingAssistantPage() {
         "@type": "ItemList",
         name: "AIコーディング支援ツールおすすめ比較",
         itemListElement: [
-          { "@type": "ListItem", position: 1, item: { "@type": "Product", name: "GitHub Copilot", url: "https://github.com/features/copilot" } },
-          { "@type": "ListItem", position: 2, item: { "@type": "Product", name: "Cursor", url: "https://cursor.sh/" } },
-          { "@type": "ListItem", position: 3, item: { "@type": "Product", name: "Claude Code", url: "https://claude.ai/code" } },
-          { "@type": "ListItem", position: 4, item: { "@type": "Product", name: "Codeium", url: "https://codeium.com/" } },
-          { "@type": "ListItem", position: 5, item: { "@type": "Product", name: "Tabnine", url: "https://www.tabnine.com/" } },
+          { "@type": "ListItem", position: 1, item: { "@type": "Thing", name: "GitHub Copilot", url: "https://github.com/features/copilot" } },
+          { "@type": "ListItem", position: 2, item: { "@type": "Thing", name: "Cursor", url: "https://cursor.sh/" } },
+          { "@type": "ListItem", position: 3, item: { "@type": "Thing", name: "Claude Code", url: "https://claude.ai/code" } },
+          { "@type": "ListItem", position: 4, item: { "@type": "Thing", name: "Codeium", url: "https://codeium.com/" } },
+          { "@type": "ListItem", position: 5, item: { "@type": "Thing", name: "Tabnine", url: "https://www.tabnine.com/" } },
         ],
       }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />

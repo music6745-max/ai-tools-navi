@@ -130,10 +130,10 @@ export default function AIInvestmentPage() {
         "@type": "ItemList",
         name: "AI投資ツールおすすめ比較",
         itemListElement: [
-          { "@type": "ListItem", position: 1, item: { "@type": "Product", name: "ChatGPT", url: "https://chat.openai.com/" } },
-          { "@type": "ListItem", position: 2, item: { "@type": "Product", name: "Claude", url: "https://claude.ai/" } },
-          { "@type": "ListItem", position: 3, item: { "@type": "Product", name: "WealthNavi", url: "https://www.wealthnavi.com/" } },
-          { "@type": "ListItem", position: 4, item: { "@type": "Product", name: "THEO", url: "https://theo.blue/" } },
+          { "@type": "ListItem", position: 1, item: { "@type": "Thing", name: "ChatGPT", url: "https://chat.openai.com/" } },
+          { "@type": "ListItem", position: 2, item: { "@type": "Thing", name: "Claude", url: "https://claude.ai/" } },
+          { "@type": "ListItem", position: 3, item: { "@type": "Thing", name: "WealthNavi", url: "https://www.wealthnavi.com/" } },
+          { "@type": "ListItem", position: 4, item: { "@type": "Thing", name: "THEO", url: "https://theo.blue/" } },
         ],
       }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />

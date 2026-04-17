@@ -68,10 +68,10 @@ export default function AIEnglishLearningPage() {
         "@type": "ItemList",
         name: "AI英語学習ツールおすすめ比較",
         itemListElement: [
-          { "@type": "ListItem", position: 1, item: { "@type": "Product", name: "ChatGPT", url: "https://chat.openai.com/" } },
-          { "@type": "ListItem", position: 2, item: { "@type": "Product", name: "Claude", url: "https://claude.ai/" } },
-          { "@type": "ListItem", position: 3, item: { "@type": "Product", name: "Gemini", url: "https://gemini.google.com/" } },
-          { "@type": "ListItem", position: 4, item: { "@type": "Product", name: "DeepL", url: "https://www.deepl.com/" } },
+          { "@type": "ListItem", position: 1, item: { "@type": "Thing", name: "ChatGPT", url: "https://chat.openai.com/" } },
+          { "@type": "ListItem", position: 2, item: { "@type": "Thing", name: "Claude", url: "https://claude.ai/" } },
+          { "@type": "ListItem", position: 3, item: { "@type": "Thing", name: "Gemini", url: "https://gemini.google.com/" } },
+          { "@type": "ListItem", position: 4, item: { "@type": "Thing", name: "DeepL", url: "https://www.deepl.com/" } },
         ],
       }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
