@@ -353,7 +353,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Sister Site */}
+      {/* Sister Site - Net Toolbox */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4">
           <div className="rounded-2xl p-8" style={{ background: "linear-gradient(135deg, #2563eb 0%, #0891b2 100%)", color: "#ffffff" }}>
@@ -361,25 +361,57 @@ export default function Home() {
               <span className="text-4xl">🛠️</span>
               <div>
                 <h2 className="text-xl font-bold" style={{ color: "#ffffff" }}>無料Webツールもチェック</h2>
-                <p className="text-sm" style={{ color: "rgba(255,255,255,0.8)" }}>姉妹サイト「ネットツールボックス」で252以上の便利ツールを公開中</p>
+                <p className="text-sm" style={{ color: "rgba(255,255,255,0.8)" }}>姉妹サイト「ネットツールボックス」で400以上の便利ツールを公開中</p>
               </div>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
-              <a href="https://net-toolbox.vercel.app/tools/qr-code" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition text-sm" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
+              <a href="https://net-toolbox.jp/tools/qr-code" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition text-sm" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
                 📱 QRコード作成
               </a>
-              <a href="https://net-toolbox.vercel.app/tools/password-generator" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition text-sm" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
+              <a href="https://net-toolbox.jp/tools/password-generator" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition text-sm" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
                 🔐 パスワード生成
               </a>
-              <a href="https://net-toolbox.vercel.app/tools/json-formatter" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition text-sm" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
+              <a href="https://net-toolbox.jp/tools/json-formatter" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition text-sm" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
                 📋 JSON整形
               </a>
-              <a href="https://net-toolbox.vercel.app/tools/character-count" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition text-sm" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
+              <a href="https://net-toolbox.jp/tools/character-count" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition text-sm" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
                 🔢 文字数カウント
               </a>
             </div>
-            <a href="https://net-toolbox.vercel.app" target="_blank" rel="noopener noreferrer" className="inline-block px-5 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition" style={{ background: "#ffffff", color: "#2563eb" }}>
+            <a href="https://net-toolbox.jp" target="_blank" rel="noopener noreferrer" className="inline-block px-5 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition" style={{ background: "#ffffff", color: "#2563eb" }}>
               ネットツールボックスを見る →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Sister Site - Toshi Navi JP */}
+      <section className="pb-16">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="rounded-2xl p-8" style={{ background: "linear-gradient(135deg, #059669 0%, #0891b2 100%)", color: "#ffffff" }}>
+            <div className="flex items-center gap-4 mb-4">
+              <span className="text-4xl">💰</span>
+              <div>
+                <h2 className="text-xl font-bold" style={{ color: "#ffffff" }}>お金の悩みはこちらで解決</h2>
+                <p className="text-sm" style={{ color: "rgba(255,255,255,0.8)" }}>姉妹サイト「投資ナビJP」で新NISA・iDeCo・副業・節税を徹底解説</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
+              <a href="https://toshi-navi.jp/guide/nisa-broker-ranking-2026" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition text-sm" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
+                💰 新NISA証券TOP5
+              </a>
+              <a href="https://toshi-navi.jp/guide/side-business-ranking-2026" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition text-sm" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
+                💼 副業ランキング
+              </a>
+              <a href="https://toshi-navi.jp/guide/furusato-tax-guide-2026" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition text-sm" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
+                🎁 ふるさと納税
+              </a>
+              <a href="https://toshi-navi.jp/tools/nisa-simulator" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition text-sm" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
+                📈 NISAシミュ
+              </a>
+            </div>
+            <a href="https://toshi-navi.jp" target="_blank" rel="noopener noreferrer" className="inline-block px-5 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition" style={{ background: "#ffffff", color: "#059669" }}>
+              投資ナビJPを見る →
             </a>
           </div>
         </div>
