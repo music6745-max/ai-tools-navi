@@ -301,7 +301,17 @@ export default function RootLayout({
                       rel="noopener noreferrer"
                       className="text-sm text-muted hover:text-primary transition-colors"
                     >
-                      🛠️ ネットツールボックス - 無料Web便利ツール250+
+                      🛠️ ネットツールボックス - 無料Web便利ツール
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://toshi-navi.jp"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-muted hover:text-primary transition-colors"
+                    >
+                      💰 投資ナビJP - 新NISA/iDeCo/投資の比較
                     </a>
                   </li>
                 </ul>
