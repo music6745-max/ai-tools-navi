@@ -76,6 +76,9 @@ export default async function ToolPage({
       "@type": "Offer",
       price: "0",
       priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+      url: tool.url,
+      priceValidUntil: "2027-12-31",
       description: tool.pricing,
     },
   };
