@@ -369,6 +369,29 @@ export default function AISideBusinessPage() {
           />
         </section>
 
+        {/* Side Job Entry CTA */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-4">AI副業の収益化までに使える副収入源</h2>
+          <p className="text-sm text-muted mb-6">AIブログ・デザインが軌道に乗るまでの「つなぎ収入」として、すぐに現金化できる副業を並行するのがおすすめ。</p>
+          <ComparisonTableCTA
+            services={[
+              {
+                name: "マクロミル",
+                url: "https://px.a8.net/svt/ejp?a8mat=4B1O1P+8XJMI+2WL0+CLYLD",
+                highlight: "スキマ時間のアンケートモニター",
+                price: "無料登録",
+                badge: "即金性◎",
+              },
+              {
+                name: "クラウドワークス",
+                url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6",
+                highlight: "国内最大の案件サイト",
+                price: "無料登録",
+              },
+            ]}
+          />
+        </section>
+
         {/* CTA */}
         <section className="bg-gradient-to-r from-primary-light to-background border border-primary rounded-2xl p-8 text-center">
           <h2 className="text-xl font-bold mb-3">副業に使えるAIツールを探す</h2>

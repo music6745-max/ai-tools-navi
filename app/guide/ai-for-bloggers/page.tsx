@@ -178,6 +178,17 @@ export default function AIForBloggersPage() {
           />
         </section>
 
+        <section className="mb-8">
+          <h2 className="text-xl font-bold mb-4">ブログ開設の最初の1歩はレンタルサーバー</h2>
+          <ComparisonTableCTA
+            services={[
+              { name: "エックスサーバー", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1B19KI+CO4+6HES1", highlight: "国内シェアNo.1・安定実績20年", price: "月額990円〜", badge: "定番" },
+              { name: "ConoHa WING", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1FSQEQ+50+5SG2LT", highlight: "国内最速水準・初心者にも優しい", price: "月額687円〜" },
+              { name: "マクロミル", url: "https://px.a8.net/svt/ejp?a8mat=4B1O1P+8XJMI+2WL0+CLYLD", highlight: "ブログ収益化までの繋ぎ副業に最適", price: "無料登録", badge: "即金性◎" },
+            ]}
+          />
+        </section>
+
         <section className="bg-gradient-to-r from-primary-light to-background border border-primary rounded-2xl p-8 text-center mb-8">
           <h2 className="text-xl font-bold mb-3">AIを活用してブログを加速させよう</h2>
           <p className="text-sm text-muted mb-6">まずは無料プランで試してみるのがおすすめです</p>
