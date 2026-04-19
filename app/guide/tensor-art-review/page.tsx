@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import { siteConfig } from "../../lib/data";
 import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
 export const metadata: Metadata = {
-  title: "Tensor Art 使い方・料金徹底解説【2026年最新】無料AI画像生成プラットフォーム",
-  description: "Tensor Artの使い方・料金・モデル・商用利用条件を徹底解説。無料でStable Diffusionモデルを使ったAI画像生成ができるプラットフォーム。",
+  title: "Tensor Art 使い方・料金完全ガイド【2026年最新】無料AI画像生成のやり方・商用利用・モデル3,000種",
+  description: "Tensor Art（テンソルアート）の始め方・料金プラン・無料と有料の違い・商用利用条件を徹底解説。Stable Diffusion モデル3,000種以上を無料で使える最新AI画像生成サービスの使い方・日本語プロンプト対応。",
   keywords: ["Tensor Art", "tensor art 使い方", "tensor art 料金", "AI 画像生成 無料", "Stable Diffusion オンライン"],
   alternates: { canonical: `${siteConfig.url}/guide/tensor-art-review` },
 };

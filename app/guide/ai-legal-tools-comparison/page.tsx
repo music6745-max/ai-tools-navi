@@ -4,8 +4,8 @@ import { siteConfig } from "../../lib/data";
 import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
-  title: "リーガルAIツール比較5選【2026年最新】契約書レビュー・法令検索",
-  description: "Harvey AI・LegalForce・LawGeex・Spellbook・MNTSQの法律業務向けAIツール5選を徹底比較。契約書レビューから法令検索まで網羅。",
+  title: "【2026年最新】法務に最適なAIドキュメントツール比較5選｜契約書レビュー・法令検索で業務を3倍効率化",
+  description: "Harvey AI・LegalForce・LawGeex・Spellbook・MNTSQの法務向けAIドキュメントツールを料金・機能・日本語対応で徹底比較。契約書レビュー・法令検索・法律事務所向けから企業法務部までの選び方を解説。",
   keywords: ["リーガルAI", "契約書 AI", "Harvey", "LegalForce", "LawGeex", "Spellbook", "MNTSQ"],
   alternates: { canonical: `${siteConfig.url}/guide/ai-legal-tools-comparison` },
 };
