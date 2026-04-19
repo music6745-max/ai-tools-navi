@@ -1913,6 +1913,22 @@ export const guides: Guide[] =
     readTime: "12分",
     icon: "📊",
   },
+  {
+    slug: "ai-medical-tools-comparison",
+    title: "AI医療ツール比較5選【2026年最新】",
+    description: "画像診断AI・問診AI・電子カルテAI・創薬AI等、医師・クリニック向けのAIツールを徹底比較。見落とし80%削減・問診時間50%短縮の効果。",
+    category: "業種別",
+    readTime: "12分",
+    icon: "🩺",
+  },
+  {
+    slug: "ai-real-estate-tools-comparison",
+    title: "AI不動産査定ツール比較5選【2026年最新】",
+    description: "HowMa・スマイスター・イエウール・SRE AI不動産査定・Gate.の比較。数秒で査定結果、売却・購入時の相場把握に。",
+    category: "業種別",
+    readTime: "11分",
+    icon: "🏠",
+  },
 ];
 
 export const GENRES = [
@@ -2087,6 +2103,10 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
 
   // AI税務・会計ツール
   "ai-tax-accounting-tools": "ビジネス",
+
+  // AI医療・不動産
+  "ai-medical-tools-comparison": "業種別",
+  "ai-real-estate-tools-comparison": "業種別",
 };
 
 export function genreOf(slug: string): Genre {
