@@ -1905,6 +1905,14 @@ export const guides: Guide[] =
     readTime: "10分",
     icon: "🔍",
   },
+  {
+    slug: "ai-tax-accounting-tools",
+    title: "AI会計・税務ツールおすすめ比較【2026年最新】",
+    description: "freee・マネーフォワード・弥生会計のAI機能を徹底比較。個人事業主・中小企業向けに料金・OCR精度・電子帳簿保存法対応を解説。",
+    category: "ビジネス",
+    readTime: "12分",
+    icon: "📊",
+  },
 ];
 
 export const GENRES = [
@@ -2076,6 +2084,9 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "windsurf-pricing": "その他",
   "napkin-ai-pricing": "その他",
   "ai-code-editor-comparison": "その他",
+
+  // AI税務・会計ツール
+  "ai-tax-accounting-tools": "ビジネス",
 };
 
 export function genreOf(slug: string): Genre {
