@@ -11,6 +11,7 @@ import {
   getPricingBadge,
 } from "../../lib/data";
 import { ShareButtons } from "../../components/ShareButtons";
+import { TrackedAffiliateLink } from "../../components/TrackedAffiliateLink";
 
 export function generateStaticParams() {
   return tools.map((tool) => ({ slug: tool.slug }));
@@ -178,14 +179,15 @@ export default async function ToolPage({
                 ))}
               </div>
               <div className="flex flex-wrap gap-3">
-                <a
+                <TrackedAffiliateLink
                   href={tool.affiliateUrl}
-                  target="_blank"
-                  rel="nofollow sponsored noopener noreferrer"
+                  page={tool.slug}
+                  position="tool_hero"
+                  service={tool.name}
                   className="px-6 py-3 bg-primary text-white rounded-full font-medium hover:bg-primary-hover transition-colors"
                 >
                   公式サイトを見る →
-                </a>
+                </TrackedAffiliateLink>
                 <Link
                   href="/compare"
                   className="px-6 py-3 bg-card-bg border border-card-border rounded-full font-medium hover:bg-primary-light transition-colors"
@@ -298,14 +300,15 @@ export default async function ToolPage({
               ? "無料で今すぐ始められます。まずは試してみましょう。"
               : "公式サイトで詳しいプランと機能を確認できます。"}
           </p>
-          <a
+          <TrackedAffiliateLink
             href={tool.affiliateUrl}
-            target="_blank"
-            rel="nofollow sponsored noopener noreferrer"
+            page={tool.slug}
+            position="tool_bottom_cta"
+            service={tool.name}
             className="inline-block px-8 py-4 bg-primary text-white rounded-full font-medium hover:bg-primary-hover transition-colors text-lg"
           >
             {tool.name}の公式サイトへ →
-          </a>
+          </TrackedAffiliateLink>
           <p className="text-xs text-muted mt-3">
             ※ 外部サイトに移動します
           </p>

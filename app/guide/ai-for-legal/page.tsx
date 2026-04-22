@@ -199,10 +199,57 @@ export default function AIForLegalPage() {
           </div>
         </section>
 
+        {/* 高単価CTA①：AIと併用したい法務・会計の専門家相談 */}
+        <section className="mb-8">
+          <h2 className="text-xl font-bold mb-4">AIと併用したい：税務・契約の専門家無料相談</h2>
+          <p className="text-sm text-muted mb-4">
+            AIは下書き・レビューに強い一方、最終的な法的・税務判断はプロに任せるのが安全です。税理士ドットコムは契約書・税務・インボイス対応に強い税理士を全国から無料マッチング（成約時のみASP発生）。
+          </p>
+          <ComparisonTableCTA
+            page="ai-for-legal"
+            services={[
+              {
+                name: "税理士ドットコム",
+                url: "https://px.a8.net/svt/ejp?a8mat=4B1O1P+C9KCY2+3XTG+60WN5",
+                highlight: "登録税理士6,500名以上・無料マッチング。インボイス/電帳法/契約書の税務確認に",
+                price: "相談無料（成約報酬型）",
+                badge: "高単価導線",
+              },
+              {
+                name: "freee会計",
+                url: "https://px.a8.net/svt/ejp?a8mat=4B1O1P+C9KCY2+3XTG+60WN5",
+                highlight: "AI仕訳・インボイス・電帳法対応のクラウド会計。個人事業主〜法人まで",
+                price: "月額1,078円〜",
+                badge: "AI会計",
+              },
+              {
+                name: "保険マンモス（法人向けFP）",
+                url: "https://px.a8.net/svt/ejp?a8mat=4B1O1P+526ONU+5SIO+5YJRM",
+                highlight: "役員退職金・法人保険の無料FP相談。契約書レビュー前の資金繰り設計に",
+                price: "相談無料",
+                badge: "法人向け",
+              },
+            ]}
+          />
+          <p className="text-xs text-muted mt-3">
+            AIで効率化したあとの意思決定は、
+            <Link href="https://toshi-navi.jp/guide/invoice-system-complete-guide" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
+              インボイス制度完全ガイド
+            </Link>
+            ・
+            <Link href="https://toshi-navi.jp/guide/denshi-chobo-preservation-guide" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
+              電子帳簿保存法ガイド
+            </Link>
+            も参考に。
+          </p>
+        </section>
+
+        {/* 既存：スクール系（低単価だが学習意欲のある読者向けに残す） */}
         <section className="mb-8">
           <h2 className="text-xl font-bold mb-4">法務×AIスキルを伸ばすスクール</h2>
           <p className="text-sm text-muted mb-4">リーガルテック時代の法務担当者には、Python・データ活用スキルがあると業務の幅が広がります。</p>
           <ComparisonTableCTA
+            page="ai-for-legal"
             services={[
               { name: "SkillHacks（スキルハックス）", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4DRW36+4K3S+5YJRM", highlight: "業界最安値・動画で学べて質問し放題", price: "買い切り69,800円", badge: "業界最安値" },
               { name: "Winスクール", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4D6GHE+529E+5ZMCH", highlight: "全国展開・個人レッスン・就転職サポート", price: "コース別", badge: "全国展開" },
