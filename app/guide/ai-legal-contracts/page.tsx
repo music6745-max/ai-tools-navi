@@ -234,30 +234,37 @@ export default function AILegalContractsPage() {
             </Link>
           </div>
         </section>
-        {/* 関連ガイド */}
-        <section className="mt-12 mb-8">
-          <h2 className="text-xl font-bold mb-4">関連ガイド</h2>
+        {/* 🎯 ai-for-legal クラスター（上位ハブ = ai-for-legal） */}
+        <section className="mt-12 mb-8 bg-gradient-to-br from-primary/5 to-primary/0 border-2 border-primary/30 rounded-xl p-6">
+          <div className="flex items-center gap-2 mb-4">
+            <span className="text-2xl">🏛️</span>
+            <h2 className="text-xl font-bold">法務・契約AIクラスター</h2>
+          </div>
+          <Link
+            href="/guide/ai-for-legal"
+            className="block bg-gradient-to-r from-primary to-primary-hover text-white rounded-xl p-4 mb-3 hover:shadow-md transition-all"
+          >
+            <div className="text-[10px] opacity-90 mb-1">📍 クラスター起点</div>
+            <div className="font-bold text-base mb-1">法律業界向けAI活用ガイド【総合】</div>
+            <div className="text-xs opacity-90">法務AI活用の全体像・ツール比較・実践フロー</div>
+          </Link>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <Link href="/guide/ai-for-healthcare" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
-                <div className="text-xs text-muted mb-1">特定業界</div>
-                <div className="font-bold text-sm">医療・健康AI</div>
-              </Link>
-              <Link href="/guide/ai-for-education" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
-                <div className="text-xs text-muted mb-1">特定業界</div>
-                <div className="font-bold text-sm">AI教育活用</div>
-              </Link>
-              <Link href="/guide/ai-recipe" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
-                <div className="text-xs text-muted mb-1">特定業界</div>
-                <div className="font-bold text-sm">AIレシピ提案</div>
-              </Link>
-              <Link href="/guide/ai-travel-planning" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
-                <div className="text-xs text-muted mb-1">特定業界</div>
-                <div className="font-bold text-sm">AI旅行計画</div>
-              </Link>
-              <Link href="/guide/ai-for-ecommerce" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
-                <div className="text-xs text-muted mb-1">特定業界</div>
-                <div className="font-bold text-sm">ECサイト向けAI</div>
-              </Link>
+            <Link href="/guide/ai-legal-tools-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+              <div className="text-xs text-muted mb-1">リーガルテック比較</div>
+              <div className="font-bold text-sm">法務AIツール徹底比較</div>
+            </Link>
+            <Link href="/guide/ai-tax-accounting-tools" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+              <div className="text-xs text-muted mb-1">税務・会計 × AI</div>
+              <div className="font-bold text-sm">税理士・会計士向けAI</div>
+            </Link>
+            <Link href="/guide/ai-document-generation" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+              <div className="text-xs text-muted mb-1">書面自動化</div>
+              <div className="font-bold text-sm">AI書面生成</div>
+            </Link>
+            <Link href="/guide/best-ai-for-freelance" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+              <div className="text-xs text-muted mb-1">フリーランス × AI</div>
+              <div className="font-bold text-sm">個人弁護士向けAI活用</div>
+            </Link>
           </div>
         </section>
 

@@ -266,30 +266,94 @@ export default function AIForLegalPage() {
             <Link href="/guide/ai-legal-contracts" className="px-6 py-3 bg-card-bg border border-card-border rounded-full font-medium hover:bg-primary-light transition-colors">AI法務・契約書ガイド</Link>
           </div>
         </section>
-        {/* 関連ガイド */}
-        <section className="mt-12 mb-8">
-          <h2 className="text-xl font-bold mb-4">関連ガイド</h2>
+        {/* 🎯 ai-for-legal クラスターナビゲーション
+              ai-for-legal は「法務・税務・契約・士業・フリーランス」クラスターの hub。
+              周辺5ページを明示的に並べて、双方向リンクで cluster を形成する。
+              ※ 各カードの link 先は実在 slug のみ採用（ビルド時に dead link にならないことを保証） */}
+        <section className="mt-12 mb-8 bg-gradient-to-br from-primary/5 to-primary/0 border-2 border-primary/30 rounded-xl p-6">
+          <div className="flex items-center gap-2 mb-4">
+            <span className="text-2xl">🏛️</span>
+            <div>
+              <h2 className="text-xl font-bold">法務・税務・契約AIクラスター</h2>
+              <p className="text-xs text-muted">本記事を起点に、士業／フリーランスのAI活用を体系的に深掘りできます</p>
+            </div>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <Link href="/guide/ai-for-business" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
-                <div className="text-xs text-muted mb-1">ビジネス・業務</div>
-                <div className="font-bold text-sm">ビジネス向けAI</div>
-              </Link>
-              <Link href="/guide/ai-for-designers" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
-                <div className="text-xs text-muted mb-1">ビジネス・業務</div>
-                <div className="font-bold text-sm">デザイナー向けAI</div>
-              </Link>
-              <Link href="/guide/ai-for-remote-work" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
-                <div className="text-xs text-muted mb-1">ビジネス・業務</div>
-                <div className="font-bold text-sm">リモートワーク向けAI</div>
-              </Link>
-              <Link href="/guide/ai-meeting-notes" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
-                <div className="text-xs text-muted mb-1">ビジネス・業務</div>
-                <div className="font-bold text-sm">AI議事録</div>
-              </Link>
-              <Link href="/guide/ai-presentation" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
-                <div className="text-xs text-muted mb-1">ビジネス・業務</div>
-                <div className="font-bold text-sm">AIプレゼン作成</div>
-              </Link>
+            <Link
+              href="/guide/ai-legal-contracts"
+              className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"
+            >
+              <div className="text-xs text-muted mb-1">契約書 × AI</div>
+              <div className="font-bold text-sm mb-1">AI契約書レビュー実践ガイド</div>
+              <div className="text-xs text-muted">NDA・業務委託・ライセンス契約のリスク抽出テンプレ</div>
+            </Link>
+            <Link
+              href="/guide/ai-legal-tools-comparison"
+              className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"
+            >
+              <div className="text-xs text-muted mb-1">リーガルテック比較</div>
+              <div className="font-bold text-sm mb-1">法務AIツール徹底比較</div>
+              <div className="text-xs text-muted">LegalForce・GVA assist・Hubbleなど主要ツールを実務視点で比較</div>
+            </Link>
+            <Link
+              href="/guide/ai-tax-accounting-tools"
+              className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"
+            >
+              <div className="text-xs text-muted mb-1">税務・会計 × AI</div>
+              <div className="font-bold text-sm mb-1">税理士・会計士向けAIツール</div>
+              <div className="text-xs text-muted">インボイス・電帳法対応のAI会計・税務自動化ツール</div>
+            </Link>
+            <Link
+              href="/guide/ai-document-generation"
+              className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"
+            >
+              <div className="text-xs text-muted mb-1">書面自動化</div>
+              <div className="font-bold text-sm mb-1">AI書面・ドキュメント生成ガイド</div>
+              <div className="text-xs text-muted">意見書・報告書・議事録の初稿生成をAIで時短</div>
+            </Link>
+            <Link
+              href="/guide/best-ai-for-freelance"
+              className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"
+            >
+              <div className="text-xs text-muted mb-1">フリーランス × AI</div>
+              <div className="font-bold text-sm mb-1">フリーランス弁護士・士業向けAI活用</div>
+              <div className="text-xs text-muted">1人事務所で使える業務効率化AIとコスト最適化</div>
+            </Link>
+            <Link
+              href="/guide/ai-knowledge-base"
+              className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"
+            >
+              <div className="text-xs text-muted mb-1">ナレッジ管理</div>
+              <div className="font-bold text-sm mb-1">法務ナレッジDB構築ガイド</div>
+              <div className="text-xs text-muted">過去案件・判例メモ・契約書テンプレをAI検索可能に</div>
+            </Link>
+          </div>
+        </section>
+
+        {/* money-navi 高単価送客 — 法務判断のその先にある税務実務へ */}
+        <section className="mt-8 mb-8 bg-card-bg border border-card-border rounded-xl p-6">
+          <h2 className="text-lg font-bold mb-2">📖 実務判断に必要な制度ガイド（姉妹サイト）</h2>
+          <p className="text-sm text-muted mb-4">
+            AIが出した初稿を実運用に落とすときに必要な、日本の税務・法務制度の前提知識。投資ナビJPの解説ガイドへリンクしています。
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {[
+              { slug: "invoice-system-complete-guide", title: "インボイス制度完全ガイド", desc: "適格請求書・2割特例" },
+              { slug: "denshi-chobo-preservation-guide", title: "電子帳簿保存法ガイド", desc: "2024年本格施行の対応" },
+              { slug: "company-expense-rules-guide", title: "会社員の経費計上ルール", desc: "副業経費・特定支出控除" },
+            ].map((g) => (
+              <a
+                key={g.slug}
+                href={`https://toshi-navi.jp/guide/${g.slug}?utm_source=ai-tools-navi&utm_medium=referral&utm_campaign=guide_ai-for-legal`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block p-3 rounded-lg bg-background border border-card-border hover:border-primary transition-colors"
+              >
+                <div className="text-[10px] text-muted mb-1">投資ナビJP</div>
+                <div className="font-bold text-sm mb-1">{g.title}</div>
+                <div className="text-xs text-muted">{g.desc}</div>
+              </a>
+            ))}
           </div>
         </section>
 

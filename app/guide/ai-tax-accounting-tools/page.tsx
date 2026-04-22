@@ -246,13 +246,36 @@ export default function AITaxAccountingToolsPage() {
           </div>
         </section>
 
-        <section className="mt-12 mb-8">
-          <h2 className="text-xl font-bold mb-4">関連ガイド</h2>
+        {/* 🎯 ai-for-legal クラスター（税務・会計AIは法務クラスターに属する） */}
+        <section className="mt-12 mb-8 bg-gradient-to-br from-primary/5 to-primary/0 border-2 border-primary/30 rounded-xl p-6">
+          <div className="flex items-center gap-2 mb-4">
+            <span className="text-2xl">🏛️</span>
+            <h2 className="text-xl font-bold">法務・税務・契約AIクラスター</h2>
+          </div>
+          <Link
+            href="/guide/ai-for-legal"
+            className="block bg-gradient-to-r from-primary to-primary-hover text-white rounded-xl p-4 mb-3 hover:shadow-md transition-all"
+          >
+            <div className="text-[10px] opacity-90 mb-1">📍 クラスター起点</div>
+            <div className="font-bold text-base mb-1">法律業界向けAI活用ガイド【総合】</div>
+            <div className="text-xs opacity-90">税務・法務・契約AIの全体像と実践フロー</div>
+          </Link>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <Link href="/guide/ai-for-small-business" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">経営</div><div className="font-bold text-sm">中小企業向けAI</div></Link>
-            <Link href="/guide/ai-side-business" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">副業</div><div className="font-bold text-sm">副業AIで月5万円</div></Link>
-            <Link href="/guide/ai-for-business" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">ビジネス</div><div className="font-bold text-sm">ビジネスAI活用</div></Link>
-            <Link href="/guide/ai-for-freelancer" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">フリーランス</div><div className="font-bold text-sm">フリーランス向けAI</div></Link>
+            <Link href="/guide/ai-legal-contracts" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">契約書 × AI</div><div className="font-bold text-sm">AI契約書レビュー実践</div></Link>
+            <Link href="/guide/ai-legal-tools-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">リーガルテック比較</div><div className="font-bold text-sm">法務AIツール徹底比較</div></Link>
+            <Link href="/guide/ai-document-generation" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">書面自動化</div><div className="font-bold text-sm">AI文書生成ガイド</div></Link>
+            <Link href="/guide/best-ai-for-freelance" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">フリーランス × AI</div><div className="font-bold text-sm">個人税理士・士業向け</div></Link>
+          </div>
+          <div className="mt-4 pt-4 border-t border-card-border">
+            <p className="text-xs text-muted mb-2">📖 制度の詳細は姉妹サイト「投資ナビJP」の解説ガイドで</p>
+            <div className="flex flex-wrap gap-2">
+              <a href="https://toshi-navi.jp/guide/invoice-system-complete-guide?utm_source=ai-tools-navi&utm_medium=referral&utm_campaign=cluster_ai-for-legal" target="_blank" rel="noopener noreferrer" className="text-xs px-3 py-1.5 rounded-full bg-card-bg border border-card-border hover:border-primary transition-colors">
+                📌 インボイス制度完全ガイド
+              </a>
+              <a href="https://toshi-navi.jp/guide/denshi-chobo-preservation-guide?utm_source=ai-tools-navi&utm_medium=referral&utm_campaign=cluster_ai-for-legal" target="_blank" rel="noopener noreferrer" className="text-xs px-3 py-1.5 rounded-full bg-card-bg border border-card-border hover:border-primary transition-colors">
+                📌 電子帳簿保存法ガイド
+              </a>
+            </div>
           </div>
         </section>
       </div>

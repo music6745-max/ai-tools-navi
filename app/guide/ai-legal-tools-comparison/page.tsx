@@ -75,11 +75,25 @@ export default function Page() {
           ]} />
         </section>
 
-        <section className="mt-12 mb-8">
-          <h2 className="text-xl font-bold mb-4">関連ガイド</h2>
+        {/* 🎯 ai-for-legal クラスター */}
+        <section className="mt-12 mb-8 bg-gradient-to-br from-primary/5 to-primary/0 border-2 border-primary/30 rounded-xl p-6">
+          <div className="flex items-center gap-2 mb-4">
+            <span className="text-2xl">🏛️</span>
+            <h2 className="text-xl font-bold">法務・契約AIクラスター</h2>
+          </div>
+          <Link
+            href="/guide/ai-for-legal"
+            className="block bg-gradient-to-r from-primary to-primary-hover text-white rounded-xl p-4 mb-3 hover:shadow-md transition-all"
+          >
+            <div className="text-[10px] opacity-90 mb-1">📍 クラスター起点</div>
+            <div className="font-bold text-base mb-1">法律業界向けAI活用ガイド【総合】</div>
+            <div className="text-xs opacity-90">法務AI活用の全体像・ツール比較・実践フロー</div>
+          </Link>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <Link href="/guide/ai-legal-contracts" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">法務</div><div className="font-bold text-sm">AI契約書ツール</div></Link>
-            <Link href="/guide/ai-document-generation" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">業務</div><div className="font-bold text-sm">AI文書生成</div></Link>
+            <Link href="/guide/ai-legal-contracts" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">契約書 × AI</div><div className="font-bold text-sm">AI契約書レビュー実践</div></Link>
+            <Link href="/guide/ai-tax-accounting-tools" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">税務・会計 × AI</div><div className="font-bold text-sm">税理士・会計士向けAI</div></Link>
+            <Link href="/guide/ai-document-generation" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">書面自動化</div><div className="font-bold text-sm">AI文書生成ガイド</div></Link>
+            <Link href="/guide/best-ai-for-freelance" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">フリーランス × AI</div><div className="font-bold text-sm">個人弁護士・士業向け</div></Link>
           </div>
         </section>
       </div>
