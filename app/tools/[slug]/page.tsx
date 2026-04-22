@@ -12,6 +12,7 @@ import {
 } from "../../lib/data";
 import { ShareButtons } from "../../components/ShareButtons";
 import { TrackedAffiliateLink } from "../../components/TrackedAffiliateLink";
+import { ToolMonetizationBlock } from "../../components/ToolMonetizationBlock";
 
 export function generateStaticParams() {
   return tools.map((tool) => ({ slug: tool.slug }));
@@ -289,6 +290,9 @@ export default async function ToolPage({
             </li>
           </ol>
         </section>
+
+        {/* 🎯 テンプレ一括収益化CTA（全151ツール詳細ページ共通） */}
+        <ToolMonetizationBlock toolSlug={tool.slug} toolName={tool.name} />
 
         {/* Affiliate CTA */}
         <section className="bg-gradient-to-r from-primary-light to-background border border-primary rounded-2xl p-8 mb-8 text-center">
