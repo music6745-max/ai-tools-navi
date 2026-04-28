@@ -76,6 +76,20 @@ export const offers: Offer[] = [
     category: "business",
   },
 
+  // ============ GMOオフィスサポート（バーチャルオフィス） — Phase B+ review ============
+  // A8承認 2026-04-24。mylink未取得（A8セッション復帰後にinsId=s00000023181で取得 → active化）
+  {
+    id: "gmo-office-support",
+    service: "GMOオフィスサポート（バーチャルオフィス）",
+    provider: "a8net",
+    payout_yen: 7000,
+    official_url: "https://www.gmo-office.com/",
+    affiliate_url: "https://www.gmo-office.com/",
+    status: "review",
+    note: "バーチャルオフィス・法人住所サービス。A8プログラム 22-0228 (insId=s00000023181)。2026-04-24承認。EPC 130.67、確定率85%。payout 5000-9000円/件。mylink未取得→active化待ち。配置候補: best-ai-for-freelance / ai-for-startups / ai-for-business / ai-side-business。",
+    category: "business",
+  },
+
   // ============ 姉妹サイト誘導 ============
   {
     id: "toshi-navi-nisa",
