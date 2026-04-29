@@ -76,17 +76,17 @@ export const offers: Offer[] = [
     category: "business",
   },
 
-  // ============ GMOオフィスサポート（バーチャルオフィス） — Phase B+ review ============
-  // A8承認 2026-04-24。mylink未取得（A8セッション復帰後にinsId=s00000023181で取得 → active化）
+  // ============ GMOオフィスサポート（バーチャルオフィス） — Phase B+ active ============
+  // A8承認 2026-04-24、2026-04-29 mylink取得・active化。
   {
     id: "gmo-office-support",
     service: "GMOオフィスサポート（バーチャルオフィス）",
     provider: "a8net",
     payout_yen: 7000,
     official_url: "https://www.gmo-office.com/",
-    affiliate_url: "https://www.gmo-office.com/",
-    status: "review",
-    note: "バーチャルオフィス・法人住所サービス。A8プログラム 22-0228 (insId=s00000023181)。2026-04-24承認。EPC 130.67、確定率85%。payout 5000-9000円/件。mylink未取得→active化待ち。配置候補: best-ai-for-freelance / ai-for-startups / ai-for-business / ai-side-business。",
+    affiliate_url: "https://px.a8.net/svt/ejp?a8mat=4B1O1P+4FK7OA+4YV6+62MDD",
+    status: "active",
+    note: "バーチャルオフィス・法人住所サービス。A8プログラム 22-0228 (insId=s00000023181)。2026-04-24承認、2026-04-29 mylink取得・active化。EPC 130.67、確定率85%、payout 5000-9000円/件 (転送なし5000円/月1転送9000円)。素材39件、推奨は素材ID 020 (728x90バナー)。AIツール利用者=個人事業主・フリーランス向けの法人住所/起業ニーズに合致。配置候補: best-ai-for-freelance / ai-for-startups / ai-for-business / ai-side-business。",
     category: "business",
   },
 
