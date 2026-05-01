@@ -9,7 +9,6 @@ import {
   renderStars,
   getPricingBadge,
 } from "./lib/data";
-import { AdSenseUnit } from "./components/AdSenseUnit";
 import { ToolSearch } from "./components/ToolSearch";
 
 export const metadata: Metadata = {
@@ -218,11 +217,6 @@ export default function Home() {
           })}
         </div>
       </section>
-
-      {/* Mid-page ad placement */}
-      <div className="max-w-6xl mx-auto px-4">
-        <AdSenseUnit format="horizontal" className="my-8" />
-      </div>
 
       {/* 2026年ランキングハブ */}
       <section className="py-16 bg-gradient-to-b from-primary-light/20 to-transparent">
