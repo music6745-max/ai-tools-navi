@@ -48,6 +48,9 @@ export default function PrivacyPage() {
             当サイトでは、第三者配信の広告サービス「Google AdSense」を利用しています。広告配信事業者はユーザーの興味に応じた広告を表示するためにCookieを使用することがあります。
           </p>
           <p className="text-muted mt-2">
+            Google を含む第三者配信事業者は、Cookie、広告ID、IPアドレス、ブラウザ情報等を利用して、当サイトや他サイトへの過去のアクセス情報に基づく広告を配信する場合があります。Google による広告でのCookie利用を無効にする方法や広告設定については、Google の広告設定ページおよびプライバシーポリシーをご確認ください。
+          </p>
+          <p className="text-muted mt-2">
             また、当サイトは以下のアフィリエイトプログラムに参加しています。当サイト経由でサービスに登録・購入された場合、当サイトに報酬が支払われることがあります。
           </p>
           <ul className="list-disc list-inside text-muted mt-2 space-y-1">
@@ -77,6 +80,7 @@ export default function PrivacyPage() {
         </section>
 
         <p className="text-muted mt-8">制定日: 2026年4月1日</p>
+        <p className="text-muted">最終更新日: 2026年5月1日</p>
       </div>
     </div>
   );

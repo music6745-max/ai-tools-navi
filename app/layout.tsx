@@ -269,6 +269,22 @@ export default function RootLayout({
                   </li>
                   <li>
                     <Link
+                      href="/about"
+                      className="text-sm text-muted hover:text-primary transition-colors"
+                    >
+                      運営者情報
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/author"
+                      className="text-sm text-muted hover:text-primary transition-colors"
+                    >
+                      編集部について
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
                       href="/privacy"
                       className="text-sm text-muted hover:text-primary transition-colors"
                     >

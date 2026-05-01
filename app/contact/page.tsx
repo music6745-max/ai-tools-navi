@@ -28,7 +28,7 @@ export default function ContactPage() {
         <div className="bg-muted-bg rounded-xl p-6 mb-6">
           <h2 className="font-bold mb-2">メールでのお問い合わせ</h2>
           <p className="text-primary font-medium">
-            contact@ai-tools-navi.example.com
+            contact@ai-tools-navi.jp
           </p>
           <p className="text-xs text-muted mt-2">
             ※ 返信にはお時間をいただく場合があります。
