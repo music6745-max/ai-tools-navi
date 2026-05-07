@@ -1,9 +1,55 @@
+"use client";
+
+import { getOffer } from "../lib/offers";
+import { providerFromUrl, trackEvent } from "../lib/tracking";
+
 interface AffiliateCTAProps {
   serviceName: string;
   url: string;
   description: string;
   badge?: string;
   color: "green" | "blue" | "purple" | "red" | "orange" | "yellow" | "indigo";
+  page?: string;
+  position?: string;
+}
+
+function offerIdFromGoUrl(url: string): string | undefined {
+  const match = url.match(/^\/go\/([^/?#]+)/);
+  return match ? decodeURIComponent(match[1]) : undefined;
+}
+
+function currentPage(page?: string): string {
+  if (page) return page;
+  if (typeof window === "undefined") return "";
+  return window.location.pathname;
+}
+
+function trackAffiliateClick({
+  serviceName,
+  url,
+  page,
+  position,
+}: {
+  serviceName: string;
+  url: string;
+  page?: string;
+  position: string;
+}) {
+  const offerId = offerIdFromGoUrl(url);
+  const offer = offerId ? getOffer(offerId) : undefined;
+  const trackedUrl = offer?.affiliate_url ?? url;
+  const provider =
+    offer?.provider === "direct" ? "direct" : providerFromUrl(trackedUrl);
+
+  trackEvent("affiliate_click", {
+    page: currentPage(page),
+    position,
+    service: offer?.service ?? serviceName,
+    offer_id: offer?.id ?? offerId,
+    provider,
+    status: offer?.status,
+    url: trackedUrl.slice(0, 200),
+  });
 }
 
 const colorStyles: Record<
@@ -73,8 +119,12 @@ export function AffiliateCTA({
   description,
   badge,
   color,
+  page,
+  position = "affiliate_cta",
 }: AffiliateCTAProps) {
   const styles = colorStyles[color] || colorStyles.blue;
+  const onClick = () =>
+    trackAffiliateClick({ serviceName, url, page, position });
 
   return (
     <div
@@ -98,6 +148,7 @@ export function AffiliateCTA({
           href={url}
           target="_blank"
           rel="nofollow sponsored noopener noreferrer"
+          onClick={onClick}
           className={`inline-block ${styles.button} text-white px-10 py-4 rounded-full text-base font-bold shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-200`}
         >
           公式サイトで詳細を見る &rarr;
@@ -122,9 +173,17 @@ interface AffiliateCTAMultiProps {
   title: string;
   description: string;
   links: AffiliateCTALink[];
+  page?: string;
+  position?: string;
 }
 
-export function AffiliateCTAMulti({ title, description, links }: AffiliateCTAMultiProps) {
+export function AffiliateCTAMulti({
+  title,
+  description,
+  links,
+  page,
+  position = "affiliate_cta_multi",
+}: AffiliateCTAMultiProps) {
   return (
     <div className="relative border-2 border-blue-200 dark:border-blue-800 rounded-2xl p-6 bg-card-bg shadow-lg shadow-blue-200/50 dark:shadow-blue-900/30 transition-shadow hover:shadow-xl my-8">
       <h3 className="text-xl font-bold text-blue-600 dark:text-blue-400 mb-2">{title}</h3>
@@ -150,6 +209,14 @@ export function AffiliateCTAMulti({ title, description, links }: AffiliateCTAMul
               href={link.url}
               target="_blank"
               rel="nofollow sponsored noopener noreferrer"
+              onClick={() =>
+                trackAffiliateClick({
+                  serviceName: link.name,
+                  url: link.url,
+                  page,
+                  position,
+                })
+              }
               className="inline-block bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-400 text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-200 shrink-0"
             >
               詳細を見る &rarr;
