@@ -16,7 +16,7 @@ const items = [
   { rank: 3, name: "Jasper", feat: "マーケ特化の老舗", price: "月49ドル〜", link: "/guide/ai-seo-tools-comparison" },
   { rank: 4, name: "Catchy", feat: "国産・日本語特化", price: "月額制", link: "/guide/ai-blog-writing" },
   { rank: 5, name: "Writesonic", feat: "SEO記事生成に強い", price: "月13ドル〜", link: "/guide/ai-seo-tools-comparison" },
-  { rank: 6, name: "Notion AI", feat: "ドキュメント内蔵", price: "月10ドル", link: "/guide/notion-ai-qa-pricing" },
+  { rank: 6, name: "Notion AI", feat: "ドキュメント内蔵", price: "月10ドル", link: "/tools/notion-ai" },
   { rank: 7, name: "Rytr", feat: "低価格で多機能", price: "月9ドル〜", link: "/guide/ai-blog-writing" },
   { rank: 8, name: "Copy.ai", feat: "テンプレ豊富", price: "無料+有料", link: "/guide/ai-blog-writing" },
   { rank: 9, name: "Sudowrite", feat: "小説執筆特化", price: "月10ドル〜", link: "/guide/ai-blog-writing" },

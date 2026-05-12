@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const items = [
-  { rank: 1, name: "Notion AI", feat: "ドキュメント作成をAI化", price: "月10ドル", link: "/guide/notion-ai-qa-pricing" },
+  { rank: 1, name: "Notion AI", feat: "ドキュメント作成をAI化", price: "月10ドル", link: "/tools/notion-ai" },
   { rank: 2, name: "Gamma", feat: "AIプレゼン作成の定番", price: "月10ドル〜", link: "/guide/ai-presentation-comparison" },
   { rank: 3, name: "tl;dv", feat: "会議録作成の人気No.1", price: "無料+月20ドル", link: "/guide/ai-meeting-summarizer-comparison" },
   { rank: 4, name: "Julius AI", feat: "データ分析をチャットで", price: "月20ドル〜", link: "/guide/ai-data-analysis-comparison" },

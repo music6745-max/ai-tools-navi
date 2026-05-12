@@ -18,7 +18,7 @@ const items = [
   { rank: 4, name: "Midjourney", feat: "高品質な画像生成の代表格", price: "月10ドル〜", link: "/guide/ai-image-generator-comparison-detail" },
   { rank: 5, name: "Perplexity", feat: "引用付きAI検索の定番", price: "無料 / Pro月20ドル", link: "/guide/ai-search-engines-comparison" },
   { rank: 6, name: "Cursor", feat: "AIネイティブのコードエディタ", price: "月20ドル", link: "/guide/ai-no-code-comparison" },
-  { rank: 7, name: "Notion AI", feat: "ドキュメント作成をAI化", price: "月10ドル", link: "/guide/notion-ai-qa-pricing" },
+  { rank: 7, name: "Notion AI", feat: "ドキュメント作成をAI化", price: "月10ドル", link: "/tools/notion-ai" },
   { rank: 8, name: "Suno AI", feat: "歌詞付き楽曲を即生成", price: "月10ドル〜", link: "/guide/ai-music-creation-comparison" },
   { rank: 9, name: "ElevenLabs", feat: "感情豊かな音声合成", price: "月5ドル〜", link: "/guide/ai-voice-cloning-comparison" },
   { rank: 10, name: "Sora (OpenAI)", feat: "高品質AI動画生成", price: "ChatGPT Plus内", link: "/guide/ai-image-to-video-comparison" },

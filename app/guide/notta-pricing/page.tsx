@@ -50,7 +50,7 @@ export default function Page() {
         <section className="mt-12 mb-8">
           <h2 className="text-xl font-bold mb-4">関連ガイド</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <Link href="/guide/otter-pricing" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">料金</div><div className="font-bold text-sm">Otter.ai料金</div></Link>
+        <Link href="/tools/otter-ai" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">料金</div><div className="font-bold text-sm">Otter.ai</div></Link>
             <Link href="/guide/ai-meeting-summarizer-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">比較</div><div className="font-bold text-sm">AI会議録ツール比較</div></Link>
           </div>
         </section>
