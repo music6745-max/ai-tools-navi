@@ -81,7 +81,7 @@ export default function Page() {
           <h2 className="text-xl font-bold mb-4">関連ガイド</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Link href="/guide/midjourney-pricing" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">料金</div><div className="font-bold text-sm">Midjourney料金</div></Link>
-            <Link href="/guide/leonardo-ai-pricing" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">料金</div><div className="font-bold text-sm">Leonardo AI料金</div></Link>
+            <Link href="/tools/leonardo-ai" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">料金</div><div className="font-bold text-sm">Leonardo AI料金</div></Link>
           </div>
         </section>
       </div>

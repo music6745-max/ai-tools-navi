@@ -162,7 +162,7 @@ export default function Page() {
               <div className="text-xs text-muted mb-1">業種別</div>
               <div className="font-bold text-sm">教師向けAI</div>
             </Link>
-            <Link href="/guide/ai-for-students" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+            <Link href="/guide/ai-tools-for-students" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
               <div className="text-xs text-muted mb-1">学習・研究</div>
               <div className="font-bold text-sm">学生向けAI</div>
             </Link>

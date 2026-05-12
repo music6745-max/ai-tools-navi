@@ -395,7 +395,7 @@ export default function AIEnglishLearningPage() {
         <section className="mt-12 mb-8">
           <h2 className="text-xl font-bold mb-4">関連ガイド</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <Link href="/guide/ai-english-tools" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+              <Link href="/guide/ai-english-proofreading" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
                 <div className="text-xs text-muted mb-1">スキル・学習</div>
                 <div className="font-bold text-sm">AI英語ツール</div>
               </Link>

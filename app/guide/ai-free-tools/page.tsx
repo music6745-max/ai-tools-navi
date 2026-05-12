@@ -102,7 +102,7 @@ export default function Page() {
           <h2 className="text-xl font-bold mb-4">関連ガイド</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Link href="/guide/how-to-start-ai" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">基礎</div><div className="font-bold text-sm">AIツールの始め方</div></Link>
-            <Link href="/guide/ai-pricing-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">料金</div><div className="font-bold text-sm">主要AI料金比較</div></Link>
+            <Link href="/guide/ai-tools-pricing" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">料金</div><div className="font-bold text-sm">主要AI料金比較</div></Link>
             <Link href="/guide/chatgpt-vs-claude" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">比較</div><div className="font-bold text-sm">ChatGPT vs Claude</div></Link>
             <Link href="/guide/ai-side-business" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">副業</div><div className="font-bold text-sm">AIで副業を始める</div></Link>
           </div>

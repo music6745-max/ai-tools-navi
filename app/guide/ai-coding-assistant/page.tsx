@@ -259,7 +259,7 @@ export default function AICodingAssistantPage() {
                 <div className="text-xs text-muted mb-1">スキル・学習</div>
                 <div className="font-bold text-sm">AI英語学習</div>
               </Link>
-              <Link href="/guide/ai-english-tools" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+              <Link href="/guide/ai-english-learning" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
                 <div className="text-xs text-muted mb-1">スキル・学習</div>
                 <div className="font-bold text-sm">AI英語ツール</div>
               </Link>

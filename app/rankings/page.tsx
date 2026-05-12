@@ -29,7 +29,7 @@ const genres: Genre[] = [
   { id: "audio", name: "音声", icon: "🎵", desc: "AI音声・音楽生成の人気ガイドTop3。", slugs: ["ai-music-creation", "ai-voice-cloning", "ai-transcription"] },
   { id: "coding", name: "コーディング", icon: "💻", desc: "AIコーディング支援の人気ガイドTop3。", slugs: ["ai-coding-assistant", "ai-no-code-tools", "ai-programming-school"] },
   { id: "writing", name: "ライティング", icon: "✍️", desc: "AIライティング・文章生成の人気ガイドTop3。", slugs: ["ai-blog-writing", "ai-email-writing", "ai-summary"] },
-  { id: "business", name: "ビジネス", icon: "📊", desc: "ビジネス向けAI活用の人気ガイドTop3。", slugs: ["ai-for-business", "ai-pricing-comparison", "ai-meeting-notes"] },
+  { id: "business", name: "ビジネス", icon: "📊", desc: "ビジネス向けAI活用の人気ガイドTop3。", slugs: ["ai-for-business", "ai-tools-pricing", "ai-meeting-notes"] },
 ];
 
 function getGuide(slug: string) {

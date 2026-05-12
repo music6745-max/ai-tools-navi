@@ -3,16 +3,19 @@ import type { Metadata } from "next";
 import { siteConfig } from "../lib/data";
 import GuideList from "./GuideList";
 import { guides } from "./guides.data";
+import { getIndexableGuides } from "./retiredGuides";
+
+const publicGuides = getIndexableGuides(guides);
 
 export const metadata: Metadata = {
-  title: `AIツール活用ガイド【全${guides.length}本】| 初心者〜実践まで徹底解説`,
-  description: `ChatGPT・Claude・Midjourney・Sora等のAIツール活用ガイドを${guides.length}本公開。初心者向けの始め方から、副業・ビジネス・業種別の実践テクニックまで2026年最新情報を無料で学べます。`,
+  title: `AIツール活用ガイド【全${publicGuides.length}本】| 初心者〜実践まで徹底解説`,
+  description: `ChatGPT・Claude・Midjourney・Sora等のAIツール活用ガイドを${publicGuides.length}本公開。初心者向けの始め方から、副業・ビジネス・業種別の実践テクニックまで2026年最新情報を無料で学べます。`,
   alternates: {
     canonical: `${siteConfig.url}/guide`,
   },
   openGraph: {
-    title: `AIツール活用ガイド【全${guides.length}本】`,
-    description: `初心者〜実践まで、AIツール活用ガイド${guides.length}本を無料公開。`,
+    title: `AIツール活用ガイド【全${publicGuides.length}本】`,
+    description: `初心者〜実践まで、AIツール活用ガイド${publicGuides.length}本を無料公開。`,
     url: `${siteConfig.url}/guide`,
     type: "website",
   },
@@ -23,7 +26,7 @@ function CollectionPageJsonLd() {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     name: "AIツール活用ガイド一覧",
-    description: `${guides.length}本のAIツール活用ガイドを掲載。`,
+    description: `${publicGuides.length}本のAIツール活用ガイドを掲載。`,
     url: `${siteConfig.url}/guide`,
     inLanguage: "ja",
     isPartOf: {
@@ -33,8 +36,8 @@ function CollectionPageJsonLd() {
     },
     mainEntity: {
       "@type": "ItemList",
-      numberOfItems: guides.length,
-      itemListElement: guides.slice(0, 30).map((g, i) => ({
+      numberOfItems: publicGuides.length,
+      itemListElement: publicGuides.slice(0, 30).map((g, i) => ({
         "@type": "ListItem",
         position: i + 1,
         url: `${siteConfig.url}/guide/${g.slug}`,
@@ -98,7 +101,7 @@ export default function GuidePage() {
         </p>
       </div>
 
-      <GuideList guides={guides} />
+      <GuideList guides={publicGuides} />
 
       {/* CTA */}
       <div className="mt-12 text-center">

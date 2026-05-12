@@ -1,0 +1,27 @@
+export const retiredGuideRedirects = {
+  "ai-english-tools": "/guide/ai-english-learning",
+  "ai-for-students": "/guide/ai-tools-for-students",
+  "ai-pricing-comparison": "/guide/ai-tools-pricing",
+  "ai-pricing-detailed": "/guide/ai-tools-pricing",
+  "ai-slide-creation": "/guide/ai-presentation",
+  "copy-ai-pricing": "/tools/copy-ai",
+  "descript-pricing": "/tools/descript",
+  "gamma-pricing": "/tools/gamma",
+  "leonardo-ai-pricing": "/tools/leonardo-ai",
+  "photoroom-pricing": "/tools/photoroom",
+  "pika-pricing": "/tools/pika",
+  "synthesia-pricing": "/tools/synthesia",
+  "whisper-pricing": "/tools/whisper",
+} as const;
+
+const retiredGuideSlugs = new Set<string>(Object.keys(retiredGuideRedirects));
+
+export function isRetiredGuideSlug(slug: string) {
+  return retiredGuideSlugs.has(slug);
+}
+
+export function getIndexableGuides<T extends { slug: string }>(
+  guides: readonly T[]
+): T[] {
+  return guides.filter((guide) => !isRetiredGuideSlug(guide.slug));
+}

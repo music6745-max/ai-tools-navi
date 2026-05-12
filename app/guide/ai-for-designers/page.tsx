@@ -303,7 +303,7 @@ export default function AIForDesignersPage() {
                 <div className="text-xs text-muted mb-1">ビジネス・業務</div>
                 <div className="font-bold text-sm">AIプレゼン作成</div>
               </Link>
-              <Link href="/guide/ai-slide-creation" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+              <Link href="/guide/ai-presentation" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
                 <div className="text-xs text-muted mb-1">ビジネス・業務</div>
                 <div className="font-bold text-sm">AIスライド作成</div>
               </Link>

@@ -79,7 +79,7 @@ export default function Page() {
           <h2 className="text-xl font-bold mb-4">関連ガイド</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Link href="/guide/ai-presentation" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">業務</div><div className="font-bold text-sm">AIプレゼン活用</div></Link>
-            <Link href="/guide/ai-slide-creation" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">業務</div><div className="font-bold text-sm">AIスライド作成</div></Link>
+            <Link href="/guide/ai-presentation" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">業務</div><div className="font-bold text-sm">AIスライド作成</div></Link>
           </div>
         </section>
       </div>
