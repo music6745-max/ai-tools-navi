@@ -1,0 +1,58 @@
+name: Codex AdSense Low Value AI 20260521
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - ".github/workflows/codex-adsense-low-value-ai-20260521.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Apply patch
+        shell: bash
+        run: |
+          git apply <<'PATCH'
+          diff --git a/app/guide/retiredGuides.ts b/app/guide/retiredGuides.ts
+          index bf40f9e..5e6ce35 100644
+          --- a/app/guide/retiredGuides.ts
+          +++ b/app/guide/retiredGuides.ts
+          @@ -1,5 +1,7 @@
+           export const retiredGuideRedirects = {
+          +  "ai-customer-support": "/guide/ai-customer-service",
+             "ai-english-tools": "/guide/ai-english-learning",
+          +  "ai-for-data-scientists": "/guide/ai-data-analysis",
+             "ai-for-students": "/guide/ai-tools-for-students",
+             "ai-pricing-comparison": "/guide/ai-tools-pricing",
+             "ai-pricing-detailed": "/guide/ai-tools-pricing",
+          diff --git a/next.config.ts b/next.config.ts
+          index 8bdb9fa..1d0e614 100644
+          --- a/next.config.ts
+          +++ b/next.config.ts
+          @@ -1,7 +1,9 @@
+           import type { NextConfig } from "next";
+           
+           const retiredGuideRedirects = [
+          +  ["ai-customer-support", "/guide/ai-customer-service"],
+             ["ai-english-tools", "/guide/ai-english-learning"],
+          +  ["ai-for-data-scientists", "/guide/ai-data-analysis"],
+             ["ai-for-students", "/guide/ai-tools-for-students"],
+             ["ai-pricing-comparison", "/guide/ai-tools-pricing"],
+             ["ai-pricing-detailed", "/guide/ai-tools-pricing"],
+          PATCH
+      - name: Commit changes and remove workflow
+        shell: bash
+        run: |
+          rm -f .github/workflows/codex-adsense-low-value-ai-20260521.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add next.config.ts app/guide/retiredGuides.ts .github/workflows/codex-adsense-low-value-ai-20260521.yml
+          git commit -m "feat: consolidate duplicate ai guides"
+          git push
