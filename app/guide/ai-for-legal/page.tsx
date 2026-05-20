@@ -340,7 +340,7 @@ export default function AIForLegalPage() {
             {[
               { slug: "invoice-system-complete-guide", title: "インボイス制度完全ガイド", desc: "適格請求書・2割特例" },
               { slug: "denshi-chobo-preservation-guide", title: "電子帳簿保存法ガイド", desc: "2024年本格施行の対応" },
-              { slug: "company-expense-rules-guide", title: "会社員の経費計上ルール", desc: "副業経費・特定支出控除" },
+              { slug: "foreign-tax-credit-guide", title: "外国税額控除の申告ガイド", desc: "米国株・ETF配当の二重課税調整" },
             ].map((g) => (
               <a
                 key={g.slug}

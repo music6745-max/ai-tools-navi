@@ -331,6 +331,32 @@ export default function AIInvestmentPage() {
           />
         </section>
 
+        <section className="mb-12 bg-card-bg border border-card-border rounded-xl p-6">
+          <h2 className="text-xl font-bold mb-3">AIで調べた後に確認したい投資制度</h2>
+          <p className="text-sm text-muted mb-4">
+            ロボアドやAI投資サービスを比較するときは、口座の種類・税金・証券会社の使い分けも一緒に確認すると判断しやすくなります。
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {[
+              { slug: "nisa-broker-ranking-2026", title: "新NISAの証券会社比較", desc: "SBI・楽天・マネックスを比較" },
+              { slug: "roboadvisor-comparison", title: "ロボアドバイザー比較", desc: "手数料・NISA対応・最低投資額" },
+              { slug: "foreign-tax-credit-guide", title: "外国税額控除のやり方", desc: "米国ETF配当の確定申告" },
+            ].map((g) => (
+              <a
+                key={g.slug}
+                href={`https://toshi-navi.jp/guide/${g.slug}?utm_source=ai-tools-navi&utm_medium=referral&utm_campaign=guide_ai-investment`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block p-3 rounded-lg bg-background border border-card-border hover:border-primary transition-colors"
+              >
+                <div className="text-[10px] text-muted mb-1">投資ナビJP</div>
+                <div className="font-bold text-sm mb-1">{g.title}</div>
+                <div className="text-xs text-muted">{g.desc}</div>
+              </a>
+            ))}
+          </div>
+        </section>
+
         {/* FAQ */}
         <section id="faq" className="mb-12">
           <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
