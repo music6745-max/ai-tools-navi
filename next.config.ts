@@ -1,9 +1,7 @@
 import type { NextConfig } from "next";
 
 const retiredGuideRedirects = [
-  ["ai-customer-support", "/guide/ai-customer-service"],
   ["ai-english-tools", "/guide/ai-english-learning"],
-  ["ai-for-data-scientists", "/guide/ai-data-analysis"],
   ["ai-for-students", "/guide/ai-tools-for-students"],
   ["ai-pricing-comparison", "/guide/ai-tools-pricing"],
   ["ai-pricing-detailed", "/guide/ai-tools-pricing"],

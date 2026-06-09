@@ -1,0 +1,493 @@
+diff --git a/app/components/ThemeToggle.tsx b/app/components/ThemeToggle.tsx
+index 4028ea1..4a3be24 100644
+--- a/app/components/ThemeToggle.tsx
++++ b/app/components/ThemeToggle.tsx
+@@ -4,33 +4,41 @@ import { useEffect, useState } from "react";
+ 
+ type Theme = "system" | "light" | "dark";
+ 
++function isTheme(value: string | null): value is Theme {
++  return value === "system" || value === "light" || value === "dark";
++}
++
++function getInitialTheme(): Theme {
++  if (typeof window === "undefined") {
++    return "system";
++  }
++
++  const saved = localStorage.getItem("theme");
++  return isTheme(saved) ? saved : "system";
++}
++
++function applyTheme(t: Theme) {
++  const root = document.documentElement;
++  if (t === "dark") {
++    root.setAttribute("data-theme", "dark");
++  } else if (t === "light") {
++    root.setAttribute("data-theme", "light");
++  } else {
++    root.removeAttribute("data-theme");
++  }
++}
++
+ export function ThemeToggle() {
+-  const [theme, setTheme] = useState<Theme>("system");
++  const [theme, setTheme] = useState<Theme>(getInitialTheme);
+ 
+   useEffect(() => {
+-    const saved = localStorage.getItem("theme") as Theme | null;
+-    if (saved) {
+-      setTheme(saved);
+-      applyTheme(saved);
+-    }
+-  }, []);
+-
+-  function applyTheme(t: Theme) {
+-    const root = document.documentElement;
+-    if (t === "dark") {
+-      root.setAttribute("data-theme", "dark");
+-    } else if (t === "light") {
+-      root.setAttribute("data-theme", "light");
+-    } else {
+-      root.removeAttribute("data-theme");
+-    }
+-  }
++    applyTheme(theme);
++  }, [theme]);
+ 
+   function cycle() {
+     const next: Theme = theme === "system" ? "dark" : theme === "dark" ? "light" : "system";
+     setTheme(next);
+     localStorage.setItem("theme", next);
+-    applyTheme(next);
+   }
+ 
+   return (
+diff --git a/app/components/ToolMonetizationBlock.tsx b/app/components/ToolMonetizationBlock.tsx
+deleted file mode 100644
+index 4032de6..0000000
+--- a/app/components/ToolMonetizationBlock.tsx
++++ /dev/null
+@@ -1,83 +0,0 @@
+-import { TrackedOfferLink } from "./TrackedOfferLink";
+-
+-/**
+- * å…¨151ãƒ„ãƒ¼ãƒ«è©³ç´°ãƒšãƒ¼ã‚¸å…±é€šã®åç›ŠåŒ–CTAãƒ–ãƒ­ãƒƒã‚¯ã€‚
+- *
+- * AIãƒ„ãƒ¼ãƒ«è‡ªä½“ï¼ˆChatGPT / Claude / Gemini ç­‰ï¼‰ã¯ã‚¢ãƒ•ã‚£ãƒªã‚¨ã‚¤ãƒˆæä¾›ãŒã»ã¼ãªã„
+- * ï¼ tool.affiliateUrl ã¯ vendor-direct ã§æˆæœç™ºç”Ÿã‚¼ãƒ­ ã®ã‚±ãƒ¼ã‚¹ãŒå¤šã„ã€‚
+- *
+- * ã ã‹ã‚‰ã“ãã€ŒAIãƒ„ãƒ¼ãƒ«ã‚’æ¢ã—ã¦ã„ã‚‹èª­è€…ï¼å€‹äººäº‹æ¥­ä¸»ãƒ»å‰¯æ¥­å®¶ãƒ»ãƒ•ãƒªãƒ¼ãƒ©ãƒ³ã‚¹ã€
+- * ã¨ã„ã†ãƒ¦ãƒ¼ã‚¶ãƒ¼å±æ€§ã«åˆã‚ã›ã¦ã€åˆ¥é ˜åŸŸã®é«˜å˜ä¾¡ã‚ªãƒ•ã‚¡ãƒ¼ã‚’1ç®‡æ‰€ã«é›†ã‚ã¦å‡ºã™ã€‚
+- *
+- *  - ç¨ç†å£«ãƒ‰ãƒƒãƒˆã‚³ãƒ ï¼š1ä»¶ 12,000å††ï¼ˆå€‹äººäº‹æ¥­ä¸»ã®ç¢ºå®šç”³å‘Š/ã‚¤ãƒ³ãƒœã‚¤ã‚¹ï¼‰
+- *  - ä¿é™ºãƒãƒ³ãƒ¢ã‚¹ï¼š1ä»¶ 10,000å††ï¼ˆFPç›¸è«‡ï¼‰
+- *  - æŠ•è³‡ãƒŠãƒ“JP ã‚¯ãƒ­ã‚¹ãƒ‰ãƒ¡ã‚¤ãƒ³ï¼šç›´æ¥åç›Šã¯0ã ãŒã€é«˜å˜ä¾¡ãƒšãƒ¼ã‚¸ã¸ã®é€å®¢
+- *
+- * page è­˜åˆ¥å­ã¯ GA4 ã§ AIãƒ„ãƒ¼ãƒ«åˆ¥ã« CVR ã‚’è¿½ãˆã‚‹å½¢ã«ã—ã¦ãŠãã€‚
+- */
+-export function ToolMonetizationBlock({ toolSlug, toolName }: { toolSlug: string; toolName: string }) {
+-  const page = `tool_${toolSlug}`;
+-  return (
+-    <section className="bg-gradient-to-br from-primary-light/30 to-background border-2 border-primary/40 rounded-2xl p-6 mb-8">
+-      <h2 className="text-lg font-bold mb-2 flex items-center gap-2">
+-        ğŸ’¡ AIãƒ„ãƒ¼ãƒ«ã‚’æ´»ç”¨ã—ã¦ã„ã‚‹æ–¹ã¸
+-      </h2>
+-      <p className="text-sm text-muted mb-4">
+-        {toolName}ã‚’å«ã‚€AIãƒ„ãƒ¼ãƒ«ã‚’æ¥­å‹™ã§æ´»ç”¨ã™ã‚‹å€‹äººäº‹æ¥­ä¸»ãƒ»ãƒ•ãƒªãƒ¼ãƒ©ãƒ³ã‚¹ã®æ–¹å‘ã‘ã«ã€é–¢é€£ã™ã‚‹ç¨å‹™ãƒ»è³‡ç”£é‹ç”¨ã®æƒ…å ±ã‚’é›†ã‚ã¾ã—ãŸã€‚
+-      </p>
+-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+-        <TrackedOfferLink
+-          offerId="zeirishi-dotcom"
+-          page={page}
+-          position="monetization_tax"
+-          className="block p-4 rounded-lg bg-card-bg border border-card-border hover:border-primary transition-colors"
+-        >
+-          <div className="text-xs text-muted mb-1">ç¨å‹™ç›¸è«‡</div>
+-          <div className="font-bold text-sm mb-1">ç¨ç†å£«ãƒ‰ãƒƒãƒˆã‚³ãƒ </div>
+-          <div className="text-xs text-muted">
+-            AI/SaaSå‰¯æ¥­ã®ã‚¤ãƒ³ãƒœã‚¤ã‚¹å¯¾å¿œãƒ»çµŒè²»è¨ˆä¸Šã‚’å…¨å›½ã®ç¨ç†å£«ãŒç„¡æ–™ã§ææ¡ˆ
+-          </div>
+-        </TrackedOfferLink>
+-        <TrackedOfferLink
+-          offerId="hoken-mammoth"
+-          page={page}
+-          position="monetization_fp"
+-          className="block p-4 rounded-lg bg-card-bg border border-card-border hover:border-primary transition-colors"
+-        >
+-          <div className="text-xs text-muted mb-1">FPç„¡æ–™ç›¸è«‡</div>
+-          <div className="font-bold text-sm mb-1">ä¿é™ºãƒãƒ³ãƒ¢ã‚¹</div>
+-          <div className="text-xs text-muted">
+-            ãƒ•ãƒªãƒ¼ãƒ©ãƒ³ã‚¹ãƒ»å€‹äººäº‹æ¥­ä¸»å‘ã‘ã®ä¿é™ºè¦‹ç›´ã—ãƒ»è€å¾Œè¨­è¨ˆã‚’ç„¡æ–™ç›¸è«‡
+-          </div>
+-        </TrackedOfferLink>
+-        <TrackedOfferLink
+-          offerId="toshi-navi-invoice"
+-          page={page}
+-          position="monetization_crossdomain_invoice"
+-          className="block p-4 rounded-lg bg-card-bg border border-card-border hover:border-primary transition-colors"
+-        >
+-          <div className="text-xs text-muted mb-1">é–¢é€£ã‚¬ã‚¤ãƒ‰ï¼ˆå§‰å¦¹ã‚µã‚¤ãƒˆï¼‰</div>
+-          <div className="font-bold text-sm mb-1">ã‚¤ãƒ³ãƒœã‚¤ã‚¹åˆ¶åº¦å®Œå…¨ã‚¬ã‚¤ãƒ‰</div>
+-          <div className="text-xs text-muted">
+-            2å‰²ç‰¹ä¾‹ãƒ»ç™»éŒ²è¦å¦ã‚’æŠ•è³‡ãƒŠãƒ“JPã§è©³ã—ãè§£èª¬
+-          </div>
+-        </TrackedOfferLink>
+-        <TrackedOfferLink
+-          offerId="toshi-navi-nisa"
+-          page={page}
+-          position="monetization_crossdomain_nisa"
+-          className="block p-4 rounded-lg bg-card-bg border border-card-border hover:border-primary transition-colors"
+-        >
+-          <div className="text-xs text-muted mb-1">é–¢é€£ã‚¬ã‚¤ãƒ‰ï¼ˆå§‰å¦¹ã‚µã‚¤ãƒˆï¼‰</div>
+-          <div className="font-bold text-sm mb-1">æ–°NISAè¨¼åˆ¸ä¼šç¤¾ãƒ©ãƒ³ã‚­ãƒ³ã‚°</div>
+-          <div className="text-xs text-muted">
+-            AIå‰¯æ¥­ã®åç›Šã‚’è³‡ç”£é‹ç”¨ã«ã¤ãªã’ã‚‹è¨¼åˆ¸ä¼šç¤¾é¸ã³
+-          </div>
+-        </TrackedOfferLink>
+-      </div>
+-      <p className="text-xs text-muted mt-3 text-center">
+-        â€» PRãƒ»åºƒå‘Šã‚’å«ã¿ã¾ã™
+-      </p>
+-    </section>
+-  );
+-}
+diff --git a/app/guide/GuideList.tsx b/app/guide/GuideList.tsx
+index a231d9d..2bb906a 100644
+--- a/app/guide/GuideList.tsx
++++ b/app/guide/GuideList.tsx
+@@ -12,7 +12,7 @@ import {
+ } from "./guides.data";
+ 
+ type Props = { guides: Guide[] };
+-const ALL: "all" = "all";
++const ALL = "all" as const;
+ 
+ export default function GuideList({ guides }: Props) {
+   const [q, setQ] = useState("");
+diff --git a/app/guide/ai-customer-support/page.tsx b/app/guide/ai-customer-support/page.tsx
+index d99c62a..0a90797 100644
+--- a/app/guide/ai-customer-support/page.tsx
++++ b/app/guide/ai-customer-support/page.tsx
+@@ -118,7 +118,7 @@ export default function Page() {
+         <section className="mb-12">
+           <h2 className="text-2xl font-bold mb-4">ã‚ˆãã‚ã‚‹è³ªå•</h2>
+           <div className="space-y-3">
+-            {faq.mainEntity.map((q: any) => (
++            {faq.mainEntity.map((q: { name: string; acceptedAnswer: { text: string } }) => (
+               <div key={q.name} className="bg-card-bg border border-card-border rounded-xl p-5">
+                 <h3 className="font-bold text-sm mb-2">Q. {q.name}</h3>
+                 <p className="text-sm text-muted leading-relaxed">A. {q.acceptedAnswer.text}</p>
+diff --git a/app/guide/ai-data-visualization/page.tsx b/app/guide/ai-data-visualization/page.tsx
+index 6031442..ae4b16c 100644
+--- a/app/guide/ai-data-visualization/page.tsx
++++ b/app/guide/ai-data-visualization/page.tsx
+@@ -118,7 +118,7 @@ export default function Page() {
+         <section className="mb-12">
+           <h2 className="text-2xl font-bold mb-4">ã‚ˆãã‚ã‚‹è³ªå•</h2>
+           <div className="space-y-3">
+-            {faq.mainEntity.map((q: any) => (
++            {faq.mainEntity.map((q: { name: string; acceptedAnswer: { text: string } }) => (
+               <div key={q.name} className="bg-card-bg border border-card-border rounded-xl p-5">
+                 <h3 className="font-bold text-sm mb-2">Q. {q.name}</h3>
+                 <p className="text-sm text-muted leading-relaxed">A. {q.acceptedAnswer.text}</p>
+diff --git a/app/guide/ai-for-content-creators/page.tsx b/app/guide/ai-for-content-creators/page.tsx
+index 2424ef0..5dd37b1 100644
+--- a/app/guide/ai-for-content-creators/page.tsx
++++ b/app/guide/ai-for-content-creators/page.tsx
+@@ -115,7 +115,7 @@ export default function Page() {
+         <section className="mb-12">
+           <h2 className="text-2xl font-bold mb-4">ã‚ˆãã‚ã‚‹è³ªå•</h2>
+           <div className="space-y-3">
+-            {faq.mainEntity.map((q: any) => (
++            {faq.mainEntity.map((q: { name: string; acceptedAnswer: { text: string } }) => (
+               <div key={q.name} className="bg-card-bg border border-card-border rounded-xl p-5">
+                 <h3 className="font-bold text-sm mb-2">Q. {q.name}</h3>
+                 <p className="text-sm text-muted leading-relaxed">A. {q.acceptedAnswer.text}</p>
+diff --git a/app/guide/ai-for-marketers/page.tsx b/app/guide/ai-for-marketers/page.tsx
+index b636877..c6405fb 100644
+--- a/app/guide/ai-for-marketers/page.tsx
++++ b/app/guide/ai-for-marketers/page.tsx
+@@ -133,7 +133,7 @@ export default function Page() {
+         <section className="mb-12">
+           <h2 className="text-2xl font-bold mb-4">ã‚ˆãã‚ã‚‹è³ªå•</h2>
+           <div className="space-y-3">
+-            {faq.mainEntity.map((q: any) => (
++            {faq.mainEntity.map((q: { name: string; acceptedAnswer: { text: string } }) => (
+               <div key={q.name} className="bg-card-bg border border-card-border rounded-xl p-5">
+                 <h3 className="font-bold text-sm mb-2">Q. {q.name}</h3>
+                 <p className="text-sm text-muted leading-relaxed">A. {q.acceptedAnswer.text}</p>
+diff --git a/app/guide/ai-for-startups/page.tsx b/app/guide/ai-for-startups/page.tsx
+index d0afc45..6d3a54d 100644
+--- a/app/guide/ai-for-startups/page.tsx
++++ b/app/guide/ai-for-startups/page.tsx
+@@ -118,7 +118,7 @@ export default function Page() {
+         <section className="mb-12">
+           <h2 className="text-2xl font-bold mb-4">ã‚ˆãã‚ã‚‹è³ªå•</h2>
+           <div className="space-y-3">
+-            {faq.mainEntity.map((q: any) => (
++            {faq.mainEntity.map((q: { name: string; acceptedAnswer: { text: string } }) => (
+               <div key={q.name} className="bg-card-bg border border-card-border rounded-xl p-5">
+                 <h3 className="font-bold text-sm mb-2">Q. {q.name}</h3>
+                 <p className="text-sm text-muted leading-relaxed">A. {q.acceptedAnswer.text}</p>
+diff --git a/app/guide/ai-photo-restoration-comparison/page.tsx b/app/guide/ai-photo-restoration-comparison/page.tsx
+index fdd41fe..f66fac1 100644
+--- a/app/guide/ai-photo-restoration-comparison/page.tsx
++++ b/app/guide/ai-photo-restoration-comparison/page.tsx
+@@ -61,7 +61,7 @@ export default function Page() {
+           <div className="bg-card-bg border border-card-border rounded-xl p-5 space-y-3 text-sm">
+             <p><span className="font-bold">ãƒ—ãƒ­ã‚«ãƒ¡ãƒ©ãƒãƒ³ï¼š</span> Topaz Photo AI</p>
+             <p><span className="font-bold">å¤å†™çœŸå¾©å…ƒï¼š</span> Reminiãƒ»PicWish</p>
+-            <p><span className="font-bold">SNSæŠ•ç¨¿ç”¨ï¼š</span> Let's Enhanceãƒ»PicWish</p>
++            <p><span className="font-bold">SNSæŠ•ç¨¿ç”¨ï¼š</span> Let&apos;s Enhanceãƒ»PicWish</p>
+             <p><span className="font-bold">ã‚¤ãƒ©ã‚¹ãƒˆæ‹¡å¤§ï¼š</span> Bigjpg</p>
+           </div>
+         </section>
+diff --git a/app/guide/best-ai-for-freelance/layout.tsx b/app/guide/best-ai-for-freelance/layout.tsx
+index ca54012..c381a98 100644
+--- a/app/guide/best-ai-for-freelance/layout.tsx
++++ b/app/guide/best-ai-for-freelance/layout.tsx
+@@ -1,25 +1,9 @@
+ import type { ReactNode } from "react";
+-import { AffiliateCTA } from "../../components/AffiliateCTA";
+ 
+ export default function BestAiForFreelanceLayout({
+   children,
+ }: {
+   children: ReactNode;
+ }) {
+-  return (
+-    <>
+-      {children}
+-      <div className="max-w-3xl mx-auto px-4 pb-8">
+-        <section className="mb-8">
+-          <AffiliateCTA
+-            serviceName="GMOã‚ªãƒ•ã‚£ã‚¹ã‚µãƒãƒ¼ãƒˆï¼ˆãƒãƒ¼ãƒãƒ£ãƒ«ã‚ªãƒ•ã‚£ã‚¹ï¼‰"
+-            url="/go/gmo-office-support"
+-            description="ãƒ•ãƒªãƒ¼ãƒ©ãƒ³ã‚¹ã¨ã—ã¦å£²ä¸ŠãŒä¼¸ã³ã¦ããŸã‚‰ã€æ³•äººç™»è¨˜ç”¨ã®äº‹æ¥­æ‰€ä½æ‰€ã‚‚æ¤œè¨ã‚’ã€‚GMOã‚ªãƒ•ã‚£ã‚¹ã‚µãƒãƒ¼ãƒˆãªã‚‰æœˆé¡660å††ã‹ã‚‰ä¸€ç­‰åœ°ä½æ‰€ã®åˆ©ç”¨OKã€æ³•äººç™»è¨˜ãƒ»éƒµä¾¿ç‰©è»¢é€ã«å¯¾å¿œã€‚AIãƒ„ãƒ¼ãƒ«æ´»ç”¨ã§ç”Ÿç”£æ€§ãŒä¸ŠãŒã‚Šã€æ³•äººåŒ–ãƒ•ã‚§ãƒ¼ã‚ºã«å…¥ã£ãŸæ–¹ã«ã€‚"
+-            badge="æœˆé¡660å††ã‹ã‚‰ãƒ»æ³•äººç™»è¨˜OK"
+-            color="indigo"
+-          />
+-        </section>
+-      </div>
+-    </>
+-  );
++  return <>{children}</>;
+ }
+diff --git a/app/guide/retiredGuides.ts b/app/guide/retiredGuides.ts
+index 5e6ce35..ec86383 100644
+--- a/app/guide/retiredGuides.ts
++++ b/app/guide/retiredGuides.ts
+@@ -22,14 +22,41 @@ export const retiredGuideRedirects = {
+   "whisper-pricing": "/tools/whisper",
+ } as const;
+ 
++export const reviewApprovedGuideSlugs = [
++  "how-to-start-ai",
++  "ai-for-business",
++  "ai-image-generation",
++  "ai-side-business",
++  "ai-video-creation",
++  "chatgpt-vs-claude",
++  "ai-tools-for-students",
++  "best-ai-for-freelance",
++  "ai-blog-writing",
++  "ai-tools-pricing",
++  "ai-english-learning",
++  "chatgpt-claude-gemini-comparison",
++  "ai-prompt-engineering",
++  "ai-meeting-notes",
++  "ai-japanese-tools",
++  "ai-free-tools",
++  "best-ai-for-marketing",
++  "ai-for-remote-work",
++  "ai-for-designers",
++] as const;
++
+ const retiredGuideSlugs = new Set<string>(Object.keys(retiredGuideRedirects));
++const reviewApprovedGuideSlugSet = new Set<string>(reviewApprovedGuideSlugs);
+ 
+ export function isRetiredGuideSlug(slug: string) {
+   return retiredGuideSlugs.has(slug);
+ }
+ 
++export function isReviewApprovedGuideSlug(slug: string) {
++  return reviewApprovedGuideSlugSet.has(slug);
++}
++
+ export function getIndexableGuides<T extends { slug: string }>(
+   guides: readonly T[]
+ ): T[] {
+-  return guides.filter((guide) => !isRetiredGuideSlug(guide.slug));
++  return guides.filter((guide) => isReviewApprovedGuideSlug(guide.slug));
+ }
+diff --git a/app/layout.tsx b/app/layout.tsx
+index 461decb..1919947 100644
+--- a/app/layout.tsx
++++ b/app/layout.tsx
+@@ -121,7 +121,6 @@ export default function RootLayout({
+       <head>
+         <link rel="preconnect" href="https://www.googletagmanager.com" />
+         <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
+-        <link rel="preconnect" href="https://aml.valuecommerce.com" />
+         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+         {/* Google Analytics */}
+         <script
+@@ -147,13 +146,6 @@ export default function RootLayout({
+           type="application/ld+json"
+           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+         />
+-        <script
+-          dangerouslySetInnerHTML={{ __html: 'var vc_pid = "892589513";' }}
+-        />
+-        <script
+-          async
+-          src="//aml.valuecommerce.com/vcdal.js"
+-        />
+       </head>
+       <body className="min-h-full flex flex-col">
+         {/* Header */}
+diff --git a/app/sitemap.ts b/app/sitemap.ts
+index bdf3c31..d799565 100644
+--- a/app/sitemap.ts
++++ b/app/sitemap.ts
+@@ -1,5 +1,6 @@
+ import type { MetadataRoute } from "next";
+ import { siteConfig, tools, categories } from "./lib/data";
++import { reviewApprovedGuideSlugs } from "./guide/retiredGuides";
+ 
+ export default function sitemap(): MetadataRoute.Sitemap {
+   const toolPages = tools.map((tool) => ({
+@@ -16,6 +17,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
+     priority: 0.7,
+   }));
+ 
++  const guidePages = reviewApprovedGuideSlugs.map((slug) => ({
++    url: `${siteConfig.url}/guide/${slug}`,
++    lastModified: new Date(),
++    changeFrequency: "monthly" as const,
++    priority: 0.8,
++  }));
++
+   return [
+     {
+       url: siteConfig.url,
+@@ -83,120 +91,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
+       changeFrequency: "monthly",
+       priority: 0.5,
+     },
+-    {
+-      url: `${siteConfig.url}/guide/how-to-start-ai`,
+-      lastModified: new Date(),
+-      changFrequency: "monthly",
+-     priority: 0.8,
+-    },
+-    {
+-      url: `${siteConfig.url}/guide/ai-for-business`,
+-      lastModified: new Date(),
+-      changeFrequency: "monthly",
+-     priority: 0.8,
+-    },
+-    {
+-      url: `${siteConfig.url}/guide/ai-image-generation`,
+-      lastModified: new Date(),
+-      changFrequency: "monthly",
+-     priority: 0.8,
+-    },
+-    {
+-      url: `${siteConfig.url}/guide/ai-side-business`,
+-      lastModified: new Date(),
+-      changFrequency: "monthly",
+-     priority: 0.8,
+-    },
+-    {
+-      url: `${siteConfig.url}/guide/ai-video-creation`,
+-     lastModified: new Date(),
+-      changFrequency: "monthly",
+-     priority: 0.8,
+-    },
+-    {
+-      url: `${siteConfig.url}/guide/chatgpt-vs-claude`,
+-     lastModified: new Date(),
+-      changFrequency: "monthly",
+-     priority: 0.8,
+-    },
+-    {
+-      url: `${siteConfig.url}/guide/ai-tools-for-students`,
+-      lastModified: new Date(),
+-      changgFrequency: "monthly",
+-     priority: 0.8,
+-    },
+-    {
+-      url: `${siteConfig.url}/guide/best-ai-for-freelance`,
+-      lastModified: new Date(),
+-      changgFrequency: "monthly",
+-     priority: 0.8,
+-    },
+-    {
+-      url: `${siteConfig.url}/guide/ai-blog-writing`,
+-      lastModified: new Date(),
+-      changgFrequency: "monthly",
+-     priority: 0.8,
+-    },
+-    {
+-      url: `${siteConfig.url}/guide/ai-tools-pricing`,
+-      lastModified: new Date(),
+-      changFrequency: "monthly",
+-     priority: 0.8,
+-    },
+-    {
+-      url: `${siteConfig.url}/guide/ai-english-learning`,
+-      lastModified: new Date(),
+-      changFrequency: "monthly",
+-     priority: 0.8,
+-    },
+-    {
+-      url: `${siteConfig.url}/guide/chatgpt-claude-gemini-comparison`,
+-     lastModified: new Date(),
+-      changFrequency: "monthly",
+-     priority: 0.8,
+-    },
+-    {
+-      url: `${siteConfig.url}/guide/ai-prompt-engineering`,
+-      lastModified: new Date(),
+-      changgFrequency: "monthly",
+-     priority: 0.8,
+-    },
+-    {
+-      url: `${siteConfig.url}/guide/ai-meeting-notes`,
+-      lastModified: new Date(),
+-      changFrequency: "monthly",
+-     priority: 0.8,
+-    },
+-    {
+-      url: `${siteConfig.url}/guide/ai-japanese-tools`,
+-     lastModified: new Date(),
+-      changFrequency: "monthly",
+-     priority: 0.8,
+-    },
+-    {
+-      url: `${siteConfig.url}/guide/ai-free-tools`,
+-      lastModified: new Date(),
+-      changFrequency: "monthly",
+-     priority: 0.8,
+-    },
+-    {
+-      url: `${siteConfig.url}/guide/best-ai-for-marketing`,
+-      lastModified: new Date(),
+-      changgFrequency: "monthly",
+-     priority: 0.8,
+-    },
+-    {
+-      url: `${siteConfig.url}/guide/ai-for-remote-work`,
+-      lastModified: new Date(),
+-      changgFrequency: "monthly",
+-     priority: 0.8,
+-    },
+-    {
+-      url: `${siteConfig.url}/guide/ai-for-designers`,
+-      lastModified: new Date(),
+-      changFrequency: "monthly",
+-     priority: 0.8,
+-    },(¬€€€€¸¸¹Õ¥‘•A…•Ì°(€€€€€¸¸¹…Ñ•½ÉåA…•Ì°(€€€€€¸¸¹Ñ½½±A…•Ì°(€€€€ì)‘¥™˜€´µ¥Ğ„½…ÁÀ½Ñ½½±Ì½mÍ±Õt½Á…”¹ÑÍàˆ½…ÁÀ½Ñ½½±Ì½mÍ±Õt½Á…”¹ÑÍà)¥¹‘•à€ØÌäÍ˜Á¸¸ĞÌİ˜Å‘€ÄÀÀØĞĞ(´´´„½…ÁÀ½Ñ½½±Ì½mÍ±Õt½Á…”¹ÑÍà(¬¬¬ˆ½…ÁÀ½Ñ½½±Ì½mÍ±Õt½Á…”¹ÑÍà) €´ÄÈ°Ü€¬ÄÈ°Ø ¥µÁ½ÉĞì(ô™É½´€ˆ¸¸¼¸¸½±¥ˆ½‘…Ñ„ˆì(¥µÁ½ÉĞìM¡…É•	ÕÑÑ½¹Ìô™É½´€ˆ¸¸¼¸¸½½µÁ½¹•¹ÑÌ½M¡…É•	ÕÑÑ½¹Ìˆì(¥µÁ½ÉĞìQÉ…­•‘™™¥±¥…Ñ•1¥¹¬ô™É½´€ˆ¸¸¼¸¸½½µÁ½¹•¹ÑÌ½QÉ…­•‘™™¥±¥…Ñ•1¥¹¬ˆì(µ¥µÁ½ÉĞìQ½½±5½¹•Ñ¥é…Ñ¥½¹	±½¬ô™É½´€ˆ¸¸¼¸¸½½µÁ½¹•¹ÑÌ½Q½½±5½¹•Ñ¥é…Ñ¥½¹	±½¬ˆì(€(•áÁ½ÉĞ™Õ¹Ñ¥½¸•¹•É…Ñ•MÑ…Ñ¥A…É…µÌ ¤ì(€€É•ÑÕÉ¸Ñ½½±Ì¹µ…À ¡Ñ½½°¤€ôø€¡ìÍ±ÕœèÑ½½°¹Í±Õœô¤¤ì) €´ÈäÄ°ä€¬ÈäÀ°Ø •áÁ½ÉĞ‘•™…Õ±Ğ…Íå¹Œ™Õ¹Ñ¥½¸Q½½±A…”¡ì(€€€€€€€€€€€ğ½½°ø(€€€€€€€€€ğ½Í•Ñ¥½¸ø(€(´€€€€€€€ì¼¨ƒÂ~:¼ƒÏ_³’âš.³–>;n+–2YQ¾ò#– ÄÔÇó¯¢¦ÏÒÃkó
+ã–Ç¦k¾ò$€¨½ô(´€€€€€€€€ñQ½½±5½¹•Ñ¥é…Ñ¥½¹	±½¬Ñ½½±M±ÕœõíÑ½½°¹Í±ÕôÑ½½±9…µ”õíÑ½½°¹¹…µ•ô€¼ø(´(€€€€€€€€ì¼¨™™¥±¥…Ñ”Q€¨½ô(€€€€€€€€€ñÍ•Ñ¥½¸±…ÍÍ9…µ”ô‰‰œµÉ…‘¥•¹ĞµÑ¼µÈ™É½´µÁÉ¥µ…Éäµ±¥¡ĞÑ¼µ‰…­É½Õ¹‰½É‘•È‰½É‘•ÈµÁÉ¥µ…ÉäÉ½Õ¹‘•´Éá°À´àµˆ´àÑ•áĞµ•¹Ñ•Èˆø(€€€€€€€€€€€ñ È±…ÍÍ9…µ”ô‰Ñ•áĞµá°™½¹Ğµ‰½±µˆ´Ìˆø)‘¥™˜€´µ¥Ğ„½ÁÉ½áä¹ÑÌˆ½ÁÉ½áä¹ÑÌ)¹•Ü™¥±”µ½‘”€ÄÀÀØĞĞ)¥¹‘•à€ÀÀÀÀÀÀÀ¸¸ÈÁ„ÙÌØ(´´´€½‘•Ø½¹Õ±°(¬¬¬ˆ½ÁÉ½áä¹ÑÌ) €´À°À€¬Ä°ÈÜ (­¥µÁ½ÉĞì9•áÑI•ÍÁ½¹Í”°ÑåÁ”9•áÑI•ÅÕ•ÍĞô™É½´€‰¹•áĞ½Í•ÉÙ•Èˆì(­¥µÁ½ÉĞì¥ÍI•Ù¥•İÁÁÉ½Ù•‘Õ¥‘•M±Õœô™É½´€ˆ¸½…ÁÀ½Õ¥‘”½É•Ñ¥É•‘Õ¥‘•Ìˆì(¬(­•áÁ½ÉĞ™Õ¹Ñ¥½¸ÁÉ½áä¡É•ÅÕ•ÍĞè9•áÑI•ÅÕ•ÍĞ¤ì(¬€½¹ÍĞìÁ…Ñ¡¹…µ”ô€ôÉ•ÅÕ•ÍĞ¹¹•áÑUÉ°ì(¬€½¹ÍĞÕ¥‘•5…Ñ €ôÁ…Ñ¡¹…µ”¹µ…Ñ  ½yp½Õ¥‘•p¼¡mx½t¬¥p¼ü¼¤ì(¬(¬€¥˜€ …Õ¥‘•5…Ñ ¤ì(¬€€€É•ÑÕÉ¸9•áÑI•ÍÁ½¹Í”¹¹•áĞ ¤ì(¬€ô(¬(¬€½¹ÍĞÍ±Õœ€ôÕ¥‘•5…Ñ¡lÅtì(¬(¬€¥˜€¡¥ÍI•Ù¥•İÁÁÉ½Ù•‘Õ¥‘•M±Õœ¡Í±Õœ¤¤ì(¬€€€É•ÑÕÉ¸9•áÑI•ÍÁ½¹Í”¹¹•áĞ ¤ì(¬€ô(¬(¬€½¹ÍĞ‘•ÍÑ¥¹…Ñ¥½¸€ôÉ•ÅÕ•ÍĞ¹¹•áÑUÉ°¹±½¹” ¤ì(¬€‘•ÍÑ¥¹…Ñ¥½¸¹Á…Ñ¡¹…µ”€ô€ˆ½Õ¥‘”ˆì(¬€‘•ÍÑ¥¹…Ñ¥½¸¹Í•…É €ô€ˆˆì(¬(¬€É•ÑÕÉ¸9•áÑI•ÍÁ½¹Í”¹É•‘¥É•Ğ¡‘•ÍÑ¥¹…Ñ¥½¸°€ÌÀà¤ì(­ô(¬(­•áÁ½ÉĞ½¹ÍĞ½¹™¥œ€ôì(¬€µ…Ñ¡•Èèlˆ½Õ¥‘”¼éÁ…Ñ ¨‰t°(­ôì(
