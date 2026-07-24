@@ -1,6 +1,8 @@
 // Unified affiliate/CTA click tracking for GA4.
 // Works as a no-op if gtag isn't loaded, so it's safe to use in any component.
 
+import { getOffer, offers } from "./offers";
+
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
@@ -9,6 +11,72 @@ declare global {
 }
 
 type EventParams = Record<string, string | number | boolean | undefined>;
+export type TrackedClickEventName =
+  | "affiliate_click"
+  | "outbound_click"
+  | "internal_referral_click";
+
+const SITE_ORIGIN = "https://ai-tools-navi.jp";
+const AFFILIATE_PROVIDERS = new Set([
+  "a8net",
+  "moshimo",
+  "rakuten-aff",
+  "valuecommerce",
+  "amazon-associates",
+]);
+const SISTER_SITE_HOSTS = ["toshi-navi.jp", "net-toolbox.jp"];
+
+function hostnameMatches(hostname: string, domain: string): boolean {
+  return hostname === domain || hostname.endsWith(`.${domain}`);
+}
+
+function parsedUrl(url: string): URL | null {
+  try {
+    return new URL(url, SITE_ORIGIN);
+  } catch {
+    return null;
+  }
+}
+
+function offerIdFromGoUrl(url: string): string | undefined {
+  const parsed = parsedUrl(url);
+  if (!parsed || parsed.origin !== SITE_ORIGIN) return undefined;
+
+  const match = parsed.pathname.match(/^\/go\/([^/]+)\/?$/);
+  return match ? decodeURIComponent(match[1]) : undefined;
+}
+
+/**
+ * Match offer-master URLs byte-for-byte. Do not remove, reorder, or normalize
+ * query parameters: ASP URLs are only attributed when the complete URL agrees.
+ */
+function offerFromExactRawUrl(url: string) {
+  return offers.find(
+    (offer) =>
+      url === offer.affiliate_url || url === offer.official_url,
+  );
+}
+
+function resolveTrackedDestination(href: string) {
+  const routeOfferId = offerIdFromGoUrl(href);
+  const routeOffer = routeOfferId ? getOffer(routeOfferId) : undefined;
+  const exactUrlOffer = routeOffer ? undefined : offerFromExactRawUrl(href);
+  const offer = routeOffer ?? exactUrlOffer;
+
+  return {
+    destination: routeOffer?.affiliate_url ?? href,
+    offer,
+    offerId: routeOfferId ?? exactUrlOffer?.id,
+  };
+}
+
+function isSisterSiteUrl(url: string): boolean {
+  const parsed = parsedUrl(url);
+  if (!parsed) return false;
+  return SISTER_SITE_HOSTS.some((domain) =>
+    hostnameMatches(parsed.hostname.toLowerCase(), domain),
+  );
+}
 
 /**
  * Fire a GA4 event. Falls back to dataLayer push if gtag isn't present.
@@ -32,13 +100,27 @@ export function trackEvent(name: string, params: EventParams = {}): void {
  */
 export function providerFromUrl(url: string): string {
   if (!url) return "unknown";
+  const parsed = parsedUrl(url);
   const u = url.toLowerCase();
-  if (u.includes("px.a8.net")) return "a8net";
-  if (u.includes("af.moshimo.com")) return "moshimo";
-  if (u.includes("hb.afl.rakuten.co.jp")) return "rakuten-aff";
-  if (u.includes("valuecommerce") || u.includes("vc.aforest.jp")) return "valuecommerce";
-  if (u.includes("amazon.co.jp/s?") || u.includes("amazon.co.jp/b?")) return "amazon-search";
-  if (u.includes("amazon.co.jp") || u.includes("amzn.to")) return "amazon-direct";
+  const hostname = parsed?.hostname.toLowerCase() ?? "";
+
+  if (hostnameMatches(hostname, "toshi-navi.jp")) return "toshi-navi";
+  if (hostnameMatches(hostname, "net-toolbox.jp")) return "net-toolbox";
+  if (hostname === "px.a8.net") return "a8net";
+  if (hostname === "af.moshimo.com") return "moshimo";
+  if (hostname === "hb.afl.rakuten.co.jp") return "rakuten-aff";
+  if (
+    hostname.endsWith(".valuecommerce.com") ||
+    hostname === "vc.aforest.jp"
+  )
+    return "valuecommerce";
+  if (
+    hostname === "amzn.to" ||
+    (hostnameMatches(hostname, "amazon.co.jp") &&
+      Boolean(parsed?.searchParams.get("tag")))
+  )
+    return "amazon-associates";
+  if (hostnameMatches(hostname, "amazon.co.jp")) return "amazon-direct";
   // Common AI tool vendor domains - mark as direct so we can see pure non-monetized traffic
   if (
     u.includes("openai.com") ||
@@ -57,22 +139,69 @@ export function providerFromUrl(url: string): string {
 }
 
 /**
- * Common handler for affiliate/outbound click events.
- * Attach to <a onClick={onAffiliateClick(...)}>.
+ * Classify the final destination rather than the component name.
+ * `/go/{offerId}` links are resolved through the offer master first.
  */
-export function onAffiliateClick(params: {
+export function trackedClickEventName(href: string): TrackedClickEventName {
+  const { destination } = resolveTrackedDestination(href);
+  if (isSisterSiteUrl(destination)) return "internal_referral_click";
+  if (AFFILIATE_PROVIDERS.has(providerFromUrl(destination))) {
+    return "affiliate_click";
+  }
+  return "outbound_click";
+}
+
+export function trackedLinkRel(href: string): string {
+  return trackedClickEventName(href) === "affiliate_click"
+    ? "nofollow sponsored noopener noreferrer"
+    : "noopener noreferrer";
+}
+
+export function trackLinkClick(params: {
   page?: string;
   position?: string;
   service?: string;
   href: string;
+  offerId?: string;
+  status?: string;
+}): void {
+  const resolved = resolveTrackedDestination(params.href);
+  const destination = resolved.destination;
+  const offer = params.offerId
+    ? getOffer(params.offerId)
+    : resolved.offer;
+
+  trackEvent(trackedClickEventName(params.href), {
+    page:
+      params.page ??
+      (typeof window === "undefined" ? "" : window.location.pathname),
+    position: params.position,
+    service: params.service ?? offer?.service,
+    offer_id: params.offerId ?? resolved.offerId,
+    provider: providerFromUrl(destination),
+    status: params.status ?? offer?.status,
+    url: destination.slice(0, 200),
+  });
+}
+
+/**
+ * Common handler for affiliate, official outbound, and sister-site clicks.
+ */
+export function onTrackedLinkClick(params: {
+  page?: string;
+  position?: string;
+  service?: string;
+  href: string;
+  offerId?: string;
+  status?: string;
 }) {
   return () => {
-    trackEvent("affiliate_click", {
-      page: params.page,
-      position: params.position,
-      service: params.service,
-      provider: providerFromUrl(params.href),
-      url: params.href.slice(0, 200),
-    });
+    trackLinkClick(params);
   };
 }
+
+/**
+ * Backward-compatible alias for older call sites.
+ * Event naming is still determined from the actual destination.
+ */
+export const onAffiliateClick = onTrackedLinkClick;

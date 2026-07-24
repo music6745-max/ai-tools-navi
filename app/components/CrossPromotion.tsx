@@ -1,3 +1,5 @@
+import { TrackedExternalLink } from "./TrackedAffiliateLink";
+
 export function CrossPromotion() {
   const toolCategories = [
     { name: "文字数カウント", icon: "📝" },
@@ -15,10 +17,10 @@ export function CrossPromotion() {
 
   return (
     <section className="mt-10 mb-6 max-w-4xl mx-auto px-4 space-y-3">
-      <a
-        href="https://net-toolbox.jp"
-        target="_blank"
-        rel="noopener noreferrer"
+      <TrackedExternalLink
+        href="https://net-toolbox.jp/?utm_source=ai-tools-navi&utm_medium=referral&utm_campaign=global_cross_promotion"
+        position="cross_promotion_net_toolbox"
+        service="ネットツールボックス"
         className="block bg-muted-bg border border-card-border rounded-lg p-5 hover:border-primary/40 hover:shadow-sm transition-all group"
       >
         <div className="flex items-center gap-2 mb-2">
@@ -41,11 +43,11 @@ export function CrossPromotion() {
             </span>
           ))}
         </div>
-      </a>
-      <a
-        href="https://toshi-navi.jp"
-        target="_blank"
-        rel="noopener noreferrer"
+      </TrackedExternalLink>
+      <TrackedExternalLink
+        href="https://toshi-navi.jp/?utm_source=ai-tools-navi&utm_medium=referral&utm_campaign=global_cross_promotion"
+        position="cross_promotion_toshi_navi"
+        service="投資ナビJP"
         className="block bg-muted-bg border border-card-border rounded-lg p-5 hover:border-primary/40 hover:shadow-sm transition-all group"
       >
         <div className="flex items-center gap-2 mb-2">
@@ -68,7 +70,7 @@ export function CrossPromotion() {
             </span>
           ))}
         </div>
-      </a>
+      </TrackedExternalLink>
     </section>
   );
 }

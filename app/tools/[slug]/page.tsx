@@ -57,9 +57,6 @@ export default async function ToolPage({
   const relatedTools = getRelatedTools(tool);
   const badge = getPricingBadge(tool.pricing);
 
-  // Generate stable ratingCount from slug hash
-  const ratingCount = tool.slug.split("").reduce((acc, c) => acc + c.charCodeAt(0), 0) % 150 + 80;
-
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -67,22 +64,6 @@ export default async function ToolPage({
     description: tool.description,
     applicationCategory: "AI Tool",
     url: tool.url,
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: tool.rating,
-      bestRating: 5,
-      worstRating: 1,
-      ratingCount,
-    },
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
-      url: tool.url,
-      priceValidUntil: "2027-12-31",
-      description: tool.pricing,
-    },
   };
 
   const breadcrumbJsonLd = {
@@ -160,8 +141,11 @@ export default async function ToolPage({
                 </span>
               </div>
               <p className="text-muted text-sm mb-2">{tool.nameEn}</p>
-              <p className="stars text-lg mb-3">
-                {renderStars(tool.rating)}{" "}
+              <p className="text-lg mb-3">
+                <span className="text-muted text-sm font-medium mr-2">
+                  編集部評価
+                </span>
+                <span className="stars">{renderStars(tool.rating)}</span>{" "}
                 <span className="text-muted text-sm ml-1">
                   ({tool.rating}/5.0)
                 </span>
@@ -335,9 +319,12 @@ export default async function ToolPage({
                       <span className="text-2xl">{rt.icon}</span>
                       <div>
                         <h3 className="font-bold">{rt.name}</h3>
-                        <span className="stars text-xs">
-                          {renderStars(rt.rating)}
-                        </span>
+                        <div className="text-xs text-muted">
+                          <span className="mr-1">編集部評価</span>
+                          <span className="stars">
+                            {renderStars(rt.rating)}
+                          </span>
+                        </div>
                       </div>
                       <span
                         className={`badge-${rtBadge.color} text-xs px-2 py-0.5 rounded-full ml-auto`}

@@ -1,5 +1,9 @@
 "use client";
-import { onAffiliateClick } from "../lib/tracking";
+import { usePathname } from "next/navigation";
+import {
+  onTrackedLinkClick,
+  trackedLinkRel,
+} from "../lib/tracking";
 
 interface ServiceRow {
   name: string;
@@ -16,6 +20,9 @@ interface ComparisonTableCTAProps {
 }
 
 export function ComparisonTableCTA({ services, page }: ComparisonTableCTAProps) {
+  const pathname = usePathname();
+  const trackingPage = page ?? pathname;
+
   return (
     <div>
       {/* Desktop table */}
@@ -59,9 +66,9 @@ export function ComparisonTableCTA({ services, page }: ComparisonTableCTAProps) 
                   <a
                     href={svc.url}
                     target="_blank"
-                    rel="nofollow sponsored noopener noreferrer"
-                    onClick={onAffiliateClick({
-                      page,
+                    rel={trackedLinkRel(svc.url)}
+                    onClick={onTrackedLinkClick({
+                      page: trackingPage,
                       position: `comparison_table_${i + 1}`,
                       service: svc.name,
                       href: svc.url,
@@ -97,9 +104,9 @@ export function ComparisonTableCTA({ services, page }: ComparisonTableCTAProps) 
             <a
               href={svc.url}
               target="_blank"
-              rel="nofollow sponsored noopener noreferrer"
-              onClick={onAffiliateClick({
-                page,
+              rel={trackedLinkRel(svc.url)}
+              onClick={onTrackedLinkClick({
+                page: trackingPage,
                 position: `comparison_table_mobile_${i + 1}`,
                 service: svc.name,
                 href: svc.url,

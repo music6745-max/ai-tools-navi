@@ -1,7 +1,10 @@
 "use client";
 import type { ReactNode } from "react";
 import { getOffer } from "../lib/offers";
-import { trackEvent, providerFromUrl } from "../lib/tracking";
+import {
+  onTrackedLinkClick,
+  trackedLinkRel,
+} from "../lib/tracking";
 
 /**
  * offer master (offers.ts) の id を経由して GA4 にクリックを自動計測するリンク。
@@ -24,23 +27,20 @@ export function TrackedOfferLink({
   if (!offer) {
     return <span className={className}>{children}</span>;
   }
-  const onClick = () => {
-    trackEvent("affiliate_click", {
-      page: page ?? "",
-      position: position ?? "",
-      service: offer.service,
-      offer_id: offer.id,
-      provider: offer.provider === "direct" ? "direct" : providerFromUrl(offer.affiliate_url),
-      status: offer.status,
-      url: offer.affiliate_url.slice(0, 200),
-    });
-  };
+  const href = `/go/${encodeURIComponent(offer.id)}`;
   return (
     <a
-      href={offer.affiliate_url}
+      href={href}
       target="_blank"
-      rel="nofollow sponsored noopener noreferrer"
-      onClick={onClick}
+      rel={trackedLinkRel(href)}
+      onClick={onTrackedLinkClick({
+        href,
+        page,
+        position,
+        service: offer.service,
+        offerId: offer.id,
+        status: offer.status,
+      })}
       className={className}
       data-offer-id={offer.id}
       data-offer-status={offer.status}
