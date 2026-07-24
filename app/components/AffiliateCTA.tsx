@@ -1,7 +1,9 @@
 "use client";
 
-import { getOffer } from "../lib/offers";
-import { providerFromUrl, trackEvent } from "../lib/tracking";
+import {
+  onTrackedLinkClick,
+  trackedLinkRel,
+} from "../lib/tracking";
 
 interface AffiliateCTAProps {
   serviceName: string;
@@ -11,45 +13,6 @@ interface AffiliateCTAProps {
   color: "green" | "blue" | "purple" | "red" | "orange" | "yellow" | "indigo";
   page?: string;
   position?: string;
-}
-
-function offerIdFromGoUrl(url: string): string | undefined {
-  const match = url.match(/^\/go\/([^/?#]+)/);
-  return match ? decodeURIComponent(match[1]) : undefined;
-}
-
-function currentPage(page?: string): string {
-  if (page) return page;
-  if (typeof window === "undefined") return "";
-  return window.location.pathname;
-}
-
-function trackAffiliateClick({
-  serviceName,
-  url,
-  page,
-  position,
-}: {
-  serviceName: string;
-  url: string;
-  page?: string;
-  position: string;
-}) {
-  const offerId = offerIdFromGoUrl(url);
-  const offer = offerId ? getOffer(offerId) : undefined;
-  const trackedUrl = offer?.affiliate_url ?? url;
-  const provider =
-    offer?.provider === "direct" ? "direct" : providerFromUrl(trackedUrl);
-
-  trackEvent("affiliate_click", {
-    page: currentPage(page),
-    position,
-    service: offer?.service ?? serviceName,
-    offer_id: offer?.id ?? offerId,
-    provider,
-    status: offer?.status,
-    url: trackedUrl.slice(0, 200),
-  });
 }
 
 const colorStyles: Record<
@@ -123,8 +86,12 @@ export function AffiliateCTA({
   position = "affiliate_cta",
 }: AffiliateCTAProps) {
   const styles = colorStyles[color] || colorStyles.blue;
-  const onClick = () =>
-    trackAffiliateClick({ serviceName, url, page, position });
+  const onClick = onTrackedLinkClick({
+    service: serviceName,
+    href: url,
+    page,
+    position,
+  });
 
   return (
     <div
@@ -147,7 +114,7 @@ export function AffiliateCTA({
         <a
           href={url}
           target="_blank"
-          rel="nofollow sponsored noopener noreferrer"
+          rel={trackedLinkRel(url)}
           onClick={onClick}
           className={`inline-block ${styles.button} text-white px-10 py-4 rounded-full text-base font-bold shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-200`}
         >
@@ -208,15 +175,13 @@ export function AffiliateCTAMulti({
             <a
               href={link.url}
               target="_blank"
-              rel="nofollow sponsored noopener noreferrer"
-              onClick={() =>
-                trackAffiliateClick({
-                  serviceName: link.name,
-                  url: link.url,
-                  page,
-                  position,
-                })
-              }
+              rel={trackedLinkRel(link.url)}
+              onClick={onTrackedLinkClick({
+                service: link.name,
+                href: link.url,
+                page,
+                position,
+              })}
               className="inline-block bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-400 text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-200 shrink-0"
             >
               詳細を見る &rarr;

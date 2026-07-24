@@ -57,9 +57,6 @@ export default async function ToolPage({
   const relatedTools = getRelatedTools(tool);
   const badge = getPricingBadge(tool.pricing);
 
-  // Generate stable ratingCount from slug hash
-  const ratingCount = tool.slug.split("").reduce((acc, c) => acc + c.charCodeAt(0), 0) % 150 + 80;
-
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -67,22 +64,6 @@ export default async function ToolPage({
     description: tool.description,
     applicationCategory: "AI Tool",
     url: tool.url,
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: tool.rating,
-      bestRating: 5,
-      worstRating: 1,
-      ratingCount,
-    },
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
-      url: tool.url,
-      priceValidUntil: "2027-12-31",
-      description: tool.pricing,
-    },
   };
 
   const breadcrumbJsonLd = {

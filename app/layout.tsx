@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Link from "next/link";
 import { siteConfig, categories } from "./lib/data";
 import { CrossPromotion } from "./components/CrossPromotion";
+import { TrackedExternalLink } from "./components/TrackedAffiliateLink";
 import { ThemeToggle } from "./components/ThemeToggle";
 import "./globals.css";
 
@@ -311,24 +312,24 @@ export default function RootLayout({
                 <h4 className="font-bold mb-3 mt-6">姉妹サイト</h4>
                 <ul className="space-y-2">
                   <li>
-                    <a
+                    <TrackedExternalLink
                       href="https://net-toolbox.jp"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      position="footer_net_toolbox"
+                      service="ネットツールボックス"
                       className="text-sm text-muted hover:text-primary transition-colors"
                     >
                       🛠️ ネットツールボックス - 無料Web便利ツール
-                    </a>
+                    </TrackedExternalLink>
                   </li>
                   <li>
-                    <a
+                    <TrackedExternalLink
                       href="https://toshi-navi.jp"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      position="footer_toshi_navi"
+                      service="投資ナビJP"
                       className="text-sm text-muted hover:text-primary transition-colors"
                     >
                       💰 投資ナビJP - 新NISA/iDeCo/投資の比較
-                    </a>
+                    </TrackedExternalLink>
                   </li>
                 </ul>
               </div>

@@ -10,6 +10,7 @@ import {
   getPricingBadge,
 } from "./lib/data";
 import { ToolSearch } from "./components/ToolSearch";
+import { TrackedExternalLink } from "./components/TrackedAffiliateLink";
 
 export const metadata: Metadata = {
   title: `${siteConfig.name} - AIツール比較・おすすめガイド【2026年最新】`,
@@ -359,22 +360,22 @@ export default function Home() {
               </div>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
-              <a href="https://net-toolbox.jp/tools/qr-code" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition text-sm" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
+              <TrackedExternalLink href="https://net-toolbox.jp/tools/qr-code" page="/" position="home_net_toolbox_qr" service="ネットツールボックス QRコード作成" className="rounded-lg p-3 text-center hover:opacity-90 transition text-sm" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
                 📱 QRコード作成
-              </a>
-              <a href="https://net-toolbox.jp/tools/password-generator" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition text-sm" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
+              </TrackedExternalLink>
+              <TrackedExternalLink href="https://net-toolbox.jp/tools/password-generator" page="/" position="home_net_toolbox_password" service="ネットツールボックス パスワード生成" className="rounded-lg p-3 text-center hover:opacity-90 transition text-sm" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
                 🔐 パスワード生成
-              </a>
-              <a href="https://net-toolbox.jp/tools/json-formatter" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition text-sm" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
+              </TrackedExternalLink>
+              <TrackedExternalLink href="https://net-toolbox.jp/tools/json-formatter" page="/" position="home_net_toolbox_json" service="ネットツールボックス JSON整形" className="rounded-lg p-3 text-center hover:opacity-90 transition text-sm" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
                 📋 JSON整形
-              </a>
-              <a href="https://net-toolbox.jp/tools/character-count" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition text-sm" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
+              </TrackedExternalLink>
+              <TrackedExternalLink href="https://net-toolbox.jp/tools/character-count" page="/" position="home_net_toolbox_character_count" service="ネットツールボックス 文字数カウント" className="rounded-lg p-3 text-center hover:opacity-90 transition text-sm" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
                 🔢 文字数カウント
-              </a>
+              </TrackedExternalLink>
             </div>
-            <a href="https://net-toolbox.jp" target="_blank" rel="noopener noreferrer" className="inline-block px-5 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition" style={{ background: "#ffffff", color: "#2563eb" }}>
+            <TrackedExternalLink href="https://net-toolbox.jp" page="/" position="home_net_toolbox_main" service="ネットツールボックス" className="inline-block px-5 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition" style={{ background: "#ffffff", color: "#2563eb" }}>
               ネットツールボックスを見る →
-            </a>
+            </TrackedExternalLink>
           </div>
         </div>
       </section>
@@ -391,22 +392,22 @@ export default function Home() {
               </div>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
-              <a href="https://toshi-navi.jp/guide/nisa-broker-ranking-2026" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition text-sm" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
+              <TrackedExternalLink href="https://toshi-navi.jp/guide/nisa-broker-ranking-2026" page="/" position="home_toshi_navi_nisa" service="投資ナビJP 新NISA証券TOP5" className="rounded-lg p-3 text-center hover:opacity-90 transition text-sm" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
                 💰 新NISA証券TOP5
-              </a>
-              <a href="https://toshi-navi.jp/guide/side-business-ranking-2026" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition text-sm" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
+              </TrackedExternalLink>
+              <TrackedExternalLink href="https://toshi-navi.jp/guide/side-business-ranking-2026" page="/" position="home_toshi_navi_side_business" service="投資ナビJP 副業ランキング" className="rounded-lg p-3 text-center hover:opacity-90 transition text-sm" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
                 💼 副業ランキング
-              </a>
-              <a href="https://toshi-navi.jp/guide/furusato-tax-guide-2026" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition text-sm" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
+              </TrackedExternalLink>
+              <TrackedExternalLink href="https://toshi-navi.jp/guide/furusato-tax-guide-2026" page="/" position="home_toshi_navi_furusato_tax" service="投資ナビJP ふるさと納税" className="rounded-lg p-3 text-center hover:opacity-90 transition text-sm" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
                 🎁 ふるさと納税
-              </a>
-              <a href="https://toshi-navi.jp/tools/nisa-simulator" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition text-sm" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
+              </TrackedExternalLink>
+              <TrackedExternalLink href="https://toshi-navi.jp/tools/nisa-simulator" page="/" position="home_toshi_navi_nisa_simulator" service="投資ナビJP NISAシミュレーター" className="rounded-lg p-3 text-center hover:opacity-90 transition text-sm" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
                 📈 NISAシミュ
-              </a>
+              </TrackedExternalLink>
             </div>
-            <a href="https://toshi-navi.jp" target="_blank" rel="noopener noreferrer" className="inline-block px-5 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition" style={{ background: "#ffffff", color: "#059669" }}>
+            <TrackedExternalLink href="https://toshi-navi.jp" page="/" position="home_toshi_navi_main" service="投資ナビJP" className="inline-block px-5 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition" style={{ background: "#ffffff", color: "#059669" }}>
               投資ナビJPを見る →
-            </a>
+            </TrackedExternalLink>
           </div>
         </div>
       </section>

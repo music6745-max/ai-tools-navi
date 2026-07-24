@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { siteConfig, getToolBySlug, renderStars } from "../../lib/data";
 import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
+import { TrackedExternalLink } from "../../components/TrackedAffiliateLink";
 
 export const metadata: Metadata = {
   title: "法律業界向けAIおすすめ7選【2026年最新】徹底比較｜選び方も解説",
@@ -210,21 +211,14 @@ export default function AIForLegalPage() {
             services={[
               {
                 name: "税理士ドットコム",
-                url: "https://px.a8.net/svt/ejp?a8mat=4B1O1P+C9KCY2+3XTG+60WN5",
+                url: "/go/zeirishi-dotcom",
                 highlight: "登録税理士6,500名以上・無料マッチング。インボイス/電帳法/契約書の税務確認に",
                 price: "相談無料（成約報酬型）",
                 badge: "高単価導線",
               },
               {
-                name: "freee会計",
-                url: "https://px.a8.net/svt/ejp?a8mat=4B1O1P+C9KCY2+3XTG+60WN5",
-                highlight: "AI仕訳・インボイス・電帳法対応のクラウド会計。個人事業主〜法人まで",
-                price: "月額1,078円〜",
-                badge: "AI会計",
-              },
-              {
                 name: "保険マンモス（法人向けFP）",
-                url: "https://px.a8.net/svt/ejp?a8mat=4B1O1P+526ONU+5SIO+5YJRM",
+                url: "/go/hoken-mammoth",
                 highlight: "役員退職金・法人保険の無料FP相談。契約書レビュー前の資金繰り設計に",
                 price: "相談無料",
                 badge: "法人向け",
@@ -233,13 +227,13 @@ export default function AIForLegalPage() {
           />
           <p className="text-xs text-muted mt-3">
             AIで効率化したあとの意思決定は、
-            <Link href="https://toshi-navi.jp/guide/invoice-system-complete-guide" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
+            <TrackedExternalLink href="https://toshi-navi.jp/guide/invoice-system-complete-guide" page="/guide/ai-for-legal" position="legal_inline_invoice" service="投資ナビJP インボイス制度完全ガイド" className="text-primary hover:underline">
               インボイス制度完全ガイド
-            </Link>
+            </TrackedExternalLink>
             ・
-            <Link href="https://toshi-navi.jp/guide/denshi-chobo-preservation-guide" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
+            <TrackedExternalLink href="https://toshi-navi.jp/guide/denshi-chobo-preservation-guide" page="/guide/ai-for-legal" position="legal_inline_electronic_books" service="投資ナビJP 電子帳簿保存法ガイド" className="text-primary hover:underline">
               電子帳簿保存法ガイド
-            </Link>
+            </TrackedExternalLink>
             も参考に。
           </p>
         </section>
@@ -342,17 +336,18 @@ export default function AIForLegalPage() {
               { slug: "denshi-chobo-preservation-guide", title: "電子帳簿保存法ガイド", desc: "2024年本格施行の対応" },
               { slug: "foreign-tax-credit-guide", title: "外国税額控除の申告ガイド", desc: "米国株・ETF配当の二重課税調整" },
             ].map((g) => (
-              <a
+              <TrackedExternalLink
                 key={g.slug}
                 href={`https://toshi-navi.jp/guide/${g.slug}?utm_source=ai-tools-navi&utm_medium=referral&utm_campaign=guide_ai-for-legal`}
-                target="_blank"
-                rel="noopener noreferrer"
+                page="/guide/ai-for-legal"
+                position={`legal_sister_guide_${g.slug}`}
+                service={`投資ナビJP ${g.title}`}
                 className="block p-3 rounded-lg bg-background border border-card-border hover:border-primary transition-colors"
               >
                 <div className="text-[10px] text-muted mb-1">投資ナビJP</div>
                 <div className="font-bold text-sm mb-1">{g.title}</div>
                 <div className="text-xs text-muted">{g.desc}</div>
-              </a>
+              </TrackedExternalLink>
             ))}
           </div>
         </section>
