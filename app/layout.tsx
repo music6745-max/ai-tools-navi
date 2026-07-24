@@ -313,7 +313,7 @@ export default function RootLayout({
                 <ul className="space-y-2">
                   <li>
                     <TrackedExternalLink
-                      href="https://net-toolbox.jp"
+                      href="https://net-toolbox.jp/?utm_source=ai-tools-navi&utm_medium=referral&utm_campaign=global_footer"
                       position="footer_net_toolbox"
                       service="ネットツールボックス"
                       className="text-sm text-muted hover:text-primary transition-colors"
@@ -323,7 +323,7 @@ export default function RootLayout({
                   </li>
                   <li>
                     <TrackedExternalLink
-                      href="https://toshi-navi.jp"
+                      href="https://toshi-navi.jp/?utm_source=ai-tools-navi&utm_medium=referral&utm_campaign=global_footer"
                       position="footer_toshi_navi"
                       service="投資ナビJP"
                       className="text-sm text-muted hover:text-primary transition-colors"

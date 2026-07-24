@@ -1,7 +1,7 @@
 // Unified affiliate/CTA click tracking for GA4.
 // Works as a no-op if gtag isn't loaded, so it's safe to use in any component.
 
-import { getOffer } from "./offers";
+import { getOffer, offers } from "./offers";
 
 declare global {
   interface Window {
@@ -46,14 +46,27 @@ function offerIdFromGoUrl(url: string): string | undefined {
   return match ? decodeURIComponent(match[1]) : undefined;
 }
 
+/**
+ * Match offer-master URLs byte-for-byte. Do not remove, reorder, or normalize
+ * query parameters: ASP URLs are only attributed when the complete URL agrees.
+ */
+function offerFromExactRawUrl(url: string) {
+  return offers.find(
+    (offer) =>
+      url === offer.affiliate_url || url === offer.official_url,
+  );
+}
+
 function resolveTrackedDestination(href: string) {
-  const offerId = offerIdFromGoUrl(href);
-  const offer = offerId ? getOffer(offerId) : undefined;
+  const routeOfferId = offerIdFromGoUrl(href);
+  const routeOffer = routeOfferId ? getOffer(routeOfferId) : undefined;
+  const exactUrlOffer = routeOffer ? undefined : offerFromExactRawUrl(href);
+  const offer = routeOffer ?? exactUrlOffer;
 
   return {
-    destination: offer?.affiliate_url ?? href,
+    destination: routeOffer?.affiliate_url ?? href,
     offer,
-    offerId,
+    offerId: routeOfferId ?? exactUrlOffer?.id,
   };
 }
 

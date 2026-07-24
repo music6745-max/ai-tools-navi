@@ -227,11 +227,11 @@ export default function AIForLegalPage() {
           />
           <p className="text-xs text-muted mt-3">
             AIで効率化したあとの意思決定は、
-            <TrackedExternalLink href="https://toshi-navi.jp/guide/invoice-system-complete-guide" page="/guide/ai-for-legal" position="legal_inline_invoice" service="投資ナビJP インボイス制度完全ガイド" className="text-primary hover:underline">
+            <TrackedExternalLink href="https://toshi-navi.jp/guide/invoice-system-complete-guide?utm_source=ai-tools-navi&utm_medium=referral&utm_campaign=guide_ai-for-legal" page="/guide/ai-for-legal" position="legal_inline_invoice" service="投資ナビJP インボイス制度完全ガイド" className="text-primary hover:underline">
               インボイス制度完全ガイド
             </TrackedExternalLink>
             ・
-            <TrackedExternalLink href="https://toshi-navi.jp/guide/denshi-chobo-preservation-guide" page="/guide/ai-for-legal" position="legal_inline_electronic_books" service="投資ナビJP 電子帳簿保存法ガイド" className="text-primary hover:underline">
+            <TrackedExternalLink href="https://toshi-navi.jp/guide/denshi-chobo-preservation-guide?utm_source=ai-tools-navi&utm_medium=referral&utm_campaign=guide_ai-for-legal" page="/guide/ai-for-legal" position="legal_inline_electronic_books" service="投資ナビJP 電子帳簿保存法ガイド" className="text-primary hover:underline">
               電子帳簿保存法ガイド
             </TrackedExternalLink>
             も参考に。

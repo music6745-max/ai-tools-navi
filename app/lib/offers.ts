@@ -69,10 +69,11 @@ export const offers: Offer[] = [
     id: "hoken-mammoth",
     service: "保険マンモス（FP相談）",
     provider: "a8net",
-    payout_yen: 10000,
+    payout_yen: 11278,
     official_url: "https://hoken-mammoth.com/",
     affiliate_url: "https://px.a8.net/svt/ejp?a8mat=4B1O1P+526ONU+5SIO+5YJRM",
     status: "active",
+    note: "2026-04-27 A8管理画面で実機確認: 新規面談11,278円（A8プログラム 25-0901）。money-naviと同一の完全一致URL。",
     category: "business",
   },
 

@@ -18,7 +18,7 @@ export function CrossPromotion() {
   return (
     <section className="mt-10 mb-6 max-w-4xl mx-auto px-4 space-y-3">
       <TrackedExternalLink
-        href="https://net-toolbox.jp"
+        href="https://net-toolbox.jp/?utm_source=ai-tools-navi&utm_medium=referral&utm_campaign=global_cross_promotion"
         position="cross_promotion_net_toolbox"
         service="ネットツールボックス"
         className="block bg-muted-bg border border-card-border rounded-lg p-5 hover:border-primary/40 hover:shadow-sm transition-all group"
@@ -45,7 +45,7 @@ export function CrossPromotion() {
         </div>
       </TrackedExternalLink>
       <TrackedExternalLink
-        href="https://toshi-navi.jp"
+        href="https://toshi-navi.jp/?utm_source=ai-tools-navi&utm_medium=referral&utm_campaign=global_cross_promotion"
         position="cross_promotion_toshi_navi"
         service="投資ナビJP"
         className="block bg-muted-bg border border-card-border rounded-lg p-5 hover:border-primary/40 hover:shadow-sm transition-all group"
