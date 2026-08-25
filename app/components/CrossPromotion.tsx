@@ -31,7 +31,7 @@ export function CrossPromotion() {
           <span className="text-xs text-muted ml-auto">姉妹サイト</span>
         </div>
         <p className="text-xs text-muted leading-relaxed mb-3">
-          文字数カウント・QRコード作成・パスワード生成など300以上の無料ツール。登録不要・ブラウザ完結で安心。
+          文字数カウント・QRコード作成・パスワード生成など厳選250ツール。登録不要・ブラウザ完結で安心。
         </p>
         <div className="flex flex-wrap gap-2">
           {toolCategories.map((cat) => (
