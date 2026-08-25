@@ -98,7 +98,7 @@ export default function Home() {
           人気のAIツール
         </h2>
         <p className="text-muted text-center mb-10">
-          ユーザー評価の高いおすすめAIツールをピックアップ
+          編集部が機能・使いやすさ・料金を確認した注目AIツールを掲載
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {topTools.map((tool) => {
@@ -114,8 +114,8 @@ export default function Home() {
                     <span className="text-3xl">{tool.icon}</span>
                     <div>
                       <h3 className="font-bold text-lg">{tool.name}</h3>
-                      <p className="stars text-sm">
-                        {renderStars(tool.rating)}
+                      <p className="text-xs text-muted">
+                        編集部評価 <span className="stars text-sm">{renderStars(tool.rating)}</span>
                       </p>
                     </div>
                   </div>
@@ -356,7 +356,7 @@ export default function Home() {
               <span className="text-4xl">🛠️</span>
               <div>
                 <h2 className="text-xl font-bold" style={{ color: "#ffffff" }}>無料Webツールもチェック</h2>
-                <p className="text-sm" style={{ color: "rgba(255,255,255,0.8)" }}>姉妹サイト「ネットツールボックス」で400以上の便利ツールを公開中</p>
+                <p className="text-sm" style={{ color: "rgba(255,255,255,0.8)" }}>姉妹サイト「ネットツールボックス」で厳選250ツールを公開中</p>
               </div>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
