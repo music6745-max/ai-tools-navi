@@ -146,7 +146,7 @@ export default function ComparePage() {
               >
                 <span className="text-4xl block mb-3">{tool.icon}</span>
                 <h2 className="text-xl font-bold mb-1">{tool.name}</h2>
-                <p className="stars mb-2">{renderStars(tool.rating)}</p>
+                <p className="mb-2 text-sm text-muted">編集部評価 <span className="stars">{renderStars(tool.rating)}</span></p>
                 <span
                   className={`badge-${badge.color} text-sm px-3 py-1 rounded-full`}
                 >
@@ -185,7 +185,7 @@ export default function ComparePage() {
               </thead>
               <tbody>
                 <tr>
-                  <td className="font-medium">総合評価</td>
+                  <td className="font-medium">編集部評価</td>
                   {compareTools.map((tool) => (
                     <td key={tool.slug} className="text-center">
                       <span className="stars">{renderStars(tool.rating)}</span>

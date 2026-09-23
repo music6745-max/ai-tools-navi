@@ -196,8 +196,8 @@ export default function Home() {
                           <span className="text-2xl">{tool.icon}</span>
                           <div>
                             <h4 className="font-bold text-sm">{tool.name}</h4>
-                            <span className="stars text-xs">
-                              {renderStars(tool.rating)}
+                            <span className="text-xs text-muted">
+                              編集部評価 <span className="stars">{renderStars(tool.rating)}</span>
                             </span>
                           </div>
                           <span
