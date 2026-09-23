@@ -110,7 +110,7 @@ export default async function CategoryPage({
                   <span className="text-3xl">{tool.icon}</span>
                   <div>
                     <h2 className="font-bold text-lg">{tool.name}</h2>
-                    <p className="stars text-sm">{renderStars(tool.rating)}</p>
+                    <p className="text-sm text-muted">編集部評価 <span className="stars">{renderStars(tool.rating)}</span></p>
                   </div>
                 </div>
                 <span

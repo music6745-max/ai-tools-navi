@@ -198,7 +198,7 @@ export default function AIForHealthcarePage() {
           <p className="text-sm text-muted mb-4">ヘルスケア業界でキャリアアップを目指す方向けの、業界特化型エージェントです。</p>
           <ComparisonTableCTA
             services={[
-              { name: "ファルマスタッフ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXL+95U5WY+276A+63OYA", highlight: "薬剤師転職専門・業界トップクラスの求人数", price: "登録無料", badge: "薬剤師特化" },
+              { name: "ファルマスタッフ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXL+95U5WY+276A+63OYA", highlight: "薬剤師向けの転職支援サービス", price: "登録無料", badge: "薬剤師特化" },
             ]}
           />
         </section>
