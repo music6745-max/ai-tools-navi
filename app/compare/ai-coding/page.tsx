@@ -214,6 +214,27 @@ export default function CompareCodingPage() {
           </div>
         </section>
 
+        <section
+          data-experiment-entry="opp_claude_code_repo_audit"
+          className="mb-12 rounded-2xl border border-card-border bg-card-bg p-6 md:p-8"
+        >
+          <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+            <div className="max-w-2xl">
+              <p className="text-xs font-bold text-primary">AI生成コードで開発が止まったチームへ</p>
+              <h2 className="mt-2 text-xl font-bold">ツール比較では解決しない詰まりを4時間で切り分け</h2>
+              <p className="mt-2 text-sm leading-relaxed text-muted">
+                再現手順、重要不具合3件までの修正または修正案、テスト結果、デプロイ準備をまとめる初回スプリントです。
+              </p>
+            </div>
+            <Link
+              href="/services/claude-code-rescue"
+              className="inline-flex min-h-11 shrink-0 items-center justify-center rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-primary-hover"
+            >
+              29,800円の範囲を見る
+            </Link>
+          </div>
+        </section>
+
         {/* Other comparisons */}
         <section className="text-center">
           <h2 className="text-xl font-bold mb-4">他の比較も見る</h2>
@@ -232,3 +253,4 @@ export default function CompareCodingPage() {
     </>
   );
 }
+
