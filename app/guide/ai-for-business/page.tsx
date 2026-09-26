@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { siteConfig } from "../../lib/data";
-import { AffiliateCTAMulti } from "../../components/AffiliateCTA";
+import { RevenueReferralExperiment } from "../../components/RevenueReferralExperiment";
 
 export const metadata: Metadata = {
   title: "ビジネス向けAIおすすめ10選【2026年最新】徹底比較｜選び方も解説",
@@ -194,14 +194,18 @@ export default function AIForBusinessPage() {
           </ul>
         </section>
 
-        <AffiliateCTAMulti
-          title="AI×ビジネスに役立つクラウド会計ソフト"
-          description="AIツールと合わせて、経理・会計業務も効率化しましょう。"
-          links={[
-            { name: "弥生シリーズ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", badge: "定番", description: "確定率91%・シェアNo.1" },
-            { name: "freee会計", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", badge: "クラウド", description: "AI自動仕訳・スマホ対応" }
-          ]}
-        />
+        {process.env.NEXT_PUBLIC_AI_BUSINESS_HOSTING_EXPERIMENT !== "false" && (
+          <RevenueReferralExperiment
+            experimentId="ai_business_hosting_20260926"
+            page="guide_ai-for-business"
+            position="exp.ai_business_hosting.v1.after_summary"
+            href="https://net-toolbox.jp/guide/rental-server-comparison?utm_source=ai-tools-navi&utm_medium=internal_referral&utm_campaign=exp_ai_business_hosting_20260926"
+            funnelId="toolbox-conoha-funnel"
+            title="AIで作ったコンテンツを自分のサイトで公開する"
+            description="ブログやオウンドメディアに移す段階の方向けに、WordPress対応サーバーの料金と条件を比較します。"
+            buttonLabel="収益化用サーバーを比較する"
+          />
+        )}
 
         {/* CTA */}
         <section className="bg-gradient-to-r from-primary-light to-background border border-primary rounded-2xl p-8 text-center">

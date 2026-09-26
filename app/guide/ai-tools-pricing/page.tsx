@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { siteConfig, getToolBySlug, renderStars, getPricingBadge } from "../../lib/data";
-import { ComparisonTableCTA } from "../../components/ComparisonTableCTA";
+import { RevenueReferralExperiment } from "../../components/RevenueReferralExperiment";
 
 export const metadata: Metadata = {
   title: "料金比較AIおすすめ7選【2026年最新】徹底比較｜選び方も解説",
@@ -294,18 +294,18 @@ export default function AIToolsPricingPage() {
           </div>
         </section>
 
-        {/* Affiliate Comparison Table CTA */}
-        <section className="mb-8">
-          <h2 className="text-xl font-bold mb-4">AIを使いこなす土台を作りたい方へ</h2>
-          <p className="text-sm text-muted mb-4">料金面だけでなく、プログラミングや業務活用の基礎を学んでおくと、AIへの投資対効果が一気に上がります。</p>
-          <ComparisonTableCTA
-            services={[
-              { name: "SkillHacks（スキルハックス）", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4DRW36+4K3S+5YJRM", highlight: "業界最安値・動画＋質問し放題", price: "買い切り69,800円", badge: "業界最安値" },
-              { name: "Winスクール", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4D6GHE+529E+5ZMCH", highlight: "全国展開・個人レッスンで挫折しない", price: "コース別", badge: "全国展開" },
-              { name: "Python Winner（Winスクール）", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4EDBOY+529E+HW2Q9", highlight: "AI・データ分析特化のPython個人レッスン", price: "コース別", badge: "AI特化" },
-            ]}
+        {process.env.NEXT_PUBLIC_AI_PRICING_SKILLHACKS_EXPERIMENT !== "false" && (
+          <RevenueReferralExperiment
+            experimentId="ai_pricing_skillhacks_20260926"
+            page="guide_ai-tools-pricing"
+            position="exp.ai_pricing_skillhacks.v1.after_free_tools"
+            href="https://net-toolbox.jp/guide/programming-school-comparison?utm_source=ai-tools-navi&utm_medium=internal_referral&utm_campaign=exp_ai_pricing_skillhacks_20260926"
+            funnelId="toolbox-skillhacks-funnel"
+            title="独学で詰まった場合の学習手段を比較する"
+            description="有料講座が必要かを判断するために、独学・オンライン講座・教室の特徴と最新条件を比較できます。"
+            buttonLabel="プログラミング学習を比較する"
           />
-        </section>
+        )}
 
         {/* CTA */}
         <section className="bg-gradient-to-r from-primary-light to-background border border-primary rounded-2xl p-8 text-center">
