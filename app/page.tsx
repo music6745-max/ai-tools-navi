@@ -92,6 +92,29 @@ export default function Home() {
         </div>
       </section>
 
+      <section
+        data-experiment-entry="opp_app_launch_qa"
+        className="border-y border-card-border bg-card-bg"
+      >
+        <div className="mx-auto grid max-w-6xl gap-5 px-4 py-8 md:grid-cols-[1fr_auto] md:items-center">
+          <div>
+            <p className="text-xs font-bold text-primary">AIで作ったWebアプリを公開する前に</p>
+            <h2 className="mt-2 text-xl font-bold md:text-2xl">
+              PC・スマホの重要導線10件を、29,800円で第三者確認
+            </h2>
+            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted">
+              再現手順、重要度付き不具合一覧、画面記録、修正後の再テスト結果までまとめる公開前QAスプリントです。
+            </p>
+          </div>
+          <Link
+            href="/services/app-launch-qa"
+            className="inline-flex min-h-12 items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-primary-hover"
+          >
+            対象範囲を見る
+          </Link>
+        </div>
+      </section>
+
       {/* Top Tools */}
       <section className="max-w-6xl mx-auto px-4 py-16">
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-2">
