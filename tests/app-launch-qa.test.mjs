@@ -33,4 +33,3 @@ test("the paused offer is no longer promoted or listed in the sitemap", () => {
   assert.doesNotMatch(homepage, /data-experiment-entry="opp_app_launch_qa"/);
   assert.doesNotMatch(sitemap, /\/services\/app-launch-qa/);
 });
-

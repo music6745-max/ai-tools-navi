@@ -33,4 +33,3 @@ export function InquiryCta({ position, compact = false }: InquiryCtaProps) {
     </div>
   );
 }
-

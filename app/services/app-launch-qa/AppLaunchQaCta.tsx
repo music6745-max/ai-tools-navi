@@ -33,4 +33,3 @@ export function AppLaunchQaCta({ position, compact = false }: AppLaunchQaCtaProp
     </div>
   );
 }
-

@@ -31,4 +31,3 @@ test("the paused offer is no longer promoted or listed in the sitemap", () => {
   assert.doesNotMatch(sourcePage, /href="\/services\/claude-code-rescue"/);
   assert.doesNotMatch(sitemap, /\/services\/claude-code-rescue/);
 });
-
