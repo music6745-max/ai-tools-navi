@@ -7,14 +7,15 @@ const EXPERIMENT_ID = "opp_app_launch_qa";
 const PAGE_URL = `${siteConfig.url}/services/app-launch-qa`;
 
 export const metadata: Metadata = {
-  title: "AI生成アプリ公開前QAスプリント｜PC・スマホの重要導線を確認",
+  title: "AI生成アプリ公開前QAスプリント｜新規受付停止中",
   description:
-    "AI生成のWebアプリ・PWAを対象に、PC・スマホ表示と重要導線10件までを公開前に確認する29,800円のQAスプリント。再現手順、重要度付き不具合一覧、画面記録、再テスト結果を納品します。",
+    "AI生成アプリ公開前QAは、公開URLだけで完結する自動受付・定型検査・週次納品へ再構築するため、新規相談と受注を停止しています。",
   alternates: { canonical: PAGE_URL },
+  robots: { index: false, follow: true },
   openGraph: {
-    title: "AI生成アプリ公開前QAスプリント｜29,800円",
+    title: "AI生成アプリ公開前QAスプリント｜新規受付停止中",
     description:
-      "Webアプリ・PWAの重要導線をPC・スマホで確認し、公開判断に必要な不具合記録を最短4営業時間で返します。",
+      "AI生成アプリ公開前QAは受付方法の再構築中につき、新規相談と受注を停止しています。",
     url: PAGE_URL,
     type: "website",
   },
@@ -64,24 +65,24 @@ const exclusions = [
 
 const process = [
   {
-    title: "安全な情報だけで相談",
+    title: "旧受付方法（停止済み）",
     detail:
-      "公開またはステージングURL、対象ブラウザ・端末、重要導線、希望日、テストアカウントの用意可否を共有します。",
+      "以前は公開URLなど最低限の情報で相談を受ける想定でしたが、現在は相談を受け付けていません。",
   },
   {
-    title: "範囲と開始条件を合意",
+    title: "旧範囲確認（停止済み）",
     detail:
-      "対象10導線、除外事項、アクセス方法、納品形式、税・支払条件、開始日時を作業前に確定します。",
+      "以前は対象導線、除外事項、納品形式、税・支払条件、開始日時を作業前に確定する想定でした。",
   },
   {
-    title: "初回QAを実施",
+    title: "旧QA作業（停止済み）",
     detail:
-      "範囲と安全なアクセスを確認後、PCとスマホ表示で優先導線を確認し、最短4営業時間で初回報告します。",
+      "以前はPCとスマホ表示で優先導線を確認する想定でした。現在は最短納期を提示していません。",
   },
   {
-    title: "1回の再テスト",
+    title: "旧再テスト（停止済み）",
     detail:
-      "合意した修正箇所を再確認し、通過、未解決、未確認を分けた最終結果を共有します。",
+      "以前は修正箇所を再確認する想定でした。現在は再テストや結果共有を行っていません。",
   },
 ];
 
@@ -102,7 +103,7 @@ export default function AppLaunchQaPage() {
             <div>
               <div className="flex flex-wrap gap-2">
                 <span className="rounded-full bg-primary px-3 py-1 text-xs font-bold text-white">
-                  Webアプリ・PWA向け
+                  新規受付停止中
                 </span>
                 <span className="rounded-full border border-card-border bg-card-bg px-3 py-1 text-xs font-medium">
                   重要導線10件まで
@@ -119,20 +120,17 @@ export default function AppLaunchQaPage() {
                 <span className="text-primary">公開前の不安</span>から前へ進める
               </h1>
               <p className="mt-5 max-w-3xl text-base leading-relaxed text-muted md:text-lg">
-                AI生成のWebアプリ・PWAを、売上や登録に関わる重要導線から確認します。
-                不具合を見つけるだけでなく、再現手順、重要度、画面記録、再テスト結果まで一つにまとめます。
+                旧販売実験では、AI生成のWebアプリ・PWAを重要導線から確認するサービスを想定していました。
+                現在は相談、見積り、契約、QA、再テスト、納品を行っていません。
               </p>
               <div className="mt-7 flex flex-wrap items-center gap-3">
-                <a
-                  href="#inquiry"
-                  className="inline-flex min-h-12 items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-primary-hover"
-                >
-                  対象範囲を確認して相談する
-                </a>
-                <p className="text-sm text-muted">初回パイロット 29,800円（税込）</p>
+                <span className="inline-flex min-h-12 items-center justify-center rounded-full bg-slate-500 px-6 py-3 text-sm font-bold text-white">
+                  新規相談・受注を停止しています
+                </span>
+                <p className="text-sm text-muted">自動受付・週次納品型へ再構築中</p>
               </div>
               <p className="mt-3 text-xs leading-relaxed text-muted">
-                範囲・納品物・開始日時・支払条件への合意前には料金は発生しません。
+                販売再開までは料金も注文も発生しません。一般のお問い合わせ窓口でも依頼を受け付けていません。
               </p>
             </div>
 
@@ -143,12 +141,12 @@ export default function AppLaunchQaPage() {
 
       <main className="mx-auto max-w-6xl px-4 py-12 md:py-16">
         <section className="mb-14" aria-labelledby="deliverables-heading">
-          <p className="text-sm font-bold text-primary">納品物</p>
+          <p className="text-sm font-bold text-primary">旧販売実験で想定していた納品物</p>
           <h2 id="deliverables-heading" className="mt-2 text-2xl font-bold md:text-3xl">
-            修正判断に使える証拠を、短時間でそろえます
+            旧実験では、修正判断に使える証拠をそろえる想定でした
           </h2>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">
-            対象は1つのWebアプリまたはPWAです。確認した事実と未確認事項を分け、公開判断に必要な順で整理します。
+            以下は終了した販売実験の記録です。現在はURLやテストデータを受領せず、QA結果も納品していません。
           </p>
           <div className="mt-7 grid gap-4 md:grid-cols-2">
             {deliverables.map((item) => (
@@ -174,8 +172,8 @@ export default function AppLaunchQaPage() {
 
         <section className="mb-14 grid gap-6 lg:grid-cols-2">
           <div className="rounded-2xl border border-success/40 bg-card-bg p-6 md:p-8">
-            <p className="text-sm font-bold text-success">対象になりやすいケース</p>
-            <h2 className="mt-2 text-2xl font-bold">公開直前の第三者チェックが必要</h2>
+            <p className="text-sm font-bold text-success">旧販売実験で想定していた対象</p>
+            <h2 className="mt-2 text-2xl font-bold">現在はすべて受付停止中です</h2>
             <ul className="mt-5 space-y-3">
               {suitableCases.map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm leading-relaxed">
@@ -204,11 +202,11 @@ export default function AppLaunchQaPage() {
           <div className="rounded-2xl border-2 border-primary bg-card-bg p-6 md:p-9">
             <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
               <div>
-                <p className="text-sm font-bold text-primary">初回パイロット価格</p>
-                <h2 id="price-heading" className="mt-2 text-4xl font-bold">29,800円<span className="ml-1 text-base">（税込）</span></h2>
-                <p className="mt-2 text-sm text-muted">1 Webアプリ / PWA・重要導線10件まで</p>
+                <p className="text-sm font-bold text-amber-700">受付状況</p>
+                <h2 id="price-heading" className="mt-2 text-4xl font-bold">新規受付停止中</h2>
+                <p className="mt-2 text-sm text-muted">現在は相談、契約、テストデータの受領を行いません</p>
                 <p className="mt-4 text-xs leading-relaxed text-muted">
-                  対応可否、対象範囲、納品物、開始日時、支払条件を事前に提示し、合意後に開始します。相談だけでは費用は発生しません。
+                  公開URLだけで完結する自動受付・定型検査・週次納品の体制が整うまで販売を再開しません。
                 </p>
               </div>
               <div className="grid gap-3 text-sm sm:grid-cols-2">
@@ -228,9 +226,9 @@ export default function AppLaunchQaPage() {
         </section>
 
         <section className="mb-14" aria-labelledby="process-heading">
-          <p className="text-sm font-bold text-primary">進め方</p>
+          <p className="text-sm font-bold text-primary">旧販売実験の記録</p>
           <h2 id="process-heading" className="mt-2 text-2xl font-bold md:text-3xl">
-            相談から再テストまで
+            旧販売実験で想定していた進め方（すべて停止済み）
           </h2>
           <ol className="mt-7 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {process.map((item, index) => (
@@ -244,11 +242,11 @@ export default function AppLaunchQaPage() {
         </section>
 
         <section className="mb-14 rounded-2xl border border-danger/40 bg-card-bg p-6 md:p-8">
-          <p className="text-sm font-bold text-danger">初回メールに送らないもの</p>
-          <h2 className="mt-2 text-2xl font-bold">認証情報・個人情報・本番データは不要です</h2>
+          <p className="text-sm font-bold text-danger">現在は情報を受領していません</p>
+          <h2 className="mt-2 text-2xl font-bold">認証情報・個人情報・本番データを送らないでください</h2>
           <p className="mt-4 text-sm leading-relaxed text-muted">
-            パスワード、APIキー、本番環境の認証情報、個人情報、顧客データ、決済情報、顧客の認証情報をメールへ記載・添付しないでください。
-            初回相談では公開またはステージングURL、対象ブラウザ・端末、重要導線、希望日、秘密情報を含まないテストアカウントを用意できるかだけを共有してください。
+            パスワード、APIキー、本番環境の認証情報、個人情報、顧客データ、決済情報、顧客の認証情報を送らないでください。
+            公開URLだけの場合も、一般のお問い合わせ窓口から相談・見積り・依頼を受け付けていません。
           </p>
         </section>
 
@@ -265,12 +263,12 @@ export default function AppLaunchQaPage() {
         </section>
 
         <section aria-labelledby="inquiry-heading">
-          <h2 id="inquiry-heading" className="sr-only">お問い合わせ</h2>
+          <h2 id="inquiry-heading" className="sr-only">受付停止のお知らせ</h2>
           <AppLaunchQaCta position="final" />
         </section>
 
         <p className="mt-6 text-center text-xs text-muted">
-          実験ID: {EXPERIMENT_ID} / 相談開始は意向指標であり、入金確認済みの売上とは分けて集計します。
+          実験ID: {EXPERIMENT_ID} / 公開販売実験は停止中です。
         </p>
       </main>
     </div>

@@ -6,53 +6,28 @@ const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), "utf
 
 const page = read("app/services/claude-code-rescue/page.tsx");
 const cta = read("app/services/claude-code-rescue/InquiryCta.tsx");
-const sitemap = read("app/sitemap.ts");
 const sourcePage = read("app/compare/ai-coding/page.tsx");
+const sitemap = read("app/sitemap.ts");
 
-test("the Claude Code rescue route is one attributable paid experiment", () => {
-  assert.match(page, /opp_claude_code_repo_audit/);
-  assert.match(page, /Claude Code Rescue/);
-  assert.match(page, /29,800円/);
-  assert.match(page, /1リポジトリ・作業4時間まで/);
-  assert.match(page, /小規模ソフトウェアチーム向け/);
-  assert.doesNotMatch(page, /opp_(?!claude_code_repo_audit)[a-z0-9_]+/);
+test("the code rescue sales experiment is visibly paused", () => {
+  assert.match(page, /新規受付停止中/);
+  assert.match(page, /新規相談・受注を停止しています/);
+  assert.match(page, /robots: \{ index: false, follow: true \}/);
+  assert.match(cta, /data-experiment-status="paused"/);
+  assert.match(cta, /再開時期は未定/);
 });
 
-test("the stated delivery scope and exclusions match the pilot contract", () => {
-  assert.match(page, /再現手順/);
-  assert.match(page, /重要不具合3件まで/);
-  assert.match(page, /テスト結果/);
-  assert.match(page, /デプロイ準備/);
-  assert.match(page, /完全復旧.*保証するものではありません/);
-  assert.match(page, /セキュリティを保証するものではありません/);
-  assert.match(page, /脆弱性診断/);
-  assert.match(page, /本番環境へのデプロイ実行/);
+test("the paused route cannot start an inquiry or collect secrets", () => {
+  assert.doesNotMatch(cta, /mailto:/);
+  assert.doesNotMatch(cta, /href=/);
+  assert.doesNotMatch(cta, /trackEvent/);
+  assert.doesNotMatch(page, /メールで共有|初回メール|初回相談|秘密情報なしで相談/);
+  assert.match(cta, /秘密情報/);
+  assert.match(cta, /顧客データ/);
+  assert.match(page, /一般のお問い合わせ窓口からも、このサービスの相談・見積り・依頼を受け付けていません/);
 });
 
-test("initial inquiry cannot solicit secrets or code through a form", () => {
-  assert.match(page, /APIキー/);
-  assert.match(page, /アクセストークン/);
-  assert.match(page, /\.env/);
-  assert.match(page, /ソースコード/);
-  assert.match(page, /非公開リポジトリURL/);
-  assert.match(cta, /秘密情報なしでメール相談を始める/);
-  assert.match(cta, /mailto:/);
-  assert.doesNotMatch(`${page}\n${cta}`, /<(form|input|textarea)\b/i);
+test("the paused offer is no longer promoted or listed in the sitemap", () => {
+  assert.doesNotMatch(sourcePage, /href="\/services\/claude-code-rescue"/);
+  assert.doesNotMatch(sitemap, /\/services\/claude-code-rescue/);
 });
-
-test("inquiry intent is measured separately from approved revenue", () => {
-  assert.match(cta, /trackEvent\("experiment_eligible"/);
-  assert.match(cta, /if \(!eligibleRecorded\)/);
-  assert.match(cta, /trackEvent\("experiment_view"/);
-  assert.match(cta, /trackEvent\("service_inquiry_click"/);
-  assert.match(cta, /outcome: "inquiry_intent_only"/);
-  assert.match(cta, /data-analytics-tracked="true"/);
-  assert.match(cta, /opp_claude_code_repo_audit/);
-  assert.match(cta, /price_yen: PRICE_YEN/);
-});
-
-test("the sales route is discoverable from one relevant source and the sitemap", () => {
-  assert.match(sourcePage, /href="\/services\/claude-code-rescue"/);
-  assert.match(sitemap, /\/services\/claude-code-rescue/);
-});
-
