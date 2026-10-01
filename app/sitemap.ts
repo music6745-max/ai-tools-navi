@@ -42,18 +42,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${siteConfig.url}/services/claude-code-rescue`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${siteConfig.url}/services/app-launch-qa`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
       url: `${siteConfig.url}/compare/ai-video`,
       lastModified: new Date(),
       changeFrequency: "weekly",
@@ -231,4 +219,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 }
+
 

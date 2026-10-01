@@ -7,14 +7,15 @@ const EXPERIMENT_ID = "opp_claude_code_repo_audit";
 const PAGE_URL = `${siteConfig.url}/services/claude-code-rescue`;
 
 export const metadata: Metadata = {
-  title: "AI生成コード復旧スプリント｜Claude Codeで止まった開発を整理",
+  title: "AI生成コード復旧スプリント｜新規受付停止中",
   description:
-    "AI生成コードのbuild・test・deploy詰まりを4時間までで切り分ける、小規模ソフトウェアチーム向け29,800円の復旧スプリント。再現手順、重要不具合3件までの修正または修正案、テスト結果、デプロイ準備を納品します。",
+    "AI生成コード復旧スプリントは、常時対応・秘密情報・個別契約を安全に扱う運用体制と合わないため、新規相談と受注を停止しています。",
   alternates: { canonical: PAGE_URL },
+  robots: { index: false, follow: true },
   openGraph: {
-    title: "AI生成コード復旧スプリント｜29,800円",
+    title: "AI生成コード復旧スプリント｜新規受付停止中",
     description:
-      "小規模チームのAI生成コードを、初回4時間までで再現・切り分け・修正準備します。",
+      "AI生成コード復旧スプリントは現在、新規相談と受注を停止しています。",
     url: PAGE_URL,
     type: "website",
   },
@@ -64,20 +65,20 @@ const exclusions = [
 
 const process = [
   {
-    title: "秘密情報なしで相談",
-    detail: "技術スタック、症状、再現状況、希望時期だけをメールで共有します。",
+    title: "旧受付方法（停止済み）",
+    detail: "以前は公開可能な概要だけで相談を受ける想定でしたが、現在は相談を受け付けていません。",
   },
   {
-    title: "対応可否と範囲を確認",
-    detail: "初回4時間で扱う対象、対象外、納品方法、正式な税・支払条件を作業前に提示します。",
+    title: "旧範囲確認（停止済み）",
+    detail: "以前は対象、対象外、納品方法、税・支払条件を作業前に提示する想定でした。",
   },
   {
-    title: "復旧スプリント",
-    detail: "再現、原因切り分け、重要度順の修正または修正案、テストを時間枠内で実施します。",
+    title: "旧復旧作業（停止済み）",
+    detail: "以前は再現、原因切り分け、修正または修正案、テストを時間枠内で行う想定でした。",
   },
   {
-    title: "結果を引き渡し",
-    detail: "実施内容、テスト結果、未解決事項、デプロイ準備チェックをまとめます。",
+    title: "旧納品方法（停止済み）",
+    detail: "以前は実施内容、テスト結果、未解決事項、デプロイ準備チェックをまとめる想定でした。",
   },
 ];
 
@@ -98,10 +99,10 @@ export default function ClaudeCodeRescuePage() {
             <div>
               <div className="flex flex-wrap gap-2">
                 <span className="rounded-full bg-primary px-3 py-1 text-xs font-bold text-white">
-                  小規模ソフトウェアチーム向け
+                  新規受付停止中
                 </span>
                 <span className="rounded-full border border-card-border bg-card-bg px-3 py-1 text-xs font-medium">
-                  初回4時間まで
+                  旧実験: 初回4時間まで
                 </span>
               </div>
               <p className="mt-5 text-sm font-bold tracking-wide text-primary">Claude Code Rescue</p>
@@ -110,17 +111,14 @@ export default function ClaudeCodeRescuePage() {
                 <span className="text-primary">再現できる状態</span>に戻す
               </h1>
               <p className="mt-5 max-w-3xl text-base leading-relaxed text-muted md:text-lg">
-                Claude CodeなどのAIコーディング支援で変更したあと、build・test・deploy準備が止まったリポジトリを短時間で切り分けます。
-                調査だけで終わらせず、修正できる箇所は修正し、残りは次に動ける具体案へ落とします。
+                旧販売実験では、AIコーディング支援で変更したあとにbuild・test・deploy準備が止まったリポジトリの切り分けを想定していました。
+                現在は調査、修正、相談、見積り、契約、納品を行っていません。
               </p>
               <div className="mt-7 flex flex-wrap items-center gap-3">
-                <a
-                  href="#inquiry"
-                  className="inline-flex min-h-12 items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-primary-hover"
-                >
-                  料金・範囲を確認して相談する
-                </a>
-                <p className="text-sm text-muted">販売実験価格 29,800円 / 1リポジトリ</p>
+                <span className="inline-flex min-h-12 items-center justify-center rounded-full bg-slate-500 px-6 py-3 text-sm font-bold text-white">
+                  新規相談・受注を停止しています
+                </span>
+                <p className="text-sm text-muted">旧販売実験は終了しました</p>
               </div>
             </div>
 
@@ -131,12 +129,12 @@ export default function ClaudeCodeRescuePage() {
 
       <main className="mx-auto max-w-6xl px-4 py-12 md:py-16">
         <section className="mb-14" aria-labelledby="deliverables-heading">
-          <p className="text-sm font-bold text-primary">納品物</p>
+          <p className="text-sm font-bold text-primary">旧販売実験で想定していた納品物</p>
           <h2 id="deliverables-heading" className="mt-2 text-2xl font-bold md:text-3xl">
-            初回4時間で、次に進める材料を残します
+            旧実験では、初回4時間で次に進める材料を残す想定でした
           </h2>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">
-            時間内に確認できた事実と未確認事項を分け、修正の有無にかかわらず作業結果を記録します。
+            以下は終了した販売実験の記録です。現在はコードや秘密情報を受領せず、作業結果も納品していません。
           </p>
           <div className="mt-7 grid gap-4 md:grid-cols-2">
             {deliverables.map((item) => (
@@ -162,8 +160,8 @@ export default function ClaudeCodeRescuePage() {
 
         <section className="mb-14 grid gap-6 lg:grid-cols-2">
           <div className="rounded-2xl border border-success/40 bg-card-bg p-6 md:p-8">
-            <p className="text-sm font-bold text-success">対象になりやすいケース</p>
-            <h2 className="mt-2 text-2xl font-bold">少人数で原因切り分けに詰まっている</h2>
+            <p className="text-sm font-bold text-success">旧販売実験で想定していた対象</p>
+            <h2 className="mt-2 text-2xl font-bold">現在はすべて受付停止中です</h2>
             <ul className="mt-5 space-y-3">
               {suitableCases.map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm leading-relaxed">
@@ -192,11 +190,11 @@ export default function ClaudeCodeRescuePage() {
           <div className="rounded-2xl border-2 border-primary bg-card-bg p-6 md:p-9">
             <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
               <div>
-                <p className="text-sm font-bold text-primary">初回パイロット価格</p>
-                <h2 id="price-heading" className="mt-2 text-4xl font-bold">29,800円</h2>
-                <p className="mt-2 text-sm text-muted">1リポジトリ・作業4時間まで</p>
+                <p className="text-sm font-bold text-amber-700">受付状況</p>
+                <h2 id="price-heading" className="mt-2 text-4xl font-bold">新規受付停止中</h2>
+                <p className="mt-2 text-sm text-muted">新規契約、相談、秘密情報の受領は行いません</p>
                 <p className="mt-4 text-xs leading-relaxed text-muted">
-                  正式な税・支払条件は対応可否の確認後、作業開始前に提示します。相談だけでは費用は発生しません。
+                  常時対応や個別契約を安全に扱える体制と合わないため、販売実験を停止しました。
                 </p>
               </div>
               <div className="grid gap-3 text-sm sm:grid-cols-2">
@@ -216,9 +214,9 @@ export default function ClaudeCodeRescuePage() {
         </section>
 
         <section className="mb-14" aria-labelledby="process-heading">
-          <p className="text-sm font-bold text-primary">進め方</p>
+          <p className="text-sm font-bold text-primary">旧販売実験の記録</p>
           <h2 id="process-heading" className="mt-2 text-2xl font-bold md:text-3xl">
-            相談から結果共有まで
+            旧販売実験で想定していた進め方（すべて停止済み）
           </h2>
           <ol className="mt-7 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {process.map((item, index) => (
@@ -232,11 +230,11 @@ export default function ClaudeCodeRescuePage() {
         </section>
 
         <section className="mb-14 rounded-2xl border border-danger/40 bg-card-bg p-6 md:p-8">
-          <p className="text-sm font-bold text-danger">初回メールに送らないもの</p>
-          <h2 className="mt-2 text-2xl font-bold">秘密情報・コード・顧客データは不要です</h2>
+          <p className="text-sm font-bold text-danger">現在は情報を受領していません</p>
+          <h2 className="mt-2 text-2xl font-bold">秘密情報・コード・顧客データを送らないでください</h2>
           <p className="mt-4 text-sm leading-relaxed text-muted">
-            APIキー、パスワード、アクセストークン、秘密鍵、.env、個人情報、顧客データ、ソースコード、DBダンプ、非公開リポジトリURLをメールへ記載・添付しないでください。
-            初回相談は、公開できる技術スタックと伏せ字にした症状だけで受け付けます。
+            APIキー、パスワード、アクセストークン、秘密鍵、.env、個人情報、顧客データ、ソースコード、DBダンプ、非公開リポジトリURLを送らないでください。
+            一般のお問い合わせ窓口からも、このサービスの相談・見積り・依頼を受け付けていません。
           </p>
         </section>
 
@@ -253,15 +251,16 @@ export default function ClaudeCodeRescuePage() {
         </section>
 
         <section aria-labelledby="inquiry-heading">
-          <h2 id="inquiry-heading" className="sr-only">お問い合わせ</h2>
+          <h2 id="inquiry-heading" className="sr-only">受付停止のお知らせ</h2>
           <InquiryCta position="final" />
         </section>
 
         <p className="mt-6 text-center text-xs text-muted">
-          実験ID: {EXPERIMENT_ID} / 問い合わせクリックは意向指標であり、承認売上のみを成約として扱います。
+          実験ID: {EXPERIMENT_ID} / 公開販売実験は停止中です。
         </p>
       </main>
     </div>
   );
 }
+
 
